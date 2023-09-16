@@ -1,30 +1,39 @@
 ---
-title: "Recurrent Quantification Analysis"
-subtitle: ""
+title: "RQA"
+subtitle: "Recurrence Quantification Analysis"
 author: "Maas van Steenbergen"
 date: today
-format: revealjs
+format: 
+     revealjs:
+          theme: serif
 jupyter: julia-1.9
 ---
 
+## What is Recurrence Quantification Analysis?
+
+* **Wikipedia:** RQA quantifies the number and duration of recurrences of a dynamic system presented by its phase space trajectory.
+* Yeah...
+
+## Okay, that's a mouthful
+
+* Let's break that down into bits:
+* RQA *quantifies* the number and duration of *recurrences* of a *dynamic system* presented by its *phase space* trajectory.
+
+## Dynamical system
+
+## Phase space
+
+## Recurrence
+
+* A time point recurs when it hits the same value as it did before. Say, you feel a good three out of five 
+
+## Quantifies
+* The *number*:
+* The *duration*:
 
 
-## Parametric Plots
 
-Plot function pair (x(u), y(u)). 
-See @fig-parametric for an example.
+## Are time series random or chaotic?
 
-```{julia}
-#| label: fig-parametric
-#| fig-cap: "Parametric Plots"
-
-Pkg.add("Plots")
-using Plots
-
-plot(sin, 
-     x->sin(2x), 
-     0, 
-     2π,
-     leg=false, 
-     fill=(0,:lavender))
-```
+* *Chaotic* behaviour is complex behaviour that can be fully deterministic, but difficult to predict.
+* *Random* is the classical understanding of random, like flipping a coin.
