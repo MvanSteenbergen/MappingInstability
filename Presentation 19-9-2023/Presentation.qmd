@@ -10,8 +10,7 @@ jupyter: julia-1.9
 ---
 
 ## Introduction
-
--    In social sciences research, we usually treat the variation that is natural in data as something to control for, apart from the variation caused by our input variables.
+-    In social sciences research, we usually treat variation in data as something to control for.
 -    Think of a typical ANOVA:
      1.   We derive averages for our dependent variable. By estimating the expected value we aim to control for all variation in our signal. 
      2.   We divide our sample into groups, and aim to average out all variation caused by changes beyond our variables of interest.
@@ -23,20 +22,20 @@ jupyter: julia-1.9
 -    In short, a well-administered experimental or correlational study, is nothing to jeer at.
 
 ## Dynamics
--    But there are a lot of aspects that are difficult to capture by relying on aggregates. To name just one 
+-    But there are a lot of aspects that are difficult to capture by relying on aggregates.
 -    For example, how does mood fluctuate over the day?
--    Or what can we say the way your pupil moves to scan your environment?
--    Both of these questions go into *dynamics*: the forces and motions that characterize a system. 
+-    How does your pupil move to scan their visual field?
+-    How do people move through their environment?
+-    How do schizophrenic symptoms appear over time?
+-    These questions go into *dynamics*: the forces and motions that characterize a system.
 
 ## Dynamics
--    The "forces" that lead to a change in mood, or that decide how you scan the room with your eyes, are  difficult to model:
-     1.   The forces are numerous.
-     2.   Interactions between those forces are numerous.
-     3.   Interactions between those forces are non-linear.
+-    The "forces" that lead to a change in mood, or that decide how you scan the room with your eyes, are difficult to model or analyze:
+     1.   These forces are numerous.
+     2.   Interactions between these forces are numerous.
+     3.   Interactions between these forces are non-linear.
      4.   It is impossible to infer the behaviour of the larger system by exclusively studying its components.
--    Systems like these are found in every research field, and are studied by 
 
-## Are time series random or chaotic?
-
--   *Chaotic* behaviour is complex behaviour that can be fully deterministic, but is difficult to predict.
--   *Random* is the classical understanding of random, like flipping a coin.
+## Complex Systems
+-    Systems like these are found in every research field, and seem to have a surprising number of common properties (and a larger number of differences).
+-    This is where *Complex Systems*-research comes in. This is a field that studies the properties of systems where its behaviour is not easy to capture. 
