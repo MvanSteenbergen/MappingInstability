@@ -23,10 +23,10 @@ jupyter: julia-1.9
 
 ## Dynamics
 -    But there are a lot of aspects that are difficult to capture by relying on aggregates.
--    For example, how does mood fluctuate over the day?
--    How does your pupil move to scan their visual field?
--    How do people move through their environment?
--    How do schizophrenic symptoms appear over time?
+     1.   For example, how does mood fluctuate over the day?
+     2.   How does your pupil move to scan their visual field?
+     3.   How do people move through their environment?
+     4.   How do schizophrenic symptoms appear over time?
 -    These questions go into *dynamics*: the forces and motions that characterize a system.
 
 ## Dynamics
@@ -34,8 +34,9 @@ jupyter: julia-1.9
      1.   These forces are numerous.
      2.   Interactions between these forces are numerous.
      3.   Interactions between these forces are non-linear.
-     4.   It is impossible to infer the behaviour of the larger system by exclusively studying its components.
+     4.   It is impossible to infer the behaviour of the larger system by exclusively studying its components (*emergent* behaviour).
 
 ## Complex Systems
--    Systems like these are found in every research field, and seem to have a surprising number of common properties (and a larger number of differences).
--    This is where *Complex Systems*-research comes in. This is a field that studies the properties of systems where its behaviour is not easy to capture. 
+-    Systems like these are found in every applied research field, and seem to have a surprising number of common properties (and a larger number of differences).
+-    *Complex Systems* research is involved with studying the properties of systems where its behaviour is consistent with these properties (e.g., numerous elements, non-linear interactions, emergent properties).
+-     Do note that scientists do not agree on an exact formal definition.
