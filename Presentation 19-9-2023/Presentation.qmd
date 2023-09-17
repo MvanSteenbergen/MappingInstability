@@ -9,31 +9,34 @@ format:
 jupyter: julia-1.9
 ---
 
-## What is Recurrence Quantification Analysis?
+## Introduction
 
-* **Wikipedia:** RQA quantifies the number and duration of recurrences of a dynamic system presented by its phase space trajectory.
-* Yeah...
+-    In social sciences research, we usually treat the variation that is natural in data as something to control for, apart from the variation caused by our input variables.
+-    Think of a typical ANOVA:
+     1.   We derive averages for our dependent variable. By estimating the expected value we aim to control for all variation in our signal. 
+     2.   We divide our sample into groups, and aim to average out all variation caused by changes beyond our variables of interest.
 
-## Okay, that's a mouthful
+## Introduction
+-    This is a very effective research strategy. The experiment is the ultimate example! 
+     1.   It allows us to make inferences about the average strength of the effect of a manipulation.
+     2.   It allows us to disentangle the effect on a dependent variable by a manipulation of independent variables between pre-defined groups.
+-    In short, a well-administered experimental or correlational study, is nothing to jeer at.
 
-* Let's break that down into bits:
-* RQA *quantifies* the number and duration of *recurrences* of a *dynamic system* presented by its *phase space* trajectory.
+## Dynamics
+-    But there are a lot of aspects that are difficult to capture by relying on aggregates. To name just one 
+-    For example, how does mood fluctuate over the day?
+-    Or what can we say the way your pupil moves to scan your environment?
+-    Both of these questions go into *dynamics*: the forces and motions that characterize a system. 
 
-## Dynamical system
-
-## Phase space
-
-## Recurrence
-
-* A time point recurs when it hits the same value as it did before. Say, you feel a good three out of five 
-
-## Quantifies
-* The *number*:
-* The *duration*:
-
-
+## Dynamics
+-    The "forces" that lead to a change in mood, or that decide how you scan the room with your eyes, are  difficult to model:
+     1.   The forces are numerous.
+     2.   Interactions between those forces are numerous.
+     3.   Interactions between those forces are non-linear.
+     4.   It is impossible to infer the behaviour of the larger system by exclusively studying its components.
+-    Systems like these are found in every research field, and are studied by 
 
 ## Are time series random or chaotic?
 
-* *Chaotic* behaviour is complex behaviour that can be fully deterministic, but difficult to predict.
-* *Random* is the classical understanding of random, like flipping a coin.
+-   *Chaotic* behaviour is complex behaviour that can be fully deterministic, but is difficult to predict.
+-   *Random* is the classical understanding of random, like flipping a coin.
