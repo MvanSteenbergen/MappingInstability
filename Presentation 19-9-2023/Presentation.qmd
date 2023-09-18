@@ -54,9 +54,10 @@ jupyter: julia-1.9
 -    Different summary statistics:
      1.   
 ## 
-
+-    Developments in research methods, such as ecological momentary
+assessment, make using time series for self-report scales more manageable.
 -    When doing research on mood, or other measures that use self-report, we often rely on fairly *course-grained* measures.
--    We also tend to rely on *ordinal* scaling: there is only a han.
--    That's because we simply don't 
+-    We also tend to rely on *ordinal* scaling: there is only a handful of categories participants can choose from.
+-    This is inherent to the self-report measure.
 
-## Open questions
+## Research question
