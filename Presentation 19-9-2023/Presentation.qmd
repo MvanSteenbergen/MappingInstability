@@ -62,16 +62,18 @@ jupyter: julia-1.9
 ## RQA & self-report scales
 -    Developments in research methods, such as ecological momentary
 assessment, allow for using time series with self-report scales.
--    When doing research on mood, or other measures that use self-report, we have to rely on fairly *course-grained* measures.
+-    When doing research on mood, or other measures that use self-report, we have to rely on fairly infrequent measures, which means that the distance between two points of t can be high.
 -    We also tend to rely on *ordinal* scaling, which means we have fewer data points.
      -    This is inherent to the self-report measure.
 
 ## Research question
 -    I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.
--    I will use simulation methods for this, 
--    Exact implementation is unknown for now (partially because it's novel, and coming to grips with this takes time and work)
+-    I will use simulation methods for this.
+-    I will start out with high-t continuous data.
+-    I will then systematically increase the degree of ordinalization (decrease the number of categories/*course-grain* the data), reduce the number of time points, and then see how it changes the summary statistics.
+-    Exact implementation is unknown for now (partially because it's novel, and coming to grips with it takes time and effort)
 
 ## Tools
 -    Perhaps the julia-package for dynamical systems (DynamicalSystems.jl) or PyRQA, because they are known to be fast.
--    I will perhaps develop some functions myself to  
+-    I will perhaps develop some functions myself to perform the simulation.
 -    I will either simulate the dataset, or use existing data that has similar properties to self-report scales.
