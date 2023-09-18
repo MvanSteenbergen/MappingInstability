@@ -1,6 +1,6 @@
 ---
 title: "RQA"
-subtitle: "Recurrence Quantification Analysis"
+subtitle: "Complex Systems methods in the behavioural sciences"
 author: "Maas van Steenbergen"
 date: today
 format: 
@@ -53,7 +53,9 @@ jupyter: julia-1.9
 ## Interpreting RQA
 -    Different summary statistics:
      1.   
-## 
+
+
+## RQA & self-report scales
 -    Developments in research methods, such as ecological momentary
 assessment, make using time series for self-report scales more manageable.
 -    When doing research on mood, or other measures that use self-report, we often rely on fairly *course-grained* measures.
