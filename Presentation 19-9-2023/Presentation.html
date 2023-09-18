@@ -401,9 +401,13 @@ Maas van Steenbergen
 <li>There are many different methods to study the underlying dynamics of complex systems.</li>
 <li>But we’ll focus on only one: Recurrence Quantification Analysis.</li>
 <li>This analysis is based on <em>recurrences</em>: the repetition of a point (within a certain radius) after <span class="math inline">\(x_{t+y}\)</span>, where t refers to a time point of x and y ⊆ ℤ.</li>
-<li>It allows us to infer <em>something</em> about the dynamics of a complex system from a single set of measurements. ## <img data-src="pic1.png" data-fig-align="center"></li>
+<li>It allows us to infer <em>something</em> about the dynamics of a complex system from a single set of measurements.</li>
 </ul>
 </section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="pic1.png" class="r-stretch quarto-figure-center"></section>
 <section id="interpreting-rqas" class="slide level2">
 <h2>Interpreting RQA’s</h2>
 <ul>
@@ -411,7 +415,7 @@ Maas van Steenbergen
 <ol type="1">
 <li><em>Recurrence rate</em>: the proportion of cells in the matrix that are recurrent.
 <ul>
-<li>Says something about</li>
+<li>Says something about stationarity/periodicity etc.</li>
 </ul></li>
 <li><em>Determinism</em>: proportion of recurrent points that form a diagonal line.
 <ul>
@@ -435,11 +439,12 @@ Maas van Steenbergen
 <section id="research-question" class="slide level2">
 <h2>Research question</h2>
 <ul>
-<li>I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.</li>
+<li>I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.
+<ul>
 <li>I will use simulation methods for this.</li>
 <li>I will start out with high-t continuous data.</li>
 <li>I will then systematically increase the degree of ordinalization (decrease the number of categories/<em>course-grain</em> the data), reduce the number of time points, and then see how it changes the summary statistics.</li>
-<li>Exact implementation is unknown for now (partially because it’s novel, and coming to grips with it takes time and effort)</li>
+</ul></li>
 </ul>
 </section>
 <section id="tools" class="slide level2">

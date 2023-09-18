@@ -47,6 +47,7 @@ jupyter: julia-1.9
 -    But we'll focus on only one: Recurrence Quantification Analysis.
 -    This analysis is based on *recurrences*: the repetition of a point (within a certain radius) after $x_{t+y}$, where t refers to a time point of x and y ⊆ ℤ.
 -    It allows us to infer *something* about the dynamics of a complex system from a single set of measurements.
+
 ## 
 ![](pic1.png){fig-align="center"}
 
@@ -67,10 +68,9 @@ assessment, allow for using time series with self-report scales.
 
 ## Research question
 -    I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.
--    I will use simulation methods for this.
--    I will start out with high-t continuous data.
--    I will then systematically increase the degree of ordinalization (decrease the number of categories/*course-grain* the data), reduce the number of time points, and then see how it changes the summary statistics.
--    Exact implementation is unknown for now (partially because it's novel, and coming to grips with it takes time and effort)
+     -    I will use simulation methods for this.
+     -    I will start out with high-t continuous data.
+     -    I will then systematically increase the degree of ordinalization (decrease the number of categories/*course-grain* the data), reduce the number of time points, and then see how it changes the summary statistics.
 
 ## Tools
 -    Perhaps the julia-package for dynamical systems (DynamicalSystems.jl) or PyRQA, because they are known to be fast.
