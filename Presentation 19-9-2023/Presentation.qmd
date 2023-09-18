@@ -45,21 +45,24 @@ jupyter: julia-1.9
 ## Recurrence Quantification Analysis
 -    There are many different methods to study the underlying dynamics of complex systems.
 -    But we'll focus on only one: Recurrence Quantification Analysis.
--    This analysis is based on *recurrences*: the repetition of a point (within a certain radius) after $x_{t+y}$, where t refers to a time point and y = 1, 2, 3....
+-    This analysis is based on *recurrences*: the repetition of a point (within a certain radius) after $x_{t+y}$, where t refers to the time point of x and y ∈ ℤ.
 
 ## 
 ![](pic1.png){fig-align="center"}
 
-## Interpreting RQA
+## Interpreting RQA's
 -    Different summary statistics:
-     1.   
-
+     1.   *Recurrence rate*: the proportion of cells in the matrix that are recurrent.
+     2.   *Determinism*: proportion of recurrent points that form a diagonal line.
+-    With these measures, we can quantify and visualize an aspect of the dynamics that are difficult to capture without these measures.
 
 ## RQA & self-report scales
 -    Developments in research methods, such as ecological momentary
 assessment, make using time series for self-report scales more manageable.
 -    When doing research on mood, or other measures that use self-report, we often rely on fairly *course-grained* measures.
 -    We also tend to rely on *ordinal* scaling: there is only a handful of categories participants can choose from.
--    This is inherent to the self-report measure.
+     -    This is inherent to the self-report measure.
 
 ## Research question
+-    I will perform a simulation study 
+-    How sensitive are these 
