@@ -39,4 +39,18 @@ jupyter: julia-1.9
 ## Complex Systems
 -    Systems like these are found in every applied research field, and seem to have a surprising number of common properties (and a larger number of differences).
 -    *Complex Systems* research is involved with studying the properties of systems where its behaviour is consistent with these properties (e.g., numerous elements, non-linear interactions, emergent properties).
--     Do note that scientists do not agree on an exact formal definition.
+-    Do note that scientists do not agree on an exact formal definition.
+-    Complex systems tend to be intrinsically more difficult to study and model.
+
+## Recurrence Quantification Analysis
+-    There are many different methods to study the underlying dynamics of complex system.
+-    But we'll focus on only one: Recurrence Quantification Analysis
+-    This is the basic technique 
+
+##
+
+-    When doing research on mood, or other measures that use self-report, we often rely on fairly *course-grained* measures.
+-    We also tend to rely on *ordinal* scaling: there is only a han.
+-    That's because we simply don't 
+
+## Open questions
