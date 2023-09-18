@@ -46,7 +46,7 @@ jupyter: julia-1.9
 -    There are many different methods to study the underlying dynamics of complex systems.
 -    But we'll focus on only one: Recurrence Quantification Analysis.
 -    This analysis is based on *recurrences*: the repetition of a point (within a certain radius) after $x_{t+y}$, where t refers to a time point of x and y ⊆ ℤ.
-
+-    It allows us to infer *something* about the dynamics of a complex system from a single set of measurements.
 ## 
 ![](pic1.png){fig-align="center"}
 
@@ -55,17 +55,23 @@ jupyter: julia-1.9
      1.   *Recurrence rate*: the proportion of cells in the matrix that are recurrent.
           -  Says something about 
      2.   *Determinism*: proportion of recurrent points that form a diagonal line.
-          - Says something about the predictability of the dataset. Given one number, can I expect what the next one is?
+          - Says something about the predictability of the dataset.
      3.   And many more.
 -    With these measures, we can quantify and visualize an aspect of the dynamics that are difficult to capture without these measures.
 
 ## RQA & self-report scales
 -    Developments in research methods, such as ecological momentary
-assessment, make using time series for self-report scales more manageable.
+assessment, allow for using time series with self-report scales.
 -    When doing research on mood, or other measures that use self-report, we have to rely on fairly *course-grained* measures.
--    We also tend to rely on *ordinal* scaling, which means we get have fewer data points.
+-    We also tend to rely on *ordinal* scaling, which means we have fewer data points.
      -    This is inherent to the self-report measure.
 
 ## Research question
 -    I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.
--    
+-    I will use simulation methods for this, 
+-    Exact implementation is unknown for now (partially because it's novel, and coming to grips with this takes time and work)
+
+## Tools
+-    Perhaps the julia-package for dynamical systems (DynamicalSystems.jl) or PyRQA, because they are known to be fast.
+-    I will perhaps develop some functions myself to  
+-    I will either simulate the dataset, or use existing data that has similar properties to self-report scales.

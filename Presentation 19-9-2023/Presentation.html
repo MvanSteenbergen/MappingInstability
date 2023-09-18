@@ -400,7 +400,7 @@ Maas van Steenbergen
 <ul>
 <li>There are many different methods to study the underlying dynamics of complex systems.</li>
 <li>But we’ll focus on only one: Recurrence Quantification Analysis.</li>
-<li>This analysis is based on <em>recurrences</em>: the repetition of a point (within a certain radius) after <span class="math inline">\(x_{t+y}\)</span>, where t refers to a time point and y ∈ ℤ.</li>
+<li>This analysis is based on <em>recurrences</em>: the repetition of a point (within a certain radius) after <span class="math inline">\(x_{t+y}\)</span>, where t refers to a time point of x and y ⊆ ℤ.</li>
 </ul>
 </section>
 <section id="section" class="slide level2">
@@ -412,8 +412,15 @@ Maas van Steenbergen
 <ul>
 <li>Different summary statistics:
 <ol type="1">
-<li><em>Recurrence rate</em>: the proportion of cells in the matrix that are recurrent.</li>
-<li><em>Determinism</em>: proportion of recurrent points that form a diagonal line.</li>
+<li><em>Recurrence rate</em>: the proportion of cells in the matrix that are recurrent.
+<ul>
+<li>Says something about</li>
+</ul></li>
+<li><em>Determinism</em>: proportion of recurrent points that form a diagonal line.
+<ul>
+<li>Says something about the predictability of the dataset. Given one number, can I expect what the next one is?</li>
+</ul></li>
+<li>And many more.</li>
 </ol></li>
 <li>With these measures, we can quantify and visualize an aspect of the dynamics that are difficult to capture without these measures.</li>
 </ul>
@@ -421,9 +428,9 @@ Maas van Steenbergen
 <section id="rqa-self-report-scales" class="slide level2">
 <h2>RQA &amp; self-report scales</h2>
 <ul>
-<li>Developments in research methods, such as ecological momentary assessment, make using time series for self-report scales more manageable.</li>
-<li>When doing research on mood, or other measures that use self-report, we often rely on fairly <em>course-grained</em> measures.</li>
-<li>We also tend to rely on <em>ordinal</em> scaling: there is only a handful of categories participants can choose from.
+<li>Developments in research methods, such as ecological momentary assessment, allow for using time series with self-report scales.</li>
+<li>When doing research on mood, or other measures that use self-report, we have to rely on fairly <em>course-grained</em> measures.</li>
+<li>We also tend to rely on <em>ordinal</em> scaling, which means we have fewer data points.
 <ul>
 <li>This is inherent to the self-report measure.</li>
 </ul></li>
@@ -431,6 +438,16 @@ Maas van Steenbergen
 </section>
 <section id="research-question" class="slide level2">
 <h2>Research question</h2>
+<ul>
+<li>I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.</li>
+<li>I will use simulation methods for this,</li>
+</ul>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+<ul>
+<li>Perhaps the julia-package for dynamical systems and PyRQA, because they are known to be fast.</li>
+</ul>
 <div class="footer footer-default">
 
 </div>
