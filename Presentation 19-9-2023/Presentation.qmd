@@ -53,10 +53,9 @@ jupyter: julia-1.9
 ## Interpreting RQA's
 -    Different summary statistics:
      1.   *Recurrence rate*: the proportion of cells in the matrix that are recurrent.
-          -  Says something about 
+          -  Says something about stationarity/periodicity etc.
      2.   *Determinism*: proportion of recurrent points that form a diagonal line.
           - Says something about the predictability of the dataset.
-     3.   And many more.
 -    With these measures, we can quantify and visualize an aspect of the dynamics that are difficult to capture without these measures.
 
 ## RQA & self-report scales

@@ -401,12 +401,9 @@ Maas van Steenbergen
 <li>There are many different methods to study the underlying dynamics of complex systems.</li>
 <li>But we’ll focus on only one: Recurrence Quantification Analysis.</li>
 <li>This analysis is based on <em>recurrences</em>: the repetition of a point (within a certain radius) after <span class="math inline">\(x_{t+y}\)</span>, where t refers to a time point of x and y ⊆ ℤ.</li>
+<li>It allows us to infer <em>something</em> about the dynamics of a complex system from a single set of measurements. ## <img data-src="pic1.png" data-fig-align="center"></li>
 </ul>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-
-<img data-src="pic1.png" class="r-stretch quarto-figure-center"></section>
 <section id="interpreting-rqas" class="slide level2">
 <h2>Interpreting RQA’s</h2>
 <ul>
@@ -418,9 +415,8 @@ Maas van Steenbergen
 </ul></li>
 <li><em>Determinism</em>: proportion of recurrent points that form a diagonal line.
 <ul>
-<li>Says something about the predictability of the dataset. Given one number, can I expect what the next one is?</li>
+<li>Says something about the predictability of the dataset.</li>
 </ul></li>
-<li>And many more.</li>
 </ol></li>
 <li>With these measures, we can quantify and visualize an aspect of the dynamics that are difficult to capture without these measures.</li>
 </ul>
@@ -429,7 +425,7 @@ Maas van Steenbergen
 <h2>RQA &amp; self-report scales</h2>
 <ul>
 <li>Developments in research methods, such as ecological momentary assessment, allow for using time series with self-report scales.</li>
-<li>When doing research on mood, or other measures that use self-report, we have to rely on fairly <em>course-grained</em> measures.</li>
+<li>When doing research on mood, or other measures that use self-report, we have to rely on fairly infrequent measures, which means that the distance between two points of t can be high.</li>
 <li>We also tend to rely on <em>ordinal</em> scaling, which means we have fewer data points.
 <ul>
 <li>This is inherent to the self-report measure.</li>
@@ -440,13 +436,18 @@ Maas van Steenbergen
 <h2>Research question</h2>
 <ul>
 <li>I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.</li>
-<li>I will use simulation methods for this,</li>
+<li>I will use simulation methods for this.</li>
+<li>I will start out with high-t continuous data.</li>
+<li>I will then systematically increase the degree of ordinalization (decrease the number of categories/<em>course-grain</em> the data), reduce the number of time points, and then see how it changes the summary statistics.</li>
+<li>Exact implementation is unknown for now (partially because it’s novel, and coming to grips with it takes time and effort)</li>
 </ul>
 </section>
 <section id="tools" class="slide level2">
 <h2>Tools</h2>
 <ul>
-<li>Perhaps the julia-package for dynamical systems and PyRQA, because they are known to be fast.</li>
+<li>Perhaps the julia-package for dynamical systems (DynamicalSystems.jl) or PyRQA, because they are known to be fast.</li>
+<li>I will perhaps develop some functions myself to perform the simulation.</li>
+<li>I will either simulate the dataset, or use existing data that has similar properties to self-report scales.</li>
 </ul>
 <div class="footer footer-default">
 
