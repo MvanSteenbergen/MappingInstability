@@ -55,7 +55,7 @@ jupyter: julia-1.9
 -    Different summary statistics:
      1.   *Recurrence rate*: the proportion of cells in the matrix that are recurrent.
           -  Says something about stationarity/periodicity etc.
-     2.   *Determinism*: proportion of recurrent points that form a diagonal line.
+     2.   *Determinism*: proportion of recurrent points that form a diagonal line (a repeating series).
           - Says something about the predictability of the dataset.
 -    With these measures, we can quantify and visualize an aspect of the dynamics that are difficult to capture without these measures.
 
@@ -69,7 +69,7 @@ assessment, allow for using time series with self-report scales.
 ## Research question
 -    I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.
      -    I will use simulation methods for this.
-     -    I will also simulate a chaotic system that is highly sensitive to a change in initial conditions (e.g., Lorentz System), and vary those conditions.
+     -    I will also simulate a chaotic system that is highly sensitive to a change in initial variables (e.g., Lorentz System), and vary those variables (to create many different datasets).
      -    I will start out with high resolution data.
      -    I will then systematically decrease the data density.
      -    I will then note the effects on different test conditions.
@@ -78,3 +78,5 @@ assessment, allow for using time series with self-report scales.
 -    Perhaps the julia-package for dynamical systems (DynamicalSystems.jl) or PyRQA, because they are known to be fast.
 -    I will perhaps develop some functions myself to perform the simulation.
 -    I will either simulate the dataset, or use existing data that has similar properties to self-report scales.
+
+####
