@@ -1,0 +1,22 @@
+---
+title: "Simulating the potential of applying recurrence quantification analysis on ecological momentary assessment data"
+author: "Maas van Steenbergen"
+date: today
+format: 
+     pdf: 
+        toc: false
+        number-sections: false
+        colorlinks: false
+jupyter: julia-1.9
+---
+# Introduction
+Ecological momentary assessment has made it possible to construct time series from self-report scales. This allows one to capture the dynamics of mood over time. While many . 
+
+Recurrence quantification analysis is one of the methods to analyse time series data. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where t refers to the time of an observation, x to an observation, and y is the distance to t where that point recurs.
+
+Traditionally, this method is used in the physical sciences, where measurements can both be retrieved much more frequently and be measured at a higher resolution, up to a certain decimal point (think of temperature, ). Measures in ecological momentary assessment often rely on likert scales, and have much lower precision. 
+
+
+We will simulate a 
+
+For practical reasons, we assume that these ordinal measurements reflect an underlying continuous measure, even though that is somewhat contentious, and .

@@ -79,4 +79,3 @@ assessment, allow for using time series with self-report scales.
 -    I will perhaps develop some functions myself to perform the simulation.
 -    I will either simulate the dataset, or use existing data that has similar properties to self-report scales.
 
-####
