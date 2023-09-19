@@ -1,6 +1,6 @@
 ---
 title: "RQA"
-subtitle: "Complex Systems methods in the behavioural sciences"
+subtitle: "Complex systems methods in the behavioural sciences"
 author: "Maas van Steenbergen"
 date: today
 format: 
@@ -69,8 +69,10 @@ assessment, allow for using time series with self-report scales.
 ## Research question
 -    I will perform a simulation study that aims to answer how sensitive these summary statistics are to course-graining and ordinalization.
      -    I will use simulation methods for this.
-     -    I will start out with high-t continuous data.
-     -    I will then systematically increase the degree of ordinalization (decrease the number of categories/*course-grain* the data), reduce the number of time points, and then see how it changes the summary statistics.
+     -    I will also simulate a chaotic system that is highly sensitive to a change in initial conditions (e.g., Lorentz System), and vary those conditions.
+     -    I will start out with high resolution data.
+     -    I will then systematically decrease the data density.
+     -    I will then note the effects on different test conditions.
 
 ## Tools
 -    Perhaps the julia-package for dynamical systems (DynamicalSystems.jl) or PyRQA, because they are known to be fast.
