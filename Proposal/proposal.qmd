@@ -10,13 +10,12 @@ format:
 jupyter: julia-1.9
 ---
 # Introduction
-Ecological momentary assessment has made it possible to construct time series from self-report scales. This allows one to capture the dynamics of mood over time. While many . 
+Ecological momentary assessment has made it possible to construct time series from self-report scales. This means that it has the potential to capture the dynamics of psychological constructs over time. While this type of data comes with its own set of severe challenges, there is also the potential to 
 
-Recurrence quantification analysis is one of the methods to analyse time series data. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where t refers to the time of an observation, x to an observation, and y is the distance to t where that point recurs.
+Recurrence quantification analysis is one of the methods to analyse time series data. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where t refers to the time of an observation, x to an observation, and y is the distance to t where that point recurs. The method results in several summary statistics that can be used to understand pattterns in the data.
 
-Traditionally, this method is used in the physical sciences, where measurements can both be retrieved much more frequently and be measured at a higher resolution, up to a certain decimal point (think of temperature, ). Measures in ecological momentary assessment often rely on likert scales, and have much lower precision. 
+Traditionally, this method is used in the physical sciences, where measurements can be retrieved at great frequency. They can often be measured at high resolution, and there are more ways to infer what the underlying true value is, which reduces the error rate. Measures in ecological momentary assessment rely on the admission of ordinal self-report questionnaires taken several times a day, limiting the set of possible states that the measuring construct can capture. Psychological constructs capture subjective states, and therefore can't be measured directly. These problems are inherent to the measurement of psychological constructs, and there is no clear-cut approach to alleviate these problems. This by no means invalidates measures, but it does necessitate that research methods that are developed or adapted from the physical in the behavioural or social sciences take these difficulties into account.
 
+It is both practically sensible and theoretically interesting to be able to see how this lower data quality impacts the ability to capture dynamics. It is practically sensible because this . It is theoretically interesting, as a decline in data quality of EMA measures captured by time series in comparison to their counterparts in the natural sciences might have common characteristics. Knowing what these common characteristics are could help researchers develop methods to adjust or calibrate their measures in ways that can increase the validity of their measurements.
 
-We will simulate a 
-
-For practical reasons, we assume that these ordinal measurements reflect an underlying continuous measure, even though that is somewhat contentious, and .
+For practical reasons, we assume that these ordinal measurements reflect an underlying continuous measure, even though that is somewhat contentious. This 
