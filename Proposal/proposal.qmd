@@ -3,32 +3,23 @@ title: "Simulating the potential of applying recurrence quantification analysis 
 author: "Maas van Steenbergen"
 date: today
 format: 
-     pdf: 
-        toc: false
-        number-sections: false
-        colorlinks: false
+    pdf: default
 jupyter: julia-1.9
 ---
+
 # Introduction
-Ecological momentary assessment has made it possible to construct time series from self-report scales. This means that it has the potential to capture the dynamics of psychological constructs over time. While this type of data comes with its own set of severe challenges, there is also the potential to gain a better understanding of how these measures actually operate. 
-Recurrence quantification analysis is one of the methods to analyse time series data. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where t refers to the time of an observation, x to an observation, and y is the distance to t where that point recurs. The method results in several summary statistics that can be used to understand patterns in the data.
 
-Traditionally, the possibility of generating time series was only possible in the physical sciences or in social sciences such as economics, where measurements can be retrieved at great frequency and at high resolution. There are also more ways to infer what the underlying true value is in the natural sciences, which reduces the error rate. Measures in ecological momentary assessment rely on the admission of ordinal self-report questionnaires taken several times a day, limiting the set of possible states that the measuring device can capture. Moreover, the psychological constructs that are measured using EMA often aim to capture the value of inherently subjective variables, and cannot be measured directly. This by no means invalidates measures of this type, but it does necessitate that research methods that are developed or adapted from the physical to the behavioural sciences take these difficulties into account. 
+Ecological momentary assessment has made it possible to construct time series from self-report scales. This means that it has the potential to capture the dynamics of psychological constructs over time. While this type of data comes with its own set of severe challenges, there is also the potential to gain a better understanding of how these measures actually operate. Recurrence quantification analysis is one of the methods to analyse time series data. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where t refers to the time of an observation, x to an observation, and y is the distance to t where that point recurs. The method results in several summary statistics that can be used to understand patterns in the data.
 
-Recurrence-based methods such as RQA allow for a direct comparison between some of the dynamical aspects of higher resolution and lower resolution data without making any assumptions about the distribution of the data or the data generating mechanism. Therefore, it allows us to infer a number of characteristics about the properties of the system under study, without running into the trouble that stochastic measures making these assumptions might cause. This means that we can use simulation to study how course-graining impacts some aspects of the measurements under study.
+Recurrence quantification measures were developed under the assumption that measurements can be retrieved at great frequency and at high resolution. However, measures in ecological momentary assessment rely on the admission of ordinal self-report questionnaires taken several times a day, limiting the set of possible states that the measuring device can capture. Moreover, the psychological constructs that are measured using EMA cannot be measured without relying on self-report questionnaires. This necessitates that research methods that are developed or adapted from the physical to the behavioural sciences take these difficulties into account.
 
-This allows us to see how this lower data quality impacts the ability to capture time-dependent dynamics. A decline in data quality of EMA measures captured by time series in comparison to their counterparts in the natural sciences might have common characteristics. Knowing what these common characteristics are could help researchers develop methods to adjust or calibrate their measures in ways that can increase the validity of their measurements for stochastic use. This allows us to improve, for example, uncertainty measures when calculating statistical parameters. It also has the potential to allow us to squeeze more accurate data from course-grained data by considering the dynamical properties of these systems. 
+# The current project
+This project aims to find out at what point course-graining data limits the usability of recurrence quantification analysis. We present an analysis pipeline consisting of multiple stages, in which each stage is a . We will use the `DynamicalSystems.jl` Julia-package to implement the toy-model, and the `Statistics.jl` and `RecurrenceQuantification.jl` packages to perform the analysis. 
 
-# Generating data
-Our study involves generating data based on a surrogate data set. There are no fully continuous self-report measures available in large enough quantities that would be a good surrogate for the kind of data, so we have to opt for data that is somewhat similar. It has to have some characteristics that would make it workable for us. It can be generated at no great cost, and it has to maintain the non-linear characteristics / Statistical techniques for generating are not an option, because they generally do not feature the geometric characteristics of non-linear dynamics that we are interested in. Thankfully, a few recently popularized techniques in machine learning allow us to generate data that maintains its non-linear properties and are . This technique uses recurrent conditional GANs ^[1] to 
+In the first stage, we use a toy model developed to simulate the data based on a 3+1 dimensions model. This model captures clinical observations found in psychiatric symptomology by modeling internal factors, environmental noise, temporal specificities, and sympomatology. By changing these variables systematically, we aim to model a large variety of possible psychological constructs. For the purpose of our study, we redefine "symptomatology" as any naturally occurring dynamical development of psychological constructs.
 
-# Course-graining data
-Course graining the data can be done by dividing values of our measure into equally sized bins, and removing t-points. 
+## Stage 2: Course-graining data
+We aim to model . To ordinalize the data generated using the toy model, we bin a range of the length of the data into n intervals of equal length, where n stands for the number of bins. We also vary the minimum and maximum value of this range to simulate ceiling and floor-effects. 
 
-# Running the comparison study
-
-# Risks and challenges
-Combining simulation studies and complex systems work does involve some pioneering. Some of the processes used to generate the data are less transparent than stochastic generation, because of their mathematically more complex . Undoubtedly, even with great care, some mistakes are 
-
-^[1]: "Recurrence" in recurrence networks means something else than recurrent in neural networks. I figured this out too late myself, yet at least I ended up using the recurrent neural networks in a different form
-
+## Stage 3: Analysis strategy 
+We will judge the sensitivity of  data by modelling the 
