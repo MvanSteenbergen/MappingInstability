@@ -1,6 +1,7 @@
 ---
 title: "Simulating the potential of applying recurrence quantification analysis on ecological momentary assessment data"
 author: "Maas van Steenbergen"
+bibliography: bibliography.bib
 date: today
 format: 
     pdf: default
@@ -8,18 +9,27 @@ jupyter: julia-1.9
 ---
 
 # Introduction
+Ecological momentary assessment has made it possible to construct time series on the basis of self-report scales. The constructs that are generated using these methods have been shown to display all markers of complex dynamics, which means that the patterning of data generated using these methods is only predictable in the short-term and that observations are dependent on the state of the system and its externalities at earlier timepoints [@olthofComplexityPsychologicalSelfratings2020]. Traditional statistical methods are often used to analyze the data that is generated using EMA, but these methods are not suitable to capture complex temporal patterns of psychological constructs [@jenkinsAffectVariabilityPredictability2020]. E.g., the popular root mean squared successive difference (RMSSD) method averages out change between two time points, and can only be used to indicate total variability of a certain range. It does not capture how that variability is patterned. 
 
-Ecological momentary assessment has made it possible to construct time series from self-report scales. This means that it has the potential to capture the dynamics of psychological constructs over time. While this type of data comes with its own set of severe challenges, there is also the potential to gain a better understanding of how these measures actually operate. Recurrence quantification analysis is one of the methods to analyse time series data. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where t refers to the time of an observation, x to an observation, and y is the distance to t where that point recurs. The method results in several summary statistics that can be used to understand patterns in the data.
+ Recurrence quantification analysis is an analysis technique that can be used to quantify these complicated patterns. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where $t$ refers to the time of an observation, $x$ to an observation, and $y$ is the distance to $t$ where that point recurs [@webber2005recurrence]. The method results in several indicators that can be used to understand patterns in the data. 
 
-Recurrence quantification measures were developed under the assumption that measurements can be retrieved at great frequency and at high resolution. However, measures in ecological momentary assessment rely on the admission of ordinal self-report questionnaires taken several times a day, limiting the set of possible states that the measuring device can capture. Moreover, the psychological constructs that are measured using EMA cannot be measured without relying on self-report questionnaires. This necessitates that research methods that are developed or adapted from the physical to the behavioural sciences take these difficulties into account.
+Recurrence quantification measures were developed under the assumption that measurements can be retrieved at great frequency and at high resolution. However, measures in ecological momentary assessment rely on the admission of tests taken several times a day, meaning that the sampling frequency is limited [@haslbeckRecoveringWithinPersonDynamics2022]. Moreover, the psychological constructs that are measured using EMA cannot be measured without relying on ordinal self-report questionnaires. This necessitates that research methods that are developed or adapted from the physical to the behavioural sciences take these particularities into account.
 
 # The current project
-This project aims to find out at what point course-graining data limits the usability of recurrence quantification analysis. We present an analysis pipeline consisting of multiple stages, in which each stage is a . We will use the `DynamicalSystems.jl` Julia-package to implement the toy-model, and the `Statistics.jl` and `RecurrenceQuantification.jl` packages to perform the analysis. 
+This project aims to find out at what point decreased data quality limits the ability of EMA to capture idiographic dynamics. We present an analysis pipeline consisting of multiple stages. We will use the `DynamicalSystems.jl` and `Statistics.jl` julia-packages to simulate the toy model and perform the analysis [@bezanson2017julia; @Datseris2018; @DatserisParlitz2022]. 
 
-In the first stage, we use a toy model developed to simulate the data based on a 3+1 dimensions model. This model captures clinical observations found in psychiatric symptomology by modeling internal factors, environmental noise, temporal specificities, and sympomatology. By changing these variables systematically, we aim to model a large variety of possible psychological constructs. For the purpose of our study, we redefine "symptomatology" as any naturally occurring dynamical development of psychological constructs.
+### Stage 1: Data generation
+In the first stage, we use a toy model developed to simulate the data based on a 3+1 dimensions model [@gauldDynamicalSystemsComputational2023]. This model captures clinical observations found in psychiatric symptomology by modeling internal factors, environmental noise, temporal specificities, and sympomatology. By changing these variables systematically, we aim to model a large variety of possible psychological constructs, and we save each one of these models as a separate time series. For the purpose of our study, we redefine "symptomatology" as any naturally occurring dynamical development of psychological constructs. We chose not to use more common statistical data generation techniques, [@olthofPsychologicalDynamicsAre2020]
 
-## Stage 2: Course-graining data
-We aim to model . To ordinalize the data generated using the toy model, we bin a range of the length of the data into n intervals of equal length, where n stands for the number of bins. We also vary the minimum and maximum value of this range to simulate ceiling and floor-effects. 
+### Stage 2: Binning data and removing time points
+Now, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into $n$ intervals of equal length, where $n$ stands for the number of bins. We also vary the minimum ($min$) and maximum ($max$) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping every $k$^th^ observation of the simulated data. We systematically decrease the value of $n$ and $min$ and increase the value of $k$ and $max$, storing any combination of these values.
 
-## Stage 3: Analysis strategy 
-We will judge the sensitivity of  data by modelling the 
+### Stage 3: Data analysis 
+We will judge the sensitivity of the data by calculating summary statistics and recurrence indicators (recurrence rate, determinism, Shannen entropy, ) for each time series in each state of degradation. We judge the sensitivity of the data to degredation by looking at the change in values for each of the indicators, where the full dataset is used as the baseline. We will then map the . 
+
+## Ethical approval and proof of concept
+The project has been approved by the ethical committee. We  
+
+# References
+::: {#refs}
+:::
