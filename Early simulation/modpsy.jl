@@ -2,8 +2,7 @@ using Gadfly
 using DataFrames
 using Random
 
-# Note that this function is a literal translation of the python 
-# found on , I'll adjust it later so it uses autodiff
+# DATA GENERATION
 function generateData()
     Smax, Rs, λs, τx, P, Rb, λb, L, τy, S, α, β, τz = 10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1 
 
@@ -36,4 +35,4 @@ function generateData()
     end
 end
 
-generateData()
+function ()
