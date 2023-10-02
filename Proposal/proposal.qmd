@@ -1,5 +1,5 @@
 ---
-title: "Simulating the potential of applying recurrence quantification analysis on ecological momentary assessment data"
+title: "Studying the effect of low sampling frequency and bandwith on RQA"
 author: "Maas van Steenbergen"
 bibliography: bibliography.bib
 date: today
@@ -9,7 +9,7 @@ jupyter: julia-1.9
 ---
 
 # Introduction
-Ecological momentary assessment has made it possible to construct time series on the basis of self-report scales. Data collected using these methods have been shown to display all markers of complex dynamics, which means that the patterning of data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier timepoints [@olthofComplexityPsychologicalSelfratings2020]. Traditional statistical methods are often used to analyze the data that is generated using EMA, but these methods are not suitable to capture complex temporal patterns of psychological constructs [@jenkinsAffectVariabilityPredictability2020]. E.g., like Jenkis et al. note, the popular root mean squared successive difference (RMSSD) method averages out change between two time points, and can only be used to indicate total variability of a certain range. It does not capture how that variability is patterned. 
+Ecological momentary assessment has made it possible to construct time series on the basis of self-report scales. Data collected using these methods have been shown to display all markers of complex dynamics, which means that the future of the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier timepoints [@olthofComplexityPsychologicalSelfratings2020]. Traditional statistical methods are often used to analyze the data that is generated using EMA, but these methods are not suitable to capture complex temporal patterns of psychological constructs [@jenkinsAffectVariabilityPredictability2020]. E.g., like Jenkis et al. note, the popular root mean squared successive difference (RMSSD) method averages out change between two time points, and can only be used to indicate total variability of a certain range. It does not capture how that variability is patterned. 
 
 Recurrence quantification analysis is an analysis technique that can be used to aid in understanding psychological dynamics. This method aims to capture repeating patterns in time series by quantifying which observations $x_{t+y}$ are equivelent to $x_{t}$, where $t$ refers to the time of an observation, $x$ to an observation, and $y$ is the distance to $t$ where that point recurs [@webber2005recurrence]. The method results in several indicators that can be used to understand patterns in the data. 
 
