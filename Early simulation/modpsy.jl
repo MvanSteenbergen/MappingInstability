@@ -29,8 +29,8 @@ function generateData(Smax, Rs, λs, τx, P, Rb, λb, L, τy, S, α, β, τz)
         push!(Lz, z)
         push!(Lf, f)
     end
-
-    return Ly, Lx, Lz, Lf
+    
+    return Ly, Lx, Lz, Lf, Lt
 end
 
 data = generateData(10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1 )
