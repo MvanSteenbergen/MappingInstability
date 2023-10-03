@@ -1,5 +1,5 @@
 ---
-subtitle: "The effect of low sampling frequency and bandwith on Recurrence Quantification Analysis for Ecological Mometary Assessment"
+title: "The effect of low sampling frequency and bandwith on Recurrence Quantification Analysis for Ecological Mometary Assessment"
 author: "Maas van Steenbergen"
 bibliography: bibliography.bib
 date: today
