@@ -1,0 +1,363 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Introduction},
+  pdfauthor={Maas van Steenbergen},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Introduction}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{The effect of low sampling frequency and bandwith on
+Recurrence Quantification Analysis for Ecological Mometary Assessment}
+\author{Maas van Steenbergen}
+\date{2023-10-03}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, breakable]}{\end{tcolorbox}}\fi
+
+Ecological momentary assessment has made it possible to construct time
+series on the basis of self-report scales, where one can map
+idiographic, within-person fluctuations of psychological constructs in a
+systematic manner (Conner et al. 2009). Data collected using these
+methods have been shown to display all markers of complex dynamics,
+which means that the future of the data generated using these methods is
+only predictable in the short-term, and that observations are dependent
+on the state of the system and its externalities at earlier timepoints
+(Olthof, Hasselman, and Lichtwarck-Aschoff 2020). Traditional
+statistical methods are often used to analyze the data that is generated
+using EMA, but these methods are not suitable to capture complex
+temporal patterns of psychological constructs within one person(Jenkins
+et al. 2020).
+
+Recurrence quantification analysis is an analysis technique that can be
+used to aid in understanding psychological dynamics. This method
+identifes recurrent patterns, or repetitions, in a time series (Webber
+Jr and Zbilut 2005). The method results in several indicators that can
+be used to understand the stability, predictability, and dynamical
+behavior of the construct. While these methods were developed under the
+assumption that measurements can be retrieved at great frequency and at
+high resolution, this is generally not the case for EMA. It relies on
+the admission of tests taken several times a day, meaning that the
+sampling frequency is limited (Haslbeck and Ryan 2022).Moreover, the
+psychological constructs that are measured using EMA cannot be measured
+without relying on ordinal self-report questionnaires. Therefore,
+systematic study of the consequences of these limitations on RQA is
+needed.
+
+For the purposes of this project, we assume that the underlying
+psychological construct is a continuously changing dynamical value
+(Boker 2002), and that EMA output values are accurate ordinal,
+relatively low-t attempts to measure continuous underlying dynamical
+processes. This is an idealized assumption to study the consequences of
+low sampling frequency and data bandwith, and does not take into account
+possible challenges to ecological validity (Stinson, Liu, and Dallery
+2022). This is outside of the scope of this project .
+
+\hypertarget{the-current-project}{%
+\section{The current project}\label{the-current-project}}
+
+This project aims to find out at what point decreased data quality
+limits the ability of EMA to capture idiographic dynamics. We present an
+analysis pipeline consisting of multiple stages. We will use the
+\texttt{DynamicalSystems.jl} and \texttt{Statistics.jl} julia-packages
+to simulate the toy model and perform the analysis (Bezanson et al.
+2017; Datseris 2018; Datseris and Parlitz 2022).
+
+\hypertarget{stage-1-data-generation}{%
+\subsubsection{Stage 1: Data generation}\label{stage-1-data-generation}}
+
+In the first stage, we use a toy model developed to simulate the data
+based on a 3 + 1 dimensions model (Gauld and Depannemaecker 2023). This
+model captures clinical observations found in psychiatric symptomology
+by modeling internal factors (\(y\)), environmental noise (\(z\)),
+temporal specificities (\(f\)), and sympomatology (\(x\)).
+Symptomatology will be the outcome variable of these study. By changing
+all four of these coefficients systematically, we aim to model a large
+variety of possible trajectories, and we save each one of these models
+as a separate time series. For the purpose of our study, we redefine
+``symptomatology'' as any dynamical fluctuations of psychological
+constructs. It is important to note that this set of equations is not
+chosen to be exhaustive, but because it is one of the only systematic
+attempts to explicitly model the temporal fluctuations of psychological
+constructs.
+
+\hypertarget{stage-2-binning-data-and-removing-time-points}{%
+\subsubsection{Stage 2: Binning data and removing time
+points}\label{stage-2-binning-data-and-removing-time-points}}
+
+Now, we aim to systematically reduce the quality of the data. We bin a
+range of the width of the data into \(n\) intervals of equal length,
+where \(n\) stands for the number of bins. We also vary the minimum
+(\(min\)) and maximum (\(max\)) value of this range to simulate ceiling
+and floor-effects. Moreover, we remove time points from the data by
+keeping every \(k\)\textsuperscript{th} observation of the simulated
+data. We systematically decrease the value of \(n\) and \(min\) and
+increase the value of \(k\) and \(max\), storing any combination of
+these values.
+
+\hypertarget{stage-3-data-analysis}{%
+\subsubsection{Stage 3: Data analysis}\label{stage-3-data-analysis}}
+
+We will judge the sensitivity of the data by calculating summary
+statistics and recurrence indicators (recurrence rate, determinism,
+entropy of the distribution.) for each time series in each state of
+degradation. We judge the sensitivity of the data to degredation by
+looking at the change in values for each of the indicators, where the
+full dataset is used as the baseline. We will then map the changes in
+the indicators as the difference for that indicator between the baseline
+and at \(n\), \(min\), \(max\), and \(k\).
+
+\hypertarget{ethical-approval-and-proof-of-concept}{%
+\subsection{Ethical approval and proof of
+concept}\label{ethical-approval-and-proof-of-concept}}
+
+The project has been approved by the ethical committee {[}!not yet
+done{]}.
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-bezanson2017julia}{}}%
+Bezanson, Jeff, Alan Edelman, Stefan Karpinski, and Viral B Shah. 2017.
+{``Julia: {A} Fresh Approach to Numerical Computing.''} \emph{SIAM
+Review} 59 (1): 65--98.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bokerConsequencesContinuityHunt2002}{}}%
+Boker, Steven M. 2002. {``Consequences of {Continuity}: {The Hunt} for
+{Intrinsic Properties} Within {Parameters} of {Dynamics} in
+{Psychological Processes}.''} \emph{Multivariate Behavioral Research} 37
+(3): 405--22. \url{https://doi.org/10.1207/S15327906MBR3703_5}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-connerExperienceSamplingMethods2009}{}}%
+Conner, Tamlin S., Howard Tennen, William Fleeson, and Lisa Feldman
+Barrett. 2009. {``Experience {Sampling Methods}: {A Modern Idiographic
+Approach} to {Personality Research}.''} \emph{Social and Personality
+Psychology Compass} 3 (3): 292--313.
+\url{https://doi.org/10.1111/j.1751-9004.2009.00170.x}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Datseris2018}{}}%
+Datseris, George. 2018. {``{DynamicalSystems}.jl: {A Julia} Software
+Library for Chaos and Nonlinear Dynamics.''} \emph{Journal of Open
+Source Software} 3 (23): 598. \url{https://doi.org/10.21105/joss.00598}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-DatserisParlitz2022}{}}%
+Datseris, George, and Ulrich Parlitz. 2022. \emph{Nonlinear Dynamics:
+{A} Concise Introduction Interlaced with Code}. {Cham, Switzerland}:
+{Springer Nature}. \url{https://doi.org/10.1007/978-3-030-91032-7}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gauldDynamicalSystemsComputational2023}{}}%
+Gauld, Christophe, and Damien Depannemaecker. 2023. {``Dynamical Systems
+in Computational Psychiatry: {A} Toy-Model to Apprehend the Dynamics of
+Psychiatric Symptoms.''} \emph{Frontiers in Psychology} 14.
+
+\leavevmode\vadjust pre{\hypertarget{ref-haslbeckRecoveringWithinPersonDynamics2022}{}}%
+Haslbeck, Jonas M. B., and Oisín Ryan. 2022. {``Recovering
+{Within-Person Dynamics} from {Psychological Time Series}.''}
+\emph{Multivariate Behavioral Research} 57 (5): 735--66.
+\url{https://doi.org/10.1080/00273171.2021.1896353}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-jenkinsAffectVariabilityPredictability2020}{}}%
+Jenkins, Brooke N., John F. Hunter, Michael J. Richardson, Tamlin S.
+Conner, and Sarah D. Pressman. 2020. {``Affect Variability and
+Predictability: {Using} Recurrence Quantification Analysis to Better
+Understand How the Dynamics of Affect Relate to Health.''}
+\emph{Emotion} 20 (3): 391--402.
+\url{https://doi.org/10.1037/emo0000556}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-olthofComplexityPsychologicalSelfratings2020}{}}%
+Olthof, Merlijn, Fred Hasselman, and Anna Lichtwarck-Aschoff. 2020.
+{``Complexity in Psychological Self-Ratings: Implications for Research
+and Practice.''} \emph{BMC Medicine} 18 (1): 317.
+\url{https://doi.org/10.1186/s12916-020-01727-2}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-stinsonEcologicalMomentaryAssessment2022}{}}%
+Stinson, Lesleigh, Yunchao Liu, and Jesse Dallery. 2022. {``Ecological
+{Momentary Assessment}: {A Systematic Review} of {Validity Research}.''}
+\emph{Perspectives on Behavior Science} 45 (2): 469--93.
+\url{https://doi.org/10.1007/s40614-022-00339-w}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-webber2005recurrence}{}}%
+Webber Jr, Charles L, and Joseph P Zbilut. 2005. {``Recurrence
+Quantification Analysis of Nonlinear Dynamical Systems.''}
+\emph{Tutorials in Contemporary Nonlinear Methods for the Behavioral
+Sciences} 94 (2005): 26--94.
+
+\end{CSLReferences}
+
+
+
+\end{document}
