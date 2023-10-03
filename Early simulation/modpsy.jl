@@ -29,7 +29,7 @@ function generateData(Smax, Rs, λs, τx, P, Rb, λb, L, τy, S, α, β, τz)
         push!(Lz, z)
         push!(Lf, f)
     end
-    
+
     return Ly, Lx, Lz, Lf, Lt
 end
 
