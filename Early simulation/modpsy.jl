@@ -16,14 +16,17 @@ function generateData(Smax, Rs, λs, τx, P, Rb, λb, L, τy, S, α, β, τz)
 
     for i in Li
         a = rand() - 0.5
+        
         δx = (Smax /(1 + exp((Rs - y) / λs)) - x) / τx
         δy = (P / (1 + exp((Rb - y) / λb)) + L * f - x * y - z) 
         δz = (S * (α * x + β * y) * a - z) / τz
         δf = (y - 1.0 * f) / 720
+
         y = y + δy * δt 
         x = x + δx * δt
         z = z + δz * δt
         f = f + δf * δt
+
         push!(Ly, y)
         push!(Lx, x)
         push!(Lz, z)
