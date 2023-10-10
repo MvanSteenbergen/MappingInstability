@@ -1,7 +1,7 @@
 ---
 title: "The Effect of Low Sampling Frequency and Bandwidth of Idiographic Ecological Momentary Assessment On Recurrence Quantification Analysis"
-subtitle: "A PROPOSAL"
-author:
+subtitle: "Supervised by dr. F. Hasselman and dr. J. Garcia Bernardo"
+authors:
   - name: Maas van Steenbergen
     orcid: 0009-0000-5071-8908
     email: m.vansteenbergen@uu.nl
@@ -9,17 +9,16 @@ author:
       - name: Utrecht University
         city: Utrecht, The Netherlands
         url: www.uu.nl
+    role: "Designs and implements the study"
+    
 keywords: 
     - Dynamical Psychology
     - Recurrence Quantification Analysis
     - Idiographic Methods
     - Ecological Momentary Assessment
 bibliography: bibliography.bib
-documentclass: report
-date: today
-format: 
-    pdf: default
-jupyter: julia-1.9
+documentclass: article
+format: aft-pdf
 ---
 
 ## Introduction
@@ -28,7 +27,7 @@ Ecological momentary assessment (EMA) has made it possible to construct time ser
 Within psychology, time-dependent idiographic dynamics have historically been neglected [@molenaarManifestoPsychologyIdiographic2004]. The methods to study this type of data are still in relative infancy within a psychological context. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of time-dependent dynamics of systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in a time series [@webber2005recurrence]. One can then derive several indicators of the stability, predictability, and the dynamical behavior of the time series from these recurrences. This method was developed in the physicial sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. It also relies on the admission of tests taken several times a day, meaning that the sampling frequency is limited [@haslbeckRecoveringWithinPersonDynamics2022]. Hence, systematic study of the consequences of these limitations on RQA is needed. 
 
 ## The current project
-The research question is *"At what point does reduced data quality limit EMA's ability to capture idiographic dynamics using RQA?"*. We present an analysis pipeline consisting of multiple stages. To simulate the toy model and perform the analysis, we will utilize the `DynamicalSystems.jl` and `Statistics.jl` julia-packages [@bezanson2017julia;@Datseris2018;@DatserisParlitz2022]. Our hope, and hypothesis, is that the trajectory of indicators under degraded data quality possesses a degree of predictability.This would enable us to estimate the reliability of inferences drawn from lower quality data.
+The research question is *"At what point does reduced data quality limit EMA's ability to capture idiographic dynamics using RQA?"*. We present an analysis pipeline consisting of multiple stages. To simulate the toy model and perform the analysis, we will utilize the `DynamicalSystems.jl` and `Statistics.jl` julia-packages [@bezanson2017julia;@Datseris2018;@DatserisParlitz2022]. Our hope, and hypothesis, is that the trajectory of indicators under degraded data quality possesses a degree of predictability. This would enable us to estimate the reliability of inferences drawn from lower quality data.
 
 For the purposes of this project, we assume that the underlying psychological construct is a continuously changing dynamical value [@bokerConsequencesContinuityHunt2002]. We also assume that EMA output values are accurate ordinal, low sampling frequency attempts to measure continuous underlying dynamical processes. It is important to note that this idealized assumption is made specifically for studying the consequences of low sampling frequency and data bandwidth. It does not, however, consider other potential challenges to validity [@stinsonEcologicalMomentaryAssessment2022;@maulPhilosophicalFoundationsPsychological2016].
 
@@ -39,7 +38,7 @@ In the first stage, we use a toy model to simulate the data based on the *3 + 1 
 Now, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into $n$ intervals of equal length, where $n$ stands for the number of bins. We also vary the minimum ($min$) and maximum ($max$) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping the first and every $k$^th^ observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
 
 #### Stage 3: Data analysis 
-We will judge the sensitivity of the data by deriving the recurrence indicators (recurrence rate, determinism, entropy of the distribution) for each time series in each state of degradation. We judge the sensitivity of the data to degredation by calculating the deviation of each of these values from the baseline, which is the intact database. We will then map the changes in the indicators as the difference for that indicator between the baseline and for that set of degraded data.
+We will judge the sensitivity of the data by deriving the recurrence indicators (recurrence rate, determinism, entropy of the distribution) for each time series in each state of degradation. We judge the sensitivity of the data to degredation by calculating the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will then map the changes in the indicators as the difference for that indicator between the baseline and for that set of degraded data.
 
 ## Ethical approval
 The project has been approved by the ethical committee. The target journal is Frontiers in Psychology, section Quantitative Psychology and Measurement.
