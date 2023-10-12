@@ -22,64 +22,60 @@ format: aft-pdf
 ---
 
 ## Introduction
+Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) has made it possible to construct time series based on self-report scales. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner [@connerExperienceSamplingMethods2009]. Data collected using these methods display all markers of complex dynamics, which means that the future trajectory of the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier time points [@olthofComplexityPsychologicalSelfratings2020]. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns [@jenkinsAffectVariabilityPredictability2020; @olthofPsychologicalDynamicsAre2020].
 
-Ecological momentary assessment (EMA) has made it possible to construct time series based on self-report scales. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner [@connerExperienceSamplingMethods2009]. Data collected using these methods display all markers of complex dynamics, which means that the future trajectory of the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier time points [@olthofComplexityPsychologicalSelfratings2020]. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns [@jenkinsAffectVariabilityPredictability2020; @olthofPsychologicalDynamicsAre2020].
-
-In psychology, time-dependent within-person dynamics have historically been neglected [@molenaarManifestoPsychologyIdiographic2004]. The methods in this paradigm are still in relative infancy within a psychological context. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of time-dependent dynamics of systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in a time series [@webber2005recurrence]. One can then derive several indicators of the stability, predictability, and the dynamical behavior of the time series from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Given that EMA relies on limited sampling frequency and precision, it is necessary to systematically assess the consequences of utilizing data on the quality of RQA output[@haslbeckRecoveringWithinPersonDynamics2022].
+In psychology, time-dependent within-person dynamics have historically been neglected [@molenaarManifestoPsychologyIdiographic2004]. The methods in this paradigm are still in relative infancy within a psychological context. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of time-dependent dynamics of systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in a time series [@webber2005recurrence]. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output [@haslbeckRecoveringWithinPersonDynamics2022].
 
 ## The current project
+The research question is *How are the recurrence indicators recovered using RQA influenced by binning, ceiling effects and sampling frequency*. We present an analysis pipeline consisting of multiple stages. To simulate the toy model and perform the analysis, we will utilize the `DynamicalSystems.jl` and `Statistics.jl` julia-packages [@bezanson2017julia; @Datseris2018; @DatserisParlitz2022]. Our hypothesis is that the trajectory of indicators under degraded data quality has a degree of predictability. This would enable us to estimate the reliability of inferences drawn from lower quality data.
 
-The research question is *How are the recurrence indicators recovered using RQA influenced by binning, ceiling effects and sampling frequency*. We present an analysis pipeline consisting of multiple stages. To simulate the toy model and perform the analysis, we will utilize the `DynamicalSystems.jl` and `Statistics.jl` julia-packages [@bezanson2017julia; @Datseris2018; @DatserisParlitz2022]. Our hope, and hypothesis, is that the trajectory of indicators under degraded data quality possesses a degree of predictability. This would enable us to estimate the reliability of inferences drawn from lower quality data.
-
-For the purposes of this project, we assume that the underlying psychological construct is a continuously changing dynamical value [@bokerConsequencesContinuityHunt2002]. We also assume that EMA output values are accurate ordinal, low sampling frequency attempts to measure continuous underlying dynamical processes. It is important to note that this idealized assumption is made specifically for studying the consequences of low sampling frequency and data bandwidth. It does not, however, consider other potential challenges to validity [@stinsonEcologicalMomentaryAssessment2022; @maulPhilosophicalFoundationsPsychological2016].
+For the purposes of this project, we assume that the underlying psychological construct is a continuously changing dynamical value [@bokerConsequencesContinuityHunt2002]. We also assume that EMA output values are accurate ordinal, low sampling frequency attempts to measure continuous underlying dynamical processes. It is important to note that this idealized assumption is held for studying the consequences of low sampling frequency and data bandwidth. It does not consider other potential challenges to validity [@stinsonEcologicalMomentaryAssessment2022; @maulPhilosophicalFoundationsPsychological2016].
 
 #### Stage 1: Data generation
 
-In the first stage, we use a toy model to simulate the data based on the *3 + 1 Dimensions Model* introduced by @gauldDynamicalSystemsComputational2023. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Symptomatology will be the outcome variable of this study. By changing all four of these coefficients systematically, we aim to model a large variety of possible trajectories. We save each one of these models as a separate time series. For the purpose of our study, we redefine "symptomatology" as any dynamical fluctuations of psychological constructs. <!-- perhaps refer to Olthof et al. https://doi.org/10.1037/abn0000740 -->
+In the first stage, we use a toy model to simulate the data based on the *3 + 1 Dimensions Model* introduced by @gauldDynamicalSystemsComputational2023. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Symptomatology will be the outcome variable of this study. By changing all four of these coefficients systematically, we aim to model a large variety of possible trajectories. We save each one of these models as a separate time series. For the purpose of our study, we redefine "symptomatology" as any dynamical fluctuations of psychological constructs [@olthofComplexityTheoryPsychopathology2023].
 
 #### Stage 2: Binning data and removing time points
 
-Now, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into $n$ intervals of equal length, where $n$ stands for the number of bins. We also vary the minimum ($min$) and maximum ($max$) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping the first and every $k$^th^ observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
+Afterwards, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into $n$ intervals of equal length, where $n$ stands for the number of bins. We also vary the minimum ($min$) and maximum ($max$) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping the first and every $k$^th^ observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
 
 #### Stage 3: Data analysis
 
-We will judge the sensitivity of the data by deriving the recurrence indicators (recurrence rate, determinism, entropy of the distribution) for each time series in each state of degradation. We judge the sensitivity of the data to degradation by calculating the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will then map the changes in the indicators as the difference for that indicator between the baseline and for that set of degraded data.
+We will judge the sensitivity of the data by deriving the recurrence indicators (recurrence rate, determinism, entropy of the distribution) for each time series in each state of degradation. We judge sensitivity to degradation by calculating the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will then map the changes as the deviation for these indicators between the baseline and a set of degraded data.
 
 ## Ethical approval
 
 The project has been approved by the ethical committee (23-1844). The target journal is Frontiers in Psychology, section Quantitative Psychology and Measurement.
+{{< pagebreak >}}
+# Appendix
+## Additional papers 
 
-## Additional papers
+#### Within-person research
+-   Necessity of within-person methods [@hamakerWhyResearchersShould2012;@bokerConsequencesContinuityHunt2002].
 
-### Theoretical background:
-
-
-#### Dynamical systems:
-
--   Theoretical introductions to dynamical systems and chaos theory [@ayersApplicationChaosTheory1997; @guastelloNonlinearDynamicalSystems2016]
--   "Red flags" for applying dynamical systems in the behavioural sciences
-
-- General about complexity in behavioural science: https://www.mdpi.com/2076-328X/11/5/77 
-- Case study with ESM series quant & qual: https://www.researchsquare.com/article/rs-3358763/v1 
-- Complexity properties in EMA time series: https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-020-01727-2 
-- Scaling laws: https://doi.org/10.1016/j.tics.2010.02.005 
+#### Dynamical systems
+-   Theoretical introductions to dynamical systems and chaos theory [@ayersApplicationChaosTheory1997; @guastelloNonlinearDynamicalSystems2016].
+-   Complexity in the behavioural sciences [@heinoStudyingBehaviourChange2021;@cuiUnlockingNonlinearDynamics2023;@sturmbergItComplicatedMisunderstanding2017].
+-   Scaling laws [@kelloScalingLawsCognitive2010].
+-   Affective Ising model [@loossensAffectiveIsingModel2020].
+-   Information theory (e.g. Shannon entropy) [@kleemanInformationTheoryDynamical2011].
 
 #### Recurrence Quantification Analysis
-
-- RQA: https://doi.org/10.1016/j.physrep.2006.11.001
+-   General [@marwanRecurrencePlotsAnalysis2007;@marwanTrendsRecurrenceAnalysis2023].
 -   (Multiplex) network approach to recurrence analysis [@donnerRecurrenceNetworksNovel2010a; @erogluMultiplexRecurrenceNetworks2018].
--   Multiscale Recurrence Quantification [@xuMultiscaleRecurrenceQuantification2017]
+-   Multiscale Recurrence Quantification [@xuMultiscaleRecurrenceQuantification2017].
+-   Automated parameter selection in RQA [@kraemerUnifiedAutomatedApproach2021].
 
-- Automated parameter selection in RQA: https://doi.org/10.1088/1367-2630/abe336 
+#### Measurement
+-   General 
+[@hasselmanGoingSquaresTheorybased2023].
+-   Difference between measurement in physics and in the behavioural and social sciences [@michellMeasurementPsychologyCritical1999; @bringmannHeatingMeasurementDebate2016;@georgescu-roegenEntropyLawEconomic1971].
+-   Discrete vs. continuous time [@dehaan-rietdijkDiscreteVsContinuousTime2017].
 
-#### Philosophy of Science:
-
--   Difference between measurement in physics and in the behavioural and social sciences [@michellMeasurementPsychologyCritical1999; @bringmannHeatingMeasurementDebate2016]
-- Measurement: https://doi.org/10.1177/09593543221131511 
-- Causality: https://doi.org/10.1017/S0954579423001281
--   Application of complex systems
-
-## References
+#### Ecological momentary assessment
+-   General [@shiffmanEcologicalMomentaryAssessment2008].
+{{< pagebreak >}}
+# References
 
 ::: {#refs}
 :::
