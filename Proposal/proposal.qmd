@@ -1,5 +1,5 @@
 ---
-title: "The Effect of Low Sampling Frequency and Bandwidth of Idiographic Ecological Momentary Assessment On Recurrence Quantification Analysis"
+title: "Analyzing the Impact of Low Sampling Frequency and Bandwidth on Recurrence Quantification Analysis in Idiographic Ecological Momentary Assessment"
 subtitle: "Supervised by dr. F. Hasselman and dr. J. Garcia Bernardo"
 authors:
   - name: Maas van Steenbergen
