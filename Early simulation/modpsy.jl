@@ -7,7 +7,7 @@ function generateData(Smax, Rs, λs, τx, P, Rb, λb, L, τy, S, α, β, τz)
 
     Li = collect(1:1200000)
     δt = 0.01
-    Lt = [dt * i for i in Li]
+    Lt = [δt * i for i in Li]
     y, x, z, f = 0.01, 0.0, 0.0, 0.0
     Ly = []
     Lx = []
@@ -33,7 +33,8 @@ function generateData(Smax, Rs, λs, τx, P, Rb, λb, L, τy, S, α, β, τz)
         push!(Lf, f)
     end
 
-    return Ly, Lx, Lz, Lf, Lt
+    return DataFrame(Ly = Ly, Lx = Lx, Lz = Lz, Lf = Lf, Lt = Lt)
 end
 
-data = generateData(10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1 )
+data = generateData(10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1)
+
