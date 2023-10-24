@@ -10,7 +10,6 @@ authors:
         city: Utrecht, The Netherlands
         url: www.uu.nl
     role: "Designs and implements the study"
-    
 keywords: 
     - Dynamical Psychology
     - Recurrence Quantification Analysis
