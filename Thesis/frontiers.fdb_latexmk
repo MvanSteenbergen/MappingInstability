@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex frontiers"] 1698146020 "frontiers.aux" "frontiers.bbl" "frontiers" 1698146023 0
+["bibtex frontiers"] 1698152572 "frontiers.aux" "frontiers.bbl" "frontiers" 1698152574 0
   "./Frontiers-Harvard.bst" 1698142299 31641 1341c127ed7af43085eb64600f38bbe5 ""
   "./test.bib" 1698142300 1721 b25ba6084ef977471166d005572ae5aa ""
-  "frontiers.aux" 1698146022 4636 3cb5c5cd0da6297f58829ced2e418843 "pdflatex"
+  "frontiers.aux" 1698152574 4636 5e6bfb70548200611b43817656c53ec4 "pdflatex"
   (generated)
   "frontiers.bbl"
   "frontiers.blg"
   (rewritten before read)
-["pdflatex"] 1698146020 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/frontiers.tex" "frontiers.pdf" "frontiers" 1698146023 0
+["pdflatex"] 1698152572 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/frontiers.tex" "frontiers.pdf" "frontiers" 1698152574 0
   "C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1698146013 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/lenovo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1698142352 24142509 aed79c38206b1171dacd44b248125ee9 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -156,11 +156,11 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/xelatex/xetexconfig/crop.cfg" 1169250894 305 57c5d049d73b46b49f97b41eaa29558b ""
   "FrontiersinVancouver.cls" 1698142299 28933 f5dd896f2166d9ac0a54ad628c6f62f8 ""
-  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/frontiers.tex" 1698142439 15023 0d6964c1b7eb9d5b9012cd3d2004043e ""
-  "frontiers.aux" 1698146022 4636 3cb5c5cd0da6297f58829ced2e418843 "pdflatex"
-  "frontiers.bbl" 1698146020 1978 65f112cb30c9b1629d0e34fdba23a4bd "bibtex frontiers"
-  "frontiers.out" 1698146022 2233 fbdcd0bcc4c9cf738695c24e71a5a9dd "pdflatex"
-  "frontiers.tex" 1698142439 15023 0d6964c1b7eb9d5b9012cd3d2004043e ""
+  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/frontiers.tex" 1698152569 14870 cd381cf8c8b8de43d5316c657ad9225d ""
+  "frontiers.aux" 1698152574 4636 5e6bfb70548200611b43817656c53ec4 "pdflatex"
+  "frontiers.bbl" 1698152572 1978 65f112cb30c9b1629d0e34fdba23a4bd "bibtex frontiers"
+  "frontiers.out" 1698152574 2233 fbdcd0bcc4c9cf738695c24e71a5a9dd "pdflatex"
+  "frontiers.tex" 1698152569 14870 cd381cf8c8b8de43d5316c657ad9225d ""
   "logo1.eps" 1698142300 37462 776b4d7efab5d1912cafad2bab92a208 ""
   "logo1.pdf" 1698142300 27591 c9c324700d80d9ea6d7bfd29ab6a68a1 ""
   "logo2.eps" 1698142300 21390 840276ca5cc4a05fb065091f7b756f00 ""
