@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  24 OCT 2023 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  25 OCT 2023 12:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,7 +549,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./logo1-eps-converted-to.pdf, id=67, 284.06125pt x 80.3pt>
+<./logo1-eps-converted-to.pdf, id=87, 284.06125pt x 80.3pt>
 File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./logo1-eps-converted-to.pdf>
 Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 58.
@@ -583,19 +583,32 @@ Underfull \hbox (badness 10000) detected at line 58
 []
  []
 
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 92.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1888) in paragraph at lines 75--76
+[]\OT1/ptm/m/n/12 (+20) While the roots of com-plex systems go back to the early roots of psych-o-logy under the
+ []
 
- [1
+
+Underfull \hbox (badness 1565) in paragraph at lines 75--76
+\OT1/ptm/m/n/12 (+20) name of stru-ctu-ra-lism, time-dependent within-person dyna-mics have been negle-cted in recent
+ []
+
+[1
 
 
 
 {C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 104.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 93.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 115.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 105.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 116.
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [2]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 127.
  (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -603,19 +616,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 116.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [2]
+ [3] (frontiers.bbl
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [3] (frontiers.bbl)
-<logo1.pdf, id=136, 284.06125pt x 80.3pt>
+ [4])
+<logo1.pdf, id=162, 284.06125pt x 80.3pt>
 File: logo1.pdf Graphic file (type pdf)
 <use logo1.pdf>
-Package pdftex.def Info: logo1.pdf  used on input line 170.
+Package pdftex.def Info: logo1.pdf  used on input line 182.
 (pdftex.def)             Requested size: 284.52756pt x 80.43947pt.
 Package epstopdf Info: Source file: <logo1.eps>
 (epstopdf)                    date: 2023-10-24 12:11:40
@@ -624,17 +635,17 @@ Package epstopdf Info: Source file: <logo1.eps>
 (epstopdf)                    date: 2023-10-24 12:15:08
 (epstopdf)                    size: 24813 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo1-eps-converted-to.pdf logo1.eps>
-(epstopdf)             \includegraphics on input line 182.
+(epstopdf)             \includegraphics on input line 194.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<logo1-eps-converted-to.pdf, id=137, 284.06125pt x 80.3pt>
+<logo1-eps-converted-to.pdf, id=163, 284.06125pt x 80.3pt>
 File: logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use logo1-eps-converted-to.pdf>
-Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 182.
+Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 194.
 (pdftex.def)             Requested size: 252.0pt x 71.24008pt.
-Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 183.
+Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 195.
 Package epstopdf Info: Source file: <logo2.eps>
 (epstopdf)                    date: 2023-10-24 12:11:40
 (epstopdf)                    size: 21390 bytes
@@ -642,15 +653,15 @@ Package epstopdf Info: Source file: <logo2.eps>
 (epstopdf)                    date: 2023-10-24 12:15:09
 (epstopdf)                    size: 10360 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo2-eps-converted-to.pdf logo2.eps>
-(epstopdf)             \includegraphics on input line 190.
+(epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<logo2-eps-converted-to.pdf, id=138, 70.2625pt x 79.29625pt>
+<logo2-eps-converted-to.pdf, id=164, 70.2625pt x 79.29625pt>
 File: logo2-eps-converted-to.pdf Graphic file (type pdf)
 <use logo2-eps-converted-to.pdf>
-Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 190.
+Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 202.
 (pdftex.def)             Requested size: 252.0pt x 284.44862pt.
 
 Package caption Warning: Unused \captionsetup[sub] on input line 20.
@@ -659,32 +670,32 @@ See the caption package documentation for explanation.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [4 <./logo1.pdf>]
+ [5 <./logo1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [5 <./logo1-eps-converted-to.pdf> <./logo2-eps-converted-to.pdf>] (frontiers.aux)
+ [6 <./logo1-eps-converted-to.pdf> <./logo2-eps-converted-to.pdf>] (frontiers.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `frontiers.out' has not changed.
-(rerunfilecheck)             Checksum: FBDCD0BCC4C9CF738695C24E71A5A9DD;2233.
+(rerunfilecheck)             Checksum: 26216A044DEAE33C2693189816CC7328;2765.
  ) 
 Here is how much of TeX's memory you used:
- 16309 strings out of 475248
- 262183 string characters out of 5757340
- 1930801 words of memory out of 5000000
- 37331 multiletter control sequences out of 15000+600000
- 594574 words of font info for 190 fonts, out of 8000000 for 9000
+ 16338 strings out of 475248
+ 262456 string characters out of 5757340
+ 1934801 words of memory out of 5000000
+ 37336 multiletter control sequences out of 15000+600000
+ 595288 words of font info for 202 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,8n,131p,1073b,670s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,8n,131p,1286b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on frontiers.pdf (5 pages, 253544 bytes).
+Output written on frontiers.pdf (6 pages, 259969 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 67733 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 67773 words of extra memory for PDF output out of 74296 (max. 10000000)
 
