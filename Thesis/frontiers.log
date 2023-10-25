@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  25 OCT 2023 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  25 OCT 2023 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,16 +583,6 @@ Underfull \hbox (badness 10000) detected at line 58
 []
  []
 
-
-Underfull \hbox (badness 1888) in paragraph at lines 75--76
-[]\OT1/ptm/m/n/12 (+20) While the roots of com-plex systems go back to the early roots of psych-o-logy under the
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 75--76
-\OT1/ptm/m/n/12 (+20) name of stru-ctu-ra-lism, time-dependent within-person dyna-mics have been negle-cted in recent
- []
-
 [1
 
 
@@ -685,15 +675,15 @@ Package rerunfilecheck Info: File `frontiers.out' has not changed.
 (rerunfilecheck)             Checksum: 26216A044DEAE33C2693189816CC7328;2765.
  ) 
 Here is how much of TeX's memory you used:
- 16338 strings out of 475248
- 262456 string characters out of 5757340
+ 16329 strings out of 475248
+ 262384 string characters out of 5757340
  1934801 words of memory out of 5000000
  37336 multiletter control sequences out of 15000+600000
- 595288 words of font info for 202 fonts, out of 8000000 for 9000
+ 594931 words of font info for 196 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,8n,131p,1286b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,8n,131p,1178b,589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on frontiers.pdf (6 pages, 259969 bytes).
+Output written on frontiers.pdf (6 pages, 259896 bytes).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  46 named destinations out of 1000 (max. 500000)
