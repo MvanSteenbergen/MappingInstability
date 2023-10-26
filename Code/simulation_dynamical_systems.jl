@@ -8,10 +8,13 @@ using Statistics
     threePlusOneDimensionsRule!(du, u, p, t)
 
     
-This function implements the 3 + 1 Dimensions Model from the paper 
+This function implements the 3 + 1 Dimensions Model. Please check the paper for details. 
 
     # Arguments
-    - 'du' = : The derivatives in the order 
+    - 'du' = : The derivatives of the functions x, y, z, f
+    - 'u' = : The functions x, y, z, f
+    - 'p' = : Parameters Smax, τx, τy, τz, τf, α, β, P, S, Rₛ, L, λᵦ, λₛ
+    - 't' = : Used by coupledODEs function. Does something under the hood.
 """
 function threePlusOneDimensionsRule!(du, u, p, t)
 
@@ -27,72 +30,28 @@ function threePlusOneDimensionsRule!(du, u, p, t)
     return nothing
 end
 
-"""
-    reduceTimepoints(data, reductionFactor)
-
-This simple function reduces the number of timepoints in a time series 
-    by taking the modulus of the reduction factor and 
-"""
-function reduceTimepoints(data, reductionFactor)
-    data = filter(:Li => x -> x % reductionFactor == 0, data)
-    data.Li = 1:nrow(data)
-    return data
-end
-
-"""
-    degradeData(data, segmentN, reductionFactor)
-
-
-TBW
-"""
-function degradeData(data, segmentN, reductionFactor)
-    segmentLength = (maximum(data.Lx) - minimum(data.Lx)) / segmentN
-
-    # Take the modulus and remove it from the values
-    data.Ax = [data.Lx[i] - mod(data.Lx[i], segmentLength) for i in 1:length(data.Lx)]
-
-    # Remove unwanted timepoints and return
-    return reduceTimepoints(data, reductionFactor)
-end
 
 # Set the starting conditions and parameters of the model
 p₀ = [10, 14, 14, 2, 1, 0.5, 0.5, 10, 10, 1, 1.01, 0.05, 0.1]
 u₀ = [0.0, 0.1, 0.0, 0.0]
 
-# Save the threePlusOneDimensions as a Dynamical Systems object using the rule
-threePlusOneDimensions = CoupledODEs(threePlusOneDimensionsRule!, u₀, p₀)
+# Saves the threePlusOneDimensions as a Dynamical Systems object using the rule specified above
+    threePlusOneDimensions = CoupledODEs(threePlusOneDimensionsRule!, u₀, p₀)
 
 # Settings
 totalTime = 20
 samplingTime = 0.5
 
-# Calculate trajectory over 
-Y,t = trajectory(threePlusOneDimensions, Ttr = 15, totalTime, Δt = samplingTime)
+# Calculate trajectory over time steps
+Y,t = trajectory(threePlusOneDimensions, Ttr = 35, totalTime, Δt = samplingTime)
 
 # Create figure
 fig = Figure()
-
 ax = Axis(fig[1, 1]; xlabel = "time", ylabel = "variable")
-
 for var in columns(Y)
     lines!(ax, t, var)
 end
-
 fig[1, 2] = Legend(fig, ax, "Variables", framevisible = false)
 
+# Show figure
 fig
-
-# Split columns
-x, y, z, f = columns(Y)
-
-# Create recurrenceplot
-R = recurrenceplot(threePlusOneDimensions)
-Rg = grayscale(R)
-rr = recurrencerate(R)
-
-# Plot heatmap
-heatmap(Rg; colormap = :grays,
-    axis = (title = "recurrence rate = $(rr)", aspect = 1)
-)
-
-# Create dataframe
