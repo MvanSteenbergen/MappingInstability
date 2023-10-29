@@ -63,3 +63,4 @@ degradedData = degradeData(reducedData, 7, 2)
 plot(x = reducedData.Li, y = reducedData.Lx)
 plot(x = degradedData.Li, y = degradedData.Ax)
 
+ 

@@ -11,11 +11,7 @@
 %%% In http://www.ctan.org/ you can find the packages and how to install them, if necessary. %%%
 %%%  NB logo1.jpg is required in the path in order to correctly compile front page header %%%
 
-\documentclass[utf8]{FrontiersinVancouver} % for articles in journals using the Harvard Referencing Style (Author-Date), for Frontiers Reference Styles by Journal: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal
-%\documentclass[utf8]{FrontiersinVancouver} % for articles in journals using the Vancouver Reference Style (Numbered), for Frontiers Reference Styles by Journal: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal
-%\documentclass[utf8]{frontiersinFPHY_FAMS} % Vancouver Reference Style (Numbered) for articles in the journals "Frontiers in Physics" and "Frontiers in Applied Mathematics and Statistics" 
-
-%\setcitestyle{square} % for articles in the journals "Frontiers in Physics" and "Frontiers in Applied Mathematics and Statistics" 
+\documentclass[utf8]{FrontiersinVancouver} 
 \usepackage{url,hyperref,lineno,microtype,subcaption}
 \usepackage[onehalfspacing]{setspace}
 
@@ -36,8 +32,6 @@
 \def\corrAuthor{Corresponding Author}
 
 \def\corrEmail{m.vansteenbergen@uu.nl}
-
-
 
 
 \begin{document}
@@ -66,27 +60,54 @@ As a primary goal, the abstract should render the general significance and conce
 
 
 \tiny
- \keyFont{ \section{Keywords:} keyword, keyword, keyword, keyword, keyword, keyword, keyword, keyword} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+ \keyFont{ \section{Keywords:} complex dynamics, data quality, keyword, keyword, keyword, keyword, keyword, keyword} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
 \end{abstract}
 
 \section{Introduction}
-Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) has made it possible to construct time series based on self-report scales. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner [@connerExperienceSamplingMethods2009]. Data collected using these methods display all markers of complex dynamics, which means that the future trajectory of the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier time points [@olthofComplexityPsychologicalSelfratings2020]. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns [@jenkinsAffectVariabilityPredictability2020; @olthofPsychologicalDynamicsAre2020].
+Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) has made it possible to construct time series based on self-report scales. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner \citep{connerExperienceSamplingMethods2009}. Data collected using these methods display all markers of complex dynamics, which means that the future trajectory of the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier time points \citep{olthofComplexityPsychologicalSelfratings2020b}. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns \citep{olthofPsychologicalDynamicsAre2020}.
 
-Time-dependent within-person dynamics have been neglected in recent history [@molenaarManifestoPsychologyIdiographic2004]. The methods in this paradigm are still in relative infancy within a psychological context. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of time-dependent dynamics of systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in a time series [@webber2005recurrence]. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output [@haslbeckRecoveringWithinPersonDynamics2022].
+Time-dependent within-person dynamics have been neglected in recent history \citep{molenaarManifestoPsychologyIdiographic2004}. The methods in this paradigm are still in relative infancy within a psychological context. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of time-dependent dynamics of systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in a time series \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}.
 
-For Original Research Articles \citep{conference}, Clinical Trial Articles \citep{article}, and Technology Reports \citep{patent}, the introduction should be succinct, with no subheadings \citep{book}. For Case Reports the Introduction should include symptoms at presentation \citep{chapter}, physical exams and lab results \citep{dataset}.
+Some extensions or reformulations of this model can also aid in unlocking patterns in data. Network methods 
 
 \section{Materials and methods}
 
 \subsection{Software}
+I will use the Julia-packages `DynamicalSystems.jl`,  `Statistics.jl` to implement  
 
 \subsection{Toy model}
-For this study, I will use the 
+For this study, we will use the "3 + 1 dimension model" introduced by \citep{gauldDynamicalSystemsComputational2023}. We chose to generate data using a toy model, as self-report data by definition cannot be measured constantly and continuously with high ecological validity. This means we have to generate data that is as realistic as possible, given the constraint that we can not know how the .  The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can easily be used for our project by reformulating some of the model and .  It uses four coupled differential equations to model the effect of time on symptom intensity. It is explained quite well in the aforementioned paper. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible
+
+\subsubsection{Symptom intensity}
+The first equation is supposed to represent symptom intensity. 
+
+\begin{equation}
+    \tau_{x}\frac{dx}{dt} = \frac{S_{max}}{1+exp(\frac{Rs-y}{\lambda_{s}})} - x
+\end{equation}
+
+\subsubsection{Modelling of internal elements}
+
+\begin{equation}
+    \tau_{y}\frac{dy}{dt} = \frac{P}{1+exp(\frac{R_{b}-y}{\lambda_{b}})} + L - xy - z
+\end{equation}
+
+\subsubsection{Modelling of perceived environment}
+
+\begin{equation}
+    \tau_{y}\frac{dy}{dt} = \frac{P}{1+exp(\frac{R_{b}-y}{\lambda_{b}})} + L - xy - z
+\end{equation}
+
+\subsubsection{Temporal specificities}
+
+\begin{equation}
+    \tau_{z}\frac{dz}{dt} = S(ax + \beta y)\zeta(t) - z
+\end{equation}
 
 \section{Results}
 
 \section{Discussion}
 The results of this study suggest that applying recurrence methods in 
+
 \section{Article types}
 
 For requirements for a specific article type please refer to the Article Types on any Frontiers journal page. Please also refer to  \href{http://home.frontiersin.org/about/author-guidelines#Sections}{Author Guidelines} for further information on how to organize your manuscript in the required sections or their equivalents for your field
@@ -164,7 +185,7 @@ The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF RE
 
 \bibliographystyle{Frontiers-Harvard} %  Many Frontiers journals use the Harvard referencing system (Author-date), to find the style and resources for the journal you are submitting to: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal. For Humanities and Social Sciences articles please include page numbers in the in-text citations 
 %\bibliographystyle{Frontiers-Vancouver} % Many Frontiers journals use the numbered referencing system, to find the style and resources for the journal you are submitting to: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal
-\bibliography{test}
+\bibliography{bibliography}
 
 %%% Make sure to upload the bib file along with the tex file and PDF
 %%% Please see the test.bib file for some examples of references
