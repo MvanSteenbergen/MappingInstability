@@ -76,13 +76,13 @@ Some extensions or reformulations of this model can also aid in unlocking patter
 I will use the Julia-packages `DynamicalSystems.jl`,  `Statistics.jl` to implement  
 
 \subsection{Toy model}
-For this study, we will use the "3 + 1 dimension model" introduced by \citep{gauldDynamicalSystemsComputational2023}. We chose to generate data using a toy model, as self-report data by definition cannot be measured constantly and continuously with high ecological validity. This means we have to generate data that is as realistic as possible, given the constraint that we can not know how the .  The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can easily be used for our project by reformulating some of the model and .  It uses four coupled differential equations to model the effect of time on symptom intensity. It is explained quite well in the aforementioned paper. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible
+For this study, we will use the "3 + 1 dimension model" introduced by \citep{gauldDynamicalSystemsComputational2023}. We chose to generate data using a toy model, as self-report data by definition cannot be measured constantly and continuously with high ecological validity. This means we have to generate data that is as realistic as possible, given the constraint that we can not know how the.  The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can easily be used for our project by reformulating some of the model and .  It uses four coupled differential equations to model the effect of time on symptom intensity. It is explained quite well in the aforementioned paper. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible
 
 \subsubsection{Symptom intensity}
 The first equation is supposed to represent symptom intensity. 
 
 \begin{equation}
-    \tau_{x}\frac{dx}{dt} = \frac{S_{max}}{1+exp(\frac{Rs-y}{\lambda_{s}})} - x
+    \tau_{x}\frac{dx}{dt} = \frac{S_{\max}}{1+exp(\frac{Rs-y}{\lambda_{s}})} - x
 \end{equation}
 
 \subsubsection{Modelling of internal elements}
