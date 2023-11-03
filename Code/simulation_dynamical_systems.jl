@@ -27,7 +27,7 @@ function threePlusOneDimensions!(du, u, p, t)
     du[1] = (Smax /(1 + exp((Rₛ - u[2]) / λₛ)) - u[1]) / τx
     du[2] = (P / (1 + exp((Rᵦ - u[2]) / λᵦ)) + u[4] * L - u[1] * u[2] - u[3]) / τᵧ
     du[3] = (S * (α * u[1] + β * u[2]) * p[14] - u[3]) / τz
-    du[4] = u[2] - λf * u[4] / τf
+    du[4] = (u[2] - λf * u[4]) / τf
     return nothing
 end 
 
