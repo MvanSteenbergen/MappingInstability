@@ -194,14 +194,8 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-p
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\fmtcount\fc-english.def
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\fmtcount\fc-english.def
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\fmtcount\fc-english.def
-INPUT .\frontiers.out
-INPUT .\frontiers.out
-INPUT frontiers.out
-INPUT frontiers.out
-OUTPUT frontiers.pdf
-INPUT .\frontiers.out
-INPUT .\frontiers.out
 OUTPUT frontiers.out
+OUTPUT frontiers.pdf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cfg
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cfg
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cfg
@@ -257,6 +251,7 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb7t.tfm
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb7t.tfm
@@ -278,6 +273,8 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb7t.vf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
@@ -300,7 +297,6 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr
 INPUT .\frontiers.bbl
 INPUT .\frontiers.bbl
 INPUT frontiers.bbl
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT .\logo1.pdf
@@ -332,8 +328,6 @@ INPUT .\logo2-eps-converted-to.pdf
 INPUT .\logo2-eps-converted-to.pdf
 INPUT .\logo2-eps-converted-to.pdf
 INPUT .\logo2-eps-converted-to.pdf
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri7t.vf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT frontiers.aux

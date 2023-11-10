@@ -60,23 +60,30 @@ As a primary goal, the abstract should render the general significance and conce
 
 
 \tiny
- \keyFont{ \section{Keywords:} complex dynamics, data quality, keyword, keyword, keyword, keyword, keyword, keyword} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+ \keyFont{ \section{Keywords:} complex dynamics, data quality} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
 \end{abstract}
 
 \section{Introduction}
-Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) has made it possible to construct time series based on self-report scales. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner \citep{connerExperienceSamplingMethods2009}. Data collected using these methods display all markers of complex dynamics, which means that the future trajectory of the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier time points \citep{olthofComplexityPsychologicalSelfratings2020b}. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns \citep{olthofPsychologicalDynamicsAre2020}.
+Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) is a technique meant to construct time series based on self-report instruments. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner \citep{connerExperienceSamplingMethods2009}. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns \citep{olthofPsychologicalDynamicsAre2020}. 
 
-Time-dependent within-person dynamics have been neglected in recent history \citep{molenaarManifestoPsychologyIdiographic2004}. The methods in this paradigm are still in relative infancy within a psychological context. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of time-dependent dynamics of systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in a time series \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}.
+We postulate that there is an underlying trajectory of whatever we aim to measure. These  In other words, we assume that the categorical We also assume that the trajectory of the time series is chaotic, which means that the data generating mechanism is very sensitive to changes in the initial parameters. This means that the data generated using these methods is only predictable in the short-term, and that observations are dependent on the state of the system and its externalities at earlier time points \citep{olthofComplexityPsychologicalSelfratings2020b}. Hence, chaotic behaviour can be easily mistaken for random behaviour, but can (yet does not have to be) fully deterministic. We also postulate that self-report measures are accurate measures at a certain timepoint of this continuous measure, but with lower bandwith and more coursegraining. Working from these assumptions, we run a simulation 
 
-Some extensions or reformulations of this model can also aid in unlocking patterns in data. Network methods 
+The methods to study chaotic behavior are still in infancy within a psychological context \citep{molenaarManifestoPsychologyIdiographic2004}. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of the time-dependent dynamics of complex systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in time series analysis \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}.
+
+We choose to generate the data through a set of coupled differential equations that lead to chaotic behaviour. Note that randomness has a part to play in the generation of the data, but that most of the variance is created determinalistically through four broadly modeled influences. These influences include symptom intensity, the modelling of the person's internal factors, influences of the perceived environment, and the influence of time. Many alternative models could be formulated that could result in similar behavior or would be as realistic. 
+
+Our choice for this way of modelling is based on a variety of interesting characteristics. The most important of these is that self-report data cannot be measured consistently and continuously with high ecological validity in almost all use cases where self-report is used. We note that if it were possible to measure these variables directly, then researchers would not have to rely on the instrument in the first place. Therefore, theory-based simulation is a necessary starting point for further research. We hope that the models, in turn, can be refined using empirical data that take into account the time dependence, and that is where the recovery of complex characteristics can be used in ways that would be hard to do if one were to study the trajectory statistically.
+
+This brings us to a natural place to introduce the goal of this project: we hope that studying the stability of complexity characteristics under data degredation can help us recover certain aspects of the trajectory of the system under study. E.g., incompatibility of the theoretical time development of disease symptomatology contrasted with the recovered complexity characteristics of a patient can be used as a counterfactual against the choice of one model over another. A more concrete example: say that a patient is postulated to have a disorder where a particular symptom oscillates predictably and repeatadly for a period of 12 hours. A more fine-tuned understanding of that trajectory can then be used to optimize treatment times. If their symptoms were to oscillate more irratically, then this would be reflected in the recurrence indicators of the patient. If it would show dampened oscillations instead where the bandwith becomes lower with the passage of time, then that would be reflected in the recurrence inidicators in a different manner. This is, of course, only true if those characteristics can be picked up reliably from the degraded data. 
 
 \section{Materials and methods}
 
 \subsection{Software}
-I will use the Julia-packages `DynamicalSystems.jl`,  `Statistics.jl` to implement  
+We used the Julia languages, and in particular `DynamicalSystems.jl', `RecurrenceAnalysis.jl', and `Statistics.jl', to implement the toy model and run the recurrence analyses. Full information about dependencies and version numbers can be found in a human-readable format in the Manifest.toml file in the Github-repository. Instructions for running the analysis through a sandboxed project environment that is identical can be found on the main page of the github repository.
 
-\subsection{Toy model}
-For this study, we will use the "3 + 1 dimension model" introduced by \citep{gauldDynamicalSystemsComputational2023}. We chose to generate data using a toy model, as self-report data by definition cannot be measured constantly and continuously with high ecological validity. This means we have to generate data that is as realistic as possible, given the constraint that we can not know how the.  The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can easily be used for our project by reformulating some of the model and .  It uses four coupled differential equations to model the effect of time on symptom intensity. It is explained quite well in the aforementioned paper. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible
+\subsection{Toy Model}
+For this study, we will use the "3 + 1 dimension model" introduced by \citep{gauldDynamicalSystemsComputational2023}. The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can be used for our project by reformulating some of the model .  It uses four coupled differential equations to model the effect of time on symptom intensity. It is explained quite well in the aforementioned paper. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible
+
 
 \subsubsection{Symptom intensity}
 The first equation is supposed to represent symptom intensity. 
@@ -103,11 +110,26 @@ The first equation is supposed to represent symptom intensity.
     \tau_{z}\frac{dz}{dt} = S(ax + \beta y)\zeta(t) - z
 \end{equation}
 
+\subsection{Recurrence Indicators}
+
+\textbf{Recurrence rate}
+\textbf{Determinism}
+\textbf{Average length of diagonal structures}
+\textbf{Maximum length of diagonal structures}
+\textbf{Divergence}
+\textbf{Entropy of diagonal structures}
+\text
+\textbf{Trapping time}
+\textbf{Most probable recurrence time}
+
 \section{Results}
 
 \section{Discussion}
 The results of this study suggest that applying recurrence methods in 
 
+One of the ways that researchers can strengthen their idiographic inferences is through asking whether their 
+
+The limitations of this study are 
 \section{Article types}
 
 For requirements for a specific article type please refer to the Article Types on any Frontiers journal page. Please also refer to  \href{http://home.frontiersin.org/about/author-guidelines#Sections}{Author Guidelines} for further information on how to organize your manuscript in the required sections or their equivalents for your field
@@ -153,8 +175,6 @@ In the main text, when inputting symbols, use the following format:\begin{verbat
 \subsection{Resource Identification Initiative}
 To take part in the Resource Identification Initiative, please use the corresponding catalog number and RRID in your current manuscript. For more information about the project and for steps on how to search for an RRID, please click \href{http://www.frontiersin.org/files/pdf/letter_to_author.pdf}{here}.
 
-\subsection{Life Science Identifiers}
-Life Science Identifiers (LSIDs) for ZOOBANK registered names or nomenclatural acts should be listed in the manuscript before the keywords. For more information on LSIDs please see \href{https://www.frontiersin.org/about/author-guidelines#Nomenclature}{Inclusion of Zoological Nomenclature} section of the guidelines.
 
 
 \section{Additional Requirements}
@@ -162,8 +182,6 @@ Life Science Identifiers (LSIDs) for ZOOBANK registered names or nomenclatural a
 For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
 
 \section*{Conflict of Interest Statement}
-%All financial, commercial or other relationships that might be perceived by the academic community as representing a potential conflict of interest must be disclosed. If no such relationship exists, authors will be asked to confirm the following statement: 
-
 The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
 
 \section*{Author Contributions}
@@ -174,13 +192,13 @@ The Author Contributions section is mandatory for all articles, including articl
 Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
 
 \section*{Acknowledgments}
-This is a short text to acknowledge the contributions of specific colleagues, institutions, or agencies that aided the efforts of the authors.
+I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to persue the project as I imagined it. I also acknowledge the great help of the Julia community, which has been helping me with programming where I got stuck and which took the time to respond to my stupid questions. Finally, I'd like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is followable.
 
 \section*{Supplemental Data}
  \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
 
 \section*{Data Availability Statement}
-The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF REPOSITORY] [LINK].
+The code, all additional material, and generated data for this study can be found in the [NAME OF REPOSITORY]{}.
 % Please see the availability of data guidelines for more information, at https://www.frontiersin.org/about/author-guidelines#AvailabilityofData
 
 \bibliographystyle{Frontiers-Harvard} %  Many Frontiers journals use the Harvard referencing system (Author-date), to find the style and resources for the journal you are submitting to: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal. For Humanities and Social Sciences articles please include page numbers in the in-text citations 

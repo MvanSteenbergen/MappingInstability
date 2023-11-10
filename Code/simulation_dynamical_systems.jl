@@ -101,11 +101,18 @@ end
 
 binData(healthyX, 5)
 
+function calculateRecurrenceIndicators()
+    
+end
+
 # Calculate the recurrence matrix for the data
 healthyRM = RecurrenceMatrix(healthy, 0.1)
 schizophreniaRM = RecurrenceMatrix(schizophrenia, 0.1) 
 bipolarRM = RecurrenceMatrix(bipolar, 0.1)
 bereavementRM = RecurrenceMatrix(bereavement, 0.1)
+
+# Make plot 
+
 
 # Do RQA
 healthyRQA = rqa(healthyRM)

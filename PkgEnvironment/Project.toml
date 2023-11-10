@@ -1,6 +1,9 @@
 [deps]
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DelayEmbeddings = "5732040d-69e3-5649-938a-b6b4f237613f"
+DiffEqGPU = "071ae1c0-96b5-11e9-1965-c90190d839ea"
 DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 DynamicalSystems = "61744808-ddfa-5f27-97ff-6e42cc95d634"
