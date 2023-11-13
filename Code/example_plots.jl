@@ -10,9 +10,6 @@ fig = Figure(resolution = (1000,1000), fontsize = 40)
 ax = Axis(fig[1, 1]; title = "Recurrence plot for a simple sinus wave")
 heatmap!(ax, grayscale(R))
 fig
-
-
-
 rqa(R)
 
 function dampedOscillationsRule!()
