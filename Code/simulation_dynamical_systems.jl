@@ -19,7 +19,7 @@ This function implements the 3 + 1 Dimensions Model. Please check the paper for 
     - 'du' = : The derivatives of the functions x, y, z, f
     - 'u' = : The functions x, y, z, f
     - 'p' = : Parameters Smax, Rₛ, λₛ, τx, P, Rᵦ, λᵦ, L, τᵧ, S, α, β, τz, ζ 
-    - 't' = : Used by ODEProblem function. Does something under the hood.
+    - 't' = : Represents time. Not directly called.
 """
 function threePlusOneDimensions!(du, u, p, t)
     Smax, Rₛ, λₛ, τx, P, Rᵦ, λᵦ, L, τᵧ, S, α, β, τz, ζ, λf, τf  = p
@@ -55,12 +55,11 @@ end
 function calculateTrajectory(p₀)
     u₀ = [0.0, 0.01, 0.0, 0.0]
     prob = ODEProblem(threePlusOneDimensions!, u₀, (0.0,12000.0), p₀)
-    data = solve(prob, Tsit5(), callback = cb, reltol = 1e-9, abstol = 1e-9, saveat = 0.01)
+    data = solve(prob, Tsit5(), callback = cb, reltol = 1e-9, abstol = 1e-9, saveat = 0.1, maxiters = 1e7)
     data = unique(DataFrame(data))
     data = StateSpaceSet(data[:,2])
 
     # Initially reduce the data set so that each points reflects one measurement per day
-    data = reduceTimepoints(data, 100)
     return data
 end
 
@@ -70,8 +69,6 @@ healthy = calculateTrajectory([10, 1, 0.1, 14, 10, 1.04, 0.05, 0.2, 14, 4, 0.5, 
 schizophrenia = calculateTrajectory([10, 1, 0.1, 14, 10, 0.904, 0.05, 0.2, 14, 4, 0.5, 0.5, 1, 0.2, 1, 720])
 bipolar = calculateTrajectory([10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1, 0.2, 1, 720])
 bereavement = calculateTrajectory([10, 1, 0.1, 14, 10, 1, 0.05, 0.6, 14, 4.5, 0.5, 0.5, 1, 0.2, 1, 720])
-
-reduced = reduceTimepoints(healthy, 256)
 
 # Plot and calculate the recurrence statistics
 
@@ -99,19 +96,30 @@ function degradeData(data, segmentN, reductionFactor)
     return reduceTimepoints(reduced, reductionFactor)
 end   
 
-binData(healthyX, 5)
-
-function calculateRecurrenceIndicators()
-    
+function calculateRQA(data, segmentN, reductionFactor)
+    segment = degradeData(data, segmeplntN, reductionFactor)
+    rm = RecurrenceMatrix(segment, (reductionFactor*0.1))
+     return rqa(segment)
 end
+
+
+
+function runSimulationStudy(data)
+
+    for segmentN in [100, 20, 7, 6, 5, 4, 3, 2]
+        for reductionFactor in [8, 4, 2, 1]
+            calculateRQA(data, segmentN, reductionFactor)
+        end
+    end
+end
+
+plot(healthy)
 
 # Calculate the recurrence matrix for the data
 healthyRM = RecurrenceMatrix(healthy, 0.1)
 schizophreniaRM = RecurrenceMatrix(schizophrenia, 0.1) 
 bipolarRM = RecurrenceMatrix(bipolar, 0.1)
 bereavementRM = RecurrenceMatrix(bereavement, 0.1)
-
-# Make plot 
 
 
 # Do RQA
