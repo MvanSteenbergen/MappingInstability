@@ -38,7 +38,7 @@
 \onecolumn
 \firstpage{1}
 
-\title[Running Title]{Making Self-Report Ready for Dynamics: the Impact of Low Sampling Frequency and Bandwidth on Recurrence Quantification Analysis in Idiographic Ecological Momentary Assessment} 
+\title[Running Title]{Making Self-Report Ready for Dynamics: the Impact of Low Sampling Frequency and Bandwidth on Recurrence Quantification Analysis in Within-Person Ecological Momentary Assessment} 
 
 \author[\firstAuthorLast ]{\Authors} %This field will be automatically populated
 \address{} %This field will be automatically populated
@@ -60,29 +60,33 @@ As a primary goal, the abstract should render the general significance and conce
 
 
 \tiny
- \keyFont{ \section{Keywords:} complex dynamics, data quality} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+ \keyFont{ \section{Keywords:} Complex Dynamics, Data Quality, Idiographic Methods, Recurrence Quantification Analysis} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
 \end{abstract}
 
 \section{Introduction}
-Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) is a technique meant to construct time series based on self-report instruments. This approach allows mapping within-person fluctuations of psychological constructs in a systematic manner \citep{connerExperienceSamplingMethods2009}. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing complex temporal within-person patterns \citep{olthofPsychologicalDynamicsAre2020}. 
+Self-report scales have a long historical precedent in psychology. Ecological momentary assessment (EMA) is a technique meant to construct time series based on self-report instruments, allowing for `idiographic' inference on the basis of self-report data (henceforth referred to as within-person) \citep{connerExperienceSamplingMethods2009}. While traditional statistical methods are frequently and fruitfully employed to analyze data generated using EMA, these methods are not suitable for capturing some complex temporal within-person patterns \citep{olthofPsychologicalDynamicsAre2020}. 
 
-The methods to study chaotic behavior are still in infancy within a psychological context \citep{molenaarManifestoPsychologyIdiographic2004}. They are often imported from complex dynamical systems theory, which is an area of mathematics that concerns itself with the study of the time-dependent dynamics of complex systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in time series analysis \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}. 
+Methods to study within-person trajectories of psychological constructs are still in infancy within a psychological context \citep{molenaarManifestoPsychologyIdiographic2004}. One of the reasons for this is that group-comparison research is often incorrectly equated with finding general laws in psychology, and thus with scientific rigour, which leads to the marginalization of other approaches \citep{hamakerWhyResearchersShould2012, lamiellProblemIndividualityScientific2021}. Another reason is that the statistical tools we predominantly rely on are a natural fit for between-person research and are both well-researched and well-understood for relatively course measurement devices. Statistics has a built-in relience on aggregation to offset the problems that are caused by such devices. Besides, many devices exist to deal with course measurement devices or relatively low accuracy in statistics when these methods fail: think of missing data imputation, or reliability measures. While dynamical systems research has a mature research history, it is often used in places that have more accurate measuring devices (such as physics) or fields that do not really initially concern themselves with `real' measurement at all (such as some subfields of mathematics). 
 
-We postulate that there is an underlying continuous trajectory of the constructs that EMA devices aim to measure. In other words, we assume that ordinal likert type-scales reflect an underlying continuous measure. We also assume that the trajectory of the time series is chaotic, which means that the data generating mechanism is very sensitive to changes in the initial parameters: it is only predictable in the short-term, and observations are dependent on the state of the system and its externalities at earlier time points \citep{olthofComplexityPsychologicalSelfratings2020b}. Hence, chaotic behaviour can be easily mistaken for random behaviour, but can (yet does not have to be) fully deterministic. Finally, we suppose that self-report measures are accurate measures at a certain timepoint of this continuous measure, but with lower bandwidth and more coursegraining. Working from these assumptions, we first simulate a potential continuous trajectory of a dynamical system, coursegrain and ordinalize it, and then test the deviation of recurrence measures from a segment of the full dataset to its degraded alternatives.
+Non-statistical within-person methods are often imported from dynamical systems theory, which is an area of mathematics that concerns itself with the study of the time-dependent dynamics of complex systems. A popular analysis technique is called Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in time series analysis \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}. 
 
-We choose to generate the data through a set of coupled differential equations that lead to chaotic behaviour. Note that while randomness does have a part to play in the generation of the data, most of the variance is created determinalistically through four broadly modeled influences. These influences consist of symptom intensity, the modelling of the person's internal factors, influences of the perceived environment, and the influence of time. Many alternative models could be formulated that could result in similar behavior or would be as or more realistic.  
+We postulate that there is an underlying continuous trajectory of the constructs that EMA devices aim to measure. This might seem obvious, but it is not universally agreed upon /citep{}. In other words, we make the explicit assumption that ordinal likert type-scales reflect an underlying continuous measure that is internally consistent. We also assume that the trajectory of the time series is chaotic, which means that the data generating mechanism is very sensitive to changes in the initial parameters, it is only predictable in the short-term, and observations are dependent on the state of the system and its externalities at earlier time points \citep{olthofComplexityPsychologicalSelfratings2020b}. Hence, chaotic behaviour can be easily mistaken for random behaviour, but can be fully deterministic. Finally, we suppose that self-report measures are accurate measures at a certain timepoint of this continuous measure, but courser. Working from these assumptions, we first simulate a potential continuous trajectory of a dynamical system, coursegrain and ordinalize it, and then test the deviation of recurrence measures from a segment of the full dataset to its degraded alternatives. Bear in mind that we do not see within-person research as inherently qualitative, and between-person research as inherently quantitative, as some do. 
 
-Our choice for this way of modelling is based on a variety of interesting characteristics. The most important of these is that self-report data cannot be measured consistently and continuously with high ecological validity in almost all use cases where self-report is used. We note that if it were possible to measure these variables directly, then researchers would not have to rely on the instrument in the first place. Therefore, theory-based simulation is a necessary starting point for further research. We hope that the models, in turn, can be refined using empirical data that takes into account time dependence, and that is where the recovery of complex characteristics can be used in ways that would be hard to do if one were to study the trajectory statistically. Furthermore, we chose for this model because it is one of the only ones (if not the only one) that has the stated goal of emulating the trajectory of psychological constructs over time (in the form of symptomatology of psychiatric illness), thus being a good starting point . 
+We choose to generate the data through a set of coupled differential equations that lead to chaotic behaviour. Note that while randomness does have a part to play in the generation of the data, most of the variance is created deterministically through four broadly modeled influences. These influences consist of symptom intensity, the modelling of the person's internal factors, influences of the perceived environment, and the influence of time. Many alternative models could be formulated that could result in similar behavior or would be as or more realistic. With a suitably broad model, however, many different trajectories can be reconstructed using parameter tuning. 
 
-This brings us to a natural place to introduce the goal of this project. Right now, there is often no empirical feedback system for theoretical models that aim to recover the time-dependent characteristics of constructs that are measured using EMA. We hope that studying the stability of complexity characteristics under data degredation can help us recover certain aspects empirically of the trajectory of the system under study. E.g., incompatibility of the theoretical time development of disease symptomatology contrasted with the recovered complexity characteristics of a patient can be used as a counterfactual against the choice of one model over another. A more concrete example: say that a patient is postulated to have a disorder where a particular symptom oscillates predictably and repeatadly for a period of 12 hours. A more fine-tuned understanding of that trajectory can then be used to optimize treatment times. If their symptoms were to oscillate more irratically, then this would be reflected in the recurrence indicators of the patient. If it would show dampened oscillations instead where the bandwidth becomes lower with the passage of time, then that would be reflected in the recurrence inidicators in a different manner. This is, of course, only true if those characteristics can be picked up reliably from the degraded data. 
+Our choice for this way of modelling is based on a number of suitable characteristics. The most important of these is that self-report data cannot be measured consistently and continuously with high validity in almost all use cases where self-report is used, meaning that measured baseline data is currently impossible. We note that if it were possible to measure these variables directly, then researchers would not have to rely on the instrument in the first place. Therefore, theory-based simulation is a necessary starting point for further research. We hope that the models, in turn, can be refined using empirical data that takes into account time dependence. Furthermore, we chose the "3 + 1 Dimension Model" because it is one of the only ones (if not the only one) that has the stated goal of simulating the trajectory of psychological constructs over time (in the form of symptomatology of psychiatric illness), thus being a good candidate for real empirical feedback studies.
+
+This brings us to a natural place to introduce the goal of this project. Right now, there is often no empirical feedback system for theoretical models that aim to recover the time-dependent characteristics of constructs that are measured using EMA\@. We hope that studying the stability of complexity characteristics under data degredation can help us recover certain aspects empirically of the trajectory of the system under study. E.g., incompatibility of the theoretical time development of disease symptomatology contrasted with the recovered complexity characteristics of a patient can be used as a counterfactual against the choice of one model over another. A more concrete example: say that a patient is postulated to have a disorder where a particular symptom oscillates predictably and repeatedly for a period of 12 hours. A more fine-tuned understanding of that trajectory can then be used to optimize treatment times. If their symptoms were to oscillate more irratically, then this would be reflected in the recurrence indicators of the patient. If it would show dampened oscillations instead where the bandwidth becomes lower with the passage of time, then that would be reflected in the recurrence inidicators in a different manner. This is, of course, only true if those characteristics can be picked up reliably from the degraded data. 
 
 \section{Materials and methods}
 
-\subsection{Software}
+\subsection{Materials}
+
+\subsubsection{Software}
 We used the Julia languages, and in particular the `DynamicalSystems.jl', `RecurrenceAnalysis.jl', and `Statistics.jl' packages to implement the toy model and run the recurrence analyses. Full information about dependencies and version numbers can be found in a human-readable format in the Manifest.toml file in the Github-repository. Instructions for running the analysis through a sandboxed project environment identical to our system can be found on the main page of the github repository.
 
-\subsection{Toy Model}
-For this study, we will use the "3 + 1 dimension model" introduced by \citep{gauldDynamicalSystemsComputational2023}. The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can be used for our project by reformulating some of the model .  It uses four coupled differential equations to model the effect of time on symptom intensity. It is explained quite well in the aforementioned paper. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible
+\subsubsection{Toy Model}
+For this study, we will use the `3 + 1 Dimensions Model' introduced by \citep{gauldDynamicalSystemsComputational2023}. The original aim of this toy model is to simulate the trajectory of symptomatology over time, but it can be used for our project by reformulating some of the model.  It uses four coupled differential equations to model the effect of time on symptom intensity. We give a basic explanation of each equation, and note some interesting behaviour that might be more or less suitable for use in this project. I will use identical terminology where possible. 
 
 
 \subsubsection{Symptom intensity}
@@ -102,22 +106,35 @@ The first equation is supposed to represent symptom intensity. For our study,
 \subsubsection{Modelling of perceived environment}
 
 \begin{equation}
-    \tau_{y}\frac{dy}{dt} = \frac{P}{1+exp(\frac{R_{b}-y}{\lambda_{b}})} + L - xy - z
+    \tau_{z}\frac{dz}{dt} = S(ax + \beta y)\zeta(t) - z
 \end{equation}
+
 
 \subsubsection{Temporal specificities}
 
 \begin{equation}
-    \tau_{z}\frac{dz}{dt} = S(ax + \beta y)\zeta(t) - z
+    \tau_f\frac{df}{dt} = y - \lambda_f f
 \end{equation}
 
 \subsection{Recurrence Indicators}
 
-The \textbf{Recurrence rate} is the proportion of points in the phase space that reoccur at later times. A flat line would mean a recurrence rate of 1. \textbf{Determinism} is the share of recurrent points that are part of diagonal lines, which indicate that the structure is deterministic.
-\textbf{Average and maximum length of diagonal structures} is the average length of diagonal lines. A longer average length means more predictable dynamics, the maximum also indicates that there are long predictabe segments.
-\textbf{Entropy of diagonal structures} concerns the Shannon entropy of diagonal line lengths. It quantifies the amount of randomness, or information, in the data. 
-\textbf{Trapping time} is the average length of vertical lines in the plot. It is a measure of how long a system stays in a particular state.
-\textbf{Most probable recurrence time} is the mode of the length of the vertical lines in the plot.
+The \textit{Recurrence rate} is the proportion of points in the phase space that reoccur at later times \citep{webber2005recurrence}. A flat line would mean a recurrence rate of 1.\@\textit{Determinism} is the share of recurrent points that are part of diagonal lines, which indicate that the structure is deterministic.\@\textit{Average and maximum length of diagonal structures} is the average length of diagonal lines. A longer average length means more predictable dynamics, the maximum also indicates that there are long predictabe segments.\@\textit{Entropy of diagonal structures} concerns the Shannon entropy of diagonal line lengths \citep{kraemerRecurrenceThresholdSelection2018}. It quantifies the amount of randomness, or information, in the data.\@\textit{Trapping time} is the average length of vertical lines in the plot. It is a measure of how long a system stays in a particular state.\@\textit{Most probable recurrence time}, similarly, is the mode of the length of the vertical lines in the plot. 
+
+
+
+\subsection{Methods}
+
+\subsubsection{Stage 1: Data generation}
+
+In the first stage, we use a toy model to simulate the data based on the *3 + 1 Dimensions Model* introduced by @gauldDynamicalSystemsComputational2023. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Symptomatology will be the outcome variable of this study By changing all four of these coefficients systematically, we aim to model a large variety of possible trajectories. We save each one of these models as a separate time series. For the purpose of our study, we redefine "symptomatology" as any dynamical fluctuations of psychological constructs [@olthofComplexityTheoryPsychopathology2023].
+
+\subsubsection{Stage 2: Binning data and removing time points}
+
+Afterwards, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into n intervals of equal length, where n stands for the number of bins. We also vary the minimum (min) and maximum (max) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping the first and every k^{th} observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
+
+\subsubsection{Stage 3: Data analysis}
+
+We will judge the sensitivity of the data by deriving the recurrence indicators (recurrence rate, determinism, entropy of the distribution) for each time series in each state of degradation. We judge sensitivity to degradation by calculating the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will then map the changes as the deviation for these indicators between the baseline and a set of degraded data.
 
 \section{Results}
 
@@ -160,22 +177,10 @@ Figures, tables, and images will be published under a Creative Commons CC-BY lic
 %%Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 
 \subsection{Tables}
-Tables should be inserted at the end of the manuscript. Please build your table directly in LaTeX.Tables provided as jpeg/tiff files will not be accepted. Please note that very large tables (covering several pages) cannot be included in the final PDF for reasons of space. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
-
-\subsection{International Phonetic Alphabet}
-To include international phonetic alphabet (IPA) symbols, please include the following functions:
-Under useful packages, include:\begin{verbatim}\usepackage{tipa}\end{verbatim} 
-In the main text, when inputting symbols, use the following format:\begin{verbatim}\text[symbolname]\end{verbatim}e.g.\begin{verbatim}\textgamma\end{verbatim}
-
-\section{Nomenclature}
-
-\subsection{Resource Identification Initiative}
-To take part in the Resource Identification Initiative, please use the corresponding catalog number and RRID in your current manuscript. For more information about the project and for steps on how to search for an RRID, please click \href{http://www.frontiersin.org/files/pdf/letter_to_author.pdf}{here}.
-
+Tables should be inserted at the end of the manuscript. Please build your table directly in LaTeX. Tables provided as jpeg/tiff files will not be accepted. Please note that very large tables (covering several pages) cannot be included in the final PDF for reasons of space. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
 
 
 \section{Additional Requirements}
-
 For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
 
 \section*{Conflict of Interest Statement}
@@ -186,7 +191,7 @@ The authors declare that the research was conducted in the absence of any commer
 The Author Contributions section is mandatory for all articles, including articles by sole authors. If an appropriate statement is not provided on submission, a standard one will be inserted during the production process. The Author Contributions statement must describe the contributions of individual authors referred to by their initials and, in doing so, all authors agree to be accountable for the content of the work. Please see  \href{https://www.frontiersin.org/about/policies-and-publication-ethics#AuthorshipAuthorResponsibilities}{here} for full authorship criteria.
 
 \section*{Funding}
-Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
+No external funding was used for this project.
 
 \section*{Acknowledgments}
 I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to persue the project as I imagined it. I also acknowledge the great help of the Julia community, which has been helping me with programming where I got stuck and which took the time to respond to my stupid questions. Finally, I'd like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is followable.

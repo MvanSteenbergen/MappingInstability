@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -29,12 +29,36 @@ Gauld, C. and Depannemaecker, D. (2023).
 \newblock \emph{Frontiers in Psychology} 14
 \bibAnnoteFile{gauldDynamicalSystemsComputational2023}
 
+\bibitem[{Hamaker(2012)}]{hamakerWhyResearchersShould2012}
+Hamaker, E.~L. (2012).
+\newblock Why researchers should think "within-person": {{A}} paradigmatic
+  rationale.
+\newblock In \emph{Handbook of Research Methods for Studying Daily Life} ({New
+  York, NY, US}: {The Guilford Press}). 43--61
+\bibAnnoteFile{hamakerWhyResearchersShould2012}
+
 \bibitem[{Haslbeck and Ryan(2022)}]{haslbeckRecoveringWithinpersonDynamics2022}
 Haslbeck, J. M.~B. and Ryan, O. (2022).
 \newblock Recovering within-person dynamics from psychological time series.
 \newblock \emph{Multivariate Behavioral Research} 57, 735--766.
 \newblock \doi{10.1080/00273171.2021.1896353}
 \bibAnnoteFile{haslbeckRecoveringWithinpersonDynamics2022}
+
+\bibitem[{Kraemer et~al.(2018)Kraemer, Donner, Heitzig, and
+  Marwan}]{kraemerRecurrenceThresholdSelection2018}
+Kraemer, K.~H., Donner, R.~V., Heitzig, J., and Marwan, N. (2018).
+\newblock Recurrence threshold selection for obtaining robust recurrence
+  characteristics in different embedding dimensions.
+\newblock \emph{Chaos (Woodbury, N.Y.)} 28, 085720.
+\newblock \doi{10.1063/1.5024914}
+\bibAnnoteFile{kraemerRecurrenceThresholdSelection2018}
+
+\bibitem[{Lamiell(2021)}]{lamiellProblemIndividualityScientific2021}
+Lamiell, J. (2021).
+\newblock The `{{Problem}} of {{Individuality}}' in {{Scientific Psychology}}.
+\newblock 111--131.
+\newblock \doi{10.1007/978-3-030-67734-3_6}
+\bibAnnoteFile{lamiellProblemIndividualityScientific2021}
 
 \bibitem[{Molenaar(2004)}]{molenaarManifestoPsychologyIdiographic2004}
 Molenaar, P. C.~M. (2004).

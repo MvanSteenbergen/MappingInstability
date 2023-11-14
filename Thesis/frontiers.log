@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  13 NOV 2023 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  14 NOV 2023 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -502,7 +502,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 37.
- (frontiers.out) (frontiers.out)
 \@outlinefile=\write3
 \openout3 = `frontiers.out'.
 
@@ -549,7 +548,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./logo1-eps-converted-to.pdf, id=103, 284.06125pt x 80.3pt>
+<./logo1-eps-converted-to.pdf, id=3, 284.06125pt x 80.3pt>
 File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./logo1-eps-converted-to.pdf>
 Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 52.
@@ -583,49 +582,107 @@ Underfull \hbox (badness 10000) detected at line 52
 []
  []
 
+
+Package natbib Warning: Citation `connerExperienceSamplingMethods2009' on page 1 undefined on input line 67.
+
+
+Package natbib Warning: Citation `olthofPsychologicalDynamicsAre2020' on page 1 undefined on input line 67.
+
+
+Package natbib Warning: Citation `molenaarManifestoPsychologyIdiographic2004' on page 1 undefined on input line 69.
+
+
+Package natbib Warning: Citation `hamakerWhyResearchersShould2012' on page 1 undefined on input line 69.
+
+
+Package natbib Warning: Citation `lamiellProblemIndividualityScientific2021' on page 1 undefined on input line 69.
+
 [1
 
 
 
 {C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
+
+Package natbib Warning: Citation `webber2005recurrence' on page 2 undefined on input line 71.
+
+
+Package natbib Warning: Citation `haslbeckRecoveringWithinpersonDynamics2022' on page 2 undefined on input line 71.
+
+
+Package natbib Warning: Citation `olthofComplexityPsychologicalSelfratings2020b' on page 2 undefined on input line 73.
+
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 83.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 80.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [2]
+
+Package natbib Warning: Citation `gauldDynamicalSystemsComputational2023' on page 3 undefined on input line 89.
+
+
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [3]
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 144.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 145.
+
+Package natbib Warning: Citation `webber2005recurrence' on page 4 undefined on input line 121.
+
+
+Package natbib Warning: Citation `kraemerRecurrenceThresholdSelection2018' on page 4 undefined on input line 121.
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/frontiers.tex:133: Missing $ inserted.
+<inserted text> 
+                $
+l.133 ...he data by keeping the first and every k^
+                                                  {th} observation of the si...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/frontiers.tex:134: Missing $ inserted.
+<inserted text> 
+                $
+l.134 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 133--134
+\OT1/ptm/m/n/12 (+20) floor-effects. More-o-ver, we remove time points from the data by kee-ping the first and every
+ []
+
+
+Overfull \hbox (120.45775pt too wide) in paragraph at lines 133--134
+\OT1/ptm/m/n/12 (-20) k$[]\OML/cmm/m/it/12 observationofthesimulateddata:Wesystematicallydecreasethenumberofbins; therange; numberoftimepoints; andre \OMS/cmsy/m/n/12 ^^@
+ []
+
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [4]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 167.
- (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 161.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 162.
+
+
+LaTeX Warning: Reference `fig:Subfigure 1' on page 5 undefined on input line 172.
+
+
+LaTeX Warning: Reference `fig:Subfigure 2' on page 5 undefined on input line 172.
+
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [5] (frontiers.bbl)
-<logo1.pdf, id=184, 284.06125pt x 80.3pt>
+ [5]
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [6] (frontiers.bbl)
+<logo1.pdf, id=100, 284.06125pt x 80.3pt>
 File: logo1.pdf Graphic file (type pdf)
 <use logo1.pdf>
-Package pdftex.def Info: logo1.pdf  used on input line 218.
+Package pdftex.def Info: logo1.pdf  used on input line 223.
 (pdftex.def)             Requested size: 284.52756pt x 80.43947pt.
-
-Overfull \vbox (3.49998pt too high) has occurred while \output is active []
-
- [6]
 Package epstopdf Info: Source file: <logo1.eps>
 (epstopdf)                    date: 2023-10-24 12:11:40
 (epstopdf)                    size: 37462 bytes
@@ -633,17 +690,17 @@ Package epstopdf Info: Source file: <logo1.eps>
 (epstopdf)                    date: 2023-10-24 12:15:08
 (epstopdf)                    size: 24813 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo1-eps-converted-to.pdf logo1.eps>
-(epstopdf)             \includegraphics on input line 230.
+(epstopdf)             \includegraphics on input line 235.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<logo1-eps-converted-to.pdf, id=195, 284.06125pt x 80.3pt>
+<logo1-eps-converted-to.pdf, id=101, 284.06125pt x 80.3pt>
 File: logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use logo1-eps-converted-to.pdf>
-Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 230.
+Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 235.
 (pdftex.def)             Requested size: 252.0pt x 71.24008pt.
-Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 231.
+Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 236.
 Package epstopdf Info: Source file: <logo2.eps>
 (epstopdf)                    date: 2023-10-24 12:11:40
 (epstopdf)                    size: 21390 bytes
@@ -651,43 +708,72 @@ Package epstopdf Info: Source file: <logo2.eps>
 (epstopdf)                    date: 2023-10-24 12:15:09
 (epstopdf)                    size: 10360 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo2-eps-converted-to.pdf logo2.eps>
-(epstopdf)             \includegraphics on input line 238.
+(epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<logo2-eps-converted-to.pdf, id=196, 70.2625pt x 79.29625pt>
+<logo2-eps-converted-to.pdf, id=102, 70.2625pt x 79.29625pt>
 File: logo2-eps-converted-to.pdf Graphic file (type pdf)
 <use logo2-eps-converted-to.pdf>
-Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 238.
+Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 243.
 (pdftex.def)             Requested size: 252.0pt x 284.44862pt.
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [7 <./logo1.pdf>]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 16.
 See the caption package documentation for explanation.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [7 <./logo1.pdf> <./logo1-eps-converted-to.pdf> <./logo2-eps-converted-to.pdf>] (frontiers.aux)
+ [8 <./logo1-eps-converted-to.pdf> <./logo2-eps-converted-to.pdf>]
+
+Package natbib Warning: There were undefined citations.
+
+(frontiers.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-Package rerunfilecheck Info: File `frontiers.out' has not changed.
-(rerunfilecheck)             Checksum: 04C57D245C29E5B41248537B12CC8A81;3558.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `frontiers.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `frontiers.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  4E7EF28A7311F71A55B96F1D64137C93;3920.
  ) 
 Here is how much of TeX's memory you used:
- 16417 strings out of 475248
- 264594 string characters out of 5757340
- 1934801 words of memory out of 5000000
- 37355 multiletter control sequences out of 15000+600000
- 598640 words of font info for 237 fonts, out of 8000000 for 9000
+ 16383 strings out of 475248
+ 264304 string characters out of 5757340
+ 1935801 words of memory out of 5000000
+ 37302 multiletter control sequences out of 15000+600000
+ 598883 words of font info for 250 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,9n,131p,1440b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on frontiers.pdf (7 pages, 302327 bytes).
+ 87i,9n,131p,1465b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on frontiers.pdf (8 pages, 289415 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
- 73949 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 71189 words of extra memory for PDF output out of 74296 (max. 10000000)
 

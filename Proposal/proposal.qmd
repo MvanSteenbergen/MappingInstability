@@ -32,7 +32,7 @@ For the purposes of this project, we assume that the underlying psychological co
 
 #### Stage 1: Data generation
 
-In the first stage, we use a toy model to simulate the data based on the *3 + 1 Dimensions Model* introduced by @gauldDynamicalSystemsComputational2023. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Symptomatology will be the outcome variable of this study. By changing all four of these coefficients systematically, we aim to model a large variety of possible trajectories. We save each one of these models as a separate time series. For the purpose of our study, we redefine "symptomatology" as any dynamical fluctuations of psychological constructs [@olthofComplexityTheoryPsychopathology2023].
+In the first stage, we use a toy model to simulate the data based on the *3 + 1 Dimensions Model* introduced by @gauldDynamicalSystemsComputational2023. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Symptomatology will be the outcome variable of this study By changing all four of these coefficients systematically, we aim to model a large variety of possible trajectories. We save each one of these models as a separate time series. For the purpose of our study, we redefine "symptomatology" as any dynamical fluctuations of psychological constructs [@olthofComplexityTheoryPsychopathology2023].
 
 #### Stage 2: Binning data and removing time points
 
