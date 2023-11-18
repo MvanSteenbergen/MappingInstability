@@ -42,13 +42,6 @@ end
 # Implementation of the periodic callback that uses the affect function above to update the value of ζ in threePlusOneDimensions every 0.01 t.
 cb = PeriodicCallback(affect!, 0.01)
 
-# Function to reduce the number of timepoints in the data
-# Reduction factor is the kth element to keep (refer to proposal)
-function reduceTimepoints(data, reductionFactor)
-    # Return every reductionFactor-th element of the data, starting from the first element
-    return data[1:reductionFactor:end]
-end
-
 # Calculation of the trajectory based on the rules above and return it as a statespaceset
 function calculateTrajectory(p₀)
     u₀ = [0.0, 0.01, 0.0, 0.0]
@@ -56,7 +49,6 @@ function calculateTrajectory(p₀)
     data = solve(prob, Tsit5(), callback = cb, reltol = 1e-9, abstol = 1e-9, saveat = 0.1, maxiters = 1e7)
     data = unique(DataFrame(data))
     data = StateSpaceSet(data[:,2])
-
     return data
 end
 
