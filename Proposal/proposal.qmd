@@ -15,7 +15,7 @@ keywords:
     - Recurrence Quantification Analysis
     - Idiographic Methods
     - Ecological Momentary Assessment
-bibliography: bibliography.bib
+bibliography: bibliography_proposal.bib
 documentclass: article
 format: aft-pdf
 ---

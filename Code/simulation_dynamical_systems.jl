@@ -54,7 +54,7 @@ end
 # Calculation of the trajectory based on the rules above and return it as a statespaceset
 function calculateTrajectory(p₀)
     u₀ = [0.0, 0.01, 0.0, 0.0]
-    prob = ODEProblem(threePlusOneDimensions!, u₀, (0.0,12000.0), p₀)
+    prob = ODEProblem(threePlusOneDimensions!, u₀, (11000.0,12000.0), p₀)
     data = solve(prob, Tsit5(), callback = cb, reltol = 1e-9, abstol = 1e-9, saveat = 0.1, maxiters = 1e7)
     data = unique(DataFrame(data))
     data = StateSpaceSet(data[:,2])
@@ -99,18 +99,18 @@ end
 function calculateRQA(data, segmentN, reductionFactor)
     segment = degradeData(data, segmeplntN, reductionFactor)
     rm = RecurrenceMatrix(segment, (reductionFactor*0.1))
-     return rqa(segment)
+    return rqa(segment)
 end
 
 
-
 function runSimulationStudy(data)
-
+    save = []
     for segmentN in [100, 20, 7, 6, 5, 4, 3, 2]
         for reductionFactor in [8, 4, 2, 1]
-            calculateRQA(data, segmentN, reductionFactor)
+            save.append(calculateRQA(data, segmentN, reductionFactor))
         end
     end
+    return save
 end
 
 plot(healthy)
@@ -121,11 +121,10 @@ schizophreniaRM = RecurrenceMatrix(schizophrenia, 0.1)
 bipolarRM = RecurrenceMatrix(bipolar, 0.1)
 bereavementRM = RecurrenceMatrix(bereavement, 0.1)
 
+runSimulationStudy(healthyRM)
 
 # Do RQA
 healthyRQA = rqa(healthyRM)
 schizophreniaRQA = rqa(schizophreniaRM)
 bipolarRQA = rqa(bipolarRM)
 bereavementRQA = rqa(bereavementRM)
-
-
