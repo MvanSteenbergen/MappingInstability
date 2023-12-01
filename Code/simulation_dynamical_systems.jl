@@ -31,33 +31,26 @@ end
 
 function calculateRQA(data, segmentN, reductionFactor)
     segment = degradeData(data, segmentN, reductionFactor)
-    rm = RecurrenceMatrix(segment, (reductionFactor*0.1))
-    return rqa(rm)
+    rqa_calc = rqa(RecurrenceMatrix(segment, 0.1))
+    return [segmentN, reductionFactor, collect(values(rqa_calc))...]
 end
 
 
 function runSimulationStudy(data)
-    save = []
+    # get colnames from data
+    findNames = [String(i) for i in collect(keys(rqa((RecurrenceMatrix(data, 100)))))]
+    colnames = ["segmentN", "reductionFactor", findNames...]
+    save = DataFrame([name => [] for name in colnames])
     for segmentN in [100, 20, 7, 6, 5, 4, 3, 2]
         for reductionFactor in [8, 4, 2, 1]
-            save.append(calculateRQA(data, segmentN, reductionFactor))
+            push!(save, calculateRQA(data, segmentN, reductionFactor))
         end
     end
     return save
 end
 
-plot(healthy)
 
-# Calculate the recurrence matrix for the data
-healthyRM = RecurrenceMatrix(healthy, 0.1)
-schizophreniaRM = RecurrenceMatrix(schizophrenia, 0.1) 
-bipolarRM = RecurrenceMatrix(bipolar, 0.1)
-bereavementRM = RecurrenceMatrix(bereavement, 0.1)
-
-runSimulationStudy(healthyRM)
-
-# Do RQA
-healthyRQA = rqa(healthyRM)
-schizophreniaRQA = rqa(schizophreniaRM)
-bipolarRQA = rqa(bipolarRM)
-bereavementRQA = rqa(bereavementRM)
+ss_healthy = runSimulationStudy(healthy.value1)
+ss_schizophrenia = runSimulationStudy(schizophrenia.value1)
+ss_bipolar = runSimulationStudy(bipolar.value1)
+ss_bereavement = runSimulationStudy(bereavement.value1)

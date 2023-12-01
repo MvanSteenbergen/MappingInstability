@@ -4,6 +4,7 @@ using Distributions
 using DynamicalSystems
 using Random
 using JLD2
+using CSV
 
 ## DATA GENERATION
 
@@ -42,13 +43,20 @@ end
 # Implementation of the periodic callback that uses the affect function above to update the value of ζ in threePlusOneDimensions every 0.01 t.
 cb = PeriodicCallback(affect!, 0.01)
 
+
 # Calculation of the trajectory based on the rules above and return it as a statespaceset
 function calculateTrajectory(p₀)
     u₀ = [0.0, 0.01, 0.0, 0.0]
-    prob = ODEProblem(threePlusOneDimensions!, u₀, (0.0,12000.0), p₀)
-    data = solve(prob, Tsit5(), callback = cb, reltol = 1e-9, abstol = 1e-9, saveat = 0.1, maxiters = 1e7)
-    data = unique(DataFrame(data))
-    data = StateSpaceSet(data[:,2])
+    startat = 0.0
+    stopat = 12000.0
+    saveat = 0.2
+    prob = ODEProblem(threePlusOneDimensions!, u₀, (startat, stopat), p₀)
+    data = solve(prob, Tsit5(), callback = cb, reltol = 1e-9, abstol = 1e-9, saveat = saveat, maxiters = 1e7)
+    data = DataFrame(data)
+    unique!(data)
+    
+    startat = 10000.0
+    filter!(:timestamp => ts -> ts in startat:saveat:stopat, data)
     return data
 end
 
@@ -59,4 +67,5 @@ schizophrenia = calculateTrajectory([10, 1, 0.1, 14, 10, 0.904, 0.05, 0.2, 14, 4
 bipolar = calculateTrajectory([10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1, 0.2, 1, 720])
 bereavement = calculateTrajectory([10, 1, 0.1, 14, 10, 1, 0.05, 0.6, 14, 4.5, 0.5, 0.5, 1, 0.2, 1, 720])
 
-save("MasterThesisRQA/Data/data.jld2", "healthy", healthy, "schizophrenia", schizophrenia, "bipolar", bipolar, "bereavement", bereavement)
+
+save("MasterThesisRQA/Data/data.jld2", "healthy", healthy, "schizophrenia", schizophrenia, "bipolar", bipolar, "bereavement", bereavement) 
