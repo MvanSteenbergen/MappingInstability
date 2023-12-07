@@ -65,68 +65,115 @@ As a primary goal, the abstract should render the general significance and conce
 
 \section{Introduction}
 
-Intesive longitudinal data ha. 
-We make a number of hypotheses 
+Within-person methods using intensive longitudinal measurements have come a long way in recent years, and they come with their own, unique set of challenges. The most pressing of these challenges is that they bring measurement theory back to the forefront: whereas between-person methods can neatly average out the effects of time and within-person variation, (quantitative) dynamical within-person time-dependent methods rely on that variation as their locus. 
 
-The problem we aim to elucidate is the degree to which information about the trajectory of a system can be recovered using recurrence quantification analysis when data is degraded through ordinalization and removal of time points. The overarching goal is to develop methods to recover aspects of a trajectory empirically in intensive longitudinal studies using  recurrence indicators after data is degraded. This is a  challenging problem, because data has a much lower bandwidth and sampling frequency than other fields that use these methods. Therefore, every recoverable aspect can matter. The major elements to be examined include the stability of several recurrence indicators under degradation, .
+To introduce our topic, we make a number of explicit assumptions about the nature of psychological constructs that are studied using intensive longitudinal methods These may very well turn out to be wrong, but we believe it is important to make these assumptions explicit to spot weaknesses in thinking \citep{meehlTheoreticalRisksTabular2004}. We will use these assumptions to introduce the topic and embed the study in the literature. We leave in the middle whether we actually hold on to those assumptions ourselves. We note that these assumptions are very close to `common sense' beliefs within the idiographic research community. To our understanding, however, these assumptions are not made explicit all that often. We invite the reader to evaluate them critically and form an opinion as well, and even think of arguments or experiments to disproof them. To help this process along, we put in some questions that help show weaknesses in the validity of these assumptions. 
+
+The first one of these assumptions is related to our working definition of psychological constructs. We take the perspective that these are references to `objectively existing consituents of reality' (see the second category in the paper by Stanley and Garcia \citep{slaneyConstructingPsychologicalObjects2015}). These constructs represent the phenomena of interest in psychology \citep{borsboomLatentVariableTheory2008}. They are directly unobservable and our knowledge of these phenomena is incomplete \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. As such, we do not (and perhaps cannot) know the true value of these constructs, both because of our incapacity to measure them directly and the `error' that comes with measuring them. 
+
+The second assumption posits that there is an underlying continuous real-valued trajectory of the constructs that intensive longitudinal methods aim to measure \citep{hamakerNoTimePresent2017}. This underlying continuous trajectory is always present. Inferring more about that trajectory might lead to a better understanding of the mechanism in question. This underlying trajectory is time-dependent and shaped by various forces and its own previous state \citep{olthofComplexityPsychologicalSelfratings2020b}. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. 
+
+The third, and final assumption is that ordinal likert-type scales are approximations of this underlying continuous measure \citep{haslbeckRecoveringWithinpersonDynamics2022}. Thus, we model the part of the `error' that comes with these continuous measures through ordinalization \citep{westlandInformationLossBias2022}. For our purposes, we discard other types of error. 
+
+Building on these assumptions, we are left with a problem: given that we know that we have this continuous trajectory of a personality construct and that it is measured using ordinal likert-type scales, there is a loss of information \citep{haslbeckRecoveringWithinpersonDynamics2022}. If you would make an explicit theoretical prediction for a trajectory, it will be hard to validate. This is because you can only validate this theoretical trajectory using ordinal measurements of low granularity. 
+
+To help understand this problem, we will use tools that allow us to make each of these assumptions explicit in our methods. We first simulate a trajectory through dynamical computational modelling \citep{grahekAnatomyPsychologicalTheory2021,gauldDynamicalSystemsComputational2023}, and then break it down by binning the data and removing time points. This forces us to 
+
+Then, we look at the means to recover some of this 
+
+The overarching goal is to develop methods to recover aspects of a trajectory empirically in intensive longitudinal studies using recurrence indicators after data is degraded. This is a challenging problem, because intensive longitudinal data of latent variables 
+
+One analysis technique that is relatively robust to the type of degradation that we do is Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in time series analysis \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}. 
+
+The major elements to be examined include the stability of several recurrence indicators under degradation, the implications for measurement, and weaknesses and oversights that come with applying a novel method to a specified . We hope that the process with which 
+
+A strength of this project is that it fully explicates normally tacit assumptions, and uses these assumptions to model the . A limitation of this project is that there is no empirical 
+
+\section{Materials and methods}
+
+We have chosen to add a detailed overview of parameter settings and design choices in the materials section. This leads into a clear and concise explanation of the basic structure of our experiment. 
+
+\subsection{Materials}
+
+\subsubsection{Software}
+We used the Julia languages, and in particular the `DynamicalSystems.jl', `RecurrenceAnalysis.jl', and `Statistics.jl' packages to implement the toy model and run the recurrence analyses \citep{bezanson2017julia, Datseris2018, DatserisParlitz2022}. All analyses were run on a personal computer. Full information about dependencies and version numbers can be found in a machine-readable format in the Manifest.toml file in the Github-repository. Instructions for running the analysis through a sandboxed project environment identical to our system can be found on the main page of this repository.
+
+\subsubsection{Toy Model}
+For this study, we will use the `3 + 1 Dimensions Model' introduced by Gauld and Depannemaecker \citep{gauldDynamicalSystemsComputational2023}. The original aim of this toy model is to simulate the trajectory of symptomatology of psychiatric symptoms over time, but it can be used for our project because it is easy to create somewhat realistic looking trajectories of latent constructs (although one can question whether they really are realistic if no one ever measured them) and flexible enough to capture a wide range of plausible trajectories. The model uses four coupled differential equations to model the effect of time on symptom intensity. Symptom intensity is a subset of latent constructs, and we see its behaviour over time as similar to other latent constructs. It is of note that many different systems could have let to similar results to the ones outputted here, and the data generating process is of secondary importance as long as it is able to result in interesting trajectories. For our purposes, we focused on the flexibility of the model in capturing different interesting plausible suitably realistic trajectories in a relatively straightforward manner as our main motivation for choosing this model over more traditional choices such as the Lorenz attractor.  
+
+\paragraph{Symptom intensity}
+\begin{equation}
+    \tau_{x}\frac{dx}{dt} = \frac{S_{\max}}{1+exp(\frac{Rs-y}{\lambda_{s}})} - x
+\end{equation}
 
 
+\paragraph{Modelling of internal elements}
+\begin{equation}
+    \tau_{y}\frac{dy}{dt} = \frac{P}{1+exp(\frac{R_{b}-y}{\lambda_{b}})} + L - xy - z
+\end{equation}
 
-\subsubsection{}
-While . One limitation is that there is generally no way to study 
+\paragraph{Modelling of perceived environment}
+\begin{equation}
+    \tau_{z}\frac{dz}{dt} = S(ax + \beta y)\zeta(t) - z
+\end{equation}
 
 
-\section{Article types}
+\paragraph{Temporal specificities}
+\begin{equation}
+    \tau_f\frac{df}{dt} = y - \lambda_f f
+\end{equation}
 
-For requirements for a specific article type please refer to the Article Types on any Frontiers journal page. Please also refer to \href{http://home.frontiersin.org/about/author-guidelines#Sections}{Author Guidelines} for further information on how to organize your manuscript in the required sections or their equivalents for your field
+\subsubsection{Solvers}
+We used the Tsitouras 5/4 Runge-Kutta method as the solver for the differential equations, as implemented in the DifferentialEquations.jl package \citep{tsitourasRungeKuttaPairs2011}. We used standard settings for all of the parameters, aside from a higher number of maximum iterations ($1e^{7}$).  
+
+\subsection{Recurrence Quantification Analysis}
+
+There are many different recurrence indicators, and developing new ones has been an area of considerable development \citep{marwanTrendsRecurrenceAnalysis2023}. We chose to focus on the core set of indicators, as described by Marwan \& Webber \citep{marwanMathematicalComputationalFoundations2015}. The recurrence threshold was set at the size of the bins of the degraded data set. E.g., if the range of the trajectory was 0 to 2, and the number of bins is 7 (data is degraded so that it is similar to likert-scale data), then the recurrence threshold would have been set at $\frac{1--1}{7}$ = $\frac{2}{7}$. Because the data is discrete, the embedding dimension is set to the amount of time that is covered by one data point. 
+
+\subsubsection{Recurrence Indicators}
+
+The \textit{recurrence rate} is the proportion of points in the phase space that reoccur at later times \citep{webber2005recurrence}. Higher recurrence rates indicate that an underlying function is more periodic. 
+
+\textit{Determinism} is the share of recurrent points that are part of diagonal lines, which indicate that the structure might be deterministic. It should be noted that it is a necessary condition, not sufficient by itself, to indicate determinism \citep{marwanHowAvoidPotential2011}.
+
+\textit{Average and maximum length of diagonal structures} are also given. A longer average length means more predictable dynamics. A longer maximum indicates the longest segment.
+
+\textit{Entropy of diagonal structures} concerns the Shannon entropy of diagonal line lengths \citep{kraemerRecurrenceThresholdSelection2018}. It quantifies the amount of randomness, or information, in the data.
+
+\textit{Trapping time} is the average length of vertical lines in the plot. It is a measure of how long a system stays in a particular state.
+
+\textit{Most probable recurrence time}, similarly, is the mode of the length of the vertical lines in the plot. 
+
+\subsection{Analysis}
+
+\subsection{Methods}
+
+\subsubsection{Stage 1: Data generation}
+
+In the first stage, we use a toy model to simulate the data based on the \textit{3 + 1 Dimensions Model} introduced by \citep{gauldDynamicalSystemsComputational2023}. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Fluctuations  will be the outcome variable of this study. We modeled four. We save each one of these models as a separate time series. 
+
+\subsubsection{Stage 2: Binning data and removing time points}
+
+Afterwards, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into n intervals of equal length, where n stands for the number of bins.  We also vary the minimum ($min$) and maximum ($max$) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping the first and every $k^{th}$ observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
+
+\subsubsection{Stage 3: Data analysis}
+
+We will judge the sensitivity of the data by deriving the recurrence indicators introduced before for each time series in each state of degradation. We judge sensitivity to degradation by calculating the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will map the changes as the deviation for these indicators between the baseline and a set of degraded data.
 
 % For Original Research articles, please note that the Material and Methods section can be placed in any of the following ways: before Results, before Discussion or after Discussion.
 
-\section{Manuscript Formatting}
 
-\subsection{Heading Levels}
-
-%There are 5 heading levels
-
-\subsection{Level 2}
-\subsubsection{Level 3}
-\paragraph{Level 4}
-\subparagraph{Level 5}
-
-\subsection{Equations}
-Equations should be inserted in editable format from the equation editor.
-
-\begin{equation}
-\sum x+ y =Z\label{eq:01}
-\end{equation}
-
-\subsection{Figures}
-Frontiers requires figures to be submitted individually, in the same order as they are referred to in the manuscript. Figures will then be automatically embedded at the bottom of the submitted manuscript. Kindly ensure that each table and figure is mentioned in the text and in numerical order. Figures must be of sufficient resolution for publication \href{https://www.frontiersin.org/about/author-guidelines#ImageSizeRequirements}{see here for examples and minimum requirements}. Figures which are not according to the guidelines will cause substantial delay during the production process. Please see \href{https://www.frontiersin.org/about/author-guidelines#FigureRequirementsStyleGuidelines}{here} for full figure guidelines. Cite figures with subfigures as figure \ref{fig:Subfigure 1} and \ref{fig:Subfigure 2}.
-
-
-\subsubsection{Permission to Reuse and Copyright}
-Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 %%Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 
-\subsection{Tables}
-Tables should be inserted at the end of the manuscript. Please build your table directly in LaTeX. Tables provided as jpeg/tiff files will not be accepted. Please note that very large tables (covering several pages) cannot be included in the final PDF for reasons of space. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
-
-
-\section{Additional Requirements}
-For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
 
 \section*{Conflict of Interest Statement}
 The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
-
-\section*{Author Contributions}
-
-The Author Contributions section is mandatory for all articles, including articles by sole authors. If an appropriate statement is not provided on submission, a standard one will be inserted during the production process. The Author Contributions statement must describe the contributions of individual authors referred to by their initials and, in doing so, all authors agree to be accountable for the content of the work. Please see  \href{https://www.frontiersin.org/about/policies-and-publication-ethics#AuthorshipAuthorResponsibilities}{here} for full authorship criteria.
 
 \section*{Funding}
 No external funding was used for this project.
 
 \section*{Acknowledgments}
-I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to persue the project as I imagined it. I also acknowledge the great help of the Julia community, which has been helping me with programming where I got stuck and which took the time to respond to my stupid questions. Finally, I'd like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is followable.
+I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to persue the project as I imagined it. I also acknowledge the great help of the Julia community, which has been helping me with programming where I got stuck and which took the time to respond to my stupid questions. Finally, I'd like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is easy to follow and well-written.
 
 \section*{Supplemental Data}
  \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
@@ -137,12 +184,12 @@ The code, all additional material, and generated data for this study can be foun
 
 \bibliographystyle{Frontiers-Harvard} %  Many Frontiers journals use the Harvard referencing system (Author-date), to find the style and resources for the journal you are submitting to: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal. For Humanities and Social Sciences articles please include page numbers in the in-text citations 
 %\bibliographystyle{Frontiers-Vancouver} % Many Frontiers journals use the numbered referencing system, to find the style and resources for the journal you are submitting to: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal
+
 \bibliography{bibliography}
 
 %%% Make sure to upload the bib file along with the tex file and PDF
 %%% Please see the test.bib file for some examples of references
 
-\section*{Figure captions}
 
 %%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
 %%% Use this if adding the figures directly in the mansucript, if so, please remember to also upload the files when submitting your article

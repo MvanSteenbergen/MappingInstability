@@ -12,7 +12,7 @@ function binData(data, n)
     # Bin the data by rounding down the data value to the nearest bin edge
     binned_data = floor.(data / bin_size) * bin_size
     # Return the binned data
-    return binned_data
+    return binned_data, bin_size
 end
 
 # Function to reduce the number of timepoints in the data
@@ -24,33 +24,54 @@ end
 # Function to degrade the data by binning it and reducing the number of timepoints
 function degradeData(data, segmentN, reductionFactor)
     # Bin the data into segmentN bins
-    reduced = binData(data, segmentN)
+    reduced, bin_size = binData(data, segmentN)
     # Remove unwanted timepoints and return the reduced data
-    return reduceTimepoints(reduced, reductionFactor)
+    return reduceTimepoints(reduced, reductionFactor), bin_size
 end   
 
 function calculateRQA(data, segmentN, reductionFactor)
-    segment = degradeData(data, segmentN, reductionFactor)
-    rqa_calc = rqa(RecurrenceMatrix(segment, 0.1))
+    segment, bin_size = degradeData(data, segmentN, reductionFactor)
+    recurrence_matrix = RecurrenceMatrix(segment, bin_size)
+
+    rqa_calc = rqa(RecurrenceMatrix(segment, bin_size))
     return [segmentN, reductionFactor, collect(values(rqa_calc))...]
 end
 
 
 function runSimulationStudy(data)
-    # get colnames from data
-    findNames = [String(i) for i in collect(keys(rqa((RecurrenceMatrix(data, 100)))))]
-    colnames = ["segmentN", "reductionFactor", findNames...]
-    save = DataFrame([name => [] for name in colnames])
-    for segmentN in [100, 20, 7, 6, 5, 4, 3, 2]
-        for reductionFactor in [8, 4, 2, 1]
-            push!(save, calculateRQA(data, segmentN, reductionFactor))
+    # get colnames from data (very compactly written, converts keys to an array))
+    convert_names = [String(i) for i in collect(keys(rqa((RecurrenceMatrix(data, 100)))))]
+    # save the colnames of the dataframe as array
+    colnames = ["segmentN", "reductionFactor", convert_names...]
+    #  Create empty dataframe using colnames
+    simulation = DataFrame([name => [] for name in colnames])
+    # Iterate over all conditions and save those to dataframe
+    for segment_n in [100, 20, 7, 6, 5, 4, 3, 2]
+        for reduction_factor in [8, 4, 2, 1]
+            push!(simulation, calculateRQA(data, segment_n, reduction_factor))
         end
     end
-    return save
+    # Return the simulations
+    return simulation
 end
 
+function createPlots(data)
+    plots = Array{Any}(nothing, 32)
+    idx = 1
+    for segment_n in [100, 20, 7, 6, 5, 4, 3, 2]
+        for reduction_factor in [8, 4, 2, 1]
+            object, bin_size = degradeData(data, segment_n, reduction_factor)
+            plot(RecurrenceMatrix(object, bin_size), title="$(segment_n) segments, reduction factor $(reduction_factor)")
+        end
+    end
+    return nothing
+end
 
 ss_healthy = runSimulationStudy(healthy.value1)
 ss_schizophrenia = runSimulationStudy(schizophrenia.value1)
 ss_bipolar = runSimulationStudy(bipolar.value1)
 ss_bereavement = runSimulationStudy(bereavement.value1)
+
+plot = createPlots(healthy.value1)
+
+save("MasterThesisRQA/Data/simulation_studies.jld2", "ss_healthy", ss_healthy, "ss_schizophrenia", ss_schizophrenia, "ss_bipolar", ss_bipolar, "ss_bereavement", ss_bereavement)

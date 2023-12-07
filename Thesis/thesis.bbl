@@ -1,4 +1,4 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -11,5 +11,175 @@
 \providecommand{\bibAnnote}[2]{%
   \begin{quotation}\noindent\textsc{Key:} #1\\
   \textsc{Annotation:}\ #2\end{quotation}}
+
+\bibitem[{Bezanson et~al.(2017)Bezanson, Edelman, Karpinski, and
+  Shah}]{bezanson2017julia}
+Bezanson, J., Edelman, A., Karpinski, S., and Shah, V.~B. (2017).
+\newblock Julia: {{A}} fresh approach to numerical computing.
+\newblock \emph{SIAM review} 59, 65--98
+\bibAnnoteFile{bezanson2017julia}
+
+\bibitem[{Borsboom(2008)}]{borsboomLatentVariableTheory2008}
+Borsboom, D. (2008).
+\newblock Latent {{Variable Theory}}.
+\newblock \emph{Measurement: Interdisciplinary Research and Perspectives} 6,
+  25--53.
+\newblock \doi{10.1080/15366360802035497}
+\bibAnnoteFile{borsboomLatentVariableTheory2008}
+
+\bibitem[{Datseris(2018)}]{Datseris2018}
+Datseris, G. (2018).
+\newblock {{DynamicalSystems}}.jl: {{A Julia}} software library for chaos and
+  nonlinear dynamics.
+\newblock \emph{Journal of Open Source Software} 3, 598.
+\newblock \doi{10.21105/joss.00598}
+\bibAnnoteFile{Datseris2018}
+
+\bibitem[{Datseris and Parlitz(2022)}]{DatserisParlitz2022}
+Datseris, G. and Parlitz, U. (2022).
+\newblock \emph{Nonlinear Dynamics: {{A}} Concise Introduction Interlaced with
+  Code} ({Cham, Switzerland}: {Springer Nature}).
+\newblock \doi{10.1007/978-3-030-91032-7}
+\bibAnnoteFile{DatserisParlitz2022}
+
+\bibitem[{Fried(2017)}]{friedWhatArePsychological2017}
+Fried, E.~I. (2017).
+\newblock What are psychological constructs? {{On}} the nature and statistical
+  modelling of emotions, intelligence, personality traits and mental disorders.
+\newblock \emph{Health Psychology Review} 11, 130--134.
+\newblock \doi{10.1080/17437199.2017.1306718}
+\bibAnnoteFile{friedWhatArePsychological2017}
+
+\bibitem[{Gauld and
+  Depannemaecker(2023)}]{gauldDynamicalSystemsComputational2023}
+Gauld, C. and Depannemaecker, D. (2023).
+\newblock Dynamical systems in computational psychiatry: {{A}} toy-model to
+  apprehend the dynamics of psychiatric symptoms.
+\newblock \emph{Frontiers in Psychology} 14
+\bibAnnoteFile{gauldDynamicalSystemsComputational2023}
+
+\bibitem[{Grahek et~al.(2021)Grahek, Schaller, and
+  Tackett}]{grahekAnatomyPsychologicalTheory2021}
+Grahek, I., Schaller, M., and Tackett, J.~L. (2021).
+\newblock Anatomy of a {{Psychological Theory}}: {{Integrating
+  Construct-Validation}} and {{Computational-Modeling Methods}} to {{Advance
+  Theorizing}}.
+\newblock \emph{Perspectives on Psychological Science} 16, 803--815.
+\newblock \doi{10.1177/1745691620966794}
+\bibAnnoteFile{grahekAnatomyPsychologicalTheory2021}
+
+\bibitem[{Hamaker and Wichers(2017)}]{hamakerNoTimePresent2017}
+Hamaker, E.~L. and Wichers, M. (2017).
+\newblock No {{Time Like}} the {{Present}}: {{Discovering}} the {{Hidden
+  Dynamics}} in {{Intensive Longitudinal Data}}.
+\newblock \emph{Current Directions in Psychological Science} 26, 10--15
+\bibAnnoteFile{hamakerNoTimePresent2017}
+
+\bibitem[{Haslbeck and Ryan(2022)}]{haslbeckRecoveringWithinpersonDynamics2022}
+Haslbeck, J. M.~B. and Ryan, O. (2022).
+\newblock Recovering within-person dynamics from psychological time series.
+\newblock \emph{Multivariate Behavioral Research} 57, 735--766.
+\newblock \doi{10.1080/00273171.2021.1896353}
+\bibAnnoteFile{haslbeckRecoveringWithinpersonDynamics2022}
+
+\bibitem[{Kraemer et~al.(2018)Kraemer, Donner, Heitzig, and
+  Marwan}]{kraemerRecurrenceThresholdSelection2018}
+Kraemer, K.~H., Donner, R.~V., Heitzig, J., and Marwan, N. (2018).
+\newblock Recurrence threshold selection for obtaining robust recurrence
+  characteristics in different embedding dimensions.
+\newblock \emph{Chaos (Woodbury, N.Y.)} 28, 085720.
+\newblock \doi{10.1063/1.5024914}
+\bibAnnoteFile{kraemerRecurrenceThresholdSelection2018}
+
+\bibitem[{Maraun et~al.(2009)Maraun, Slaney, and
+  Gabriel}]{maraunAugustinianMethodologicalFamily2009}
+Maraun, M.~D., Slaney, K.~L., and Gabriel, S.~M. (2009).
+\newblock The {{Augustinian}} methodological family of psychology.
+\newblock \emph{New Ideas in Psychology} 27, 148--162.
+\newblock \doi{10.1016/j.newideapsych.2008.04.011}
+\bibAnnoteFile{maraunAugustinianMethodologicalFamily2009}
+
+\bibitem[{Marwan(2011)}]{marwanHowAvoidPotential2011}
+Marwan, N. (2011).
+\newblock How to avoid potential pitfalls in recurrence plot based data
+  analysis.
+\newblock \emph{International Journal of Bifurcation and Chaos} 21, 1003--1017.
+\newblock \doi{10.1142/S0218127411029008}
+\bibAnnoteFile{marwanHowAvoidPotential2011}
+
+\bibitem[{Marwan and Kraemer(2023)}]{marwanTrendsRecurrenceAnalysis2023}
+Marwan, N. and Kraemer, K.~H. (2023).
+\newblock Trends in recurrence analysis of dynamical systems.
+\newblock \emph{The European Physical Journal Special Topics} 232, 5--27.
+\newblock \doi{10.1140/epjs/s11734-022-00739-8}
+\bibAnnoteFile{marwanTrendsRecurrenceAnalysis2023}
+
+\bibitem[{Marwan and
+  Webber(2015)}]{marwanMathematicalComputationalFoundations2015}
+Marwan, N. and Webber, C.~L. (2015).
+\newblock Mathematical and {{Computational Foundations}} of {{Recurrence
+  Quantifications}}.
+\newblock In \emph{Recurrence {{Quantification Analysis}}: {{Theory}} and
+  {{Best Practices}}}, eds. {\relax Jr}.~Webber, Charles~L. and N.~Marwan
+  ({Cham}: {Springer International Publishing}), Understanding {{Complex
+  Systems}}. 3--43.
+\newblock \doi{10.1007/978-3-319-07155-8_1}
+\bibAnnoteFile{marwanMathematicalComputationalFoundations2015}
+
+\bibitem[{Meehl(2004)}]{meehlTheoreticalRisksTabular2004}
+Meehl, P.~E. (2004).
+\newblock Theoretical risks and tabular asterisks: {{Sir Karl}}, {{Sir
+  Ronald}}, and the slow progress of soft psychology.
+\newblock \emph{Applied and Preventive Psychology} 11, 1.
+\newblock \doi{10.1016/j.appsy.2004.02.001}
+\bibAnnoteFile{meehlTheoreticalRisksTabular2004}
+
+\bibitem[{Olthof et~al.(2020)Olthof, Hasselman, and
+  {Lichtwarck-Aschoff}}]{olthofComplexityPsychologicalSelfratings2020b}
+Olthof, M., Hasselman, F., and {Lichtwarck-Aschoff}, A. (2020).
+\newblock Complexity in psychological self-ratings: Implications for research
+  and practice.
+\newblock \emph{BMC Medicine} 18, 317.
+\newblock \doi{10.1186/s12916-020-01727-2}
+\bibAnnoteFile{olthofComplexityPsychologicalSelfratings2020b}
+
+\bibitem[{Olthof et~al.(2023)Olthof, Hasselman, Oude~Maatman, Bosman, and
+  {Lichtwarck-Aschoff}}]{olthofComplexityTheoryPsychopathology2023}
+Olthof, M., Hasselman, F., Oude~Maatman, F., Bosman, A. M.~T., and
+  {Lichtwarck-Aschoff}, A. (2023).
+\newblock Complexity theory of psychopathology.
+\newblock \emph{Journal of Psychopathology and Clinical Science} 132, 314--323.
+\newblock \doi{10.1037/abn0000740}
+\bibAnnoteFile{olthofComplexityTheoryPsychopathology2023}
+
+\bibitem[{Slaney and Garcia(2015)}]{slaneyConstructingPsychologicalObjects2015}
+Slaney, K.~L. and Garcia, D.~A. (2015).
+\newblock Constructing psychological objects: {{The}} rhetoric of constructs.
+\newblock \emph{Journal of Theoretical and Philosophical Psychology} 35,
+  244--259.
+\newblock \doi{10.1037/teo0000025}
+\bibAnnoteFile{slaneyConstructingPsychologicalObjects2015}
+
+\bibitem[{Tsitouras(2011)}]{tsitourasRungeKuttaPairs2011}
+Tsitouras, {\relax Ch}. (2011).
+\newblock Runge{\textendash}{{Kutta}} pairs of order 5(4) satisfying only the
+  first column simplifying assumption.
+\newblock \emph{Computers \& Mathematics with Applications} 62, 770--775.
+\newblock \doi{10.1016/j.camwa.2011.06.002}
+\bibAnnoteFile{tsitourasRungeKuttaPairs2011}
+
+\bibitem[{Webber~Jr and Zbilut(2005)}]{webber2005recurrence}
+Webber~Jr, C.~L. and Zbilut, J.~P. (2005).
+\newblock Recurrence quantification analysis of nonlinear dynamical systems.
+\newblock \emph{Tutorials in contemporary nonlinear methods for the behavioral
+  sciences} 94, 26--94
+\bibAnnoteFile{webber2005recurrence}
+
+\bibitem[{Westland(2022)}]{westlandInformationLossBias2022}
+Westland, J.~C. (2022).
+\newblock Information loss and bias in likert survey responses.
+\newblock \emph{PLoS ONE} 17, e0271949.
+\newblock \doi{10.1371/journal.pone.0271949}
+\bibAnnoteFile{westlandInformationLossBias2022}
 
 \end{thebibliography}
