@@ -1,5 +1,4 @@
 using RecurrenceAnalysis, DelayEmbeddings, CairoMakie
-# A simple sine wave (based on https://juliadynamics.github.io/RecurrenceAnalysis.jl/v2.0/rplots/)
 
 healthy, schizophrenia, bipolar, bereavement = load("MasterThesisRQA/Data/data.jld2", "healthy", "schizophrenia", "bipolar", "bereavement")
 plot(healthy.value1)
