@@ -3,7 +3,7 @@
 % This will only generate the Manuscript, the final article will be typeset by Frontiers after acceptance.   
 %                                              %
 %                                                                                                                                                         %
-% When submitting your files, remember to upload this *tex file, the pdf generated with it, the *bib file (if bibliography is not within the *tex) and all the figures.
+% When submitting your files, remember to upload this *tex file, the pdf generated with it, the *bib file (if bibliography is not\daleth  within the *tex) and all the figures.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Version 3.4 Generated 2022/06/14 %%%
@@ -16,8 +16,6 @@
 \usepackage[onehalfspacing]{setspace}
 
 \linenumbers
-
-
 % Leave a blank line between paragraphs instead of using \\
 
 
@@ -26,7 +24,7 @@
 \def\Authors{Maas van Steenbergen\,$^{1,*}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
-\def\Address{$^{1}$Laboratory X, Faculty of Behavioural and Social Sciences,  Methodology \& Statistics, Utrecht University, the Netherlands  }
+\def\Address{$^{1}$ Faculty of Behavioural and Social Sciences,  Methodology \& Statistics, Utrecht University, the Netherlands  }
 % The Corresponding Author should be marked with an asterisk
 % Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
 \def\corrAuthor{Corresponding Author}
@@ -40,7 +38,7 @@
 
 \title[Data degradation and EMA]{Making Self-Report Ready for Dynamics: the Impact of Low Sampling Frequency and Bandwidth on Recurrence Quantification Analysis in Within-Person Ecological Momentary Assessment} 
 
-\author[\firstAuthorLast ]{\Authors} %This field will be automatically populated
+\author[\firstAuthorLast]{\Authors} %This field will be automatically populated
 \address{} %This field will be automatically populated
 \correspondance{} %This field will be automatically populated
 
@@ -65,33 +63,25 @@ As a primary goal, the abstract should render the general significance and conce
 
 \section{Introduction}
 
-Within-person methods using intensive longitudinal measurements have come a long way in recent years, and they come with their own, unique set of challenges. The most pressing of these challenges is that they bring measurement theory back to the forefront: whereas between-person methods can neatly average out the effects of time and within-person variation, (quantitative) dynamical within-person time-dependent methods rely on that variation as their locus. 
+Within-person methods using intensive longitudinal measurements have come a long way in recent years, and they come with their own, unique set of methodological challenges. The most pressing of these challenges is that they bring measurement theory back to the forefront. Psychological variables are generally latent: they are not directly observable and our knowledge of their mechanisms is incomplete at best. Whereas between-person methods rely on averaging out the effects of time and within-person variation to deal with the complications this causes, (quantitative) within-person methods rely on that variation to make inferences about their underlying trajectory: how the variable fluctuates over time. With directly observable variables, it is relatively uncomplicated to measure an underlying trajectory. Latent variable constructs, however, result in data that is generally of much lower granularity than measurements of observable variables. Therefore, reconstructing elements of the trajectories of latent constructs is essential for making accurate inferences about within-person effects. We aim to reconstruct aspects of the underlying data using recurrence quantification analysis (RQA). Before we introduce this method, though, we need to explain a bit more about the background.
 
-To introduce our topic, we make a number of explicit assumptions about the nature of psychological constructs that are studied using intensive longitudinal methods These may very well turn out to be wrong, but we believe it is important to make these assumptions explicit to spot weaknesses in thinking \citep{meehlTheoreticalRisksTabular2004}. We will use these assumptions to introduce the topic and embed the study in the literature. We leave in the middle whether we actually hold on to those assumptions ourselves. We note that these assumptions are very close to `common sense' beliefs within the idiographic research community. To our understanding, however, these assumptions are not made explicit all that often. We invite the reader to evaluate them critically and form an opinion as well, and even think of arguments or experiments to disproof them. To help this process along, we put in some questions that help show weaknesses in the validity of these assumptions. 
+To introduce our topic, we make a number of assumptions about the nature of psychological constructs that are studied using intensive longitudinal methods. It is important to make these assumptions explicit to spot weaknesses in thinking \citep{meehlTheoreticalRisksTabular2004}. We will use these assumptions to introduce the topic and embed the study in the literature. We note that these assumptions are very close to `common sense' beliefs within the idiographic research community. To our understanding, however, these assumptions are not made explicit all that often. We invite the reader to evaluate them critically and form an opinion, and even think of arguments or experiments to disproof them. To help this process along, we put in some questions that help show weaknesses in the validity of these assumptions. 
 
-The first one of these assumptions is related to our working definition of psychological constructs. We take the perspective that these are references to `objectively existing consituents of reality' (see the second category in the paper by Stanley and Garcia \citep{slaneyConstructingPsychologicalObjects2015}). These constructs represent the phenomena of interest in psychology \citep{borsboomLatentVariableTheory2008}. They are directly unobservable and our knowledge of these phenomena is incomplete \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. As such, we do not (and perhaps cannot) know the true value of these constructs, both because of our incapacity to measure them directly and the `error' that comes with measuring them. 
+The first one of these assumptions is related to our working definition of psychological constructs. We take the perspective that these are references to `objectively existing consituents of reality' (see the second category in the paper by Stanley and Garcia \citep{slaneyConstructingPsychologicalObjects2015}). These constructs represent the phenomena of interest in psychology \citep{borsboomLatentVariableTheory2008}. They are not directly observable and our knowledge of these phenomena is incomplete \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. As such, one does not (and perhaps cannot) know the true value of these constructs, both because of the incapacity to measure them directly and the `error' that comes with measuring them. For example, take the construct of happiness. To measure this construct, we need to ask someone how happy they are. There is no external `measuring tape' to judge whether their account of their happiness is equivalent to their `true' state of happiness.
 
-The second assumption posits that there is an underlying continuous real-valued trajectory of the constructs that intensive longitudinal methods aim to measure \citep{hamakerNoTimePresent2017}. This underlying continuous trajectory is always present. Inferring more about that trajectory might lead to a better understanding of the mechanism in question. This underlying trajectory is time-dependent and shaped by various forces and its own previous state \citep{olthofComplexityPsychologicalSelfratings2020b}. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. 
+Secondly, we posit that there is an underlying continuous real-valued trajectory of the constructs that intensive longitudinal methods aim to measure \citep{hamakerNoTimePresent2017}. This underlying continuous trajectory is always present. Inferring more about that trajectory might lead to a better understanding of the mechanism in question. Intensive longitudinal measurements are time-dependent and shaped by various forces and their own previous state \citep{olthofComplexityPsychologicalSelfratings2020b}. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. The third, and final assumption is that ordinal likert-type scales are approximations of this underlying continuous measure \citep{haslbeckRecoveringWithinpersonDynamics2022}. Thus, we model the part of the `error' that comes with these continuous measures through ordinalization \citep{westlandInformationLossBias2022}. For our purposes, we discard other types of error.
 
-The third, and final assumption is that ordinal likert-type scales are approximations of this underlying continuous measure \citep{haslbeckRecoveringWithinpersonDynamics2022}. Thus, we model the part of the `error' that comes with these continuous measures through ordinalization \citep{westlandInformationLossBias2022}. For our purposes, we discard other types of error. 
+A technique that stands out for its broad applicability is Recurrence Quantification Analysis (RQA). This method, rooted in the identification of recurrent patterns from time series data \citep{webber2005recurrence}, results in different indicators for the stability, predictability, and dynamic behavior inherent in these systems. This method was developed in the physical sciences where data is directly observable: it can be retrieved at great frequency and at high resolution, to an extent that is impossible when using latent variable constructs. 
 
-Building on these assumptions, we are left with a problem: given that we know that we have this continuous trajectory of a personality construct and that it is measured using ordinal likert-type scales, there is a loss of information \citep{haslbeckRecoveringWithinpersonDynamics2022}. If you would make an explicit theoretical prediction for a trajectory, it will be hard to validate. This is because you can only validate this theoretical trajectory using ordinal measurements of low granularity. 
+Our research question follows naturally from these assumptions and the introduction of recurrence methods. If one were to make an explicit theoretical prediction for a trajectory, it would be difficult to validate it, as we would have to test our predictions about this continuous trajectory using ordinal measurements of low granularity \citep{haslbeckRecoveringWithinpersonDynamics2022}. Therefore, we do not have sufficient information to consider the trajectory immediately, but there needs to be an intermediary step where we reconstruct relevant aspects of the trajectory from these ordinal measurements. Our research problem is to find out whether RQA is suitable to fulfill this role.
 
-To help understand this problem, we will use tools that allow us to make each of these assumptions explicit in our methods. We first simulate a trajectory through dynamical computational modelling \citep{grahekAnatomyPsychologicalTheory2021,gauldDynamicalSystemsComputational2023}, and then break it down by binning the data and removing time points. This forces us to 
+To answer this problem, we will use computational methods to simulate each of the four assumptions described above. We then try to infer characteristics of the trajectory from the degraded data using RQA.\@We first simulate a trajectory through dynamical computational modelling \citep{grahekAnatomyPsychologicalTheory2021,gauldDynamicalSystemsComputational2023}, and then break it down by binning the data and removing time points. We use a toy model that simulates symptomatology by Gauld \& Depannemaecker to generate the trajectories \citep{gauldDynamicalSystemsComputational2023}. Symptomatology is a subset of latent variable constructs, with many simarities to latent construct variables in other fields. The overarching goal is to develop methods to recover aspects of a trajectory empirically using intensive longitudinal studies based on infrequent, low-resolution measurements. While full recovery of trajectory is impossible, it may be possible to recover some relevant aspects of the system under study. The purpose of the study is to see how the technique performs when dynamical systems result in latent variable measures. The research question is `How are the recurrence indicators recovered using RQA influenced by binning and sampling frequency?'. The major elements to be examined include the stability of several recurrence indicators under degradation, the implications for measurement and analysis of time series of latent variable constructs, and the weaknesses and oversights that we found when we tried to simulate a theoretical trajectory and sampled points from it.  
 
-Then, we look at the means to recover some of this 
-
-The overarching goal is to develop methods to recover aspects of a trajectory empirically in intensive longitudinal studies using recurrence indicators after data is degraded. This is a challenging problem, because intensive longitudinal data of latent variables 
-
-One analysis technique that is relatively robust to the type of degradation that we do is Recurrence Quantification Analysis (RQA). It results in the identification of recurrent patterns, or repetitions, in time series analysis \citep{webber2005recurrence}. One can then derive several indicators of the stability, predictability, and dynamical behavior of data from these recurrences. This method was developed in the physical sciences under the assumption that measurements can be retrieved at great frequency and at high resolution, to an extent that is impossible when relying on self-report scales. Hence, it is necessary to systematically assess the consequences of utilizing EMA data on the quality of RQA output \citep{haslbeckRecoveringWithinpersonDynamics2022}. 
-
-The major elements to be examined include the stability of several recurrence indicators under degradation, the implications for measurement, and weaknesses and oversights that come with applying a novel method to a specified . We hope that the process with which 
-
-A strength of this project is that it fully explicates normally tacit assumptions, and uses these assumptions to model the . A limitation of this project is that there is no empirical 
+A strength of this project is that it explicates normally tacit assumptions, and uses these assumptions to model the entire process. Computational methods allow us to simulate a theoretical trajectory and find out the performance of recurrence methods when data is degenerated. Part of the reason why we chose this method is because it is impossible to answer this question in the same way empirically as we do not know the underlying trajectory. There is, however, an important trade-off being made here: because we simulate our data, many of the complicating aspects that would come up during empirical studies are overlooked. We do not use real data, and that means that the inferences are only correct when our assumptions are correct. Another weakness is that the performance of recurrence methods can be sensitive to the parameter settings of the computational model. In the current project, we treat only four different trajectories, and these are far from exhaustive in the trajectories that psychological constructs might have. Adding many more different trajectory will, however, greatly increase the complexity of the project. 
 
 \section{Materials and methods}
 
-We have chosen to add a detailed overview of parameter settings and design choices in the materials section. This leads into a clear and concise explanation of the basic structure of our experiment. 
+We have chosen to add a detailed overview of parameter settings and design choices in the materials section. We kept the explanation of the experiment as concise as possible. 
 
 \subsection{Materials}
 
@@ -99,17 +89,17 @@ We have chosen to add a detailed overview of parameter settings and design choic
 We used the Julia languages, and in particular the `DynamicalSystems.jl', `RecurrenceAnalysis.jl', and `Statistics.jl' packages to implement the toy model and run the recurrence analyses \citep{bezanson2017julia, Datseris2018, DatserisParlitz2022}. All analyses were run on a personal computer. Full information about dependencies and version numbers can be found in a machine-readable format in the Manifest.toml file in the Github-repository. Instructions for running the analysis through a sandboxed project environment identical to our system can be found on the main page of this repository.
 
 \subsubsection{Toy Model}
-For this study, we will use the `3 + 1 Dimensions Model' introduced by Gauld and Depannemaecker \citep{gauldDynamicalSystemsComputational2023}. The original aim of this toy model is to simulate the trajectory of symptomatology of psychiatric symptoms over time, but it can be used for our project because it is easy to create somewhat realistic looking trajectories of latent constructs (although one can question whether they really are realistic if no one ever measured them) and flexible enough to capture a wide range of plausible trajectories. The model uses four coupled differential equations to model the effect of time on symptom intensity. Symptom intensity is a subset of latent constructs, and we see its behaviour over time as similar to other latent constructs. It is of note that many different systems could have let to similar results to the ones outputted here, and the data generating process is of secondary importance as long as it is able to result in interesting trajectories. For our purposes, we focused on the flexibility of the model in capturing different interesting plausible suitably realistic trajectories in a relatively straightforward manner as our main motivation for choosing this model over more traditional choices such as the Lorenz attractor.  
+For this study, we will use the `3 + 1 Dimensions Model' introduced by Gauld and Depannemaecker \citep{gauldDynamicalSystemsComputational2023}. The original aim of this toy model is to simulate the trajectory of symptomatology of psychiatric symptoms over time, but it can be used for our project because it is easy to create somewhat realistic looking trajectories of latent constructs (although one can question whether they really are realistic if no one ever measured them) and flexible enough to capture a wide range of plausible trajectories. The model uses four coupled differential equations to model the effect of time on symptom intensity. Symptom intensity is a subset of latent constructs, and we see its behaviour over time as similar to other latent constructs. It is of note that many different systems could have let to similar results to the ones outputted here, and the data generating process is of secondary importance as long as it is able to result in plausible trajectories. We chose this model over more traditional choices, such as the Lorenz attractor, because we prioritized its flexibility in capturing different, realistic trajectories in a relatively straightforward manner.
 
 \paragraph{Symptom intensity}
 \begin{equation}
-    \tau_{x}\frac{dx}{dt} = \frac{S_{\max}}{1+exp(\frac{Rs-y}{\lambda_{s}})} - x
+    \tau_{x}\frac{dx}{dt} = \frac{S_{\max}}{1+\exp(\frac{Rs-y}{\lambda_{s}})} - x
 \end{equation}
 
 
 \paragraph{Modelling of internal elements}
 \begin{equation}
-    \tau_{y}\frac{dy}{dt} = \frac{P}{1+exp(\frac{R_{b}-y}{\lambda_{b}})} + L - xy - z
+    \tau_{y}\frac{dy}{dt} = \frac{P}{1+\exp(\frac{R_{b}-y}{\lambda_{b}})} + L - xy - z
 \end{equation}
 
 \paragraph{Modelling of perceived environment}
@@ -128,7 +118,7 @@ We used the Tsitouras 5/4 Runge-Kutta method as the solver for the differential 
 
 \subsection{Recurrence Quantification Analysis}
 
-There are many different recurrence indicators, and developing new ones has been an area of considerable development \citep{marwanTrendsRecurrenceAnalysis2023}. We chose to focus on the core set of indicators, as described by Marwan \& Webber \citep{marwanMathematicalComputationalFoundations2015}. The recurrence threshold was set at the size of the bins of the degraded data set. E.g., if the range of the trajectory was 0 to 2, and the number of bins is 7 (data is degraded so that it is similar to likert-scale data), then the recurrence threshold would have been set at $\frac{1--1}{7}$ = $\frac{2}{7}$. Because the data is discrete, the embedding dimension is set to the amount of time that is covered by one data point. 
+There are many different recurrence indicators, and developing new ones has been an area of considerable development \citep{marwanTrendsRecurrenceAnalysis2023}. We chose to focus on the core set of indicators, as described by Marwan and Webber \citep{marwanMathematicalComputationalFoundations2015}. The recurrence threshold was set at the size of the bins of the degraded data set. E.g., if the range of the trajectory was 0 to 2, and the number of bins is 7 (data is degraded so that it is similar to likert-scale data), then the recurrence threshold would have been set at $\frac{2-0}{7}$ = $\frac{2}{7}$. 
 
 \subsubsection{Recurrence Indicators}
 
@@ -150,15 +140,14 @@ The \textit{recurrence rate} is the proportion of points in the phase space that
 
 \subsubsection{Stage 1: Data generation}
 
-In the first stage, we use a toy model to simulate the data based on the \textit{3 + 1 Dimensions Model} introduced by \citep{gauldDynamicalSystemsComputational2023}. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. Fluctuations  will be the outcome variable of this study. We modeled four. We save each one of these models as a separate time series. 
+In the first stage, we use a toy model to simulate the data based on the \textit{3 + 1 Dimensions Model} introduced by \citep{gauldDynamicalSystemsComputational2023}. This model captures clinical observations found in psychiatric symptomatology by modeling internal factors ($y$), environmental noise ($z$), temporal specificities ($f$), and symptomatology ($x$) using coupled differential equations. We used symptomatology to generate the time series, using four different parameter settings.
 
 \subsubsection{Stage 2: Binning data and removing time points}
 
-Afterwards, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into n intervals of equal length, where n stands for the number of bins.  We also vary the minimum ($min$) and maximum ($max$) value of this range to simulate ceiling and floor-effects. Moreover, we remove time points from the data by keeping the first and every $k^{th}$ observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
+Afterwards, we aim to systematically reduce the quality of the data. We bin a range of the width of the data into n intervals of equal length, where n stands for the number of bins. Moreover, we remove time points from the data by keeping the first and every $k^{th}$ observation of the simulated data. We systematically decrease the number of bins, the range, number of time points, and re-analyze the data.
 
 \subsubsection{Stage 3: Data analysis}
-
-We will judge the sensitivity of the data by deriving the recurrence indicators introduced before for each time series in each state of degradation. We judge sensitivity to degradation by calculating the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will map the changes as the deviation for these indicators between the baseline and a set of degraded data.
+We will judge the sensitivity of the data by deriving the recurrence indicators introduced before for each time series in each state of degradation. Wr calculate the deviation of each of these values from the baseline, which are the recurrence values derived for the intact dataset. We will map the changes as the deviation for these indicators between the baseline and a set of degraded data.
 
 % For Original Research articles, please note that the Material and Methods section can be placed in any of the following ways: before Results, before Discussion or after Discussion.
 
@@ -173,13 +162,11 @@ The authors declare that the research was conducted in the absence of any commer
 No external funding was used for this project.
 
 \section*{Acknowledgments}
-I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to persue the project as I imagined it. I also acknowledge the great help of the Julia community, which has been helping me with programming where I got stuck and which took the time to respond to my stupid questions. Finally, I'd like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is easy to follow and well-written.
-
-\section*{Supplemental Data}
- \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
+I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to persue the project as I imagined it. The great help of the Julia community was also helpful, as they have been helping me with programming where I got stuck and took the time to respond to my stupid questions. Finally, I would like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is easy to follow and well-written.
 
 \section*{Data Availability Statement}
-The code, all additional material, and generated data for this study can be found in the [NAME OF REPOSITORY]{}.
+The code, all additional material, and generated data for this study can be found on \href{https://github.com/MvanSteenbergen/MasterThesisRQA}{GitHub}.
+
 % Please see the availability of data guidelines for more information, at https://www.frontiersin.org/about/author-guidelines#AvailabilityofData
 
 \bibliographystyle{Frontiers-Harvard} %  Many Frontiers journals use the Harvard referencing system (Author-date), to find the style and resources for the journal you are submitting to: https://zendesk.frontiersin.org/hc/en-us/articles/360017860337-Frontiers-Reference-Styles-by-Journal. For Humanities and Social Sciences articles please include page numbers in the in-text citations 
@@ -189,7 +176,6 @@ The code, all additional material, and generated data for this study can be foun
 
 %%% Make sure to upload the bib file along with the tex file and PDF
 %%% Please see the test.bib file for some examples of references
-
 
 %%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
 %%% Use this if adding the figures directly in the mansucript, if so, please remember to also upload the files when submitting your article

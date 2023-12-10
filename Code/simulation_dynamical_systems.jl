@@ -5,6 +5,7 @@ using JLD2
 
 healthy, schizophrenia, bipolar, bereavement = load("MasterThesisRQA/Data/data.jld2", "healthy", "schizophrenia", "bipolar", "bereavement")
 
+
 # Function to bin the data into a specified number of bins
 function binData(data, n)
     # Calculate the bin size based on the range of the data and the number of bins
@@ -31,12 +32,9 @@ end
 
 function calculateRQA(data, segmentN, reductionFactor)
     segment, bin_size = degradeData(data, segmentN, reductionFactor)
-    recurrence_matrix = RecurrenceMatrix(segment, bin_size)
-
     rqa_calc = rqa(RecurrenceMatrix(segment, bin_size))
     return [segmentN, reductionFactor, collect(values(rqa_calc))...]
 end
-
 
 function runSimulationStudy(data)
     # get colnames from data (very compactly written, converts keys to an array))

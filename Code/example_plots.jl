@@ -1,15 +1,27 @@
 using RecurrenceAnalysis, DelayEmbeddings, CairoMakie
-CairoMakie.activate!()
 # A simple sine wave (based on https://juliadynamics.github.io/RecurrenceAnalysis.jl/v2.0/rplots/)
 
-data = sin.(2*π.* (0:400)./ 60)
-Y = embed(data, 3, 15)
-R = RecurrenceMatrix(data, 0.1)
+healthy, schizophrenia, bipolar, bereavement = load("MasterThesisRQA/Data/data.jld2", "healthy", "schizophrenia", "bipolar", "bereavement")
+plot(healthy.value1)
 
-fig = Figure(resolution = (1000,1000), fontsize = 40)
-ax = Axis(fig[1, 1]; title = "Recurrence plot for a simple sinus wave")
-heatmap!(ax, grayscale(R))
-fig
-rqa(R)
+function binData(data, n)
+    # Calculate the bin size based on the range of the data and the number of bins
+    bin_size = (maximum(data) - minimum(data)) / n
+    # Bin the data by rounding down the data value to the nearest bin edge
+    binned_data = floor.(data / bin_size) * bin_size
+    # Return the binned data
+    return binned_data, bin_size
+end
 
-function dampedOscillationsRule!()
+
+function reduceTimepoints(data, reductionFactor)
+    # Return every reductionFactor-th element of the data, starting from the first element
+    return data[1:reductionFactor:end]
+end
+
+
+degraded, size = binData(healthy.value1, 7)
+plot(degraded)
+
+reduced = reduceTimepoints(degraded, 8)
+plot(reduced)
