@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.24)  7 DEC 2023 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  11 DEC 2023 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -617,7 +617,7 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 <logo1.pdf, id=241, 284.06125pt x 80.3pt>
 File: logo1.pdf Graphic file (type pdf)
 <use logo1.pdf>
-Package pdftex.def Info: logo1.pdf  used on input line 242.
+Package pdftex.def Info: logo1.pdf  used on input line 243.
 (pdftex.def)             Requested size: 284.52756pt x 80.43947pt.
 Package epstopdf Info: Source file: <logo1.eps>
 (epstopdf)                    date: 2023-10-24 12:11:40
@@ -626,7 +626,7 @@ Package epstopdf Info: Source file: <logo1.eps>
 (epstopdf)                    date: 2023-10-24 12:15:08
 (epstopdf)                    size: 24813 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo1-eps-converted-to.pdf logo1.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 255.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -634,9 +634,9 @@ pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: fou
 <logo1-eps-converted-to.pdf, id=242, 284.06125pt x 80.3pt>
 File: logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use logo1-eps-converted-to.pdf>
-Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 254.
+Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 255.
 (pdftex.def)             Requested size: 252.0pt x 71.24008pt.
-Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 255.
+Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 256.
 Package epstopdf Info: Source file: <logo2.eps>
 (epstopdf)                    date: 2023-10-24 12:11:40
 (epstopdf)                    size: 21390 bytes
@@ -644,7 +644,7 @@ Package epstopdf Info: Source file: <logo2.eps>
 (epstopdf)                    date: 2023-10-24 12:15:09
 (epstopdf)                    size: 10360 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=logo2-eps-converted-to.pdf logo2.eps>
-(epstopdf)             \includegraphics on input line 262.
+(epstopdf)             \includegraphics on input line 263.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -652,7 +652,7 @@ pdfTeX warning: pdflatex (file ./logo2-eps-converted-to.pdf): PDF inclusion: fou
 <logo2-eps-converted-to.pdf, id=243, 70.2625pt x 79.29625pt>
 File: logo2-eps-converted-to.pdf Graphic file (type pdf)
 <use logo2-eps-converted-to.pdf>
-Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 262.
+Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 263.
 (pdftex.def)             Requested size: 252.0pt x 284.44862pt.
 
 Package caption Warning: Unused \captionsetup[sub] on input line 16.
