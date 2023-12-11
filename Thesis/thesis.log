@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  11 DEC 2023 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  11 DEC 2023 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -595,19 +595,19 @@ Underfull \hbox (badness 10000) detected at line 50
 
 
 {C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 68.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 67.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 68.
+(Font)              size <5> substituted on input line 67.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 68.
+(Font)              size <5> substituted on input line 67.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 68.
+(Font)              size <5> substituted on input line 67.
 
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
 (Font)              Font shape `OT1/phv/b/sl' tried instead on input line 97.
@@ -662,7 +662,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (7 pages, 229236 bytes).
+Output written on thesis.pdf (7 pages, 229238 bytes).
 PDF statistics:
  257 PDF objects out of 1000 (max. 8388607)
  58 named destinations out of 1000 (max. 500000)
