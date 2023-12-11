@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  11 DEC 2023 10:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  11 DEC 2023 14:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -447,7 +447,14 @@ LaTeX Info: Redefining \lslig on input line 902.
 Package microtype Info: Loading configuration file microtype.cfg.
  (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
 File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
-)) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+)) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip67
+\fb@frw=\dimen178
+\fb@frh=\dimen179
+\FrameRule=\dimen180
+\FrameSep=\dimen181
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 35.
@@ -481,13 +488,13 @@ LaTeX Font Info:    ... okay on input line 35.
  (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count331
-\scratchdimen=\dimen178
+\scratchdimen=\dimen182
 \scratchbox=\box67
 \nofMPsegments=\count332
 \nofMParguments=\count333
 \everyMPshowfont=\toks41
 \MPscratchCnt=\count334
-\MPscratchDim=\dimen179
+\MPscratchDim=\dimen183
 \MPnumerator=\count335
 \makeMPintoPDFobject=\count336
 \everyMPtoPDFconversion=\toks42
@@ -588,8 +595,22 @@ Underfull \hbox (badness 10000) detected at line 50
 
 
 {C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 67.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 67.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 67.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 67.
+
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 79.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 97.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
@@ -598,7 +619,7 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [3]
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 94.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 114.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
@@ -609,53 +630,6 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [6])
-<logo1.pdf, id=175, 284.06125pt x 80.3pt>
-File: logo1.pdf Graphic file (type pdf)
-<use logo1.pdf>
-Package pdftex.def Info: logo1.pdf  used on input line 189.
-(pdftex.def)             Requested size: 284.52756pt x 80.43947pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (3.49998pt too high) has occurred while \output is active []
-
- [7]
-Package epstopdf Info: Source file: <logo1.eps>
-(epstopdf)                    date: 2023-10-24 12:11:40
-(epstopdf)                    size: 37462 bytes
-(epstopdf)             Output file: <logo1-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-10-24 12:15:08
-(epstopdf)                    size: 24813 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=logo1-eps-converted-to.pdf logo1.eps>
-(epstopdf)             \includegraphics on input line 201.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<logo1-eps-converted-to.pdf, id=181, 284.06125pt x 80.3pt>
-File: logo1-eps-converted-to.pdf Graphic file (type pdf)
-<use logo1-eps-converted-to.pdf>
-Package pdftex.def Info: logo1-eps-converted-to.pdf  used on input line 201.
-(pdftex.def)             Requested size: 252.0pt x 71.24008pt.
-Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on input line 202.
-Package epstopdf Info: Source file: <logo2.eps>
-(epstopdf)                    date: 2023-10-24 12:11:40
-(epstopdf)                    size: 21390 bytes
-(epstopdf)             Output file: <logo2-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-10-24 12:15:09
-(epstopdf)                    size: 10360 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=logo2-eps-converted-to.pdf logo2.eps>
-(epstopdf)             \includegraphics on input line 209.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./logo2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<logo2-eps-converted-to.pdf, id=182, 70.2625pt x 79.29625pt>
-File: logo2-eps-converted-to.pdf Graphic file (type pdf)
-<use logo2-eps-converted-to.pdf>
-Package pdftex.def Info: logo2-eps-converted-to.pdf  used on input line 209.
-(pdftex.def)             Requested size: 252.0pt x 284.44862pt.
 
 Package caption Warning: Unused \captionsetup[sub] on input line 16.
 See the caption package documentation for explanation.
@@ -663,26 +637,34 @@ See the caption package documentation for explanation.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [8 <./logo1-eps-converted-to.pdf> <./logo2-eps-converted-to.pdf> <./logo1.pdf>] (thesis.aux)
+ [7] (thesis.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 5CB2C7A8C7B9CA8D861299A81D6D55FE;2807.
  ) 
 Here is how much of TeX's memory you used:
- 16444 strings out of 475248
- 266719 string characters out of 5757340
- 1938801 words of memory out of 5000000
- 37371 multiletter control sequences out of 15000+600000
- 598114 words of font info for 243 fonts, out of 8000000 for 9000
+ 16563 strings out of 475248
+ 268790 string characters out of 5757340
+ 1935801 words of memory out of 5000000
+ 37471 multiletter control sequences out of 15000+600000
+ 607383 words of font info for 273 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,8n,131p,1702b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,8n,131p,1837b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (8 pages, 290985 bytes).
+Output written on thesis.pdf (7 pages, 229262 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
+ 257 PDF objects out of 1000 (max. 8388607)
  58 named destinations out of 1000 (max. 500000)
- 69277 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 77454 words of extra memory for PDF output out of 89155 (max. 10000000)
 
