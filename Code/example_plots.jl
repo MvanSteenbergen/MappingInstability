@@ -1,4 +1,5 @@
-using RecurrenceAnalysis, DelayEmbeddings, CairoMakie
+using RecurrenceAnalysis, DelayEmbeddings, CairoMakie, JLD2
+
 
 healthy, schizophrenia, bipolar, bereavement = load("MasterThesisRQA/Data/data.jld2", "healthy", "schizophrenia", "bipolar", "bereavement")
 plot(healthy.value1)

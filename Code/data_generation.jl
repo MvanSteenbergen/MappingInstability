@@ -43,7 +43,6 @@ end
 # Implementation of the periodic callback that uses the affect function above to update the value of ζ in threePlusOneDimensions every 0.01 t.
 cb = PeriodicCallback(affect!, 0.01)
 
-
 # Calculation of the trajectory based on the rules above and return it as a statespaceset
 function calculateTrajectory(p₀)
     u₀ = [0.0, 0.01, 0.0, 0.0]

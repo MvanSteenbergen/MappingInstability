@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -148,6 +148,13 @@ Meehl, P.~E. (2004).
 \newblock \emph{Applied and Preventive Psychology} 11, 1.
 \newblock \doi{10.1016/j.appsy.2004.02.001}
 \bibAnnoteFile{meehlTheoreticalRisksTabular2004}
+
+\bibitem[{Molenaar and Campbell(2009)}]{molenaarNewPersonSpecificParadigm2009}
+Molenaar, P.~C. and Campbell, C.~G. (2009).
+\newblock The {{New Person-Specific Paradigm}} in {{Psychology}}.
+\newblock \emph{Current Directions in Psychological Science} 18, 112--117.
+\newblock \doi{10.1111/j.1467-8721.2009.01619.x}
+\bibAnnoteFile{molenaarNewPersonSpecificParadigm2009}
 
 \bibitem[{Molenaar(2004)}]{molenaarManifestoPsychologyIdiographic2004}
 Molenaar, P. C.~M. (2004).

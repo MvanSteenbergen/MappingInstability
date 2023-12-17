@@ -73,3 +73,12 @@ ss_bereavement = runSimulationStudy(bereavement.value1)
 plot = createPlots(healthy.value1)
 
 save("MasterThesisRQA/Data/simulation_studies.jld2", "ss_healthy", ss_healthy, "ss_schizophrenia", ss_schizophrenia, "ss_bipolar", ss_bipolar, "ss_bereavement", ss_bereavement)
+
+data = RecurrenceMatrix(healthy.value1, 0.1)
+plot(data)
+
+data, degraded = degradeData(healthy.value1, 7, 4)
+
+plot(RecurrenceMatrix(data, 0.05))
+
+data
