@@ -6,44 +6,44 @@ The style file: Frontiers-Harvard.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-You've used 24 entries,
+You've used 27 entries,
             3029 wiz_defined-function locations,
-            820 strings with 11282 characters,
-and the built_in function-call counts, 14333 in all, are:
-= -- 1264
-> -- 540
-< -- 18
-+ -- 248
-- -- 147
-* -- 1016
-:= -- 2198
-add.period$ -- 68
-call.type$ -- 24
-change.case$ -- 169
-chr.to.int$ -- 25
-cite$ -- 48
-duplicate$ -- 999
-empty$ -- 1106
-format.name$ -- 215
-if$ -- 2900
+            845 strings with 12168 characters,
+and the built_in function-call counts, 16146 in all, are:
+= -- 1429
+> -- 587
+< -- 21
++ -- 269
+- -- 160
+* -- 1137
+:= -- 2475
+add.period$ -- 78
+call.type$ -- 27
+change.case$ -- 190
+chr.to.int$ -- 28
+cite$ -- 54
+duplicate$ -- 1135
+empty$ -- 1261
+format.name$ -- 235
+if$ -- 3277
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 218
-newline$ -- 177
-num.names$ -- 98
-pop$ -- 380
+missing$ -- 245
+newline$ -- 198
+num.names$ -- 112
+pop$ -- 420
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 160
 quote$ -- 0
-skip$ -- 421
+skip$ -- 476
 stack$ -- 0
-substring$ -- 719
-swap$ -- 473
+substring$ -- 822
+swap$ -- 538
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 213
+type$ -- 240
 warning$ -- 0
-while$ -- 113
+while$ -- 130
 width$ -- 0
-write$ -- 389
+write$ -- 439

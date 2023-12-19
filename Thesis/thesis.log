@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  17 DEC 2023 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  19 DEC 2023 12:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -556,7 +556,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./logo1-eps-converted-to.pdf, id=79, 284.06125pt x 80.3pt>
+<./logo1-eps-converted-to.pdf, id=95, 284.06125pt x 80.3pt>
 File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./logo1-eps-converted-to.pdf>
 Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 50.
@@ -638,10 +638,13 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
  [7]
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [8] (thesis.bbl
+ [8]
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [9])
+ [9] (thesis.bbl
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [10])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 16.
 See the caption package documentation for explanation.
@@ -649,7 +652,7 @@ See the caption package documentation for explanation.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [10] (thesis.aux)
+ [11] (thesis.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -660,23 +663,23 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7F1B203135D49CDDF0BAADCB55798148;3161.
+(rerunfilecheck)             Checksum: B96C11E62E5016FD36741BA232286AC5;3769.
  ) 
 Here is how much of TeX's memory you used:
- 16603 strings out of 475248
- 269362 string characters out of 5757340
- 1936801 words of memory out of 5000000
- 37481 multiletter control sequences out of 15000+600000
- 608499 words of font info for 289 fonts, out of 8000000 for 9000
+ 16627 strings out of 475248
+ 270173 string characters out of 5757340
+ 1938801 words of memory out of 5000000
+ 37500 multiletter control sequences out of 15000+600000
+ 608462 words of font info for 287 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,8n,131p,2023b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,8n,131p,1981b,631s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (10 pages, 246736 bytes).
+Output written on thesis.pdf (11 pages, 254393 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 77470 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 77502 words of extra memory for PDF output out of 89155 (max. 10000000)
 

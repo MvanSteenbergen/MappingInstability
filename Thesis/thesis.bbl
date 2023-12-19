@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -33,6 +33,13 @@ Borsboom, D. (2008).
   25--53.
 \newblock \doi{10.1080/15366360802035497}
 \bibAnnoteFile{borsboomLatentVariableTheory2008}
+
+\bibitem[{Burgos(2021)}]{burgosRealProblemHypothetical2021}
+Burgos, J.~E. (2021).
+\newblock The {{Real Problem}} with {{Hypothetical Constructs}}.
+\newblock \emph{Perspectives on Behavior Science} 44, 683--704.
+\newblock \doi{10.1007/s40614-021-00311-0}
+\bibAnnoteFile{burgosRealProblemHypothetical2021}
 
 \bibitem[{Datseris(2018)}]{Datseris2018}
 Datseris, G. (2018).
@@ -105,6 +112,17 @@ Lamiell, J.~T. (1998).
 \newblock \emph{Theory \& Psychology} 8, 23--38.
 \newblock \doi{10.1177/0959354398081002}
 \bibAnnoteFile{lamiellNomotheticIdiographicContrasting1998}
+
+\bibitem[{Lamiell(2019)}]{lamiellStatisticalThinkingPsychology2019}
+Lamiell, J.~T. (2019).
+\newblock Statistical {{Thinking}} in {{Psychology}}: {{Some Needed Critical
+  Perspective}} on {{What}} `{{Everyone Knows}}'.
+\newblock In \emph{Psychology's {{Misuse}} of {{Statistics}} and {{Persistent
+  Dismissal}} of Its {{Critics}}}, ed. J.~T. Lamiell ({Cham}: {Springer
+  International Publishing}), Palgrave {{Studies}} in the {{Theory}} and
+  {{History}} of {{Psychology}}. 99--121.
+\newblock \doi{10.1007/978-3-030-12131-0_5}
+\bibAnnoteFile{lamiellStatisticalThinkingPsychology2019}
 
 \bibitem[{Maraun et~al.(2009)Maraun, Slaney, and
   Gabriel}]{maraunAugustinianMethodologicalFamily2009}
@@ -183,6 +201,13 @@ Olthof, M., Hasselman, F., Oude~Maatman, F., Bosman, A. M.~T., and
 \newblock \emph{Journal of Psychopathology and Clinical Science} 132, 314--323.
 \newblock \doi{10.1037/abn0000740}
 \bibAnnoteFile{olthofComplexityTheoryPsychopathology2023}
+
+\bibitem[{Slaney and Racine(2013)}]{slaneyWhatNamePsychology2013}
+Slaney, K.~L. and Racine, T.~P. (2013).
+\newblock What's in a name? {{Psychology}}'s ever evasive construct.
+\newblock \emph{New Ideas in Psychology} 31, 4--12.
+\newblock \doi{10.1016/j.newideapsych.2011.02.003}
+\bibAnnoteFile{slaneyWhatNamePsychology2013}
 
 \bibitem[{Tsitouras(2011)}]{tsitourasRungeKuttaPairs2011}
 Tsitouras, {\relax Ch}. (2011).
