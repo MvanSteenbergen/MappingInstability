@@ -10,4 +10,4 @@ You don't have to install the packages separately! All the packages are containe
     Pkg.activate(".")
     Pkg.instantiate()
 
-Now, the code will run as-is in an editor of choice. If you don't have an editor, you can use [VSCode](https://code.visualstudio.com/)
+Now, the code will run as-is in an editor of choice. If you don't have an editor, you can use [VSCode](https://code.visualstudio.com/) with the Julia-extension.
