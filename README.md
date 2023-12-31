@@ -1,5 +1,5 @@
 # MasterThesisRQA
-This is the repository for my thesis. The entire commit history can be browsed, and the finished documents in each folder can be seen as 
+This is the repository for my thesis. 
 
 ## Running the code
 If you haven't installed the julia language, install it first at [the Julia website](https://julialang.org/). Make sure the file hierarchy is maintained, so clone the entire repository!
