@@ -198,8 +198,14 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-p
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\fmtcount\fc-english.def
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\fmtcount\fc-english.def
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\fmtcount\fc-english.def
-OUTPUT thesis.out
+INPUT .\thesis.out
+INPUT .\thesis.out
+INPUT thesis.out
+INPUT thesis.out
 OUTPUT thesis.pdf
+INPUT .\thesis.out
+INPUT .\thesis.out
+OUTPUT thesis.out
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cfg
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cfg
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-ptm.cfg
@@ -273,7 +279,6 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb7t.tfm
@@ -301,8 +306,6 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb7t.vf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
@@ -331,6 +334,7 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phv
 INPUT .\thesis.bbl
 INPUT .\thesis.bbl
 INPUT thesis.bbl
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT .\time_series_plot.png
 INPUT .\time_series_plot.png
 INPUT .\time_series_plot.png

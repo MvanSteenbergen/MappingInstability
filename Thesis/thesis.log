@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  8 JAN 2024 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.12.10)  8 JAN 2024 13:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -517,6 +517,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 35.
+ (thesis.out) (thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
 
@@ -563,7 +564,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./logo1-eps-converted-to.pdf, id=3, 284.06125pt x 80.3pt>
+<./logo1-eps-converted-to.pdf, id=63, 284.06125pt x 80.3pt>
 File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./logo1-eps-converted-to.pdf>
 Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 49.
@@ -600,39 +601,6 @@ Underfull \hbox (badness 10000) detected at line 49
 
 Package natbib Warning: Citation `bolgerIntensiveLongitudinalMethods2013' on page 1 undefined on input line 54.
 
-
-Package natbib Warning: Citation `lamiellNomotheticIdiographicContrasting1998' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `bollenLatentVariablesPsychology2002' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `borsboomLatentVariableTheory2008' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `molenaarManifestoPsychologyIdiographic2004' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `molenaarNewPersonSpecificParadigm2009' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `lamiellStatisticalThinkingPsychology2019' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `webber2005recurrence' on page 1 undefined on input line 54.
-
-
-Package natbib Warning: Citation `meehlTheoreticalRisksTabular2004' on page 1 undefined on input line 56.
-
-
-Package natbib Warning: Citation `borsboomLatentVariableTheory2008' on page 1 undefined on input line 58.
-
-
-Package natbib Warning: Citation `friedWhatArePsychological2017' on page 1 undefined on input line 58.
-
-
-Package natbib Warning: Citation `maraunAugustinianMethodologicalFamily2009' on page 1 undefined on input line 58.
-
 [1
 
 
@@ -652,109 +620,34 @@ LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
 (Font)              size <5> substituted on input line 63.
 
-
-Package natbib Warning: Citation `hamakerNoTimePresent2017' on page 2 undefined on input line 71.
-
-
-Package natbib Warning: Citation `olthofComplexityPsychologicalSelfratings2020b' on page 2 undefined on input line 71.
-
-
-Package natbib Warning: Citation `olthofComplexityTheoryPsychopathology2023' on page 2 undefined on input line 71.
-
-
-Package natbib Warning: Citation `haslbeckRecoveringWithinpersonDynamics2022' on page 2 undefined on input line 81.
-
-
-Package natbib Warning: Citation `westlandInformationLossBias2022' on page 2 undefined on input line 81.
-
-
-Package natbib Warning: Citation `webber2005recurrence' on page 2 undefined on input line 91.
-
-
-Package natbib Warning: Citation `haslbeckRecoveringWithinpersonDynamics2022' on page 2 undefined on input line 91.
-
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
 (Font)              Font shape `OT1/phv/b/sl' tried instead on input line 92.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [2]
-
-Package natbib Warning: Citation `grahekAnatomyPsychologicalTheory2021' on page 3 undefined on input line 93.
-
-
-Package natbib Warning: Citation `gauldDynamicalSystemsComputational2023' on page 3 undefined on input line 93.
-
-
-Package natbib Warning: Citation `gauldDynamicalSystemsComputational2023' on page 3 undefined on input line 93.
-
-
-Package natbib Warning: Citation `gauldDynamicalSystemsComputational2023' on page 3 undefined on input line 101.
-
-
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [3]
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sl' tried instead on input line 123.
 
-
-Package natbib Warning: Citation `gauldDynamicalSystemsComputational2023' on page 4 undefined on input line 124.
-
-
-Package natbib Warning: Citation `gauldDynamicalSystemsComputational2023' on page 4 undefined on input line 127.
-
-
-LaTeX Warning: Reference `tab:1' on page 4 undefined on input line 127.
-
-
-LaTeX Warning: Reference `fig:1' on page 4 undefined on input line 127.
-
-
-Package natbib Warning: Citation `tsitourasRungeKuttaPairs2011' on page 4 undefined on input line 130.
-
-
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [4]
-
-Package natbib Warning: Citation `webber2005recurrence' on page 5 undefined on input line 140.
-
-
-Package natbib Warning: Citation `marwanTrendsRecurrenceAnalysis2023' on page 5 undefined on input line 140.
-
-
-Package natbib Warning: Citation `marwanMathematicalComputationalFoundations2015' on page 5 undefined on input line 140.
-
-
-LaTeX Warning: Reference `fig:2' on page 5 undefined on input line 140.
-
-
-Package natbib Warning: Citation `webber2005recurrence' on page 5 undefined on input line 143.
-
-
-Package natbib Warning: Citation `marwanHowAvoidPotential2011' on page 5 undefined on input line 143.
-
-
-Package natbib Warning: Citation `kraemerRecurrenceThresholdSelection2018' on page 5 undefined on input line 143.
-
-
-Package natbib Warning: Citation `bezanson2017julia' on page 5 undefined on input line 146.
-
-
-Package natbib Warning: Citation `Datseris2018' on page 5 undefined on input line 146.
-
-
-Package natbib Warning: Citation `DatserisParlitz2022' on page 5 undefined on input line 146.
-
-
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [5]
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [6] (thesis.bbl)
-<time_series_plot.png, id=72, 12045.0pt x 8030.0pt>
+ [6] (thesis.bbl
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [7])
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [8]
+<time_series_plot.png, id=192, 12045.0pt x 8030.0pt>
 File: time_series_plot.png Graphic file (type png)
 <use time_series_plot.png>
 Package pdftex.def Info: time_series_plot.png  used on input line 175.
@@ -762,8 +655,8 @@ Package pdftex.def Info: time_series_plot.png  used on input line 175.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [7 <./time_series_plot.png>]
-<recurrence_plots.png, id=80, 10037.5pt x 10037.5pt>
+ [9 <./time_series_plot.png>]
+<recurrence_plots.png, id=198, 10037.5pt x 10037.5pt>
 File: recurrence_plots.png Graphic file (type png)
 <use recurrence_plots.png>
 Package pdftex.def Info: recurrence_plots.png  used on input line 183.
@@ -771,7 +664,7 @@ Package pdftex.def Info: recurrence_plots.png  used on input line 183.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [8 <./recurrence_plots.png>]
+ [10 <./recurrence_plots.png>]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 16.
 See the caption package documentation for explanation.
@@ -779,7 +672,7 @@ See the caption package documentation for explanation.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [9]
+ [11]
 
 Package natbib Warning: There were undefined citations.
 
@@ -793,36 +686,24 @@ L3 programming layer <2023-08-29>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  4527055899F9B0B2E8535BBAB1AD0BD5;2698.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 4527055899F9B0B2E8535BBAB1AD0BD5;2698.
  ) 
 Here is how much of TeX's memory you used:
- 16541 strings out of 475248
- 265046 string characters out of 5757340
- 1934801 words of memory out of 5000000
- 37429 multiletter control sequences out of 15000+600000
- 609712 words of font info for 300 fonts, out of 8000000 for 9000
+ 16709 strings out of 475248
+ 271563 string characters out of 5757340
+ 1940801 words of memory out of 5000000
+ 37577 multiletter control sequences out of 15000+600000
+ 608688 words of font info for 292 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,10n,131p,1575b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,10n,131p,1575b,640s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (9 pages, 5276700 bytes).
+Output written on thesis.pdf (11 pages, 5306750 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 79376 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 77448 words of extra memory for PDF output out of 89155 (max. 10000000)
 
