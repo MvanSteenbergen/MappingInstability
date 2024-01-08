@@ -66,5 +66,4 @@ schizophrenia = calculateTrajectory([10, 1, 0.1, 14, 10, 0.904, 0.05, 0.2, 14, 4
 bipolar = calculateTrajectory([10, 1, 0.1, 14, 10, 1.04, 0.05, 1.01, 14, 10, 0.5, 0.5, 1, 0.2, 1, 720])
 bereavement = calculateTrajectory([10, 1, 0.1, 14, 10, 1, 0.05, 0.6, 14, 4.5, 0.5, 0.5, 1, 0.2, 1, 720])
 
-
 save("MasterThesisRQA/Data/data.jld2", "healthy", healthy, "schizophrenia", schizophrenia, "bipolar", bipolar, "bereavement", bereavement) 
