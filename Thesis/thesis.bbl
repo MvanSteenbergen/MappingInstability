@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -18,6 +18,23 @@ Bezanson, J., Edelman, A., Karpinski, S., and Shah, V.~B. (2017).
 \newblock Julia: {{A}} fresh approach to numerical computing.
 \newblock \emph{SIAM review} 59, 65--98
 \bibAnnoteFile{bezanson2017julia}
+
+\bibitem[{Boker(2002)}]{bokerConsequencesContinuityHunt2002}
+Boker, S.~M. (2002).
+\newblock Consequences of {{Continuity}}: {{The Hunt}} for {{Intrinsic
+  Properties}} within {{Parameters}} of {{Dynamics}} in {{Psychological
+  Processes}}.
+\newblock \emph{Multivariate Behavioral Research} 37, 405--422.
+\newblock \doi{10.1207/S15327906MBR3703_5}
+\bibAnnoteFile{bokerConsequencesContinuityHunt2002}
+
+\bibitem[{Bolger and Laurenceau(2013)}]{bolgerIntensiveLongitudinalMethods2013}
+Bolger, N. and Laurenceau, J.-P. (2013).
+\newblock \emph{Intensive Longitudinal Methods: {{An}} Introduction to Diary
+  and Experience Sampling Research}.
+\newblock Intensive Longitudinal Methods: {{An}} Introduction to Diary and
+  Experience Sampling Research ({New York, NY, US}: {Guilford Press})
+\bibAnnoteFile{bolgerIntensiveLongitudinalMethods2013}
 
 \bibitem[{Bollen(2002)}]{bollenLatentVariablesPsychology2002}
 Bollen, K.~A. (2002).
@@ -49,6 +66,14 @@ Datseris, G. and Parlitz, U. (2022).
 \newblock \doi{10.1007/978-3-030-91032-7}
 \bibAnnoteFile{DatserisParlitz2022}
 
+\bibitem[{Franz(2022)}]{franzArePsychologicalAttributes2022}
+Franz, D.~J. (2022).
+\newblock ``{{Are}} psychological attributes quantitative?'' is not an
+  empirical question: {{Conceptual}} confusions in the measurement debate.
+\newblock \emph{Theory \& Psychology} 32, 131--150.
+\newblock \doi{10.1177/09593543211045340}
+\bibAnnoteFile{franzArePsychologicalAttributes2022}
+
 \bibitem[{Fried(2017)}]{friedWhatArePsychological2017}
 Fried, E.~I. (2017).
 \newblock What are psychological constructs? {{On}} the nature and statistical
@@ -64,23 +89,6 @@ Gauld, C. and Depannemaecker, D. (2023).
   apprehend the dynamics of psychiatric symptoms.
 \newblock \emph{Frontiers in Psychology} 14
 \bibAnnoteFile{gauldDynamicalSystemsComputational2023}
-
-\bibitem[{Grahek et~al.(2021)Grahek, Schaller, and
-  Tackett}]{grahekAnatomyPsychologicalTheory2021}
-Grahek, I., Schaller, M., and Tackett, J.~L. (2021).
-\newblock Anatomy of a {{Psychological Theory}}: {{Integrating
-  Construct-Validation}} and {{Computational-Modeling Methods}} to {{Advance
-  Theorizing}}.
-\newblock \emph{Perspectives on Psychological Science} 16, 803--815.
-\newblock \doi{10.1177/1745691620966794}
-\bibAnnoteFile{grahekAnatomyPsychologicalTheory2021}
-
-\bibitem[{Hamaker and Wichers(2017)}]{hamakerNoTimePresent2017}
-Hamaker, E.~L. and Wichers, M. (2017).
-\newblock No {{Time Like}} the {{Present}}: {{Discovering}} the {{Hidden
-  Dynamics}} in {{Intensive Longitudinal Data}}.
-\newblock \emph{Current Directions in Psychological Science} 26, 10--15
-\bibAnnoteFile{hamakerNoTimePresent2017}
 
 \bibitem[{Haslbeck and Ryan(2022)}]{haslbeckRecoveringWithinpersonDynamics2022}
 Haslbeck, J. M.~B. and Ryan, O. (2022).
@@ -98,14 +106,6 @@ Kraemer, K.~H., Donner, R.~V., Heitzig, J., and Marwan, N. (2018).
 \newblock \doi{10.1063/1.5024914}
 \bibAnnoteFile{kraemerRecurrenceThresholdSelection2018}
 
-\bibitem[{Lamiell(1998)}]{lamiellNomotheticIdiographicContrasting1998}
-Lamiell, J.~T. (1998).
-\newblock `{{Nomothetic}}' and `{{Idiographic}}': {{Contrasting Windelband}}'s
-  {{Understanding}} with {{Contemporary Usage}}.
-\newblock \emph{Theory \& Psychology} 8, 23--38.
-\newblock \doi{10.1177/0959354398081002}
-\bibAnnoteFile{lamiellNomotheticIdiographicContrasting1998}
-
 \bibitem[{Lamiell(2019)}]{lamiellStatisticalThinkingPsychology2019}
 Lamiell, J.~T. (2019).
 \newblock Statistical {{Thinking}} in {{Psychology}}: {{Some Needed Critical
@@ -116,6 +116,14 @@ Lamiell, J.~T. (2019).
   {{History}} of {{Psychology}}. 99--121.
 \newblock \doi{10.1007/978-3-030-12131-0_5}
 \bibAnnoteFile{lamiellStatisticalThinkingPsychology2019}
+
+\bibitem[{Luce and Tukey(1964)}]{luceSimultaneousConjointMeasurement1964}
+Luce, R.~D. and Tukey, J.~W. (1964).
+\newblock Simultaneous conjoint measurement: {{A}} new type of fundamental
+  measurement.
+\newblock \emph{Journal of Mathematical Psychology} 1, 1--27.
+\newblock \doi{10.1016/0022-2496(64)90015-X}
+\bibAnnoteFile{luceSimultaneousConjointMeasurement1964}
 
 \bibitem[{Maraun et~al.(2009)Maraun, Slaney, and
   Gabriel}]{maraunAugustinianMethodologicalFamily2009}
@@ -160,12 +168,21 @@ Meehl, P.~E. (2004).
 \newblock \doi{10.1016/j.appsy.2004.02.001}
 \bibAnnoteFile{meehlTheoreticalRisksTabular2004}
 
-\bibitem[{Molenaar and Campbell(2009)}]{molenaarNewPersonSpecificParadigm2009}
-Molenaar, P.~C. and Campbell, C.~G. (2009).
-\newblock The {{New Person-Specific Paradigm}} in {{Psychology}}.
-\newblock \emph{Current Directions in Psychological Science} 18, 112--117.
-\newblock \doi{10.1111/j.1467-8721.2009.01619.x}
-\bibAnnoteFile{molenaarNewPersonSpecificParadigm2009}
+\bibitem[{Michell(1999)}]{michellMeasurementPsychologyCritical1999}
+Michell, J. (1999).
+\newblock \emph{Measurement in {{Psychology}}: {{A Critical History}} of a
+  {{Methodological Concept}}}.
+\newblock Ideas in {{Context}} ({Cambridge}: {Cambridge University Press}).
+\newblock \doi{10.1017/CBO9780511490040}
+\bibAnnoteFile{michellMeasurementPsychologyCritical1999}
+
+\bibitem[{Michell(2019)}]{michellConjointMeasurementUnderdone2019}
+Michell, J. (2019).
+\newblock Conjoint measurement underdone: {{Comment}} on {{G{\"u}nter
+  Trendler}} (2019).
+\newblock \emph{Theory \& Psychology} 29, 138--143.
+\newblock \doi{10.1177/0959354318814962}
+\bibAnnoteFile{michellConjointMeasurementUnderdone2019}
 
 \bibitem[{Molenaar(2004)}]{molenaarManifestoPsychologyIdiographic2004}
 Molenaar, P. C.~M. (2004).
@@ -195,6 +212,21 @@ Olthof, M., Hasselman, F., Oude~Maatman, F., Bosman, A. M.~T., and
 \newblock \doi{10.1037/abn0000740}
 \bibAnnoteFile{olthofComplexityTheoryPsychopathology2023}
 
+\bibitem[{Tafreshi(2022)}]{tafreshiSenseNonsensePsychological2022}
+Tafreshi, D. (2022).
+\newblock Sense and nonsense in psychological measurement: {{A}} case of
+  problem and method passing one another by.
+\newblock \emph{Theory \& Psychology} 32, 158--163.
+\newblock \doi{10.1177/09593543211049371}
+\bibAnnoteFile{tafreshiSenseNonsensePsychological2022}
+
+\bibitem[{Trendler(2019)}]{trendlerConjointMeasurementUndone2019}
+Trendler, G. (2019).
+\newblock Conjoint measurement undone.
+\newblock \emph{Theory \& Psychology} 29, 100--128.
+\newblock \doi{10.1177/0959354318788729}
+\bibAnnoteFile{trendlerConjointMeasurementUndone2019}
+
 \bibitem[{Tsitouras(2011)}]{tsitourasRungeKuttaPairs2011}
 Tsitouras, {\relax Ch}. (2011).
 \newblock Runge{\textendash}{{Kutta}} pairs of order 5(4) satisfying only the
@@ -209,12 +241,5 @@ Webber~Jr, C.~L. and Zbilut, J.~P. (2005).
 \newblock \emph{Tutorials in contemporary nonlinear methods for the behavioral
   sciences} 94, 26--94
 \bibAnnoteFile{webber2005recurrence}
-
-\bibitem[{Westland(2022)}]{westlandInformationLossBias2022}
-Westland, J.~C. (2022).
-\newblock Information loss and bias in likert survey responses.
-\newblock \emph{PLoS ONE} 17, e0271949.
-\newblock \doi{10.1371/journal.pone.0271949}
-\bibAnnoteFile{westlandInformationLossBias2022}
 
 \end{thebibliography}

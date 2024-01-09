@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1704717905 "thesis.aux" "thesis.bbl" "thesis" 1704717929 0
+["bibtex thesis"] 1704812909 "thesis.aux" "thesis.bbl" "thesis" 1704813328 0
   "./Frontiers-Harvard.bst" 1704717835 31641 1341c127ed7af43085eb64600f38bbe5 ""
-  "./bibliography.bib" 1704712551 180570 bdec73421ebadbf33463809489f2cdbb ""
-  "thesis.aux" 1704717928 8883 12f63eeeb5f564346e220696895d9bce "pdflatex"
+  "./bibliography.bib" 1704808398 205202 08a1db84393077552932313a23b2fdbd ""
+  "thesis.aux" 1704813327 8993 9e3aa74cf43c0252c6d7e9abad72bb5a "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1704717906 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1704717929 0
+["pdflatex"] 1704813298 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1704813328 0
   "C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1703704258 143115 17c4a5c81ae7930b8bfb50b7046ce024 ""
   "C:/Users/lenovo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1702208619 24142509 280c1bbdd99c952018ab229a6fcd6513 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -37,16 +37,13 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
-  "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi9.tfm" 1136765053 1524 d89e2d087a9828407a196f428428ef4a ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
-  "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136765053 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
-  "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy9.tfm" 1136765053 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
@@ -165,13 +162,13 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/xelatex/xetexconfig/crop.cfg" 1169250894 305 57c5d049d73b46b49f97b41eaa29558b ""
   "FrontiersinVancouver.cls" 1704717835 28933 f5dd896f2166d9ac0a54ad628c6f62f8 ""
-  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1704717860 26809 6b7d44d14051b878a3e2de183b4fc3a5 ""
+  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1704813297 24518 27fc3fd17d09f31cefc300bda0e5c5d6 ""
   "logo1.eps" 1704717189 37462 776b4d7efab5d1912cafad2bab92a208 ""
   "recurrence_plots.png" 1704716664 2445786 e72fd1ce0e73b1843c0bb6a7d0bdb0be ""
-  "thesis.aux" 1704717928 8883 12f63eeeb5f564346e220696895d9bce "pdflatex"
-  "thesis.bbl" 1704717906 10327 2ee9e90ba72536a086f4ecb2e6daf6dd "bibtex thesis"
-  "thesis.out" 1704717928 2698 4527055899f9b0b2e8535bbab1ad0bd5 "pdflatex"
-  "thesis.tex" 1704717860 26809 6b7d44d14051b878a3e2de183b4fc3a5 ""
+  "thesis.aux" 1704813327 8993 9e3aa74cf43c0252c6d7e9abad72bb5a "pdflatex"
+  "thesis.bbl" 1704812909 11419 763db02438285145807f779745adb1d4 "bibtex thesis"
+  "thesis.out" 1704813327 2698 4527055899f9b0b2e8535bbab1ad0bd5 "pdflatex"
+  "thesis.tex" 1704813297 24518 27fc3fd17d09f31cefc300bda0e5c5d6 ""
   "time_series_plot.png" 1704716576 1906096 588bc32cb15cbdcd534f67d8e200bb75 ""
   (generated)
   "thesis.aux"
