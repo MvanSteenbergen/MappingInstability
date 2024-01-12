@@ -14,6 +14,7 @@
 \documentclass[utf8]{FrontiersinVancouver} 
 \usepackage{url,hyperref,lineno,microtype,subcaption,framed, float}
 \usepackage[onehalfspacing]{setspace}
+\usepackage{amsmath}
 
 \linenumbers
 % Leave a blank line between paragraphs instead of using \\ 
@@ -55,7 +56,7 @@ Intensive longitudinal methods are useful for capturing and analyzing dynamic, r
 
 To introduce our topic, we make a number of assumptions about the nature of psychological constructs that are studied in longitudinal methods. It is important to make these assumptions explicit to increase the ability to reject their tenets if they turn out not to hold \citep{meehlTheoreticalRisksTabular2004}. We will use these assumptions to introduce the topic and embed the study in the literature. To our understanding, however, these assumptions are not made explicit all that often. We invite the reader to evaluate them critically, and even think of arguments or experiments to disprove them. To help this process along, we present some questions that can function as a starting point to think about the validity of these assumptions. 
 
-The first assumption is our working definition of psychological processes or attributes. It is impossible to measure a psychological attribute as one would measure height or temperature. This is because they are exclusively accessible to the participant themselves, and we therefore have to rely on participants to estimate values on a scale. Therefore, we have to ask participants to rate themselves on a scale to get an estimate of their scores \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. These values are not  The attributes in question are not 
+The first assumption is our working definition of psychological processes or attributes. It is impossible to measure a psychological attribute as one would measure height or temperature. They are exclusively accessible to the participant themselves, and we therefore have to rely on participants of studies to estimate values based on an ordinal scale at a set number of time points \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. 
 
 \begin{framed} 
     Questions for assumption one:
@@ -68,7 +69,39 @@ The first assumption is our working definition of psychological processes or att
     \end{itemize}
 \end{framed}
 
-Secondly, we posit that psychological attributes are quantities and fulfill the same criteria as measurement does in the physical science unless otherwise specified. This means that measurement can sustain ratios,  Deciding whether an attribute is a quantity is not a trivial matter. It is an active area of debate. The classical point of view within psychology is that you can quantify any variable, as long as it has a natural order, but this is false \citep{michellMeasurementPsychologyCritical1999}. Some say that quantifiability of a construct can only be empirically settled by using techniques such as Conjoint Measurement Theory. Others argue that psychological processes are not quantifiable at all\citep{luceSimultaneousConjointMeasurement1964,michellMeasurementPsychologyCritical1999,trendlerConjointMeasurementUndone2019, michellConjointMeasurementUnderdone2019,franzArePsychologicalAttributes2022, tafreshiSenseNonsensePsychological2022}. In any case, given that we use a model  An extensive discussion of this topic can be found in the discussion section. 
+Secondly, we posit that psychological attributes are quantities and fulfill the same criteria as measurement does in the physical science unless otherwise specified. Deciding whether an attribute is a quantity is not a trivial matter. The classical point of view within psychology is that you can quantify any variable, as long as it has a natural order, but this is false \citep{luceSimultaneousConjointMeasurement1964,michellMeasurementPsychologyCritical1999,trendlerConjointMeasurementUndone2019, michellConjointMeasurementUnderdone2019,franzArePsychologicalAttributes2022, tafreshiSenseNonsensePsychological2022}. How to decide whether an attribute is quantifiable is a point of active discussion. Some say that quantifiability of a construct can only be empirically settled by using techniques such as Conjoint Measurement Theory. Others argue that psychological processes are not quantifiable at all. We assume that it is a settled manner that the attribute we are dealing with can theoretically be measured quantitatively, because the structure of the variable in question holds 
+
+
+Let X, Y \& Z by any three values of the mapping. Then the projection of the quantity to an ordinal scale, which we will refer to as P, holds to the following conditions:
+\begin{itemize}
+    \item if $X \geq Y$ \& $Y \geq Z$, then $X \geq Z$ (transitivity);
+    \item if $X \geq Y$ \& $Y \geq X$, then $X = Z$ (antisymmetry);
+    \item either $X \geq Y\ \|\ Y \geq X$ (strong connexity);
+    \item $X + Y > X$ (positivity).
+\end{itemize}
+
+This means that only order is maintained, and the point scale is not additive (it does not sustain ratios). Additionally above its ordinal structure, we allow the scale to only maintain positive values. This is warranted because we assume that the estimated quantity also allows for positive values alone, and we therefore can assume that . 
+
+As for the quantitative attribute, Q,  itself, we will assume that the following additional characteristics (above the ones for the projection of the score) will hold:
+
+\begin{itemize}
+    \item $X + (X + Y) = (X + Y) + Z$ (associativity);
+    \item $X + Y = Y + X$ (commutativity);
+    \item $X \geq Y$ iff $X + Z \geq Y + Z$ (monotonicity);
+    \item if $X > Y$ then there exists a Z such that $X = Y + Z$ (solvability);
+    \item there exists a number n such that $nX \geq Y$ (where $1X = 1$ and $(n + 1) X = nX + X$;\@ Archimeadean condition).
+\end{itemize}
+
+The goal here is to pull apart the likert scale approximation of the score from the score itself, and add an in-between step: their relationship. We do this in the form of a step-function. This allows us to provide an unambiguous classification mechanism of scores of Q to scores in P. Assume that we have a 5-level measurement instrument that aims to estimate the quantitative variable. We have a series of pegs: [a, b, c, d]. These pegs are the borders between one classification in P on the basis of a score in Q, which we refer to as q. We then define p, a score in P, for each element in Q as follows: 
+
+\[ \begin{cases} 
+    1 & q \leq a \\
+    2 & a \leq q \leq b\\
+    3 & b \leq q \leq c\\
+    4 & c \leq q \leq d\\
+    5 & d \leq q\\
+ \end{cases}
+\]
 
 \begin{framed}
     Questions for assumption two:
@@ -78,7 +111,7 @@ Secondly, we posit that psychological attributes are quantities and fulfill the 
     \end{itemize}
 \end{framed}
 
-Third, we assume psychological processes are time-dependent. These measures are shaped by different forces and the previous states of the construct \citep{olthofComplexityPsychologicalSelfratings2020b}. Their values are continuous and are related to each other in a structured manner \citep{bokerConsequencesContinuityHunt2002}. We also assume that their values are differentiable over time, changing smoothly. Their values can drop or increase very quickly, but not instantaneously. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. 
+Third, we assume that those psychological processes are time-dependent. These measures are shaped by different forces and the previous states of the construct \citep{olthofComplexityPsychologicalSelfratings2020b}. Their values are continuous and are related to each other in a structured manner \citep{bokerConsequencesContinuityHunt2002}. We also assume that their values are differentiable over time, changing smoothly. Their values can drop or increase very quickly, but not instantaneously. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. 
 
 The last assumption is that ordinal likert-type scales are approximations of this underlying continuous measure \citep{haslbeckRecoveringWithinpersonDynamics2022}. We cannot measure the underlying immediately, because we have to rely on . This means that if a person
 
@@ -90,7 +123,7 @@ The last assumption is that ordinal likert-type scales are approximations of thi
     \end{itemize}
 \end{framed}
 
-
+Likert-type scales were not initially envisioned as mappings, and do not just include the 5-point scale we are all familiar with. Treating the 
 
 The overarching goal is to model errors in . While full recovery of trajectory is impossible, it may be possible to recover some relevant aspects of the system under study. The research question is `Given that a psychological construct has a real-valued continuous trajectory, can we recover elements of it using RQA from limited sampling occurrences on an ordinal scale?'. The major elements to be examined include the stability of several recurrence indicators under degradation, the implications for measurement and analysis of time series of latent variable constructs, and the weaknesses and oversights that we found when we tried to simulate a theoretical trajectory and degrade it.  
 
@@ -147,6 +180,9 @@ We used the Julia language, and in particular the `DynamicalSystems.jl', `Recurr
 
 % For Original Research articles, please note that the Material and Methods section can be placed in any of the following ways: before Results, before Discussion or after Discussion.
 
+\section{Discussion}
+
+The Romanian economist and mathematician Georgescu-Roegen has played a similar role of aligning 
 
 %%Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 
