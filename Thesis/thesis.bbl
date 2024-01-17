@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -50,6 +50,14 @@ Borsboom, D. (2008).
   25--53.
 \newblock \doi{10.1080/15366360802035497}
 \bibAnnoteFile{borsboomLatentVariableTheory2008}
+
+\bibitem[{Borsboom and Mellenbergh(2004)}]{borsboomWhyPsychometricsNot2004}
+Borsboom, D. and Mellenbergh, G.~J. (2004).
+\newblock Why {{Psychometrics}} is {{Not Pathological}}: {{A Comment}} on
+  {{Michell}}.
+\newblock \emph{Theory \& Psychology} 14, 105--120.
+\newblock \doi{10.1177/0959354304040200}
+\bibAnnoteFile{borsboomWhyPsychometricsNot2004}
 
 \bibitem[{Datseris(2018)}]{Datseris2018}
 Datseris, G. (2018).
@@ -105,6 +113,13 @@ Kraemer, K.~H., Donner, R.~V., Heitzig, J., and Marwan, N. (2018).
 \newblock \emph{Chaos (Woodbury, N.Y.)} 28, 085720.
 \newblock \doi{10.1063/1.5024914}
 \bibAnnoteFile{kraemerRecurrenceThresholdSelection2018}
+
+\bibitem[{Krantz(1972)}]{krantzMeasurementStructuresPsychological1972}
+Krantz, D.~H. (1972).
+\newblock Measurement {{Structures}} and {{Psychological Laws}}.
+\newblock \emph{Science} 175, 1427--1435.
+\newblock \doi{10.1126/science.175.4029.1427}
+\bibAnnoteFile{krantzMeasurementStructuresPsychological1972}
 
 \bibitem[{Lamiell(2019)}]{lamiellStatisticalThinkingPsychology2019}
 Lamiell, J.~T. (2019).
@@ -175,14 +190,6 @@ Michell, J. (1999).
 \newblock Ideas in {{Context}} ({Cambridge}: {Cambridge University Press}).
 \newblock \doi{10.1017/CBO9780511490040}
 \bibAnnoteFile{michellMeasurementPsychologyCritical1999}
-
-\bibitem[{Michell(2019)}]{michellConjointMeasurementUnderdone2019}
-Michell, J. (2019).
-\newblock Conjoint measurement underdone: {{Comment}} on {{G{\"u}nter
-  Trendler}} (2019).
-\newblock \emph{Theory \& Psychology} 29, 138--143.
-\newblock \doi{10.1177/0959354318814962}
-\bibAnnoteFile{michellConjointMeasurementUnderdone2019}
 
 \bibitem[{Molenaar(2004)}]{molenaarManifestoPsychologyIdiographic2004}
 Molenaar, P. C.~M. (2004).

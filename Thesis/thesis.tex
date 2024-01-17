@@ -12,9 +12,8 @@
 %%%  NB logo1.jpg is required in the path in order to correctly compile front page header %%%
 
 \documentclass[utf8]{FrontiersinVancouver} 
-\usepackage{url,hyperref,lineno,microtype,subcaption,framed, float}
+\usepackage{url,hyperref,lineno,microtype,subcaption,framed, float, dirtytalk, amsmath, tikz}
 \usepackage[onehalfspacing]{setspace}
-\usepackage{amsmath}
 
 \linenumbers
 % Leave a blank line between paragraphs instead of using \\ 
@@ -50,13 +49,17 @@
 
 %%% Leave the Abstract empty if your article does not require one, please see the Summary Table for full details.
 
+\begin{quote}
+    ``Eh bien!''--exlaimed Walras characteristically--``this difficulty is not insurmountable. Let us suppose that this measure exists, and we shall be able to give an exact and mathematical account of it''.\ 
+    [\dots]\ In view of the fact that theoretical science is a living organism, it would not be exaggerating to say that this attitude is tantamount to planning a fish hatchery in a moist flower bed.\\
+    -- Nicholas Georgescu-Roegen
+\end{quote}
 \section{Introduction}
-
 Intensive longitudinal methods are useful for capturing and analyzing dynamic, real-time variations in individuals' behaviors and experiences over a period of time \citep{bolgerIntensiveLongitudinalMethods2013}.  They come with a unique set of methodological challenges. Psychological variables are generally latent: they are not directly observable and our knowledge of their mechanisms is incomplete at best \citep{bollenLatentVariablesPsychology2002}. Psychological researchers rely on participants that estimate values for psychological variables at a set number of time points \citep{borsboomLatentVariableTheory2008}. Whereas between-person methods rely on averaging out the effects of time and within-person variation to deal with the complications this causes, (quantitative) dynamical within-person methods rely on that variation to make inferences about the underlying trajectory: how the process changes over time \citep{bokerConsequencesContinuityHunt2002, molenaarManifestoPsychologyIdiographic2004,lamiellStatisticalThinkingPsychology2019}.
 
 To introduce our topic, we make a number of assumptions about the nature of psychological constructs that are studied in longitudinal methods. It is important to make these assumptions explicit to increase the ability to reject their tenets if they turn out not to hold \citep{meehlTheoreticalRisksTabular2004}. We will use these assumptions to introduce the topic and embed the study in the literature. To our understanding, however, these assumptions are not made explicit all that often. We invite the reader to evaluate them critically, and even think of arguments or experiments to disprove them. To help this process along, we present some questions that can function as a starting point to think about the validity of these assumptions. 
 
-The first assumption is our working definition of psychological processes or attributes. It is impossible to measure a psychological attribute as one would measure height or temperature. They are exclusively accessible to the participant themselves, and we therefore have to rely on participants of studies to estimate values based on an ordinal scale at a set number of time points \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. 
+The first assumption is our working definition of psychological processes or attributes. It is a trueism that it is impossible to measure a psychological attribute as one would measure height or temperature. They are exclusively accessible to the participant themselves, and we therefore have to rely on participants of studies to estimate values based on an ordinal scale at a set number of time points \citep{friedWhatArePsychological2017, maraunAugustinianMethodologicalFamily2009}. 
 
 \begin{framed} 
     Questions for assumption one:
@@ -69,39 +72,63 @@ The first assumption is our working definition of psychological processes or att
     \end{itemize}
 \end{framed}
 
-Secondly, we posit that psychological attributes are quantities and fulfill the same criteria as measurement does in the physical science unless otherwise specified. Deciding whether an attribute is a quantity is not a trivial matter. The classical point of view within psychology is that you can quantify any variable, as long as it has a natural order, but this is false \citep{luceSimultaneousConjointMeasurement1964,michellMeasurementPsychologyCritical1999,trendlerConjointMeasurementUndone2019, michellConjointMeasurementUnderdone2019,franzArePsychologicalAttributes2022, tafreshiSenseNonsensePsychological2022}. How to decide whether an attribute is quantifiable is a point of active discussion. Some say that quantifiability of a construct can only be empirically settled by using techniques such as Conjoint Measurement Theory. Others argue that psychological processes are not quantifiable at all. We assume that it is a settled manner that the attribute we are dealing with can theoretically be measured quantitatively, because the structure of the variable in question holds 
+Secondly, we posit that psychological attributes are quantities and fulfill the same criteria as measurement does in the physical science unless otherwise specified. While often held for true, deciding whether an attribute is a quantity is not a trivial matter. The classical point of view within psychology is that you can quantify any variable, as long as it has a natural order, but this has long been shown to be false \cite{krantzMeasurementStructuresPsychological1972} (For an extensive discussion of the history of this refer to \citep{michellMeasurementPsychologyCritical1999}). Deciding whether an attribute is a quantity is a point of active discussion. Some say that quantifiability of a construct can only be empirically settled by using techniques such as Conjoint Measurement Theory \citep{luceSimultaneousConjointMeasurement1964}. Others argue that psychological processes are not quantifiable at all \citep{trendlerConjointMeasurementUndone2019}, or that that the question itself rests on conceptual confusion \citep{franzArePsychologicalAttributes2022,tafreshiSenseNonsensePsychological2022}. Some, shockingly, even go as far as saying everything is fine because Item Response Theory solved these issues ages ago \citep{borsboomWhyPsychometricsNot2004}. We will avoid this contention by blatantly assuming it away. In fact, we will it is a settled manner that the attribute in question has a quantitative structure, that this has to be proven empirically, \textit{is} proven empirically, and it has been resolved for our theoretical construct.
 
+We will separate the `real' value from its likert-scale representation, and  
 
 Let X, Y \& Z by any three values of the mapping. Then the projection of the quantity to an ordinal scale, which we will refer to as P, holds to the following conditions:
 \begin{itemize}
     \item if $X \geq Y$ \& $Y \geq Z$, then $X \geq Z$ (transitivity);
     \item if $X \geq Y$ \& $Y \geq X$, then $X = Z$ (antisymmetry);
-    \item either $X \geq Y\ \|\ Y \geq X$ (strong connexity);
-    \item $X + Y > X$ (positivity).
+    \item either $X \geq Y\ \|\ Y \geq X$ (strong connexity).
 \end{itemize}
 
-This means that only order is maintained, and the point scale is not additive (it does not sustain ratios). Additionally above its ordinal structure, we allow the scale to only maintain positive values. This is warranted because we assume that the estimated quantity also allows for positive values alone, and we therefore can assume that . 
+This means that only order is maintained, and nothing else: a number-score on an item cannot be seen as a quantity in the classical sense. A score in P can only indicate that a score is higher or lower than another score in P. Based on the measure only, beyond that ordering, we know nothing about the real value of P (assuming a scaling S).
 
-As for the quantitative attribute, Q,  itself, we will assume that the following additional characteristics (above the ones for the projection of the score) will hold:
+As for the quantitative attribute $Q$, we will assume that the following additional characteristics (above the ones for the projection of the score) will hold:
 
 \begin{itemize}
     \item $X + (X + Y) = (X + Y) + Z$ (associativity);
     \item $X + Y = Y + X$ (commutativity);
     \item $X \geq Y$ iff $X + Z \geq Y + Z$ (monotonicity);
     \item if $X > Y$ then there exists a Z such that $X = Y + Z$ (solvability);
-    \item there exists a number n such that $nX \geq Y$ (where $1X = 1$ and $(n + 1) X = nX + X$;\@ Archimeadean condition).
+    \item $X + Y > X$ (positivity).
+    \item there exists a number n such that $nX \geq Y$ (where $1X = 1$ and $(n + 1) X = nX + X$) (Archimeadean condition).
 \end{itemize}
 
-The goal here is to pull apart the likert scale approximation of the score from the score itself, and add an in-between step: their relationship. We do this in the form of a step-function. This allows us to provide an unambiguous classification mechanism of scores of Q to scores in P. Assume that we have a 5-level measurement instrument that aims to estimate the quantitative variable. We have a series of pegs: [a, b, c, d]. These pegs are the borders between one classification in P on the basis of a score in Q, which we refer to as q. We then define p, a score in P, for each element in Q as follows: 
+This means essentially that a value of $Q$ in terms of another value of $Q$ always stand in ratios between the , 
 
-\[ \begin{cases} 
-    1 & q \leq a \\
+By pulling the scores away from the ordinal measurement instrument, we can formalize their relationship. This allows us to provide an unambiguous classification mechanism of scores in $Q$ to scores in $P$.\ This lack of ambiguity is only a result of this formalization. We may find that the relationship of the `real' variable to its ordinal estimate is not quite so straightforward. 
+
+Assume that instrument $P$ has $n$ elements. Then we can define a series of $n - 1$ `pegs' R as $/{a, b, c \ldots z/}$. These pegs are the where a score $q$ in $Q$ classification in $P$ jumps to another classification in $P$ on the basis of a score $q$ in $Q$. We then define a score $p$ in $P$ for each $q$ in $Q$ as follows, assuming we have an $n$-level measurement scale for $P$.
+
+\[
+\begin{cases} 
+    1 & q \leq a\\
     2 & a \leq q \leq b\\
     3 & b \leq q \leq c\\
-    4 & c \leq q \leq d\\
-    5 & d \leq q\\
- \end{cases}
+    \ldots & \ldots\\    
+    n & z\leq q\\
+\end{cases}
 \]
+
+This relationship can also be visualized on a number line. Imagine a five-point instrument is used to measure a quantitative psychological variable. Then, at a particular point in time t, we assume that the measurement device is divided into five segments of equal lengths (excluding the last element, which goes on infinitely). It should be noted that the scaling is arbitrary, but it has been set to 10 for our convenience.
+
+\[
+\begin{tikzpicture}
+    \draw[-latex] (0,0) -- (11,0);
+    \foreach \x in {0,...,10}
+        \draw (\x,0) -- (\x,-3pt);
+    \foreach \x in {0,...,10}
+        \node [below] at (\x,-0.1) {$\x$};
+    \foreach \x\y in {2/a,4/b,6/c,8/d}
+        \node [above] at (\x,0.1) {$\y$};
+\end{tikzpicture}
+\]
+
+The relationship between $P$ and $Q$ can then be described as 
+
+Sadly, life is never easy. It would be perfectly agreeable if nature chose to let each ordinal measuring instrument correspond to 
 
 \begin{framed}
     Questions for assumption two:
@@ -111,7 +138,7 @@ The goal here is to pull apart the likert scale approximation of the score from 
     \end{itemize}
 \end{framed}
 
-Third, we assume that those psychological processes are time-dependent. These measures are shaped by different forces and the previous states of the construct \citep{olthofComplexityPsychologicalSelfratings2020b}. Their values are continuous and are related to each other in a structured manner \citep{bokerConsequencesContinuityHunt2002}. We also assume that their values are differentiable over time, changing smoothly. Their values can drop or increase very quickly, but not instantaneously. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. 
+Third, we assume that those psychological processes which are part of Q are time-dependent. These measures are shaped by different forces and the previous states of the construct \citep{olthofComplexityPsychologicalSelfratings2020b}. Their values are continuous and are related to each other in a structured manner \citep{bokerConsequencesContinuityHunt2002}. We also assume that their values are differentiable over time, changing smoothly. Their values can drop or increase very quickly, but not instantaneously. They are `complex' measures, meaning that they come to be through the interdependencies of the numerous non-trivially interacting forces that influence the system \citep{olthofComplexityTheoryPsychopathology2023}. This allows us 
 
 The last assumption is that ordinal likert-type scales are approximations of this underlying continuous measure \citep{haslbeckRecoveringWithinpersonDynamics2022}. We cannot measure the underlying immediately, because we have to rely on . This means that if a person
 
