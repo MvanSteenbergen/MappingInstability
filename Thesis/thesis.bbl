@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -28,29 +28,6 @@ Boker, S.~M. (2002).
 \newblock \doi{10.1207/S15327906MBR3703_5}
 \bibAnnoteFile{bokerConsequencesContinuityHunt2002}
 
-\bibitem[{Bolger and Laurenceau(2013)}]{bolgerIntensiveLongitudinalMethods2013}
-Bolger, N. and Laurenceau, J.-P. (2013).
-\newblock \emph{Intensive Longitudinal Methods: {{An}} Introduction to Diary
-  and Experience Sampling Research}.
-\newblock Intensive Longitudinal Methods: {{An}} Introduction to Diary and
-  Experience Sampling Research ({New York, NY, US}: {Guilford Press})
-\bibAnnoteFile{bolgerIntensiveLongitudinalMethods2013}
-
-\bibitem[{Bollen(2002)}]{bollenLatentVariablesPsychology2002}
-Bollen, K.~A. (2002).
-\newblock Latent {{Variables}} in {{Psychology}} and the {{Social Sciences}}.
-\newblock \emph{Annual Review of Psychology} 53, 605--634.
-\newblock \doi{10.1146/annurev.psych.53.100901.135239}
-\bibAnnoteFile{bollenLatentVariablesPsychology2002}
-
-\bibitem[{Borsboom(2008)}]{borsboomLatentVariableTheory2008}
-Borsboom, D. (2008).
-\newblock Latent {{Variable Theory}}.
-\newblock \emph{Measurement: Interdisciplinary Research and Perspectives} 6,
-  25--53.
-\newblock \doi{10.1080/15366360802035497}
-\bibAnnoteFile{borsboomLatentVariableTheory2008}
-
 \bibitem[{Borsboom and Mellenbergh(2004)}]{borsboomWhyPsychometricsNot2004}
 Borsboom, D. and Mellenbergh, G.~J. (2004).
 \newblock Why {{Psychometrics}} is {{Not Pathological}}: {{A Comment}} on
@@ -58,6 +35,13 @@ Borsboom, D. and Mellenbergh, G.~J. (2004).
 \newblock \emph{Theory \& Psychology} 14, 105--120.
 \newblock \doi{10.1177/0959354304040200}
 \bibAnnoteFile{borsboomWhyPsychometricsNot2004}
+
+\bibitem[{Cliff(1992)}]{cliffAbstractMeasurementTheory1992}
+Cliff, N. (1992).
+\newblock Abstract {{Measurement Theory}} and the {{Revolution That Never
+  Happened}}.
+\newblock \emph{Psychological Science} 3, 186--190
+\bibAnnoteFile{cliffAbstractMeasurementTheory1992}
 
 \bibitem[{Datseris(2018)}]{Datseris2018}
 Datseris, G. (2018).
@@ -90,36 +74,25 @@ Fried, E.~I. (2017).
 \newblock \doi{10.1080/17437199.2017.1306718}
 \bibAnnoteFile{friedWhatArePsychological2017}
 
-\bibitem[{Gauld and
-  Depannemaecker(2023)}]{gauldDynamicalSystemsComputational2023}
-Gauld, C. and Depannemaecker, D. (2023).
-\newblock Dynamical systems in computational psychiatry: {{A}} toy-model to
-  apprehend the dynamics of psychiatric symptoms.
-\newblock \emph{Frontiers in Psychology} 14
-\bibAnnoteFile{gauldDynamicalSystemsComputational2023}
-
-\bibitem[{Haslbeck and Ryan(2022)}]{haslbeckRecoveringWithinpersonDynamics2022}
-Haslbeck, J. M.~B. and Ryan, O. (2022).
-\newblock Recovering within-person dynamics from psychological time series.
-\newblock \emph{Multivariate Behavioral Research} 57, 735--766.
-\newblock \doi{10.1080/00273171.2021.1896353}
-\bibAnnoteFile{haslbeckRecoveringWithinpersonDynamics2022}
-
-\bibitem[{Kraemer et~al.(2018)Kraemer, Donner, Heitzig, and
-  Marwan}]{kraemerRecurrenceThresholdSelection2018}
-Kraemer, K.~H., Donner, R.~V., Heitzig, J., and Marwan, N. (2018).
-\newblock Recurrence threshold selection for obtaining robust recurrence
-  characteristics in different embedding dimensions.
-\newblock \emph{Chaos (Woodbury, N.Y.)} 28, 085720.
-\newblock \doi{10.1063/1.5024914}
-\bibAnnoteFile{kraemerRecurrenceThresholdSelection2018}
-
 \bibitem[{Krantz(1972)}]{krantzMeasurementStructuresPsychological1972}
 Krantz, D.~H. (1972).
 \newblock Measurement {{Structures}} and {{Psychological Laws}}.
 \newblock \emph{Science} 175, 1427--1435.
 \newblock \doi{10.1126/science.175.4029.1427}
 \bibAnnoteFile{krantzMeasurementStructuresPsychological1972}
+
+\bibitem[{Krantz and Suppes(1971)}]{krantzFoundationsMeasurement1971}
+Krantz, D.~H. and Suppes, P. (1971).
+\newblock \emph{Foundations of Measurement} ({New York : Academic Press})
+\bibAnnoteFile{krantzFoundationsMeasurement1971}
+
+\bibitem[{Kyngdon(2008)}]{kyngdonConjointMeasurementError2008}
+Kyngdon, A. (2008).
+\newblock Conjoint {{Measurement}}, {{Error}} and the {{Rasch Model}}: {{A
+  Reply}} to {{Michell}}, and {{Borsboom}} and {{Zand Scholten}}.
+\newblock \emph{Theory \& Psychology} 18, 125--131.
+\newblock \doi{10.1177/0959354307086927}
+\bibAnnoteFile{kyngdonConjointMeasurementError2008}
 
 \bibitem[{Lamiell(2019)}]{lamiellStatisticalThinkingPsychology2019}
 Lamiell, J.~T. (2019).
@@ -148,33 +121,6 @@ Maraun, M.~D., Slaney, K.~L., and Gabriel, S.~M. (2009).
 \newblock \doi{10.1016/j.newideapsych.2008.04.011}
 \bibAnnoteFile{maraunAugustinianMethodologicalFamily2009}
 
-\bibitem[{Marwan(2011)}]{marwanHowAvoidPotential2011}
-Marwan, N. (2011).
-\newblock How to avoid potential pitfalls in recurrence plot based data
-  analysis.
-\newblock \emph{International Journal of Bifurcation and Chaos} 21, 1003--1017.
-\newblock \doi{10.1142/S0218127411029008}
-\bibAnnoteFile{marwanHowAvoidPotential2011}
-
-\bibitem[{Marwan and Kraemer(2023)}]{marwanTrendsRecurrenceAnalysis2023}
-Marwan, N. and Kraemer, K.~H. (2023).
-\newblock Trends in recurrence analysis of dynamical systems.
-\newblock \emph{The European Physical Journal Special Topics} 232, 5--27.
-\newblock \doi{10.1140/epjs/s11734-022-00739-8}
-\bibAnnoteFile{marwanTrendsRecurrenceAnalysis2023}
-
-\bibitem[{Marwan and
-  Webber(2015)}]{marwanMathematicalComputationalFoundations2015}
-Marwan, N. and Webber, C.~L. (2015).
-\newblock Mathematical and {{Computational Foundations}} of {{Recurrence
-  Quantifications}}.
-\newblock In \emph{Recurrence {{Quantification Analysis}}: {{Theory}} and
-  {{Best Practices}}}, eds. {\relax Jr}.~Webber, Charles~L. and N.~Marwan
-  ({Cham}: {Springer International Publishing}), Understanding {{Complex
-  Systems}}. 3--43.
-\newblock \doi{10.1007/978-3-319-07155-8_1}
-\bibAnnoteFile{marwanMathematicalComputationalFoundations2015}
-
 \bibitem[{Meehl(2004)}]{meehlTheoreticalRisksTabular2004}
 Meehl, P.~E. (2004).
 \newblock Theoretical risks and tabular asterisks: {{Sir Karl}}, {{Sir
@@ -190,6 +136,28 @@ Michell, J. (1999).
 \newblock Ideas in {{Context}} ({Cambridge}: {Cambridge University Press}).
 \newblock \doi{10.1017/CBO9780511490040}
 \bibAnnoteFile{michellMeasurementPsychologyCritical1999}
+
+\bibitem[{Michell(2004)}]{michellItemResponseModels2004}
+Michell, J. (2004).
+\newblock Item {{Response Models}}, {{Pathological Science}} and the {{Shape}}
+  of {{Error}}: {{Reply}} to {{Borsboom}} and {{Mellenbergh}}.
+\newblock \emph{Theory \& Psychology} 14, 121--129.
+\newblock \doi{10.1177/0959354304040201}
+\bibAnnoteFile{michellItemResponseModels2004}
+
+\bibitem[{Michell(2021)}]{michellRepresentationalMeasurementTheory2021}
+Michell, J. (2021).
+\newblock Representational measurement theory: {{Is}} its number up?
+\newblock \emph{Theory \& Psychology} 31, 3--23.
+\newblock \doi{10.1177/0959354320930817}
+\bibAnnoteFile{michellRepresentationalMeasurementTheory2021}
+
+\bibitem[{Molenaar and Campbell(2009)}]{molenaarNewPersonSpecificParadigm2009}
+Molenaar, P.~C. and Campbell, C.~G. (2009).
+\newblock The {{New Person-Specific Paradigm}} in {{Psychology}}.
+\newblock \emph{Current Directions in Psychological Science} 18, 112--117.
+\newblock \doi{10.1111/j.1467-8721.2009.01619.x}
+\bibAnnoteFile{molenaarNewPersonSpecificParadigm2009}
 
 \bibitem[{Molenaar(2004)}]{molenaarManifestoPsychologyIdiographic2004}
 Molenaar, P. C.~M. (2004).
@@ -210,14 +178,19 @@ Olthof, M., Hasselman, F., and {Lichtwarck-Aschoff}, A. (2020).
 \newblock \doi{10.1186/s12916-020-01727-2}
 \bibAnnoteFile{olthofComplexityPsychologicalSelfratings2020b}
 
-\bibitem[{Olthof et~al.(2023)Olthof, Hasselman, Oude~Maatman, Bosman, and
-  {Lichtwarck-Aschoff}}]{olthofComplexityTheoryPsychopathology2023}
-Olthof, M., Hasselman, F., Oude~Maatman, F., Bosman, A. M.~T., and
-  {Lichtwarck-Aschoff}, A. (2023).
-\newblock Complexity theory of psychopathology.
-\newblock \emph{Journal of Psychopathology and Clinical Science} 132, 314--323.
-\newblock \doi{10.1037/abn0000740}
-\bibAnnoteFile{olthofComplexityTheoryPsychopathology2023}
+\bibitem[{Sijtsma(2012)}]{sijtsmaPsychologicalMeasurementPhysics2012}
+Sijtsma, K. (2012).
+\newblock Psychological measurement between physics and statistics.
+\newblock \emph{Theory \& Psychology} 22, 786--809.
+\newblock \doi{10.1177/0959354312454353}
+\bibAnnoteFile{sijtsmaPsychologicalMeasurementPhysics2012}
+
+\bibitem[{Stevens(1951)}]{stevensMathematicsMeasurementPsychophysics1951}
+Stevens, S.~S. (1951).
+\newblock Mathematics, measurement, and psychophysics.
+\newblock In \emph{Handbook of Experimental Psychology} ({Oxford, England}:
+  {Wiley}). 1--49
+\bibAnnoteFile{stevensMathematicsMeasurementPsychophysics1951}
 
 \bibitem[{Tafreshi(2022)}]{tafreshiSenseNonsensePsychological2022}
 Tafreshi, D. (2022).
@@ -234,19 +207,12 @@ Trendler, G. (2019).
 \newblock \doi{10.1177/0959354318788729}
 \bibAnnoteFile{trendlerConjointMeasurementUndone2019}
 
-\bibitem[{Tsitouras(2011)}]{tsitourasRungeKuttaPairs2011}
-Tsitouras, {\relax Ch}. (2011).
-\newblock Runge{\textendash}{{Kutta}} pairs of order 5(4) satisfying only the
-  first column simplifying assumption.
-\newblock \emph{Computers \& Mathematics with Applications} 62, 770--775.
-\newblock \doi{10.1016/j.camwa.2011.06.002}
-\bibAnnoteFile{tsitourasRungeKuttaPairs2011}
-
-\bibitem[{Webber~Jr and Zbilut(2005)}]{webber2005recurrence}
-Webber~Jr, C.~L. and Zbilut, J.~P. (2005).
-\newblock Recurrence quantification analysis of nonlinear dynamical systems.
-\newblock \emph{Tutorials in contemporary nonlinear methods for the behavioral
-  sciences} 94, 26--94
-\bibAnnoteFile{webber2005recurrence}
+\bibitem[{Wood(1978)}]{woodFittingRaschModel1978}
+Wood, R. (1978).
+\newblock Fitting the {{Rasch}} model{\textemdash}{{A}} heady tale.
+\newblock \emph{British Journal of Mathematical and Statistical Psychology} 31,
+  27--32.
+\newblock \doi{10.1111/j.2044-8317.1978.tb00569.x}
+\bibAnnoteFile{woodFittingRaschModel1978}
 
 \end{thebibliography}
