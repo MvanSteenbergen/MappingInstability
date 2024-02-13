@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -36,12 +36,12 @@ Borsboom, D. and Mellenbergh, G.~J. (2004).
 \newblock \doi{10.1177/0959354304040200}
 \bibAnnoteFile{borsboomWhyPsychometricsNot2004}
 
-\bibitem[{Cliff(1992)}]{cliffAbstractMeasurementTheory1992}
-Cliff, N. (1992).
-\newblock Abstract {{Measurement Theory}} and the {{Revolution That Never
-  Happened}}.
-\newblock \emph{Psychological Science} 3, 186--190
-\bibAnnoteFile{cliffAbstractMeasurementTheory1992}
+\bibitem[{Burgos(2021)}]{burgosRealProblemHypothetical2021}
+Burgos, J.~E. (2021).
+\newblock The {{Real Problem}} with {{Hypothetical Constructs}}.
+\newblock \emph{Perspectives on Behavior Science} 44, 683--704.
+\newblock \doi{10.1007/s40614-021-00311-0}
+\bibAnnoteFile{burgosRealProblemHypothetical2021}
 
 \bibitem[{Datseris(2018)}]{Datseris2018}
 Datseris, G. (2018).
@@ -66,44 +66,10 @@ Franz, D.~J. (2022).
 \newblock \doi{10.1177/09593543211045340}
 \bibAnnoteFile{franzArePsychologicalAttributes2022}
 
-\bibitem[{Fried(2017)}]{friedWhatArePsychological2017}
-Fried, E.~I. (2017).
-\newblock What are psychological constructs? {{On}} the nature and statistical
-  modelling of emotions, intelligence, personality traits and mental disorders.
-\newblock \emph{Health Psychology Review} 11, 130--134.
-\newblock \doi{10.1080/17437199.2017.1306718}
-\bibAnnoteFile{friedWhatArePsychological2017}
-
-\bibitem[{Krantz(1972)}]{krantzMeasurementStructuresPsychological1972}
-Krantz, D.~H. (1972).
-\newblock Measurement {{Structures}} and {{Psychological Laws}}.
-\newblock \emph{Science} 175, 1427--1435.
-\newblock \doi{10.1126/science.175.4029.1427}
-\bibAnnoteFile{krantzMeasurementStructuresPsychological1972}
-
 \bibitem[{Krantz and Suppes(1971)}]{krantzFoundationsMeasurement1971}
 Krantz, D.~H. and Suppes, P. (1971).
 \newblock \emph{Foundations of Measurement} ({New York : Academic Press})
 \bibAnnoteFile{krantzFoundationsMeasurement1971}
-
-\bibitem[{Kyngdon(2008)}]{kyngdonConjointMeasurementError2008}
-Kyngdon, A. (2008).
-\newblock Conjoint {{Measurement}}, {{Error}} and the {{Rasch Model}}: {{A
-  Reply}} to {{Michell}}, and {{Borsboom}} and {{Zand Scholten}}.
-\newblock \emph{Theory \& Psychology} 18, 125--131.
-\newblock \doi{10.1177/0959354307086927}
-\bibAnnoteFile{kyngdonConjointMeasurementError2008}
-
-\bibitem[{Lamiell(2019)}]{lamiellStatisticalThinkingPsychology2019}
-Lamiell, J.~T. (2019).
-\newblock Statistical {{Thinking}} in {{Psychology}}: {{Some Needed Critical
-  Perspective}} on {{What}} `{{Everyone Knows}}'.
-\newblock In \emph{Psychology's {{Misuse}} of {{Statistics}} and {{Persistent
-  Dismissal}} of Its {{Critics}}}, ed. J.~T. Lamiell ({Cham}: {Springer
-  International Publishing}), Palgrave {{Studies}} in the {{Theory}} and
-  {{History}} of {{Psychology}}. 99--121.
-\newblock \doi{10.1007/978-3-030-12131-0_5}
-\bibAnnoteFile{lamiellStatisticalThinkingPsychology2019}
 
 \bibitem[{Luce and Tukey(1964)}]{luceSimultaneousConjointMeasurement1964}
 Luce, R.~D. and Tukey, J.~W. (1964).
@@ -112,14 +78,6 @@ Luce, R.~D. and Tukey, J.~W. (1964).
 \newblock \emph{Journal of Mathematical Psychology} 1, 1--27.
 \newblock \doi{10.1016/0022-2496(64)90015-X}
 \bibAnnoteFile{luceSimultaneousConjointMeasurement1964}
-
-\bibitem[{Maraun et~al.(2009)Maraun, Slaney, and
-  Gabriel}]{maraunAugustinianMethodologicalFamily2009}
-Maraun, M.~D., Slaney, K.~L., and Gabriel, S.~M. (2009).
-\newblock The {{Augustinian}} methodological family of psychology.
-\newblock \emph{New Ideas in Psychology} 27, 148--162.
-\newblock \doi{10.1016/j.newideapsych.2008.04.011}
-\bibAnnoteFile{maraunAugustinianMethodologicalFamily2009}
 
 \bibitem[{Meehl(2004)}]{meehlTheoreticalRisksTabular2004}
 Meehl, P.~E. (2004).
@@ -137,37 +95,12 @@ Michell, J. (1999).
 \newblock \doi{10.1017/CBO9780511490040}
 \bibAnnoteFile{michellMeasurementPsychologyCritical1999}
 
-\bibitem[{Michell(2004)}]{michellItemResponseModels2004}
-Michell, J. (2004).
-\newblock Item {{Response Models}}, {{Pathological Science}} and the {{Shape}}
-  of {{Error}}: {{Reply}} to {{Borsboom}} and {{Mellenbergh}}.
-\newblock \emph{Theory \& Psychology} 14, 121--129.
-\newblock \doi{10.1177/0959354304040201}
-\bibAnnoteFile{michellItemResponseModels2004}
-
-\bibitem[{Michell(2021)}]{michellRepresentationalMeasurementTheory2021}
-Michell, J. (2021).
-\newblock Representational measurement theory: {{Is}} its number up?
-\newblock \emph{Theory \& Psychology} 31, 3--23.
-\newblock \doi{10.1177/0959354320930817}
-\bibAnnoteFile{michellRepresentationalMeasurementTheory2021}
-
 \bibitem[{Molenaar and Campbell(2009)}]{molenaarNewPersonSpecificParadigm2009}
 Molenaar, P.~C. and Campbell, C.~G. (2009).
 \newblock The {{New Person-Specific Paradigm}} in {{Psychology}}.
 \newblock \emph{Current Directions in Psychological Science} 18, 112--117.
 \newblock \doi{10.1111/j.1467-8721.2009.01619.x}
 \bibAnnoteFile{molenaarNewPersonSpecificParadigm2009}
-
-\bibitem[{Molenaar(2004)}]{molenaarManifestoPsychologyIdiographic2004}
-Molenaar, P. C.~M. (2004).
-\newblock A {{Manifesto}} on {{Psychology}} as {{Idiographic Science}}:
-  {{Bringing}} the {{Person Back Into Scientific Psychology}}, {{This Time
-  Forever}}.
-\newblock \emph{Measurement: Interdisciplinary Research and Perspectives} 2,
-  201--218.
-\newblock \doi{10.1207/s15366359mea0204_1}
-\bibAnnoteFile{molenaarManifestoPsychologyIdiographic2004}
 
 \bibitem[{Olthof et~al.(2020)Olthof, Hasselman, and
   {Lichtwarck-Aschoff}}]{olthofComplexityPsychologicalSelfratings2020b}
@@ -207,12 +140,11 @@ Trendler, G. (2019).
 \newblock \doi{10.1177/0959354318788729}
 \bibAnnoteFile{trendlerConjointMeasurementUndone2019}
 
-\bibitem[{Wood(1978)}]{woodFittingRaschModel1978}
-Wood, R. (1978).
-\newblock Fitting the {{Rasch}} model{\textemdash}{{A}} heady tale.
-\newblock \emph{British Journal of Mathematical and Statistical Psychology} 31,
-  27--32.
-\newblock \doi{10.1111/j.2044-8317.1978.tb00569.x}
-\bibAnnoteFile{woodFittingRaschModel1978}
+\bibitem[{Vessonen(2021)}]{vessonenRepresentationMeasurement2021}
+Vessonen, E. (2021).
+\newblock Representation in measurement.
+\newblock \emph{European Journal for Philosophy of Science} 11, 76.
+\newblock \doi{10.1007/s13194-021-00365-6}
+\bibAnnoteFile{vessonenRepresentationMeasurement2021}
 
 \end{thebibliography}

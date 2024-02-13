@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1706880571 "thesis.aux" "thesis.bbl" "thesis" 1706880596 0
+["bibtex thesis"] 1707824064 "thesis.aux" "thesis.bbl" "thesis" 1707824092 0
   "./Frontiers-Harvard.bst" 1704717835 31641 1341c127ed7af43085eb64600f38bbe5 ""
-  "./bibliography.bib" 1706880234 259207 ef453f76b2825cb6a21ce58d0dd3baf4 ""
-  "thesis.aux" 1706880595 7149 b2c48c5ed9de08124af90fe5ed0c56c0 "pdflatex"
+  "./bibliography.bib" 1707820500 263246 449c02e6116c72dd1d907d7b95821575 ""
+  "thesis.aux" 1707824091 6430 713e2c5533ef6113f578ebb5fe272b44 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1706880571 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1706880596 0
+["pdflatex"] 1707824064 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1707824092 0
   "C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1706357339 143115 17c4a5c81ae7930b8bfb50b7046ce024 ""
   "C:/Users/lenovo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706605936 24142380 7d36b211aa2b8846af1232ead9daa2b1 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -229,13 +229,13 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/xelatex/xetexconfig/crop.cfg" 1169250894 305 57c5d049d73b46b49f97b41eaa29558b ""
   "FrontiersinVancouver.cls" 1704717835 28933 f5dd896f2166d9ac0a54ad628c6f62f8 ""
-  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1706880527 26713 93ba57ea5a85383d910dbc1df925f22a ""
+  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1707824034 26919 cc6be84a86b8b0d24fefe08148fe2c17 ""
   "logo1.eps" 1704717189 37462 776b4d7efab5d1912cafad2bab92a208 ""
   "recurrence_plots.png" 1704716664 2445786 e72fd1ce0e73b1843c0bb6a7d0bdb0be ""
-  "thesis.aux" 1706880595 7149 b2c48c5ed9de08124af90fe5ed0c56c0 "pdflatex"
-  "thesis.bbl" 1706880571 9948 5ffe0d5f872118bc7a857c8d8c5b9f87 "bibtex thesis"
-  "thesis.out" 1706880595 600 b1f06a7f04b5dfe058e05f46e7e6e1d9 "pdflatex"
-  "thesis.tex" 1706880527 26713 93ba57ea5a85383d910dbc1df925f22a ""
+  "thesis.aux" 1707824091 6430 713e2c5533ef6113f578ebb5fe272b44 "pdflatex"
+  "thesis.bbl" 1707824064 6729 11d527e28428dfe4137cfcb5ec856197 "bibtex thesis"
+  "thesis.out" 1707824091 1004 7c59666e91943dd93fa44e054297a690 "pdflatex"
+  "thesis.tex" 1707824034 26919 cc6be84a86b8b0d24fefe08148fe2c17 ""
   "time_series_plot.png" 1704716576 1906096 588bc32cb15cbdcd534f67d8e200bb75 ""
   (generated)
   "thesis.aux"

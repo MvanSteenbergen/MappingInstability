@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  2 FEB 2024 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  13 FEB 2024 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -740,4 +740,148 @@ Package epstopdf Info: Source file: <./logo1.eps>
 (epstopdf)                    date: 2024-01-08 13:33:35
 (epstopdf)                    size: 24813 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=./logo1-eps-converted-to.pdf ./logo1.eps>
-(epstopdf)             \includegraphics on input 
+(epstopdf)             \includegraphics on input line 49.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./logo1-eps-converted-to.pdf, id=34, 284.06125pt x 80.3pt>
+File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
+<use ./logo1-eps-converted-to.pdf>
+Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 49.
+(pdftex.def)             Requested size: 144.0pt x 40.70862pt.
+
+Underfull \hbox (badness 10000) detected at line 49
+[]
+ []
+
+
+Overfull \hbox (8.53581pt too wide) in paragraph at lines 49--49
+[][] 
+ []
+
+(C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Underfull \hbox (badness 10000) detected at line 49
+[]
+ []
+
+[1
+
+
+
+{C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 76.
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [2]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 82.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 82.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 82.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 82.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [4]
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [5]
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [6] (thesis.bbl)
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [7]
+<time_series_plot.png, id=135, 12045.0pt x 8030.0pt>
+File: time_series_plot.png Graphic file (type png)
+<use time_series_plot.png>
+Package pdftex.def Info: time_series_plot.png  used on input line 214.
+(pdftex.def)             Requested size: 426.79134pt x 284.50949pt.
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [8 <./time_series_plot.png>]
+<recurrence_plots.png, id=142, 10037.5pt x 10037.5pt>
+File: recurrence_plots.png Graphic file (type png)
+<use recurrence_plots.png>
+Package pdftex.def Info: recurrence_plots.png  used on input line 222.
+(pdftex.def)             Requested size: 426.79134pt x 426.70299pt.
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [9 <./recurrence_plots.png>]
+
+Package caption Warning: Unused \captionsetup[sub] on input line 16.
+See the caption package documentation for explanation.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [10] (thesis.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 7C59666E91943DD93FA44E054297A690;1004.
+ ) 
+Here is how much of TeX's memory you used:
+ 26665 strings out of 475248
+ 492048 string characters out of 5757341
+ 1938785 words of memory out of 5000000
+ 47372 multiletter control sequences out of 15000+600000
+ 605198 words of font info for 273 fonts, out of 8000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 87i,10n,131p,2682b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (10 pages, 5297271 bytes).
+PDF statistics:
+ 231 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 73300 words of extra memory for PDF output out of 74296 (max. 10000000)
+

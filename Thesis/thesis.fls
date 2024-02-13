@@ -383,6 +383,9 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phv
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb7t.vf
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvbo7t.tfm
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvbo7t.vf
+INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvbo8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -398,9 +401,6 @@ INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvbo7t.tfm
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvbo7t.vf
-INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvbo8r.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
