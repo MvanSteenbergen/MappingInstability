@@ -1,14 +1,6 @@
 # Fdb version 4
-["bibtex thesis"] 1707825117 "thesis.aux" "thesis.bbl" "thesis" 1707825143 0
-  "./Frontiers-Harvard.bst" 1704717835 31641 1341c127ed7af43085eb64600f38bbe5 ""
-  "./bibliography.bib" 1707820500 263246 449c02e6116c72dd1d907d7b95821575 ""
-  "thesis.aux" 1707825142 6555 e963905c5449989ed24ad8fb5a876e42 "pdflatex"
-  (generated)
-  "thesis.bbl"
-  "thesis.blg"
-  (rewritten before read)
-["pdflatex"] 1707825117 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1707825143 0
-  "C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1706357339 143115 17c4a5c81ae7930b8bfb50b7046ce024 ""
+["pdflatex"] 1711033397 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1711033400 2
+  "C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1709298019 143115 17c4a5c81ae7930b8bfb50b7046ce024 ""
   "C:/Users/lenovo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706605936 24142380 7d36b211aa2b8846af1232ead9daa2b1 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768654 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -229,14 +221,11 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/xelatex/xetexconfig/crop.cfg" 1169250894 305 57c5d049d73b46b49f97b41eaa29558b ""
   "FrontiersinVancouver.cls" 1704717835 28933 f5dd896f2166d9ac0a54ad628c6f62f8 ""
-  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1707825084 26920 a15d7aebb18d5600e4175898f31d88f5 ""
+  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1711033392 36410 0e86dd5cb9748d455ae7d9f0fd00d3a4 ""
   "logo1.eps" 1704717189 37462 776b4d7efab5d1912cafad2bab92a208 ""
-  "recurrence_plots.png" 1704716664 2445786 e72fd1ce0e73b1843c0bb6a7d0bdb0be ""
-  "thesis.aux" 1707825142 6555 e963905c5449989ed24ad8fb5a876e42 "pdflatex"
-  "thesis.bbl" 1707825117 6729 11d527e28428dfe4137cfcb5ec856197 "bibtex thesis"
-  "thesis.out" 1707825142 1144 9875467d8a88ec6cb4a84f0d3e126e59 "pdflatex"
-  "thesis.tex" 1707825084 26920 a15d7aebb18d5600e4175898f31d88f5 ""
-  "time_series_plot.png" 1704716576 1906096 588bc32cb15cbdcd534f67d8e200bb75 ""
+  "thesis.aux" 1711033399 5580 80db37c752578ddac2ee72a27c85f488 "pdflatex"
+  "thesis.out" 1711033399 5628 24195cd3b58e48e1a997228872a5037f "pdflatex"
+  "thesis.tex" 1711033392 36410 0e86dd5cb9748d455ae7d9f0fd00d3a4 ""
   (generated)
   "thesis.aux"
   "thesis.log"

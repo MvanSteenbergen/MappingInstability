@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -66,6 +66,27 @@ Franz, D.~J. (2022).
 \newblock \doi{10.1177/09593543211045340}
 \bibAnnoteFile{franzArePsychologicalAttributes2022}
 
+\bibitem[{{Georgescu-Roegen}(1965)}]{georgescu-roegenMeasureQualityOptimum1965}
+{Georgescu-Roegen}, N. (1965).
+\newblock Measure, {{Quality}}, and {{Optimum Scale}}.
+\newblock \emph{Sankhy{\=a}: The Indian Journal of Statistics, Series A
+  (1961-2002)} 27, 39--64
+\bibAnnoteFile{georgescu-roegenMeasureQualityOptimum1965}
+
+\bibitem[{Knapp(1990)}]{knappTreatingOrdinalScales1990}
+Knapp, T.~R. (1990).
+\newblock Treating {{Ordinal Scales}} as {{Interval Scales}}: {{An Attempt To
+  Resolve}} the {{Controversy}}.
+\newblock \emph{Nursing Research} 39, 121
+\bibAnnoteFile{knappTreatingOrdinalScales1990}
+
+\bibitem[{Krantz(1972)}]{krantzMeasurementStructuresPsychological1972}
+Krantz, D.~H. (1972).
+\newblock Measurement {{Structures}} and {{Psychological Laws}}.
+\newblock \emph{Science} 175, 1427--1435.
+\newblock \doi{10.1126/science.175.4029.1427}
+\bibAnnoteFile{krantzMeasurementStructuresPsychological1972}
+
 \bibitem[{Krantz and Suppes(1971)}]{krantzFoundationsMeasurement1971}
 Krantz, D.~H. and Suppes, P. (1971).
 \newblock \emph{Foundations of Measurement} ({New York : Academic Press})
@@ -79,14 +100,6 @@ Luce, R.~D. and Tukey, J.~W. (1964).
 \newblock \doi{10.1016/0022-2496(64)90015-X}
 \bibAnnoteFile{luceSimultaneousConjointMeasurement1964}
 
-\bibitem[{Meehl(2004)}]{meehlTheoreticalRisksTabular2004}
-Meehl, P.~E. (2004).
-\newblock Theoretical risks and tabular asterisks: {{Sir Karl}}, {{Sir
-  Ronald}}, and the slow progress of soft psychology.
-\newblock \emph{Applied and Preventive Psychology} 11, 1.
-\newblock \doi{10.1016/j.appsy.2004.02.001}
-\bibAnnoteFile{meehlTheoreticalRisksTabular2004}
-
 \bibitem[{Michell(1999)}]{michellMeasurementPsychologyCritical1999}
 Michell, J. (1999).
 \newblock \emph{Measurement in {{Psychology}}: {{A Critical History}} of a
@@ -94,6 +107,24 @@ Michell, J. (1999).
 \newblock Ideas in {{Context}} ({Cambridge}: {Cambridge University Press}).
 \newblock \doi{10.1017/CBO9780511490040}
 \bibAnnoteFile{michellMeasurementPsychologyCritical1999}
+
+\bibitem[{Michell(2021)}]{michellRepresentationalMeasurementTheory2021}
+Michell, J. (2021).
+\newblock Representational measurement theory: {{Is}} its number up?
+\newblock \emph{Theory \& Psychology} 31, 3--23.
+\newblock \doi{10.1177/0959354320930817}
+\bibAnnoteFile{michellRepresentationalMeasurementTheory2021}
+
+\bibitem[{Michell and Ernst(1997)}]{michellAxiomsQuantityTheory1997}
+Michell, J. and Ernst, C. (1997).
+\newblock The {{Axioms}} of {{Quantity}} and the {{Theory}} of {{Measurement}}.
+\newblock \emph{Journal of Mathematical Psychology} 41, 345--356.
+\newblock \doi{10.1006/jmps.1997.1178}.
+\newblock [TLDR] His paper is a watershed in measurement theory, dividing the
+  classical and modern eras, and showing that axioms for an apparently
+  nonadditive structure, stretches of a straight line, entail that linear
+  distances satisfy the axiom for quantity.
+\bibAnnoteFile{michellAxiomsQuantityTheory1997}
 
 \bibitem[{Molenaar and Campbell(2009)}]{molenaarNewPersonSpecificParadigm2009}
 Molenaar, P.~C. and Campbell, C.~G. (2009).
@@ -133,6 +164,13 @@ Tafreshi, D. (2022).
 \newblock \doi{10.1177/09593543211049371}
 \bibAnnoteFile{tafreshiSenseNonsensePsychological2022}
 
+\bibitem[{Thomas(1982)}]{thomasIQIntervalScales1982}
+Thomas, H. (1982).
+\newblock {{IQ}}, interval scales, and normal distributions.
+\newblock \emph{Psychological Bulletin} 91, 198--202.
+\newblock \doi{10.1037/0033-2909.91.1.198}
+\bibAnnoteFile{thomasIQIntervalScales1982}
+
 \bibitem[{Trendler(2019)}]{trendlerConjointMeasurementUndone2019}
 Trendler, G. (2019).
 \newblock Conjoint measurement undone.
@@ -146,5 +184,13 @@ Vessonen, E. (2021).
 \newblock \emph{European Journal for Philosophy of Science} 11, 76.
 \newblock \doi{10.1007/s13194-021-00365-6}
 \bibAnnoteFile{vessonenRepresentationMeasurement2021}
+
+\bibitem[{Wu and Leung(2017)}]{wuCanLikertScales2017}
+Wu, H. and Leung, S.-O. (2017).
+\newblock Can {{Likert Scales}} be {{Treated}} as {{Interval Scales}}?---{{A
+  Simulation Study}}.
+\newblock \emph{Journal of Social Service Research} 43, 527--532.
+\newblock \doi{10.1080/01488376.2017.1329775}
+\bibAnnoteFile{wuCanLikertScales2017}
 
 \end{thebibliography}

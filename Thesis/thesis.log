@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  13 FEB 2024 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  21 MAR 2024 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -698,7 +698,6 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 35.
- (thesis.out) (thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
@@ -740,4 +739,209 @@ Package epstopdf Info: Source file: <./logo1.eps>
 (epstopdf)                    date: 2024-01-08 13:33:35
 (epstopdf)                    size: 24813 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=./logo1-eps-converted-to.pdf ./logo1.eps>
-(epstopdf)             \includegraphics on input
+(epstopdf)             \includegraphics on input line 49.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./logo1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./logo1-eps-converted-to.pdf, id=6, 284.06125pt x 80.3pt>
+File: ./logo1-eps-converted-to.pdf Graphic file (type pdf)
+<use ./logo1-eps-converted-to.pdf>
+Package pdftex.def Info: ./logo1-eps-converted-to.pdf  used on input line 49.
+(pdftex.def)             Requested size: 144.0pt x 40.70862pt.
+
+Underfull \hbox (badness 10000) detected at line 49
+[]
+ []
+
+
+Overfull \hbox (8.53581pt too wide) in paragraph at lines 49--49
+[][] 
+ []
+
+(C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Underfull \hbox (badness 10000) detected at line 49
+[]
+ []
+
+
+Package natbib Warning: Citation `knappTreatingOrdinalScales1990' on page 1 undefined on input line 65.
+
+
+Package natbib Warning: Citation `wuCanLikertScales2017' on page 1 undefined on input line 65.
+
+[1
+
+
+
+{C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
+
+Package natbib Warning: Citation `michellMeasurementPsychologyCritical1999' on page 2 undefined on input line 77.
+
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 80.
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [2]
+
+Package natbib Warning: Citation `vessonenRepresentationMeasurement2021' on page 3 undefined on input line 81.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 89.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 89.
+
+
+Package natbib Warning: Citation `krantzFoundationsMeasurement1971' on page 3 undefined on input line 97.
+
+
+Package natbib Warning: Citation `michellAxiomsQuantityTheory1997' on page 3 undefined on input line 108.
+
+
+Package natbib Warning: Citation `franzArePsychologicalAttributes2022' on page 3 undefined on input line 108.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [3]
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [4]
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [5]
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:187: Undefined control sequence.
+l.187 ...tural or a random component.\ \textitfrom
+                                                   person-to-person and from...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package natbib Warning: Citation `olthofComplexityPsychologicalSelfratings2020b' on page 6 undefined on input line 196.
+
+
+Package natbib Warning: Citation `bokerConsequencesContinuityHunt2002' on page 6 undefined on input line 196.
+
+
+Package natbib Warning: Citation `molenaarNewPersonSpecificParadigm2009' on page 6 undefined on input line 196.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [6]
+
+Package natbib Warning: Citation `bezanson2017julia' on page 7 undefined on input line 217.
+
+
+Package natbib Warning: Citation `Datseris2018' on page 7 undefined on input line 217.
+
+
+Package natbib Warning: Citation `DatserisParlitz2022' on page 7 undefined on input line 217.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [7]
+
+Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 8 undefined on input line 261.
+
+
+Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 8 undefined on input line 261.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [8]
+
+Package natbib Warning: Citation `sijtsmaPsychologicalMeasurementPhysics2012' on page 9 undefined on input line 273.
+
+
+Package natbib Warning: Citation `burgosRealProblemHypothetical2021' on page 9 undefined on input line 280.
+
+
+Package natbib Warning: Citation `RealismforRealists' on page 9 undefined on input line 285.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [9]
+
+Package caption Warning: Unused \captionsetup[sub] on input line 16.
+See the caption package documentation for explanation.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [10]
+
+Package natbib Warning: There were undefined citations.
+
+(thesis.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  24195CD3B58E48E1A997228872A5037F;5628.
+ ) 
+Here is how much of TeX's memory you used:
+ 26536 strings out of 475248
+ 486754 string characters out of 5757341
+ 1937785 words of memory out of 5000000
+ 47225 multiletter control sequences out of 15000+600000
+ 607422 words of font info for 288 fonts, out of 8000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 87i,8n,131p,2029b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (10 pages, 225691 bytes).
+PDF statistics:
+ 187 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 75282 words of extra memory for PDF output out of 89155 (max. 10000000)
+
