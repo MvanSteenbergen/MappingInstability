@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  21 MAR 2024 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  24 MAR 2024 22:03
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex
@@ -642,7 +642,45 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count352
  (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+))) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
+Package: svg 2020/11/26 v2.02k (include SVG pictures)
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
+Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hook.sty
+Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/04/15 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)))
+\c@svg@param@lastpage=\count353
+\svg@box=\box79
+\c@svg@param@currpage=\count354
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent.sty
+Package: transparent 2022-10-27 v1.5 Transparency with color stacks
+ (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent-nometadata.sty
+Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color stack (HO)
+)) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg-extract.sty
+Package: svg-extract 2020/11/26 v2.02k (extract graphics from SVG pictures)
+\c@svgx@runs=\count355
+\c@svgx@out@count=\count356
+\svgx@stream@in=\read3
+\svgx@stream@out=\write4
+) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 35.
@@ -650,8 +688,8 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 35
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count353
-\l__pdf_internal_box=\box79
+\l__color_backend_stack_int=\count357
+\l__pdf_internal_box=\box80
 ) (thesis.aux)
 \openout1 = `thesis.aux'.
 
@@ -675,16 +713,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
  (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count354
+\scratchcounter=\count358
 \scratchdimen=\dimen288
-\scratchbox=\box80
-\nofMPsegments=\count355
-\nofMParguments=\count356
+\scratchbox=\box81
+\nofMPsegments=\count359
+\nofMParguments=\count360
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count357
+\MPscratchCnt=\count361
 \MPscratchDim=\dimen289
-\MPnumerator=\count358
-\makeMPintoPDFobject=\count359
+\MPnumerator=\count362
+\makeMPintoPDFobject=\count363
 \everyMPtoPDFconversion=\toks56
 )
 Package crop Info: requested driver: `' on input line 35.
@@ -698,8 +736,8 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 35.
-\@outlinefile=\write4
-\openout4 = `thesis.out'.
+\@outlinefile=\write5
+\openout5 = `thesis.out'.
 
 LaTeX Info: Redefining \microtypecontext on input line 35.
 Package microtype Info: Applying patch `item' on input line 35.
@@ -723,9 +761,17 @@ Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
-)
+) ()
+
+Package svg Warning: No version of Inkscape was detected by invoking
+(svg)                `inkscape -V'
+(svg)                so the Inkscape export will fail quite sure as the
+(svg)                command is probably unknown to your OS. You could set
+(svg)                `inkscapeversion=<version>' manually but this is very
+(svg)                unlikely to work on input line 35.
+
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 49.
- (C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
+(C:\Users\lenovo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -738,7 +784,7 @@ Package epstopdf Info: Source file: <./logo1.eps>
 (epstopdf)             Output file: <./logo1-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-08 13:33:35
 (epstopdf)                    size: 24813 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=./logo1-eps-converted-to.pdf ./logo1.eps>
+(epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=./logo1-eps-converted-to.pdf ./logo1.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
 
@@ -779,10 +825,10 @@ Underfull \hbox (badness 10000) detected at line 49
  []
 
 
-Package natbib Warning: Citation `knappTreatingOrdinalScales1990' on page 1 undefined on input line 65.
+Package natbib Warning: Citation `knappTreatingOrdinalScales1990' on page 1 undefined on input line 67.
 
 
-Package natbib Warning: Citation `wuCanLikertScales2017' on page 1 undefined on input line 65.
+Package natbib Warning: Citation `wuCanLikertScales2017' on page 1 undefined on input line 67.
 
 [1
 
@@ -790,38 +836,36 @@ Package natbib Warning: Citation `wuCanLikertScales2017' on page 1 undefined on 
 
 {C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo1-eps-converted-to.pdf>]
 
-Package natbib Warning: Citation `michellMeasurementPsychologyCritical1999' on page 2 undefined on input line 77.
+Package natbib Warning: Citation `vessonenRepresentationMeasurement2021' on page 2 undefined on input line 78.
 
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <11> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 80.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 79.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [2]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 86.
 
-Package natbib Warning: Citation `vessonenRepresentationMeasurement2021' on page 3 undefined on input line 81.
-
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 89.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 89.
+(Font)              size <5> substituted on input line 86.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 89.
+(Font)              size <5> substituted on input line 86.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 89.
+(Font)              size <5> substituted on input line 86.
 
 
-Package natbib Warning: Citation `krantzFoundationsMeasurement1971' on page 3 undefined on input line 97.
+Package natbib Warning: Citation `krantzFoundationsMeasurement1971' on page 3 undefined on input line 94.
 
 
-Package natbib Warning: Citation `michellAxiomsQuantityTheory1997' on page 3 undefined on input line 108.
+Package natbib Warning: Citation `michellAxiomsQuantityTheory1997' on page 3 undefined on input line 105.
 
 
-Package natbib Warning: Citation `franzArePsychologicalAttributes2022' on page 3 undefined on input line 108.
+Package natbib Warning: Citation `franzArePsychologicalAttributes2022' on page 3 undefined on input line 105.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
@@ -830,67 +874,162 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [4]
+
+Package natbib Warning: Citation `olthofComplexityPsychologicalSelfratings2020b' on page 5 undefined on input line 152.
+
+
+Package natbib Warning: Citation `bokerConsequencesContinuityHunt2002' on page 5 undefined on input line 152.
+
+
+Package natbib Warning: Citation `molenaarNewPersonSpecificParadigm2009' on page 5 undefined on input line 152.
+
+
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [5]
-c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:187: Undefined control sequence.
-l.187 ...tural or a random component.\ \textitfrom
-                                                   person-to-person and from...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package svg Info: Calling Inkscape on input line 173.
+runsystem(inkscape "zeropointinstability.svg" -D --export-latex --export-filename="zeropointinstability_svg-tex.pdf")...executed.
+
+runsystem(inkscape "zeropointinstability.svg" -D --export-latex \relax --without-gui --export-pdf="zeropointinstability_svg-tex.pdf")...executed.
 
 
-Package natbib Warning: Citation `olthofComplexityPsychologicalSelfratings2020b' on page 6 undefined on input line 196.
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:173: Package svg Error: Inkscape version not detected.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \includesvg{zeropointinstability}
+                                       
+It was tried to invoke `inkscape'
+for file "zeropointinstability.svg"
+but no result was produced. Check the log file
+and set `inkscapeversion=<version>' manually.
+
+runsystem(inkscape "zeropointinstability.svg" -D --export-latex --export-filename="zeropointinstability_svg-tex.pdf")...executed.
 
 
-Package natbib Warning: Citation `bokerConsequencesContinuityHunt2002' on page 6 undefined on input line 196.
+Package svg Warning: The export with Inkscape failed for file
+(svg)                `zeropointinstability.svg'
+(svg)                Troubleshooting: Please check in the log file how
+(svg)                the invocation of Inkscape took place and try to
+(svg)                execute it yourself in the terminal on input line 173.
 
 
-Package natbib Warning: Citation `molenaarNewPersonSpecificParadigm2009' on page 6 undefined on input line 196.
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:173: Package svg Error: File `zeropointinstability_svg-tex.pdf' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \includesvg{zeropointinstability}
+                                       
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/zeropointinstability_svg-tex.pdf'
+although `zeropointinstability.svg' was found.
+
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:173: Package svg Error: File `zeropointinstability_svg-tex.pdf_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \includesvg{zeropointinstability}
+                                       
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/zeropointinstability_svg-tex.pdf_tex'
+although `zeropointinstability.svg' was found.
+
+Package svg Info: Calling Inkscape on input line 178.
+runsystem(inkscape "scalinginstability.svg" -D --export-latex --export-filename="scalinginstability_svg-tex.pdf")...executed.
+
+runsystem(inkscape "scalinginstability.svg" -D --export-latex \relax --without-gui --export-pdf="scalinginstability_svg-tex.pdf")...executed.
+
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:178: Package svg Error: Inkscape version not detected.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \includesvg{scalinginstability}
+                                     
+It was tried to invoke `inkscape'
+for file "scalinginstability.svg"
+but no result was produced. Check the log file
+and set `inkscapeversion=<version>' manually.
+
+runsystem(inkscape "scalinginstability.svg" -D --export-latex --export-filename="scalinginstability_svg-tex.pdf")...executed.
+
+
+Package svg Warning: The export with Inkscape failed for file
+(svg)                `scalinginstability.svg'
+(svg)                Troubleshooting: Please check in the log file how
+(svg)                the invocation of Inkscape took place and try to
+(svg)                execute it yourself in the terminal on input line 178.
+
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:178: Package svg Error: File `scalinginstability_svg-tex.pdf' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \includesvg{scalinginstability}
+                                     
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/scalinginstability_svg-tex.pdf'
+although `scalinginstability.svg' was found.
+
+
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:178: Package svg Error: File `scalinginstability_svg-tex.pdf_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \includesvg{scalinginstability}
+                                     
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/scalinginstability_svg-tex.pdf_tex'
+although `scalinginstability.svg' was found.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [6]
-
-Package natbib Warning: Citation `bezanson2017julia' on page 7 undefined on input line 217.
-
-
-Package natbib Warning: Citation `Datseris2018' on page 7 undefined on input line 217.
-
-
-Package natbib Warning: Citation `DatserisParlitz2022' on page 7 undefined on input line 217.
-
-
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [7]
 
-Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 8 undefined on input line 261.
-
-
-Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 8 undefined on input line 261.
+Package natbib Warning: Citation `bezanson2017julia' on page 8 undefined on input line 225.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [8]
 
-Package natbib Warning: Citation `sijtsmaPsychologicalMeasurementPhysics2012' on page 9 undefined on input line 273.
+Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 9 undefined on input line 259.
 
 
-Package natbib Warning: Citation `burgosRealProblemHypothetical2021' on page 9 undefined on input line 280.
-
-
-Package natbib Warning: Citation `RealismforRealists' on page 9 undefined on input line 285.
+Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 9 undefined on input line 259.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [9]
+
+Package natbib Warning: Citation `sijtsmaPsychologicalMeasurementPhysics2012' on page 10 undefined on input line 270.
+
+
+Package natbib Warning: Citation `burgosRealProblemHypothetical2021' on page 10 undefined on input line 277.
+
+
+Overfull \vbox (3.49998pt too high) has occurred while \output is active []
+
+ [10]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 16.
 See the caption package documentation for explanation.
@@ -898,7 +1037,7 @@ See the caption package documentation for explanation.
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
- [10]
+ [11]
 
 Package natbib Warning: There were undefined citations.
 
@@ -919,16 +1058,16 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  24195CD3B58E48E1A997228872A5037F;5628.
+(rerunfilecheck)             After:  8E7CBA5841471B6B83BF84AFEA6A8427;5790.
  ) 
 Here is how much of TeX's memory you used:
- 26536 strings out of 475248
- 486754 string characters out of 5757341
- 1937785 words of memory out of 5000000
- 47225 multiletter control sequences out of 15000+600000
- 607422 words of font info for 288 fonts, out of 8000000 for 9000
+ 27797 strings out of 475248
+ 516436 string characters out of 5757341
+ 1935785 words of memory out of 5000000
+ 48425 multiletter control sequences out of 15000+600000
+ 607947 words of font info for 293 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 87i,8n,131p,2029b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,8n,131p,1599b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
@@ -939,9 +1078,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (10 pages, 225691 bytes).
+Output written on thesis.pdf (11 pages, 232147 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
  75282 words of extra memory for PDF output out of 89155 (max. 10000000)
 
