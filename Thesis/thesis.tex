@@ -64,11 +64,11 @@
 
 Variables in psychology often aim to quantify strength of sensation, personality traits, or attitudes. Because of the inherently subjective nature of these variables, we cannot measure or validate those concepts without research participants communicating it to us. In other words, we cannot look in their heads and experience what they experience. This makes it more challenging to assess such variables and their underlying structure. Over the course of time, psychologists developed tools to quantitatively estimate the value of such variables. The rating scale is the most popular technique by far. This family of instruments always involves a series of ordered options that represent an increasing magnitude on the variable of interest. There is a great variety in the implementation of these instruments, but the central logic remains the same. 
 
-Yet, what the numbers that are generated through this method mean has always been unclear. Over the course of time, researchers have become accustomed to a series of perscriptions to ensure that the result of the instrument is valid. Some say you should treat these variables as continuous interval-level measurements. Others claim that this is the wrong way to study these phenomane, and prescribe non-parametric methods instead \citep{knappTreatingOrdinalScales1990}. For some, parametric methods are only recommended after meeting certain criteria. A popular prescription, for example, is that you can treat an ordinal variable as continuous as long as you have more than a certain number of answering options \citep{wuCanLikertScales2017}. Another popular prescription is that ordinal variables become continuous after summing a sufficient number of them if they measure the same construct. Conversely, a group of statisticians is firmly against this treatment. These conflicts were never resolved, and no treatment is considered definitive.
+Yet, what the numbers that are generated through this method mean has always been unclear. Over the course of time, researchers have become accustomed to a series of perscriptions to ensure that the result of the instrument is valid. Some say you should treat these variables as continuous interval-level measurements. Others claim that this is the wrong way to study these phenomane, and prescribe non-parametric methods instead \citep{knappTreatingOrdinalScales1990}. For some, parametric methods are only recommended after meeting certain criteria. A popular prescription, for example, is that you can treat an ordinal variable as continuous as long as you have more than a certain number of answering options \citep{wuCanLikertScales2017}. Another popular prescription is that ordinal variables become continuous after summing a sufficient number of them if they measure the same construct. We argue that if our , then a crucial piece of the puzzle has been missed that invalidates
 
-We intend to study how different assumptions about the mapping of the quantitative structure of a variable on a rating scale influence the number of false positives. We do this by imagining a perfect (ratio-level) continuous homomorphic mapping of a \textit{quantifiable} psychological variable. Then, we specify a certain structural relationship between the perfectly measured variable and an ordinal or interval equivalent. We use a series of increasingly loose restrictions to the mapping, studying how the original variables are deformed when looser restrictions are assumed. Then, we will administer some simple statistical tests to see the degree to which the conclusions based on the `perfect' homomorphic mapping of the score correspond to ratings on the rating scale. We use this to argue that one clearly needs to define how the test relates to a hypothetical zero-point and to the stability of the mapping. We also study the influence and make a case for the importance of stability, scaling, and zero point for psychological tests. Finally, we make clear that this is necessarily a question of \textit{degree}. We show that stronger or weaker violations of these assumptions are possible.
+We intend to study how different assumptions about the mapping of the quantitative structure of a variable on a rating scale influence the number of false positives. We do this by imagining a perfect (ratio-level) continuous homomorphic mapping of a \textit{quantifiable} psychological variable. Then, we specify a certain structural relationship between the perfectly measured variable and an ordinal equivalent with a limited number of equivalence classes. We use a series of increasingly loose restrictions to the mapping, studying how the original variables are deformed when looser restrictions are assumed. Then, we will administer some simple statistical tests to see the degree to which the conclusions based on the `perfect' homomorphic mapping of the score correspond to ratings on the rating scale. We use this to argue that one clearly needs to define how the test relates to a hypothetical zero-point and to the stability of the mapping. We also study the influence and make a case for the importance of stability, scaling, and zero point for psychological tests. Finally, we make clear that this is necessarily a question of \textit{degree}. We show that stronger or weaker violations of these assumptions are possible.
 
-For the current project, we focus our attention on cases where an attribute of interest is pricipially continuously measurable. Therefore, a continuous, homomorphic mapping of the qualitative structure towards a quantitative representation can be constructed. While there might be practical limitations in the construction of such a mapping, this is of no consequence to our experimental set-up: we posit to know the true value, and use this as a starting point for a simulation of the consequences.
+For the current project, we focus our attention on cases where an attribute of interest is pricipially continuously measurable. Therefore homomorphic mapping of the qualitative structure towards a ratio-scale quantitative representation can be constructed. While there might be practical limitations in the construction of such a mapping, this is of no consequence to our experimental set-up: we posit to know the true value, and use this as a starting point for a simulation of the consequences. Then, we do an extra mapping: from the perfect measure to the scale. We map this quantitative representation again for each individual rating scale representation, adding some difference. We call the differences in mapping \textit{measurement instability} and make a distinction between four kinds. We add \textit{zero point instability}, which adds noise to the zero-point. We add \textit{scaling instability} which relates to a changing range of the instrument. add  and the relative position of the thresholds. Finally, we perform some commonly , and test the robustness of these measures
 
 \subsection{Representational Theory of Measurement}
 We assume, in alignment with Krantz, Luce, Suppes, and Tversky (henceforth referred to as KLST), that an attribute can be quantified only if it is proven to be a quantity \citep{}. We will use the criteria formalized in the representational theory of measurement (RTM). KLST is at present the most fully developed account of RTM. \@In line with this theory, we see measurement from the perspective of a representation theorem and a uniqueness theorem. The representation theorem asserts that a set, together with one or more relations on that set, follows certain axioms so that it can truthfully preserve the structure of qualitative attributes of an object to a numerical representation of that quality. In other words, a \textit{homomorphic} mapping of the qualitative relational structure into a quantitative representation can be constructed. 
@@ -143,7 +143,7 @@ If so, then both
 \end{cases}.
 \]
 
-are valid representations of the variable with 5 equivalence sets. Yet, they are inconsistent, because a quantity can be sent to one category that would be sent to another category in the other representation. E.g., the value 21.1 is seen as a 1 in the first representation while a value of 21 is seen as a 2 in the second representation. This breaks the axiom of transitivity. If we were to sum scores gained through multiple ordinal representations of the same score, the mapping can become inconsistent between these representations. Note also that this is not measurement error per sé, but another type of error. The measurement itself can be seen as correct, but the issues come to be through the incompatibility of one measurement with another.
+are valid representations of the variable with 5 equivalence sets. Yet, they are inconsistent, because a quantity can be sent by the mapping to one category that would be sent to another category in another mapping. E.g., the value 21.1 is seen as a 1 in the first representation while a value of 21 is seen as a 2 in the second representation. This breaks the axiom of transitivity. If we were to sum scores gained through multiple ordinal representations of the same score, the mapping can become inconsistent between these representations. Note also that this is not measurement error per sé, but another type of error. The measurement itself can be seen as correct, but the issues come to be through the incompatibility of one measurement with another.
 
 \subsection{Between-person mapping inconsistencies}
 It is often assumed that aggregations of individual measures rescind the limitations of different scaling because these measurement differences cancel out when enough samples are drawn. The origins of this assertion are from Knapp. This idea can be seen as follows: if the limit of the number of bins becomes infinite, and the underlying variable is continuous, then the measuring instrument will approach the normal distribution. 
@@ -189,31 +189,37 @@ If you want to make claims about the consequences of different structural defici
 \subsection{Aims}
 The aim of this simulation is to illustrate and clarify the potential consequences of measurement instability. This helps us to formalize and . Given these aims, we initially have decided to use the simplest test and data-generating mechanisms we could think of. 
 
-\subsection{Data generation}
-Our data-generation pipeline consists of multiple stages. First, we generate the data on t
+\subsection{Data-generating mechanism}
+Our data-generation pipeline consists of multiple stages. First, we generate the data on the data itself. 
 
-We generate data for a simple independent-sample t-test so that it has a statistical power of 0.80 based on an $\alpha$ of 0.05. 
+We generate data for a simple independent-sample t-test with the aim that this test performed on the unprocessed data has a statistical power of 0.80 for a one standard deviation difference based on an $\alpha$ of 0.05. Our sample size was chosen to ensure an empirical power of 0.807: 18 participants per group.  
 
-We draw the null observations from a standard normal distributions, as the scaling is arbitrary as per the uniqueness theorem. One in which we sampled two times from a standard normal distribution. In another test, we used one sample with a $\mu$ of 1 and a $\sigma$ of 1 and one sample with a $\mu$ of 0 and a $\sigma$ of 1. We have chosen the sample size so that our reasoning is consistent a power of 0.80: 18 participants per group. Empirical simulation studies have shown that our power confirms to these expectations, and is about 0.807. 
+In the first test, the two distributions should be equivalent. Two samples are drawn from the same distribution. Therefore, our test will be rejected in 0.05 percent of cases, as should be expected. We draw both samples from a standardized normal distribution:
 
-\subsection{Threshold generation}
-We have implemented a full-factorial design by planning a range of parameters for each sub-type of measurement instability. We emulate the level of scaling stability by running the thresholds through a transformation pipeline. Each stage of the pipeline draws on the results of the last, and the stages result in the final set of thresholds. Thresholds are generated for each iteration of the simulation, right before we perform the analysis.  
+    \centerline{Normal ($\mu$ = 0; $\sigma$ = 1)}
+
+In the second test, there is a one standard deviation difference between the null distribution and the alternative distribution. The parameters are as follows:
+
+
+    \centerline{0:\@ Normal ($\mu = 0; \sigma = 1$)}
+    \centerline{A:\@ Normal ($\mu = 1; \sigma = 1$)}
+
+Random numbers are generated using the Xoshiro256++ algorithm. The seed is 8508845.
+
+\subsection{Threshold transformation pipeline}
+We have implemented a full-factorial design by planning a range of parameters for each sub-type of measurement instability. These factors include the distribution of the zero-point, the number of bins the data should be divided into, the distribution of the scaling, and both random and structural threshold instabilty. We emulate differences in the degree of measurement stability by running the thresholds through a transformation pipeline. Each stage of the pipeline draws on the results of the last, and the stages result in one set of thresholds. Thresholds are generated for each iteration of the simulation, right before we perform the analysis.  
 
 \subsubsection{Setting the number of response categories}
-We set the number of response categories as one of the parameters for the simulation. This is fed into the function that generates the thresholds.
+We set the number of response categories as one of the parameters for the simulation. This is fed into the function that generates the thresholds. The set of values includes each integer from four to fifteen, 20, 50, 80, and 100.
 
 \subsubsection{Generating the zero point}
-First we set a zero-point. This is based on the left bound of the 99\% confidence interval for the null-data so that the mapping is quivalent for the two groups. If it is stable, it stays at that place exactly. If it is unstable, we use a normal distribution to generate a zero-point with $\mu$ is equal to the left bound of the CI and SD is . In the last stage, this actual bound is cut off because the left-most category extends theoretically to lower values up to the absolute zero-point. 
+First we set a zero-point. This is based on a three standard deviation difference from the mean. If it is stable, the left bound is constant. If it is unstable, we use a normal distribution to generate a zero-point with $\mu$ is three standard deviations lower than $\mu$ is variable. In the last stage, this actual bound is cut off because the left-most category extends theoretically to lower values up to the absolute zero-point. Numbers are either a constant or drawn from a distribution. The constant is always -3. If drawn from a distribution, $\mu$ is always -3. $\sigma$ is set at each interval when incrementing by 0.1 from 0.1 to 1.0.
 
 \subsubsection{Generating the scaling}
-We placed the maximum at the right bound of the 99\% confidence interval on the basis of the null-data so that the mapping is equivalent for the two groups. The generation mechanism is similar to that of the zero-point: we use a normal distribution to generate a max-point where $\mu$ is equal to the right bound of the CI 
+We placed the maximum at the right bound of the 99\% confidence interval on the basis of the null-data so that the mapping is equivalent for the two groups. The generation mechanism is similar to that of the zero-point: it is either a constant, or we use a normal distribution to generate a max-point where $\mu$ is equal to three standard deviations to the right of $\mu$. The constant is thus always 6. If drawn from a distribution, $\mu$ is always 6. $\sigma$ is set at each interval when incrementing by 0.1 from 0.1 to 1.0.
 
 \subsubsection{Generating the thresholds}
-We generated the intervals (all values of the thresholds aside from the outer bounds) by dividing the distance of the low bound to the right bound by the number of thresholds that are not at the edges.
-
-The first and the last threshold (the left bound and the right bound) of the confidence interval of the original data are dropped because the edges extend to either the absolute zero-point on the left bound and to infinity on the right bound.
-
-Unequal thresholds were generated using the cumulative distribution function of a beta-distribution. If it is stable, the same parameters are chosen for each . If it is unstable, $\alpha$ and $\beta$ were 
+We generated the intervals (all values of the thresholds aside from the outer bounds) by dividing the distance of the low bound to the right bound by the number of thresholds that are not at the edges. Unequal thresholds were generated using the cumulative distribution function of the beta-distribution. We chose this set-up because it results in either increasing or decreasing distance between, controllable by the $\beta$-parameter. If it is stable, the same parameters are chosen for each . If it is unstable, $\alpha$ and $\beta$ were 
 
 \subsection{Mapping the real scores to the bins}
 Afterwards, we cut the data using the thresholds we generated. This works using the simple step function described in the introduction: each value we've generated 
@@ -236,15 +242,20 @@ Another reason for the current treatment is the frustration about the limitation
 
 Our choice to give the hypothetized perfect measurement an absolute zero is based on both a defence and a justification. The defence concerns the claim that one never really lacks a psychological variable is no challenge. Each quantity has to have a theoretical zero-point, because otherwise the quantity is meaningless. Temperature, for example, does have an absolute zero-point, at 0$^\circ$ K, yet it cannot ever be reached. Nobody would argue because it cannot ever be reached that we should stop attempting to measure temperature in Kelvin. As for the justification: using the absolute zero-point (or the absence of the posited attribute) allows for an unambiguous relationship of the perfect quantity measurement 
 
+\subsection{Ceiling & Floor effect}
 
+\subsection{Distributions: not as expected}
 
-\subsection{Note one mapping, but many}
+\subsection{Operational ideal}
 
-\subsection{Relationship of This Framework to Others}
+\subsection{Relationship of this framework to other theories}
+We would like to 
 \subsection{Relationship to Classical Test Theory}
 In classical test theory, 
 
-\subsection{Relationship to Latent Variable Theory}
+\subsection{Relationship to Latent Variable Theory and Measurement Invariance}
+The current framework has the strongest resemblance to measurement invariance models 
+Simulation studies comparing measurement invariance approaches 
 
 \subsection{Relationship to the Rasch Model}
 
@@ -261,7 +272,6 @@ In the social sciences, there is often something left when you try to quantify k
 
 What is problematic, however, is that we do not know how our variables relate to 
 
-That is not to say that no steps should be taken to actively improving the way measurement is used in the social sciences. Much beyond the confines of what statisticians and psychometricians might be comfortable with. We do not intend to sideline the discussion of the consequences of the imperfection of scales. Quite the opposite. Just consider the replication crisis, the lack of epistemic iteration, the sometimes grating examples of methodolatry. By themselves, any of these discussions could warrant improving our understanding of where scales fall short. But too often, the conversation is had adverserially. The broad historical insight of many critics could be put to better use. 
 
 If there is no one-to-one relationship from the measurement device to the measure, it is wise not to mistake the measurement scores for the empirical relationships that are described. This problem is called the `map-territory' problem in the philosophy of science. Rating scales were invented to make an estimate of the level of psychological variables in certain contexts, but they make a whole lot of assumptions about the nature of what those variables are. Mistaking the scores on that rating scale for the quantity of . 
 

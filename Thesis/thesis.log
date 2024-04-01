@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  24 MAR 2024 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.30)  1 APR 2024 16:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1004,27 +1004,43 @@ Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [7]
 
-Package natbib Warning: Citation `bezanson2017julia' on page 8 undefined on input line 225.
+Package natbib Warning: Citation `bezanson2017julia' on page 8 undefined on input line 231.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [8]
+c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex:245: Misplaced alignment tab character &.
+<argument> Ceiling &
+                     Floor effect
+l.245 \subsection{Ceiling & Floor effect}
+                                         
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 9 undefined on input line 259.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `alignment tab' on input line 245.
 
 
-Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 9 undefined on input line 259.
+Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 9 undefined on input line 270.
+
+
+Package natbib Warning: Citation `georgescu-roegenMeasureQualityOptimum1965' on page 9 undefined on input line 270.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
 
  [9]
 
-Package natbib Warning: Citation `sijtsmaPsychologicalMeasurementPhysics2012' on page 10 undefined on input line 270.
+Package natbib Warning: Citation `sijtsmaPsychologicalMeasurementPhysics2012' on page 10 undefined on input line 280.
 
 
-Package natbib Warning: Citation `burgosRealProblemHypothetical2021' on page 10 undefined on input line 277.
+Package natbib Warning: Citation `burgosRealProblemHypothetical2021' on page 10 undefined on input line 287.
 
 
 Overfull \vbox (3.49998pt too high) has occurred while \output is active []
@@ -1058,14 +1074,14 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8E7CBA5841471B6B83BF84AFEA6A8427;5790.
+(rerunfilecheck)             After:  2A49A7ED81B9FAD3580CB71C05886FFB;6432.
  ) 
 Here is how much of TeX's memory you used:
- 27797 strings out of 475248
- 516436 string characters out of 5757341
- 1935785 words of memory out of 5000000
+ 27802 strings out of 475248
+ 516490 string characters out of 5757341
+ 1936785 words of memory out of 5000000
  48425 multiletter control sequences out of 15000+600000
- 607947 words of font info for 293 fonts, out of 8000000 for 9000
+ 608148 words of font info for 295 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  94i,8n,131p,1599b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1078,9 +1094,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (11 pages, 232147 bytes).
+Output written on thesis.pdf (11 pages, 234002 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
  75282 words of extra memory for PDF output out of 89155 (max. 10000000)
 
