@@ -10,12 +10,14 @@ begin
 	using Pipe
 	using CairoMakie
 	using DataFrames
+	using FileIO
 end
 
 # ╔═╡ 067cee09-2883-4013-b21c-7808102a4328
 begin
 	df = CSV.File("./simulation.csv")
 	df = DataFrame(df)
+	CairoMakie.activate!(type = "png")
 end
 
 # ╔═╡ 0881b78e-ae10-4277-9bfb-26f7ac68512c
@@ -74,60 +76,123 @@ end
 
 # ╔═╡ 1f986790-6f45-4ccb-a9fd-3449f895538f
 begin
-	f1 = Figure(size = (900, 1400), backgroundcolor = RGBf(0.98, 0.98, 0.98))
+	f1 = Figure(size = (1600, 1600))
 	
-	title = f1[1, 1:2] = GridLayout()
-	l1 = f1[2, 1] = GridLayout()
-	l2 = f1[3, 1] = GridLayout()
-	l3 = f1[4, 1] = GridLayout()
-	l4 = f1[5, 1] = GridLayout()
-	r1 = f1[2, 2] = GridLayout()
-	r2 = f1[3, 2] = GridLayout()
-	r3 = f1[4, 2] = GridLayout()
-	r4 = f1[5, 2] = GridLayout()
+	title = f1[1, 1:3] = GridLayout()
 
-	AxisL1 = Axis(l1[1,1], xlabel = "Number of response categories", ylabel = "Empirical power")
-	AxisL2 = Axis(l2[1,1], xlabel = "σ of the left range bound", ylabel = "Empirical power")
-	AxisL3 = Axis(l3[1,1], xlabel = "σ of the right range bound", ylabel = "Empirical power")
-	AxisL4 = Axis(l4[1,1], xlabel = "α of the threshold distribution", ylabel = "Empirical power")
-	AxisR1 = Axis(r1[1,1], xlabel = "Number of response categories", ylabel = "Empirical Type I error rate")
-	AxisR2 = Axis(r2[1,1], xlabel = "σ of the left range bound", ylabel = "Empirical Type I error rate")
-	AxisR3 = Axis(r3[1,1], xlabel = "σ of the right range bound", ylabel = "Empirical Type I error rate")
-	AxisR4 = Axis(r4[1,1], xlabel = "α of the threshold distribution", ylabel = "Empirical Type I error rate")
+	illustrationheader = f1[2, 1] = GridLayout()
+	powerheader = f1[2, 2] = GridLayout()
+	errorheader = f1[2, 3] = GridLayout()
 
-	Label(title[1,1], "Empirical Power and Type I Error After Adjusting Measurement Instability Parameters", fontsize = 20, font = :bold, halign = :left)
+	subtitle2 = f1[3, 1:3] = GridLayout()
+	
+	l2 = f1[4, 1] = GridLayout()
+	m2 = f1[4, 2] = GridLayout()
+	r2 = f1[4, 3] = GridLayout()
 
-	linkxaxes!(AxisL1, AxisR1)
+	subtitle3 = f1[5, 1:3] = GridLayout()
+
+	l3 = f1[6, 1] = GridLayout()
+	m3 = f1[6, 2] = GridLayout()
+	r3 = f1[6, 3] = GridLayout()
+
+	subtitle4 = f1[7, 1:3] = GridLayout()
+	
+	l4 = f1[8, 1] = GridLayout()
+	m4 = f1[8, 2] = GridLayout()
+	r4 = f1[8, 3] = GridLayout()
+
+	img1 = rotr90(load("./zeropointinstability.png"))
+	img2 = rotr90(load("./scalinginstability.png"))
+	img3 = rotr90(load("./systematicthresholdinstability.png"))
+
+	AxisM2 = Axis(l2[1,1], aspect = DataAspect(), title = "Zero-point Instability")
+	AxisM3 = Axis(l3[1,1], aspect = DataAspect(), title = "Scaling Instability")
+	AxisM4 = Axis(l4[1,1], aspect = DataAspect(), title = "Systematic Threshold Instability")
+
+	AxisL2 = Axis(m2[1,1], xlabel = "σ of the left range bound", ylabel = "Empirical power (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+	AxisL3 = Axis(m3[1,1], xlabel = "σ of the range", ylabel = "Empirical power (α ⩵ 0.05)", xlabelsize = 16, ylabelsize = 16)
+	AxisL4 = Axis(m4[1,1], xlabel = "α of the threshold distribution", ylabel = "Empirical power (α ⩵ 0.05)", xlabelsize = 16, ylabelsize = 16)
+
+	image!(AxisM2, img1)
+	image!(AxisM3, img2)
+	image!(AxisM4, img3)
+	
+	AxisR2 = Axis(r2[1,1], xlabel = "σ of the left range bound", ylabel = "Empirical Type I error rate (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+	AxisR3 = Axis(r3[1,1], xlabel = "σ of the range", ylabel = "Empirical Type I error rate (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+	AxisR4 = Axis(r4[1,1], xlabel = "α of the threshold distribution", ylabel = "Empirical Type I error rate (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+
+	Label(title[1,1], "Effect of Measurement Instability on Empirical Power and Type I Error", fontsize = 28, font = :bold, halign = :center)
+	Label(illustrationheader[1,1], fontsize = 20, "Type of Parameter", font = :bold_italic)
+	Label(powerheader[1,1], fontsize = 20, "Empirical Power", font = :bold_italic)
+	Label(errorheader[1,1], fontsize = 20, "Type I Error Rate", font = :bold_italic)
+
+
+	Label(subtitle2[1,1], "Zero-Point Instability", fontsize = 24, font = :bold, halign = :left)
+	Label(subtitle3[1,1], "Scaling Instability", fontsize = 24, font = :bold, halign = :left)
+	Label(subtitle4[1,1], "Systematic Threshold Instability", fontsize = 24, font = :bold, halign = :left)
+
 	linkxaxes!(AxisL2, AxisR2)
 	linkxaxes!(AxisL3, AxisR3)
 	linkxaxes!(AxisL4, AxisR4)
 
-	linkyaxes!(AxisL1, AxisL2, AxisL3, AxisL4)
-	linkyaxes!(AxisR1, AxisR2, AxisR3, AxisR4)
+	linkyaxes!(AxisL2, AxisL3, AxisL4)
+	linkyaxes!(AxisR2, AxisR3, AxisR4)
 
-	hlines!(AxisL1, 0.832, color = :cyan3)
-	hlines!(AxisR1, 0.05, color = :cyan3)
-	hlines!(AxisL2, 0.832, color = :cyan3)
-	hlines!(AxisR2, 0.05, color = :cyan3)
+	hlines!(AxisL2, 0.832, color = :cyan3, label = "Power for stable mapping")
+	hlines!(AxisR2, 0.05, color = :cyan3, label = "Type I for stable mapping")
 	hlines!(AxisL3, 0.832, color = :cyan3)
 	hlines!(AxisR3, 0.05, color = :cyan3)
 	hlines!(AxisL4, 0.832, color = :cyan3)
 	hlines!(AxisR4, 0.05, color = :cyan3)
 	
-	lines!(AxisL1, onlyIntervals.nIntervals, onlyIntervals.Power, color = :blue)
-	lines!(AxisR1, onlyIntervals.nIntervals, onlyIntervals.TypeI, color = :blue)
+	scatterlines!(AxisL2, onlyRbr.rbr_σ, onlyRbr.Power, color = :blue, label = "Power for unstable mapping: N(x, σ)")
+	scatterlines!(AxisR2, onlyRbr.rbr_σ, onlyRbr.TypeI, color = :blue, label = "Type I for unstable mapping: N(x, σ)")
+
+	scatterlines!(AxisL3, onlyLbr.lbr_σ, onlyLbr.Power, color = :blue)
+	scatterlines!(AxisR3, onlyLbr.lbr_σ, onlyLbr.TypeI, color = :blue)
+
+	scatterlines!(AxisL4, onlyα.th_α, onlyα.Power, color = :blue)
+	scatterlines!(AxisR4, onlyα.th_α, onlyα.TypeI, color = :blue)
+
+	hidedecorations!(AxisM2)
+	hidespines!(AxisM2)
+
+	colsize!(f1.layout, 1, Relative(1/3))
+	colsize!(f1.layout, 2, Relative(1/3))
+	colsize!(f1.layout, 3, Relative(1/3))
+
+	legendheader1 = Legend(f1[9, 2], AxisR2, aspect = :nothing, tellheight = true)
+	legendheader2 = Legend(f1[9, 3], AxisL2, aspect = :nothing, tellheight = true)
+
+	hidedecorations!(AxisM3)
+	hidespines!(AxisM3)
+
+	hidedecorations!(AxisM4)
+	hidespines!(AxisM4)
 	
-	lines!(AxisL2, onlyRbr.rbr_σ, onlyRbr.Power, color = :blue)
-	lines!(AxisR2, onlyRbr.rbr_σ, onlyRbr.TypeI, color = :blue)
-
-	lines!(AxisL3, onlyLbr.lbr_σ, onlyLbr.Power, color = :blue)
-	lines!(AxisR3, onlyLbr.lbr_σ, onlyLbr.TypeI, color = :blue)
-
-	lines!(AxisL4, onlyα.th_α, onlyα.Power, color = :blue)
-	lines!(AxisR4, onlyα.th_α, onlyα.TypeI, color = :blue)
-
 	f1
 end
+
+# ╔═╡ 4bab68ed-c529-4512-84f6-5bd17c3fa8d0
+	
+	AxisL1 = Axis(m1[1,1], xlabel = "Number of response categories", ylabel = "Empirical power (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+	AxisR1 = Axis(r1[1,1], xlabel = "Number of response categories", ylabel = "Empirical Type I error rate (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+	Label(subtitle1[1,1], "Adjusting the number of categories", fontsize = 24, font = :bold)
+		
+	l1 = f1[5, 1] = GridLayout()
+	m1 = f1[5, 2] = GridLayout()
+	r1 = f1[5, 3] = GridLayout()
+	subtitle1 = f1[4, 1:3] = GridLayout()
+	linkxaxes!(AxisL1, AxisR1)
+		hlines!(AxisL1, 0.832, color = :cyan3, label = "Power for stable mapping")
+	hlines!(AxisR1, 0.05, color = :cyan3, label = "Type I for stable mapping")
+
+		scatterlines!(AxisL1, onlyIntervals.nIntervals, onlyIntervals.Power, color = :blue, label = "Power for unstable mapping: N(0, σ)")
+	scatterlines!(AxisR1, onlyIntervals.nIntervals, onlyIntervals.TypeI, color = :blue, label = "Type I for unstable mapping: N(0, σ)")
+
+
+	
 
 # ╔═╡ d3f26221-8558-4e8c-a6da-ac6580ee3b58
 begin
@@ -140,9 +205,9 @@ begin
 	a21 = f2[2, 2] = GridLayout()
 	a22 = f2[3, 2] = GridLayout()
 	a31 = f2[2, 3] = GridLayout()
-	a24 = f2[2, 4] = GridLayout()
+	a24 = f2[2:4, 4] = GridLayout()
 
-	joint_limits = (0, 0.9)
+	joint_limits = (0.3, 0.9)
 
 	AxisA11 = Axis(a11[1,1])
 	AxisA12 = Axis(a12[1,1])
@@ -153,18 +218,18 @@ begin
 
 	AxisA31 = Axis(a31[1,1])
 
-	Label(title2[1,1], "Empirical Power After Adjusting Measurement Instability Parameters", fontsize = 20, font = :bold, halign = :left)
+	Label(title2[1,1], "Empirical Power After Changing Measurement Instability Parameters", fontsize = 20, font = :bold, halign = :left)
 	
-	hm11 = heatmap!(AxisA11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.Power, colorrange = joint_limits)
-	hm12 = heatmap!(AxisA12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.Power, colorrange = joint_limits)
-	hm13 = heatmap!(AxisA13, intervalAndThα.nIntervals, intervalAndThα.th_α, intervalAndThα.Power, colorrange = joint_limits)
+	hm11 = heatmap!(AxisA11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.Power, colorrange = joint_limits, colormap = :roma)
+	hm12 = heatmap!(AxisA12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.Power, colorrange = joint_limits, colormap = :roma)
+	hm13 = heatmap!(AxisA13, intervalAndThα.nIntervals, intervalAndThα.th_α, intervalAndThα.Power, colorrange = joint_limits, colormap = :roma)
 	
-	hm21 = heatmap!(AxisA21, lbrAndRbr.lbr_σ, lbrAndRbr.rbr_σ, lbrAndRbr.Power, colorrange = joint_limits)
-	hm22 = heatmap!(AxisA22, lbrAndThα.lbr_σ, lbrAndThα.th_α, lbrAndThα.Power, colorrange = joint_limits)
+	hm21 = heatmap!(AxisA21, lbrAndRbr.lbr_σ, lbrAndRbr.rbr_σ, lbrAndRbr.Power, colorrange = joint_limits, colormap = :roma)
+	hm22 = heatmap!(AxisA22, lbrAndThα.lbr_σ, lbrAndThα.th_α, lbrAndThα.Power, colorrange = joint_limits, colormap = :roma)
 
-	hm31 = heatmap!(AxisA31, rbrAndThα.rbr_σ, rbrAndThα.th_α, rbrAndThα.Power, colorrange = joint_limits)
+	hm31 = heatmap!(AxisA31, rbrAndThα.rbr_σ, rbrAndThα.th_α, rbrAndThα.Power, colorrange = joint_limits, colormap = :roma)
 
-	AxisA33 = Colorbar(a24[1,1], colorrange = joint_limits)
+	AxisA33 = Colorbar(a24[1,1], colorrange = joint_limits, colormap = :roma)
 
 	f2
 end
@@ -173,38 +238,38 @@ end
 begin
 	f3 = Figure(size = (900, 900), backgroundcolor = RGBf(0.98, 0.98, 0.98))
 	
-	title3 = f3[1, 1:3] = GridLayout()
+	title3 = f3[1, 0:3] = GridLayout()
 	b11 = f3[2, 1] = GridLayout()
 	b12 = f3[3, 1] = GridLayout()
 	b13 = f3[4, 1] = GridLayout()
-	b21 = f3[2, 2] = GridLayout()
 	b22 = f3[3, 2] = GridLayout()
-	b31 = f3[2, 3] = GridLayout()
-	b24 = f3[2, 4] = GridLayout()
+	b23 = f3[4, 2] = GridLayout()
+	b31 = f3[4, 3] = GridLayout()
+	b24 = f3[2:4,0] = GridLayout()
 
-	joint_limits_2 = (0, 0.5)
+	joint_limits_2 = (0, 0.8)
 
-	AxisB11 = Axis(b11[1,1])
-	AxisB12 = Axis(b12[1,1])
-	AxisB13 = Axis(b13[1,1])
+	AxisB11 = Axis(b11[1,1], xlabel = "σ of the left range bound",  ylabel = "Number of categories")
+	AxisB12 = Axis(b12[1,1], xlabel = "σ of the right range bound", ylabel = "Number of categories")
+	AxisB13 = Axis(b13[1,1], xlabel = "α of the threshold distribution", ylabel = "Number of categories")
 
-	AxisB21 = Axis(b21[1,1])
-	AxisB22 = Axis(b22[1,1])
+	AxisB22 = Axis(b22[1,1], xlabel = "σ of the right range bound", ylabel = "σ of the left range bound")
+	AxisB23 = Axis(b23[1,1], xlabel = "α of the threshold distribution", ylabel = "σ of the left range bound")
 
-	AxisB31 = Axis(b31[1,1])
+	AxisB31 = Axis(b31[1,1], xlabel = "α of the threshold distribution", ylabel = "σ of the right range bound")
 
-	Label(title3[1,1], "Empirical Type I Error After Adjusting Measurement Instability Parameters", fontsize = 20, font = :bold, halign = :left)
+	Label(title3[1,1], "Empirical Type I Error After Changing Measurement Instability Parameters", fontsize = 20, font = :bold, halign = :left)
 	
-	hmb11 = heatmap!(AxisB11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.TypeI, colorrange = joint_limits)
-	hmb12 = heatmap!(AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.TypeI, colorrange = joint_limits)
-	hmb13 = heatmap!(AxisB13, intervalAndThα.nIntervals, intervalAndThα.th_α, intervalAndThα.TypeI, colorrange = joint_limits)
+	hmb11 = heatmap!(AxisB11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.TypeI, colorrange = joint_limits_2, colormap = Reverse(:roma))
+	hmb12 = heatmap!(AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.TypeI, colorrange = joint_limits_2, colormap = Reverse(:roma))
+	hmb13 = heatmap!(AxisB13, intervalAndThα.th_α, intervalAndThα.nIntervals, intervalAndThα.TypeI, colorrange = joint_limits_2, colormap = Reverse(:roma))
 	
-	hmb21 = heatmap!(AxisB21, lbrAndRbr.lbr_σ, lbrAndRbr.rbr_σ, lbrAndRbr.TypeI, colorrange = joint_limits)
-	hmb22 = heatmap!(AxisB22, lbrAndThα.lbr_σ, lbrAndThα.th_α, lbrAndThα.TypeI, colorrange = joint_limits)
+	hmb21 = heatmap!(AxisB22, lbrAndRbr.rbr_σ, lbrAndRbr.lbr_σ, lbrAndRbr.TypeI, colorrange = joint_limits_2, colormap = Reverse(:roma))
+	hmb22 = heatmap!(AxisB23, lbrAndThα.th_α, lbrAndThα.lbr_σ, lbrAndThα.TypeI, colorrange = joint_limits_2, colormap = Reverse(:roma))
 
-	hmb31 = heatmap!(AxisB31, rbrAndThα.rbr_σ, rbrAndThα.th_α, rbrAndThα.TypeI, colorrange = joint_limits)
+	hmb31 = heatmap!(AxisB31, rbrAndThα.th_α, rbrAndThα.rbr_σ, rbrAndThα.TypeI, colorrange = joint_limits_2, colormap = Reverse(:roma))
 
-	AxisB33 = Colorbar(b24[1,1], colorrange = joint_limits_2)
+	AxisB33 = Colorbar(b24[1,1], colorrange = joint_limits_2, colormap = Reverse(:roma))
 
 	f3
 end
@@ -215,12 +280,14 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
 Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 
 [compat]
 CSV = "~0.10.13"
 CairoMakie = "~0.11.9"
 DataFrames = "~1.6.1"
+FileIO = "~1.16.3"
 Pipe = "~1.3.0"
 """
 
@@ -230,7 +297,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "c4142927c339d0741274bff68b14b32f3ea86558"
+project_hash = "648428b45c832c4f380bb0df53e0a6a81dae5e77"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -1901,6 +1968,7 @@ version = "3.5.0+0"
 # ╠═0881b78e-ae10-4277-9bfb-26f7ac68512c
 # ╠═6ed60b8f-bb14-4fad-ba41-723b8700ad42
 # ╠═1f986790-6f45-4ccb-a9fd-3449f895538f
+# ╠═4bab68ed-c529-4512-84f6-5bd17c3fa8d0
 # ╠═d3f26221-8558-4e8c-a6da-ac6580ee3b58
 # ╠═ca60ad2c-d9c5-420d-a271-825551b3a3dc
 # ╟─00000000-0000-0000-0000-000000000001

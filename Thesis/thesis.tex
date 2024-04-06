@@ -14,6 +14,7 @@
 \documentclass[utf8]{FrontiersinVancouver} 
 \usepackage{url,hyperref,lineno,microtype,subcaption,framed, float, dirtytalk, amsmath, tikz, svg, svg-extract}
 \usepackage[onehalfspacing]{setspace}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
 
 \linenumbers
 % Leave a blank line between paragraphs instead of using \\ 
@@ -36,7 +37,7 @@
 \onecolumn
 \firstpage{1}
 
-\title[]{Consequences of Measurement Instability on the Mapping of Real Quantities to Rating Scale Scores} 
+\title[]{Statistical Consequences of Mapping Instability from Rating Scale Scores} 
 
 \author[\firstAuthorLast]{\Authors} %This field will be automatically populated
 \address{} %This field will be automatically populated
@@ -62,52 +63,23 @@
 
 \section{Introduction}
 
-Variables in psychology often aim to quantify strength of sensation, personality traits, or attitudes. Because of the inherently subjective nature of these variables, we cannot measure or validate those concepts without research participants communicating it to us. In other words, we cannot look in their heads and experience what they experience. This makes it more challenging to assess such variables and their underlying structure. Over the course of time, psychologists developed tools to quantitatively estimate the value of such variables. The rating scale is the most popular technique by far. This family of instruments always involves a series of ordered options that represent an increasing magnitude on the variable of interest. There is a great variety in the implementation of these instruments, but the central logic remains the same. 
+Variables in psychology often aim to quantify strength of sensation, personality traits, or attitudes. Because such variables are based on the experience of people of their subjective feelings and opinions, we cannot measure or validate those concepts without participants conveying them to researchers. In other words, we cannot look in participants' heads and experience what they experience. Participants need to communicate their `state' of a variable of interest to us. Within psychological science, these are often thought of as quantitative or ordinal magnitudes. Many tools are invented that aim to estimate the value of variables that are amenable to measurement. The rating scale is the most popular family of instruments by far. This family of instruments always involves a series of ordered options that represent an increasing magnitude on a variable of interest. Its strengths include its low price of administration, the easy reproducability, and its willingness to appear similar in different modalities. Many variants are popular: linear numeric scales, likert scales, frequency scales, and the visual analog scale. There is a great variety in the details of the labelling, the number of categories, and in the way that the answer categories are presented graphically.  
 
-Yet, what the numbers that are generated through this method mean has always been unclear. Over the course of time, researchers have become accustomed to a series of perscriptions to ensure that the result of the instrument is valid. Some say you should treat these variables as continuous interval-level measurements. Others claim that this is the wrong way to study these phenomane, and prescribe non-parametric methods instead \citep{knappTreatingOrdinalScales1990}. For some, parametric methods are only recommended after meeting certain criteria. A popular prescription, for example, is that you can treat an ordinal variable as continuous as long as you have more than a certain number of answering options \citep{wuCanLikertScales2017}. Another popular prescription is that ordinal variables become continuous after summing a sufficient number of them if they measure the same construct. 
+Yet, it can be unclear what values generated using rating scales mean. Scoring `extremely likely', `4' or `very often' on a rating instrument does not have the same unambiguous meaning as a read-out of 5.2 cm on a piece of measuring tape. There is a clear contrast between estimates of psychological variables with the measures of length, of temperature, or of weight. When we express empirical relationships in measures with a commonly known scaling, we know exactly what quantity the measure indicates, what the margin of error can be, and how this error relates to the unit . 
 
-We intend to study how different assumptions about the mapping of the quantitative structure of a variable on a rating scale influence the number of false positives. We do this by imagining a perfect (ratio-level) continuous homomorphic mapping of a \textit{quantifiable} psychological variable. Then, we specify a certain structural relationship between the perfectly measured variable and an ordinal equivalent with a limited number of equivalence classes. We use a series of increasingly loose restrictions to the mapping, studying how the original variables are deformed when looser restrictions are assumed. Then, we will administer some simple statistical tests to see the degree to which the conclusions based on the `perfect' homomorphic mapping of the score correspond to ratings on the rating scale. We use this to argue that one clearly needs to define how the test relates to a hypothetical zero-point and to the stability of the mapping. We also study the influence and make a case for the importance of stability, scaling, and zero point for psychological tests. Finally, we make clear that this is necessarily a question of \textit{degree}. We show that stronger or weaker violations of these assumptions are possible.
+This difference has traditionally been understood as the difference between ordinal scales on the one hand, and interval- or ratio-level scales on the other hand. This distinction was introduced by Stevens. When an attribute is scaled ordinally, we know that the scores can only say something about relative ordering: we know that `very likely' is higher than `likely'. With interval- and ratio-level scales, the empirical relationships are expressed in terms of the ratio of the attribute of one object to a standard score of an attribute: the unit. Stevens saw the type of measurement as reflective of empirical relationships of attributes present between objects. He developed this theory, the Representational Theory of Measurement, in response to criticism by physicists of measurement in psychology that did not adhere to a classical conception. In the classical conception of measurement, only quantitative-level measurement, was considered meaningful.
 
-For the current project, we focus our attention on cases where an attribute of interest is pricipially continuously measurable. Therefore homomorphic mapping of the qualitative structure towards a ratio-scale quantitative representation can be constructed. While there might be practical limitations in the construction of such a mapping, this is of no consequence to our experimental set-up: we posit to know the true value, and use this as a starting point for a simulation of the consequences. Then, we do an extra mapping: from the perfect measure to the scale. We map this quantitative representation again for each individual rating scale representation, adding some difference. We call the differences in mapping \textit{measurement instability} and make a distinction between four kinds. We add \textit{zero point instability}, which adds noise to the zero-point. We add \textit{scaling instability} which relates to a changing range of the instrument. add  and the relative position of the thresholds. Finally, we perform some commonly , and test the robustness of these measures
+However, by making an additional assumption we aim to show that aggregations of rating scale measurements are not ordinal in the traditional sense. This is even when the underlying estimated magnitude is principally amenable to quantitative or ordinal measurement. By explicitly assuming that the structure of the empirical relationships in nature are quantitative, which is often already assumed, we can show that rating estimates can lead to incorrect statistical results even when they are treated as ordinal.
+By postulating that we know the magnitude of a quantity that the rating scale indicate, we can map these quantities to rating scale levels which are ordinal in nature. In the appendix, axioms for ordinality and , based upon the standard work in the field, are included.
 
-\subsection{Representational Theory of Measurement}
-We assume, in alignment with Krantz, Luce, Suppes, and Tversky (henceforth referred to as KLST), that an attribute can be quantified only if it is proven to be a quantity \citep{}. We will use the criteria formalized in the representational theory of measurement (RTM). KLST is at present the most fully developed account of RTM. \@In line with this theory, we see measurement from the perspective of a representation theorem and a uniqueness theorem. The representation theorem asserts that a set, together with one or more relations on that set, follows certain axioms so that it can truthfully preserve the structure of qualitative attributes of an object to a numerical representation of that quality. In other words, a \textit{homomorphic} mapping of the qualitative relational structure into a quantitative representation can be constructed. 
+We intend to study how different assumptions about the mapping of the quantitative structure of a variable on a rating scale influence the power and the Type I error rate. We do this by imagining a perfect (ratio-level) continuous homomorphic mapping of a \textit{quantifiable} psychological variable. Then, we specify a certain structural relationship between the perfectly measured variable and an ordinal equivalent with a set number of \textit{equivalence classes}: items with the same score. If this structural relationship changes between participants, we say that there is \textit{measurement instability}. We use a series of increasingly loose restrictions to the mapping, studying how the original variables are deformed when looser restrictions are assumed. Then, we will administer some simple statistical tests to see the degree to which the conclusions based on the `perfect' homomorphic mapping of the score correspond to ratings on the rating scale. We use this to argue that one clearly needs to define how the test relates to a hypothetical zero-point and to the stability of the mapping. We also study the influence and make a case for the importance of stability, scaling, and zero point for psychological rating scales. Finally, we make clear that this is necessarily a question of \textit{degree}. We show that stronger or weaker violations of these assumptions are possible.
 
-Suppose that the transformation function $\phi(a)$ is a homomorphism and the representation theorem holds for the mapping of qualitative ordering $\succ$ to quantitative ordering $>$. If $\phi(a)$ then maps a qualitative attribute of set A into $\mathbb{R}$, it should maintain the structure of the qualitative attribute in its numerical representation: if and only if $a$ is qualitatively greater than $b$, it is numerically greater than $b$. The uniqueness theorem specifies the permissible homomorphic transformations of $A$ that lead to the same structure of numerical relations. E.g., both Fahrenheit or Celsius measurements are legitimate homomorphic mappings that maintain the qualitative structure of temperature, differing in zero-point and scale. Note that these aspects of measurement do not concern modelling or statistical analysis, but are a \textit{necessary condition} for those.
+For the current project, we focus our attention on cases where an attribute of interest is pricipially continuously measurable. Therefore, a \textit{homomorphic} mapping of the qualitative structure can be constructed. This mapping is a quantity: a ratio-level measurement with an absolute zero-point. We posit to know the 'true value' of this attribute. We assume that the quantity of the attribute maps to the rating scale item in question. We map this quantitative representation again for each individual rating scale representation, adding some difference. Then, we apply the t-test to all of these different mappings. We call the differences in mapping \textit{measurement instability} and make a distinction between four kinds: zero-point instability, scaling instability, and systematic and random threshold instability.\ \textit{Zero point instability} means that the relative zero-point changes between participants.\ \textit{Scaling instability} means that the distance between the zero-point and the maximum changes.\ \textit{Systematic threshold instability} means that there is a patterned . and test the robustness of these measures. The goal of this simulation framework is to be able to study the characteristics
 
-We align ourselves with ``representational minimalism'' that rids it of most of its epistemological basis so that it can serve as a common ground for discussion about measurement, recognizing that most of the critical literature about measurement takes place either within or in discussion of this framework \citep{vessonenRepresentationMeasurement2021}. The acceptance of RTM is not universal. We do not make firm claims whether a realist, an operationalist, or a representationalist epistemology should be matched to the formal aspects of the framework. We do, however, choose to use representationalist language, as this is the most well-known and fully realized. It should be noted that choosing a different framework means that the formalism might either change slightly or majorly. If this change is subtle, then the current study might still be interpretable. In some frameworks, however, especially those that doubt the hypothetical quantifiability of psychological constructs, the current discussion might be uninterpretable. 
+\subsubsection{Rating scales and Ordinality}
+While aggregations of rating scale responses are normally understood to be ordinal, we argue that this is not true if there is between-person or within-person scaling instability. If the ordering of attributes or their relationship to the hypothetical perfect measure is not invariant to time and is not invariant between people, then the relationship of the attribute to the rating-scale representation of that attribute is not consistently weakly ordered. To show this, we first need to formalize the connection between the hypothetical perfect measure and a measure that is ordinal for one specific person at one specific time.
 
-\subsubsection{Ordinal measurement}
-An ordinal score would imply that the score is only dependent on rank order, and does not support concatenation operations. A score in P can only indicate that a score is higher or lower than another score in P. Based on the measure only, beyond that ordering, we know nothing about P. In other words, any mapping of which we can only assume that these characteristics hold is an ordinal mapping of the relational structure of $Q$. Note that an ordinal mapping of the structure of $Q$ can be made if a ratio-mapping can also be made, but not vice versa. 
-
-This can also be written down axiomatically. Let $x$, $y$ \& $z$ by any values of quantity $Q$. Then the result of the projection of the quantity to an ordinal scale, which we will refer to as $P$, holds to the following conditions. Let $A$ be a set and $\succeq$ be a binary relation on $A$. 
-
-\begin{itemize}
-    \item if $X \succeq Y$ \& $Y \succeq Z$, then $X \succeq Z$ (transitivity);
-    \item Either $X \succeq Y\ \|\ Y \succeq X$ (connectedness);
-    \item For strongly tied order: If $X \succeq Y$ \& $Y \succeq X$, then $X = Z$ (antisymmetry).
-\end{itemize}
-
-Two elements have a weak order iff, for all $a$, $b$, axiom 1 and 2 are met. A set of all tied elements with the same value is called an equivalence set. If the third axiom is also met, then the ordering is strong and elements cannot be tied. Because the likert scale obviously allows for ties (multiple people can be ranked on the same score), and is thus a weak ordering, we assume transitivity and connectedness for the mapping. Transitivity implies that all order-relations need to be consistent. Connectedness implies that a connection between two elements is either larger, smaller, or equal. If antisymmetry is met, equal scores are only possible if they refer to the same object. 
-
-\subsubsection{Ratio measurement}
-As for the `perfect' ratio-mapping of the principially measurable attribute $Q$ we will assume that the following additional characteristics will hold above axiom 1 and 2 presented above \citep{krantzFoundationsMeasurement1971}:
-
-\begin{itemize}
-    \item $X \oplus (Y \oplus Z) = (X \oplus Y) \oplus Z$ (associativity);
-    \item $X \oplus Y = Y \oplus X$ (commutativity);
-    \item $X \succeq Y$ iff $X \oplus Z \succeq Y \oplus Z$ (monotonicity);
-    \item if $X \succ Y$ then there exists a Z such that $X = Y \oplus Z$ (solvability);
-    \item $X \oplus Y \succ X$ (positivity);
-    \item there exists a number n such that $nX \succeq Y$ (where $1X = 1$ and $(n \oplus 1) X = nX \oplus X$) (Archimeadean condition).
-\end{itemize}
-
-This essentially means that a value $q$ can always be put in terms of another value $r$ in $Q$. Every ratio-scale is homomorphic to the qualitative attribute that is being measured, and ratio-scales are thus homomorphic to each other \citep{michellAxiomsQuantityTheory1997}. The last axiom (the archimedean condition) is added to ensure that the set of possible scores is finite. E.g., say that we have developed a standard measure for happiness: $H$. Then we can say that any value $x$ is written in terms of $H$ iff the finite ratio $\frac{x}{H}$ holds\footnote{We agree with the point by Franz that it is misleading to give physical magnitudes as examples when discussing psychological phenomena \citep{franzArePsychologicalAttributes2022}. Therefore, we choose to use psychological examples when we are thinking about psychological phenomena. This adds an extra face validity check: does discussing psychological attributes in this manner make sense?}.
-
-\subsubsection{Rating scales and ordinality}
-Likert scale ratings are normally understood to be ordinal, but we argue that this is not unambigiously true if there is between-person or within-person scaling instability. If the ordering of attributes or their relationship to the hypothetical perfect measure is not invariant to time and is not invariant between people, then the relationship of the attribute to the rating-scale representation of that attribute is not consistently weakly ordered. To show this, we first need to formalize the connection between the hypothetical perfect measure and a measure that is ordinal for one specific person at one specific time.
-
-Assume that the empirical structure of an attribute is in correspondence with the axioms for ratio-level measurement scaling. This means, by extension, that all axioms for ordinal measurement are in correspondence with the empirical structure of that attribute. Let us assume we have a hypothetical homomorphic mapping of the empirical structure of this attribute expressed quantitatively (with ratio-scaling). Then, each possible weakly\footnote{Meaning elements can be tied, see above.} ordinal representation of quantitative values of this perfect measurement measure can result in an unambiguous weakly ordered classification of scores in $Q$ to scores in terms of $P$\footnote{This lack of ambiguity is only a result of this formalization. We may find that the relationship of the `real' variable to its ordinal estimate is not quite so straightforward. We will discuss this later on.} Assume that instrument $P$ has $n$ elements. Then we can define a series of $n - 1$ `thresholds' R as $\{ a, b, c \ldots z \}$. These thresholds are the point of $q$ where a score $p_1$ in $P$ jumps to another classification $p_2$ in $P$ on the basis of a score $q$ in $Q$. We then define a score $p$ in $P$ for each $q$ in $Q$ as follows, assuming we have an $n$-level measurement scale for $P$:
+Assume that the empirical structure of an attribute is in correspondence with the axioms for ratio-level measurement scaling. This means, by extension, that all axioms for ordinal measurement are in correspondence with the empirical structure of that attribute. Let us assume we have a hypothetical homomorphic mapping of the empirical structure of this attribute expressed quantitatively (with ratio-scaling). Then, each possible weakly\footnote{Meaning elements can be tied, see above.} ordinal representation of quantitative values of this perfect measurement measure can result in an unambiguous weakly ordered classification of scores in $Q$ to scores in terms of $P$\footnote{This lack of ambiguity is only a result of this formalization. We may find that the relationship of the `real' variable to its ordinal estimate is not quite so straightforward. We will discuss this later on.} Assume that instrument $P$ has $n$ elements. Then we can define a series of $n - 1$ `thresholds' T as $\{ a, b, c \ldots z \}$. These thresholds are the point of $q$ where a score $p_1$ in $P$ jumps to another classification $p_2$ in $P$ on the basis of a score $q$ in $Q$. We then define a score $p$ in $P$ for each $q$ in $Q$ as follows, assuming we have an $n$-level measurement scale for $P$:
 
 \[
 \begin{cases} 
@@ -119,13 +91,14 @@ Assume that the empirical structure of an attribute is in correspondence with th
 \end{cases}.
 \]
 
-Note that if the mapping is inconsistent with this formalism, then the first axiom for ordinality is broken. Thus, this step function is a logical consequence of the empirical structure of the variable. It needs to be met. Otherwise, the two representations of the attribute are mutually inconsistent. This representation follows from the assumed structure of our hypothetical perfect representation of the variable and the ordinal rating scale. 
+Note that if the mapping is inconsistent with this formalism, then the first axiom of ordinality is broken. Thus, this step function is a logical consequence of the empirical structure of the variable. It needs to be met. Otherwise, the two representations of the attribute are mutually inconsistent. This representation follows from the assumed structure of our hypothetical perfect representation of the variable and the assumed structure of an ordinal rating scale response. 
 
-While a strong ordering of an ordinal representation of the variable is a unique representation of the variable up to monotonic transformations, a representation that groups values into a certain number of equal segments can be inconsistent with another representation of that variable that splits the range into an identical number of equivalence sets. In fact, many different constructions can be made that are not compatible with each other. Say we want to map a continuous variable into five categories. The values of our continuous variable fall in range [0, 100] and we would like to map this range to five equivalence sets.
+An ordinal representation of a continuous that groups values into a certain number of equal segments can be inconsistent with another representation of that variable that splits the range of the original variable into an identical number of equivalence sets. In fact, many different constructions can be made that are not compatible with each other. Say we want to map a continuous variable into five categories. The values of our continuous variable fall in range [0, 100] and we would like to map this range to five equivalence sets.
 
 If so, then both
 
 \[
+p_{1} = 
 \begin{cases} 
     1 & q \leq 22.4\\
     2 & 22.4 \leq q < 48.9\\
@@ -133,7 +106,8 @@ If so, then both
     4 & 59.4 \leq q < 82.2\\    
     5 & 82.2 < q\\
 \end{cases}
-\&
+\ \ \ \text{and}\ \ \ 
+p_{2} =
 \begin{cases} 
     1 & q \leq 20.0\\
     2 & 20.0 \leq q < 40.0\\
@@ -143,7 +117,7 @@ If so, then both
 \end{cases}.
 \]
 
-are valid representations of the variable with 5 equivalence sets. Yet, they are inconsistent, because a quantity can be sent by the mapping to one category that would be sent to another category in another mapping. E.g., the value 21.1 is seen as a 1 in the first representation while a value of 21 is seen as a 2 in the second representation. This breaks the axiom of transitivity. If we were to sum scores gained through multiple ordinal representations of the same score, the mapping can become inconsistent between these representations. Note also that this is not measurement error per sé, but another type of error. The measurement itself can be seen as correct, but the issues come to be through the incompatibility of one measurement with another.
+are valid representations of the variable with 5 equivalence sets. Yet, they are inconsistent, because a quantity can be sent by the mapping to one category that would be sent to another category in another mapping. E.g., the value 21.1 is seen as a 1 in the first representation while a value of 21 is seen as a 2 in the second representation. This breaks the axiom of transitivity. If we were to sum scores gained through multiple ordinal representations of the same score, the mapping becomes inconsistent between these representations. Note also that this is not equivalent to measurement error per sé, but relates to \textit{measurement instability}. The issues come to be through the incompatibility of two representations of empirical relations.
 
 \subsection{Between-person mapping inconsistencies}
 It is often assumed that aggregations of individual measures rescind the limitations of different scaling because these measurement differences cancel out when enough samples are drawn. The origins of this assertion are from Knapp. This idea can be seen as follows: if the limit of the number of bins becomes infinite, and the underlying variable is continuous, then the measuring instrument will approach the normal distribution. 
@@ -162,32 +136,65 @@ Making a, b, c, and d functions of time, step function F(x, t) becomes:
 \end{cases}.
 \]
 
-This means that each threshold becomes a function, with time as input. That is, for each time $t$, a . 
+This means that each threshold becomes a function, with time as input. 
 
 \subsection{Measurement instability}
-We introduce the \textit{measurement instability framework} to study the consequences of this type of instability.\textit{Measurement instability} can be used to make a distinction between the influence of different parameters that affect the scaling of the mapping function. Note that none of the measurement instability parameters influence the quantity of the real variable. 
+We introduce the \textit{measurement instability framework} to study the consequences of measuring procedures .\textit{Measurement instability} can be used to make a distinction between the influence of different parameters that affect the scaling of the mapping function. When we introduce these topics, we assume that the other measurement instability parameters are stable. We also assume equal intervals, unless otherwise specified. Note that none of the measurement instability parameters influence the quantity of the underlying variable, it only has repercussions on the mapping of the quantity to the measure.
 
 \subsubsection{Zero-point instability}
-\textit{Zero-point instability} means that the zero-point of the mapping is unstable. Because the absolute zero-point of the real quantity is stable, the thresholds move away or towards the absolute zero point of the real quantity by a constant amount in the same direction. The range of the thresholds will stay identical. 
+\textit{Zero-point instability} means that the zero-point of the mapping is unstable. Because the absolute zero-point of the real quantity is stable, the thresholds move away or towards the absolute zero point of the real quantity by a constant amount in the same direction. The range of the thresholds will stay identical. Every threshold shifts by a constant amount. Therefore, assuming we have an $n$-level measurement scale for $p$:
 
-\includesvg{zeropointinstability}
+\[
+\begin{cases} 
+    1 & q  \leq (a + C_{i})\\
+    2 & (a + C_{i}) \leq q < (b + C_{i})\\
+    3 & (b + C_{i})  \leq q < (c + C_{i})\\
+    \ldots & \ldots\\    
+    n & (z + C_{i})  < q\\
+\end{cases}.
+\]
+
+where set of thresholds $T = \{a, b, c, \ldots, z\}$, $C\_{i}$ is the constant for person or moment $i$, and $q$ is a continuous measure of $Q$. 
 
 \subsubsection{Scaling instability}
-\textit{Scaling instability} is instability that comes from a changing distance between the highest threshold and the lowest threshold (the zero-point). The distance of the range of the measurement instrument is unstable. In other words, the segment of the real quantity that is mapped to the representation can be wider or more narrow in the real quantity depending on the person or the timepoint on which a person is measured. Scaling instability is independent of zero-point instability.
+\textit{Scaling instability} is instability that comes from a changing distance between the highest threshold and the lowest threshold (the zero-point). The range of the measurement instrument is unstable. In other words, the segment of the real quantity that is mapped to the representation can be wider or more narrow in the real quantity depending on the person or the timepoint on which a person is measured. Scaling instability is independent of zero-point instability. The difference of each threshold to the lower range bound is scaled up by a common factor. Therefore, assuming we have an $n$-level measurement scale $p$:
 
-\includesvg{scalinginstability}
+\[
+\begin{cases} 
+    1 & q \leq a\\
+    2 & a \leq q < a + x_{i}(b - a)\\
+    3 & a + x_{i}(b - a) \leq q < a + x_{i}(c - a)\\
+    \ldots & \ldots\\    
+    n & a + x_{i}(z - a) < q\\
+\end{cases}.
+\]
+
+where where set of thresholds $T = \{a, b, c, \ldots, z\}$, $x_{i}$ is the scaling factor, and $q$ is a continuous measure of $Q$.
 
 \subsubsection{Interval instability}
 \textit{Interval instability} means that the distance between consecutive pairs of thresholds is not identical. Interval instability can have a structural or a random appearence. An example of structural interval instability would be a growing distance between each subsequent neighbouring pair of thresholds. In random interval instability, there is no relationship between the order of the pairs and the distance of neighbouring pairs of thresholds. Interval instability can simultaneously have a structural and a random component.
+
+\[
+\begin{cases} 
+    1 & q  \leq (a + C_{i1})\\
+    2 & (a + C_{i1}) \leq q < (b + C_{i2})\\
+    3 & (b + C_{i2})  \leq q < (c + C_{i3})\\
+    \ldots & \ldots \leq \ldots\\    
+    n & (z + C_{in}) < q\\
+\end{cases}.
+\]
+
+
+where the set of thresholds $T = \{a, b, c, \ldots, z\}$
 
 \subsubsection{Combinations}
 These three instabilities operate mostly independently but a few things should be noted. One is that real scores can fall outside of the range of the thresholds. These scores will naturally be mapped to the lowest or highest option. Second, if the zero-point of the mapping is stable then scaling instability can only affect the right bound of the range. Further, thresholds cannot be outside of the range of the measuring device by definition. Therefore, interval instability is limited by scaling and zero-point instability. We also reiterate once more that the values of the actually existing quantity are not affected by the mapping. We consider these absolute up to the point of the uniqueness theorem. Moreover, the chosen scaling of the real quantity is of no practical concern. If the original attribute would be scaled differently, it would affect the thresholds proportionately. Statistical conclusions would be identical after these scaling differences are propagated. Lastly, all forms of instability can be either systematic or unsystematic. If the instability is systematic, then the mapping of the variable from an existing quantity to the rating score is impacted by other variables of relevance to the test. If the instability is unsystematic, there is no relationship between other relevant variables and the mapping. Systematism can be consequential in the context of applying a statistical test, because if the mapping is inconsistent between test conditions it might lead to biased results. 
 
 \section{Method}
-If you want to make claims about the consequences of different structural deficiencies of a framework, it can be helpful to run a simulation study to  the effect of those deficiencies to show the consequences of those effects to researchers. 
+
 
 \subsection{Aims}
-The aim of this simulation is to illustrate and clarify the potential consequences of measurement instability. This helps us to formalize and . Given these aims, we initially have decided to use the simplest test and data-generating mechanisms we could think of. 
+The aim of this simulation is to illustrate and clarify the potential consequences of measurement instability. Given these aims, we initially have decided to use the simplest test and data-generating mechanisms we could think of. 
 
 \subsection{Data-generating mechanism}
 Our data-generation pipeline consists of multiple stages. First, we generate the data on the data itself. 
@@ -207,10 +214,9 @@ In the second test, there is a one standard deviation difference between the nul
 Random numbers are generated using the Xoshiro256++ algorithm. The seed is 8508845.
 
 \subsection{Threshold transformation pipeline}
-We have implemented a full-factorial design by planning a range of parameters for each sub-type of measurement instability. These factors include the distribution of the zero-point, the number of bins the data should be divided into, the distribution of the scaling, and both random and structural threshold instabilty. We emulate differences in the degree of measurement stability by running the thresholds through a transformation pipeline. Each stage of the pipeline draws on the results of the last, and the stages result in one set of thresholds. Thresholds are generated for each iteration of the simulation, right before we perform the analysis.  
+We have implemented a full-factorial design by planning a range of parameters for each sub-type of measurement instability. These factors include the distribution of the zero-point, the number of bins the data should be divided into, the distribution of the scaling, and structural threshold instabilty. We emulate differences in the degree of measurement stability by running the thresholds through a transformation pipeline. Each stage of the pipeline draws on the results of the last, until one set of thresholds is left. Thresholds are generated for each iteration of the simulation, right before we perform the analysis.  
 
-\subsubsection{Setting the number of response categories}
-We set the number of response categories as one of the parameters for the simulation. This is fed into the function that generates the thresholds. The set of values includes each integer from four to fifteen, 20, 50, 80, and 100.
+
 
 \subsubsection{Generating the zero point}
 First we set a zero-point. This is based on a three standard deviation difference from the mean. If it is stable, the left bound is constant. If it is unstable, we use a normal distribution to generate a zero-point with $\mu$ is three standard deviations lower than $\mu$ is variable. In the last stage, this actual bound is cut off because the left-most category extends theoretically to lower values up to the absolute zero-point. Numbers are either a constant or drawn from a distribution. The constant is always -3. If drawn from a distribution, $\mu$ is always -3. $\sigma$ is set at each interval when incrementing by 0.1 from 0.1 to 1.0.
@@ -218,14 +224,20 @@ First we set a zero-point. This is based on a three standard deviation differenc
 \subsubsection{Generating the scaling}
 We placed the maximum at the right bound of the 99\% confidence interval on the basis of the null-data so that the mapping is equivalent for the two groups. The generation mechanism is similar to that of the zero-point: it is either a constant, or we use a normal distribution to generate a max-point where $\mu$ is equal to three standard deviations to the right of $\mu$. The constant is thus always 6. If drawn from a distribution, $\mu$ is always 6. $\sigma$ is set at each interval when incrementing by 0.1 from 0.1 to 1.0.
 
+\subsubsection{Setting the number of response categories}
+We set the number of response categories as one of the parameters for the simulation. This is fed into the function that generates the thresholds. The set of values includes each integer from four to fifteen, 20, 50, 80, and 100.
+
 \subsubsection{Generating the thresholds}
-We generated the intervals (all values of the thresholds aside from the outer bounds) by dividing the distance of the low bound to the right bound by the number of thresholds that are not at the edges. Unequal thresholds were generated using the cumulative distribution function of the beta-distribution. We chose this set-up because it results in either increasing or decreasing distance between, controllable by the $\beta$-parameter. If it is stable, the same parameters are chosen for each . If it is unstable, $\alpha$ and $\beta$ were 
+We generated the intervals (all values of the thresholds aside from the outer bounds) by dividing the distance of the left bound of the range to the right bound of the range by the number of thresholds. Initially, this is always done 
+
+
+Unequal thresholds were generated using the cumulative distribution function of the beta-distribution. We chose this set-up because it results in either increasing or decreasing distance between, controllable by the $\beta$-parameter. If it is stable, the same parameters are chosen for each . If it is unstable, $\alpha$ and $\beta$ were 
 
 \subsection{Mapping the real scores to the bins}
-Afterwards, we cut the data using the thresholds we generated. This works using the simple step function described in the introduction: each value we've generated 
+Afterwards, we cut the data using the thresholds we generated. This works using the simple step function described in the introduction: each value we have generated is sent to a value in the . 
 
 \subsection{Analysis}
-We ran two independent two-sample t-tests to perform the analysis. Each We save the t-value and the p-value of the test for each mapping, and save this 
+We ran two independent two-sample t-tests to perform the analysis. We save the number 
 
 \subsection{Software}
 We used the Julia language, and in particular the `Statistics.jl' packages, to set up the simulation and to run the statistical analysis \citep{bezanson2017julia}. Analyses were run on a personal computer.  Full information about dependencies and version numbers can be found in a machine-readable format in the Manifest.toml file in the Github-repository. Instructions for running the analysis through a sandboxed project environment identical to our system can be found on the main page of this repository. Both the distributions and the test were chosen to use simple, commonly known statistics with the aim to show the potential consequences of zero-point, scaling, and interval instability. The experiment can be repeated using any possible test: the values are mapped \textit{before} the analysis is run, so the full study is independent of the implementation of the test.
@@ -235,12 +247,15 @@ We used the Julia language, and in particular the `Statistics.jl' packages, to s
 
 \section{Discussion}
 
-This study needs to be seen as an attempt at a bridge between scientists who study psychometrical testing and theoretical psycholigists with an interest in formal measurement theory. We believe that the dots yell out to be connected, but it can be difficult to see the structural equivalence in . Either the abstract philosophical nature of  
+This study needs to be seen as an attempt at a bridge between scientists who study psychometrical testing, theoretical psychologists with an interest in formal measurement theory, and theoretical . We believe that the dots yell out to be connected, but it can be difficult to see the structural equivalence in . Either the abstract philosophical nature of  
 
 
 Another reason for the current treatment is the frustration about the limitations of modern treatments of this topic. Many modern simulation studies implicitly assume the thing that ought to be proven: that the mapping of the continuous variable to the measurement scales result in equal intervals. We believe that part of the reason for this confusion is that psychologists are allergic to making claims about the quantitavity of variables. Yet, most of the statistical tests we commonly use to test data rely on that claim. It can be difficult to understand why we rely on those assumptions for testing, but are reluctant when it comes to justification. This is an attempt to show that it can bring a great deal of clarity if we extend our lenience to allow for these assumptions in justification.
 
-Our choice to give the hypothetized perfect measurement an absolute zero is based on both a defence and a justification. The defence concerns the claim that one never really lacks a psychological variable is no challenge. Each quantity has to have a theoretical zero-point, because otherwise the quantity is meaningless. Temperature, for example, does have an absolute zero-point, at 0$^\circ$ K, yet it cannot ever be reached. Nobody would argue because it cannot ever be reached that we should stop attempting to measure temperature in Kelvin. As for the justification: using the absolute zero-point (or the absence of the posited attribute) allows for an unambiguous relationship of the perfect quantity measurement 
+Our choice to give the hypothetized perfect measurement an absolute zero is based on both a defence and a justification. The justification for using the absolute zero-point (or the absence of the posited attribute) is the theoretical simplicity that is brought by an unambiguous relationship of the perfect quantity measurement and its relationship to a rating scale score. The defence is a response to the common claim that one never can never really observe the absence of a value of a trait. Each quantity has to have a theoretical zero-point, because otherwise the whole idea of quantity is meaningless. Temperature, for example, does have an absolute zero-point, at 0$^\circ$ K, yet it cannot ever be reached. Nobody would argue that because temperature is  it cannot ever be reached that we should stop attempting to measure temperature in Kelvin. 
+
+\subsection{}
+The better anchored a psychological variable is to known 
 
 \subsection{Ceiling & Floor effect}
 
@@ -281,6 +296,8 @@ It must also be said that we do feel some sympathy towards the viewpoint by Sijt
 
 We agree with Borsboom, Mellenbergh and van Heerden that what validity should be defined as a scale measuring what it purports to measure. However, their conception is probabl. A scale might very well be able to measure what it purports to measure, but if this is only an attempt 
 
+We align ourselves with ``representational minimalism'' that rids it of most of its epistemological basis so that it can serve as a common ground for discussion about measurement, recognizing that most of the critical literature about measurement takes place either within or in discussion of this framework \citep{vessonenRepresentationMeasurement2021}. The acceptance of RTM is not universal. We do not make firm claims whether a realist, an operationalist, or a representationalist epistemology should be matched to the formal aspects of the framework. We do, however, choose to use representationalist language, as this is the most well-known and fully realized. It should be noted that choosing a different framework means that the formalism might either change slightly or majorly. If this change is subtle, then the current study might still be interpretable. In some frameworks, however, especially those that doubt the hypothetical quantifiability of psychological constructs, the current discussion might be uninterpretable.
+
 \subsection{Utility Measures}
 An hereto unnoticed (as far as I know) strong resemblance to the discussion from economists about the status of utility measures. This problem is in many ways  identical to the problems that we see in psychology. What are the limits of 
 
@@ -288,7 +305,7 @@ There is a distinction between unobservable and observable properties made in ps
 
 \subsection{Takeaway points}
 \begin{enumerate}
-    \item{When thinking about measurement, it can be useful to separate \textit{measurement error} from \textit{measurement instability}. The former is error of a measure already assuming a certain scaling context. The latter is caused by inconsistencies in the mapping process from the real value to its rating scale equivalents.}
+    \item{When thinking about measurement, it can be useful to separate \textit{measurement error} from \textit{measurement instability}. The former is an error or deviation from a measure after already assuming its scaling. The latter is caused by inconsistencies in the mapping process from the real value to its rating scale equivalents.}
     \item{The \textit{operational ideal} of the measurement instability framework is to minimize the issues that inconsistent mapping between participants or timepoints can cause. This, for example, can be through rescaling or the development of statistical measures. Moreover, uncertainty calculations can be made on the basis of estimated measurement instability.}
     \item{If it were easy to measure the relationship of the scaling of a rating scale and a `real' magnitude of a quantity, it would have been as common as }
 \end{enumerate}
@@ -305,6 +322,43 @@ No external funding was used for this project.
 
 \section*{Acknowledgments}
 I acknowledge the work of my thesis supervisors, who introduced me to the method and left me free to pursue the project as I imagined it in all its weird and shifting shapes.  The great help of the Julia community was also appreciated, as they have been pushing me forward where I got stuck and took the time to respond to my stupid questions. Finally, I would like to acknowledge the feedback and conversations between me and my thesis group, who have been working through my text and made sure that it is easy to follow and well-written. Special thanks to Giuliana Orizzonte, Daniel Anadria, dr. Hessen, dr. Derksen, dr. Grelli and dr. Bringmann for fruitful discussions and feedback about my topic. Lastly, I would like to thank my girlfriend, family, and friends for the mental support throughout.
+
+\section*{Appendix}
+
+\subsection{Representational Theory of Measurement}
+The representational theory of measurement (RTM) is an important . While first formalized by Stevens, the most succesful 
+
+We assume, in alignment with Krantz, Luce, Suppes, and Tversky (henceforth referred to as KLST), that an attribute can be quantified only if its structural characteristics allow for measurement \citep{}. .\@In line with this theory, we see the measurability of an object from the perspective of a representation and a uniqueness theorem. The representation theorem asserts that a set, together with one or more relations on that set, follows certain axioms so that it can truthfully preserves the structure of a qualitative attribute of an object to a numerical representation of that quality. In other words, a \textit{homomorphic} mapping of the qualitative relational structure into a quantitative representation can be constructed. A uniqueness theorem specifies the set of allowable transformations which maintain this qualitative relation strcture. E.g., both Fahrenheit or Celsius measurements are legitimate homomorphic mappings that maintain the qualitative structure of temperature, differing in zero-point and scale.  
+
+More formally, suppose that the transformation function $\phi(a)$ is a homomorphism and the representation theorem holds for the mapping of qualitative ordering $\succ$ to quantitative ordering $>$. If $\phi(a)$ then maps a qualitative attribute of set A into $\mathbb{R}$, it should maintain the structure of the qualitative attribute in its numerical representation: if and only if $A$ is qualitatively greater than $B$, $a$ is numerically greater than $b$.
+
+\subsubsection{Ordinal measurement}
+In this study, we assume that a single instance of a rating scale instrument results in \textit{ordinal scores}.\textit{Ordinality} implies that we know how elements are scored relatively to other elements. By meeting the axioms for ordinality, we say nothing about the ability of a score to adhere to . In other words, any mapping of which we can only assume that these characteristics hold is an ordinal mapping of the relational structure of $Q$. Concatenation, or addition, requires additional assumptions. Note that an ordinal mapping of the structure of $Q$ can be made if a ratio-mapping can also be made, but not vice versa. 
+
+This can also be written down axiomatically. A set of all tied elements with the same value is called an equivalence set. Let $X$, $Y$ \& $X$ be any quantities in $Q$. The result of the projection of the quantity to an ordinal scale, which we will refer to as $P$, needs to match the following conditions. Let $A$ be a set and $\succeq$ be a binary relation on $A$. 
+
+\begin{itemize}
+    \item if $X \succeq Y$ \& $Y \succeq Z$, then $X \succeq Z$ (transitivity);
+    \item Either $X \succeq Y\ \|\ Y \succeq X$ (connectedness);
+    \item For strongly tied order: If $X \succeq Y$ \& $Y \succeq X$, then $X = Z$ (antisymmetry).
+\end{itemize}
+
+Two elements have a weak order iff, for all $a$, $b$, axiom 1 and 2 are met.  If the third axiom is also met, then the ordering is strong and elements cannot be tied. Because the likert scale obviously allows for ties (multiple people can be ranked on the same score), and is thus a weak ordering, we assume transitivity and connectedness for the mapping. Transitivity implies that all order-relations need to be consistent. Connectedness implies that a connection between two elements is either larger, smaller, or equal. If antisymmetry is met, equal scores are only possible if they refer to the same object. In this case, the equivalence set has only one element.
+
+\subsubsection{Quantities and ratio-level measurement}
+As for the `perfect' ratio-mapping of the principially measurable attribute we will assume that the following additional characteristics will hold above axiom 1 and 2 presented above \citep{krantzFoundationsMeasurement1971}. 
+
+\begin{itemize}
+    \item $X \oplus (Y \oplus Z) = (X \oplus Y) \oplus Z$ (associativity);
+    \item $X \oplus Y = Y \oplus X$ (commutativity);
+    \item $X \succeq Y$ iff $X \oplus Z \succeq Y \oplus Z$ (monotonicity);
+    \item if $X \succ Y$ then there exists a Z such that $X = Y \oplus Z$ (solvability);
+    \item $X \oplus Y \succ X$ (positivity);
+    \item there exists a number n such that $nX \succeq Y$ (where $1X = 1$ and $(n \oplus 1) X = nX \oplus X$) (Archimeadean condition).
+\end{itemize}
+
+$\oplus$ refers to concatenation. This is the qualitative . Another consequences is that a value $q$ can always be put in terms of another value $r$ in $Q$. Every ratio-scale is homomorphic to the qualitative attribute that is being measured \citep{michellAxiomsQuantityTheory1997}. The last axiom (the archimedean condition) is added to ensure that the set of possible scores is finite. E.g., say that we have developed a standard measure for happiness: $H$. Then we can say that any value $x$ is written in terms of $H$ iff the finite ratio $\frac{x}{H}$ holds\footnote{We agree with the point by Franz that it is misleading to give physical magnitudes as examples when discussing psychological phenomena \citep{franzArePsychologicalAttributes2022}. Therefore, we choose to use psychological examples when we are thinking about psychological phenomena. This adds an extra face validity check: does discussing psychological attributes in this manner make sense?}.
+
 
 \section*{Data Availability Statement}
 The code, additional material, and generated data for this study can be found on \href{https://github.com/MvanSteenbergen/MasterThesisRQA}{GitHub}.
