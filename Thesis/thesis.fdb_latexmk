@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1712412465 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1712412469 2
+["pdflatex"] 1712657618 "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" "thesis.pdf" "thesis" 1712657621 0
   "C:/Users/lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1711315544 143115 17c4a5c81ae7930b8bfb50b7046ce024 ""
   "C:/Users/lenovo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706605936 24142380 7d36b211aa2b8846af1232ead9daa2b1 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -14,6 +14,7 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768654 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768654 4524 6bce29db5bc272ba5f332261583fee9c ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmr7t.tfm" 1136768654 2124 2601a75482e9426d33db523edf23570a ""
+  "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmr8c.tfm" 1136768654 1352 fa28a7e6d323c65ce7d13d5342ff6be2 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmr8r.tfm" 1136768654 4408 25b74d011a4c66b7f212c0cc3c90061b ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmri7t.tfm" 1136768654 2288 f478fc8fed18759effb59f3dad7f3084 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmri8r.tfm" 1136768654 4640 532ca3305aad10cc01d769f3f91f1029 ""
@@ -62,6 +63,7 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/helvetic/phvro7t.vf" 1136768654 1372 9948cedecdb0445a3b5cf1b8a8082ab8 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmb7t.vf" 1136768654 1372 788387fea833ef5963f4c5bffe33eb89 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmr7t.vf" 1136768654 1380 0ea3a3370054be6da6acd929ec569f06 ""
+  "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmr8c.vf" 1136768654 3556 8a9a6dcbcd146ef985683f677f4758a6 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/fonts/vf/adobe/times/ptmri7t.vf" 1136768654 1384 a9d8adaf491ce34e5fba99dc7bbe5f39 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -217,6 +219,7 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1phv.fd" 1585253778 1736 51f99a09d5536398d3a0ad1d44df9625 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/times.sty" 1585926771 888 8e0e5c8cca7b18e0400f97f5a2b90a99 ""
+  "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ts1ptm.fd" 1585253778 653 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
@@ -234,11 +237,11 @@
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lenovo/AppData/Local/Programs/MiKTeX/tex/xelatex/xetexconfig/crop.cfg" 1169250894 305 57c5d049d73b46b49f97b41eaa29558b ""
   "FrontiersinVancouver.cls" 1704717835 28933 f5dd896f2166d9ac0a54ad628c6f62f8 ""
-  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1712412460 44618 9876e360c58900eed8e0b2bef55dacc0 ""
+  "c:/Users/lenovo/Documents/Thesis/MasterThesisRQA/Thesis/thesis.tex" 1712657617 46818 748d39ca41c1a93813b96c64dfbedc7f ""
   "logo1.eps" 1704717189 37462 776b4d7efab5d1912cafad2bab92a208 ""
-  "thesis.aux" 1712412468 6212 41c04991a8a59a7a56ade997a9765d8b "pdflatex"
-  "thesis.out" 1712412468 6594 c467cfa57a078fd1dfb6f758273245b6 "pdflatex"
-  "thesis.tex" 1712412460 44618 9876e360c58900eed8e0b2bef55dacc0 ""
+  "thesis.aux" 1712657620 6059 c7a3d1c9d5c26f6761a6427bf200c5d1 "pdflatex"
+  "thesis.out" 1712657620 6421 120e29b6a622059ecd3db8010086ca7e "pdflatex"
+  "thesis.tex" 1712657617 46818 748d39ca41c1a93813b96c64dfbedc7f ""
   (generated)
   "thesis.aux"
   "thesis.log"
