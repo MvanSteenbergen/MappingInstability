@@ -25,7 +25,7 @@ Subdivided into:
 
 - ./Code: Contains all the code used to run the simulation and plot the results. `./random_diff.jl` and `./group_diff.jl` contain experiment 1 and experiment 2, and `./analysis.jl` contains making the plots.
 - ./Data: Contains the generated data.
-- ./Diagrams: Diagrams used by `analysis.jl` to plot the effects of
+- ./Diagrams: Diagrams used by `analysis.jl` to plot the effects of mapping instability.
 
 ./Plots - Contains all plots as they are used in the final paper.
 ./Thesis - Contains the latex source code for my thesis.
