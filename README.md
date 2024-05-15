@@ -16,7 +16,7 @@ All software used in this project is open-source. No participants or privacy-sen
 
 ## Permission and access
 
-All material involved in the production of this thesis project is available on [GitHub](https://github.com/MvanSteenbergen/MappingInstability). Maas van Steenbergen is the maintainer of this repository. He can be contacted through mvansteenbergen@proton.me.
+All material involved in the production of this thesis project is available on [GitHub](https://github.com/MvanSteenbergen/MappingInstability). Maas van Steenbergen is the maintainer of this repository. He can be contacted via mvansteenbergen@proton.me.
 
 # Folder hierarchy
 

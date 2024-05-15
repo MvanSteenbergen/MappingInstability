@@ -21,8 +21,89 @@ begin
 	using ProgressLogging
 end
 
+# ╔═╡ 669833e4-cd5b-4d53-b91c-b33c4cdba519
+md"""
+Copyright 2024 Maas van Steenbergen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+"""
+
+# ╔═╡ 42d82511-158f-4219-8131-2383f5a4d51e
+md"""
+# Experiment 1
+
+In experiment one, we added random mapping instability to each observation. 5000 samples were drawn for each combination of parameters $x$, $y$, $z$, and $a$. There were no difference between the mapping instability settings between the two groups. 
+
+This file contains the simulation code for experiment two. Each statistical test has its own mapping function. Note that the tests were used to confirm correctness, and report_opt for memory optimization. 
+"""
+
 # ╔═╡ 87946af6-a1b1-4301-bbb5-f727ba5372b3
 Random.seed!(8508845)
+
+# ╔═╡ 482285bb-46b9-4eb6-9dec-03015f258cbf
+md"""
+# `simulation` 
+
+`simulation` conducts a simulation study by generating samples from two specified probability distributions (d₁ and d₂). It then applies hypothesis tests to these samples to assess whether there are significant differences between them. 
+""" 
+
+# ╔═╡ 5406bcfa-65ae-46e3-a007-01366a04fcf8
+function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distribution, leftBoundRange, rightBoundRange, thresholdDistribution, n::Integer, nIntervals::Integer)
+
+	# Pre-allocate memory for the results
+	results = (t₁ = Array{Float64}(undef, n),
+	           t₂ = Array{Float64}(undef, n),
+	           p₁ = Array{Union{Missing, Float64}}(undef, n),
+			   p₂ = Array{Union{Missing, Float64}}(undef, n)
+	)
+
+	# Generate three samples of n * 18 elements
+	sample₁ = rand(d₁, (n, 18))
+	sample₂ = rand(d₂, (n, 18))
+	sample₃ = rand(d₁, (n, 18))
+
+	# Multithread (use multiple cores for the different iterations of the loop), avoid new memory allocation in loop
+	@inbounds Threads.@threads for i in 1:n
+	
+		# Overwrite samples with adjusted version (to avoid having to reallocate memory)	
+		sample₁[i, :] = transform(@view(sample₁[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
+		sample₂[i, :] = transform(@view(sample₂[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
+		sample₃[i, :] = transform(@view(sample₃[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
+
+		# Run test₁ (1 σ difference between samples)
+		test₁ = HypothesisTests.EqualVarianceTTest(
+			@view(sample₁[i, :]), 
+			@view(sample₂[i, :])
+		)
+
+		# Run test₂ (No difference between samples)
+		test₂ = HypothesisTests.EqualVarianceTTest(
+			@view(sample₁[i, :]), 
+			@view(sample₃[i, :])
+		)
+		
+		results.t₁[i] = test₁.t
+		results.p₁[i] = pvalue(test₁)
+		results.t₂[i] = test₂.t
+		results.p₂[i] = pvalue(test₂)
+	end
+	
+	return results
+end
+
+# ╔═╡ 6aea3cae-e446-422f-92f6-5ad004596d9a
+@time simulation(Normal(0, 1), Normal(1, 1), Normal(-3.0, 2), Normal(6.0, 2), Normal(6.0, 2), 5000, 3)
+
+# ╔═╡ 50688240-f607-4618-b495-292dfa7e579f
+md"""
+## `transform` and helper functions
+
+`transform` maps the generated values to the rating scale bins through the steps described in the paper. `setThresholds`, `getRangeBounds`, `setIntervals` and `setZeroPoint` are helper functions for this function.
+"""
 
 # ╔═╡ 404e04a6-af72-4d15-b00b-c7221a3cb296
 begin
@@ -157,55 +238,15 @@ function transform(values, min, max, thresholdDistribution, nBins)
 	return values
 end
 
-# ╔═╡ 5406bcfa-65ae-46e3-a007-01366a04fcf8
-function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distribution, leftBoundRange, rightBoundRange, thresholdDistribution, n::Integer, nIntervals::Integer)
-
-	# Pre-allocate memory for the results
-	results = (t₁ = Array{Float64}(undef, n),
-	           t₂ = Array{Float64}(undef, n),
-	           p₁ = Array{Union{Missing, Float64}}(undef, n),
-			   p₂ = Array{Union{Missing, Float64}}(undef, n)
-	)
-
-	# Generate three samples of n * 18 elements
-	sample₁ = rand(d₁, (n, 18))
-	sample₂ = rand(d₂, (n, 18))
-	sample₃ = rand(d₁, (n, 18))
-
-	# Multithread (use multiple cores for the different iterations of the loop), avoid new memory allocation in loop
-	@inbounds Threads.@threads for i in 1:n
-	
-		# Overwrite samples with adjusted version (to avoid having to reallocate memory)	
-		sample₁[i, :] = transform(@view(sample₁[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
-		sample₂[i, :] = transform(@view(sample₂[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
-		sample₃[i, :] = transform(@view(sample₃[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
-
-		# Run test₁ (1 σ difference between samples)
-		test₁ = HypothesisTests.EqualVarianceTTest(
-			@view(sample₁[i, :]), 
-			@view(sample₂[i, :])
-		)
-
-		# Run test₂ (No difference between samples)
-		test₂ = HypothesisTests.EqualVarianceTTest(
-			@view(sample₁[i, :]), 
-			@view(sample₃[i, :])
-		)
-		
-		results.t₁[i] = test₁.t
-		results.p₁[i] = pvalue(test₁)
-		results.t₂[i] = test₂.t
-		results.p₂[i] = pvalue(test₂)
-	end
-	
-	return results
-end
-
-# ╔═╡ 6aea3cae-e446-422f-92f6-5ad004596d9a
-@time simulation(Normal(0, 1), Normal(1, 1), Normal(-3.0, 2), Normal(6.0, 2), Normal(6.0, 2), 5000, 3)
-
 # ╔═╡ 38ddc64e-8696-4147-a33d-edd6d4e3eb61
 @test transform([-1, 0, 1, 2, 3, 4, 5], 0, 5, Normal(0, 0), 5) == [1, 2, 3, 4, 5, 6, 7]
+
+# ╔═╡ 79b4211b-4837-4866-860c-8a6ab38d29e7
+md"""
+## `runSimulation`
+
+The `runSimulation` function conducts a simulation study by iterating over the Cartesian product of all different parameter values. It then a simulation for each combination. It calculates empirical power and Type I error rates based on the results of the simulations.
+"""
 
 # ╔═╡ ba7f60e8-363f-4aa8-94eb-63a934145280
 function runSimulation()
@@ -2419,10 +2460,14 @@ version = "1.4.1+1"
 """
 
 # ╔═╡ Cell order:
+# ╟─669833e4-cd5b-4d53-b91c-b33c4cdba519
+# ╟─42d82511-158f-4219-8131-2383f5a4d51e
 # ╠═9f5d42a0-c114-11ee-1763-69ae57c4e335
 # ╠═87946af6-a1b1-4301-bbb5-f727ba5372b3
+# ╟─482285bb-46b9-4eb6-9dec-03015f258cbf
 # ╠═5406bcfa-65ae-46e3-a007-01366a04fcf8
 # ╠═6aea3cae-e446-422f-92f6-5ad004596d9a
+# ╟─50688240-f607-4618-b495-292dfa7e579f
 # ╠═404e04a6-af72-4d15-b00b-c7221a3cb296
 # ╠═53ce5d7b-c4ce-47c6-9ceb-22cf69afcdc3
 # ╠═a6d3beda-180e-469a-8b58-c36a9cf3d84a
@@ -2437,6 +2482,7 @@ version = "1.4.1+1"
 # ╠═2672b8ec-fe1c-4f14-9136-8e8db5d22022
 # ╠═ae43090a-4d8c-476a-9e05-b4bb29321f71
 # ╠═38ddc64e-8696-4147-a33d-edd6d4e3eb61
+# ╟─79b4211b-4837-4866-860c-8a6ab38d29e7
 # ╠═ba7f60e8-363f-4aa8-94eb-63a934145280
 # ╠═9a10ae73-0ef8-4e22-a6d2-25246d78560b
 # ╠═2d6f46ee-3007-41dd-85e8-5e7f3f15d61c

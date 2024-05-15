@@ -22,68 +22,43 @@ begin
 	using Profile
 end
 
+# ╔═╡ 3e5e60a4-50a4-4688-9cb1-07fdefd8a517
+md"""
+Copyright 2024 Maas van Steenbergen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+"""
+
+# ╔═╡ b3a21f0c-d8c6-483b-a4b9-23871b0b359c
+md"""
+# Experiment 2
+
+For experiment two, we added structural differences in the mapping between the two experimental conditions. The mapping was kept stable within each group. There was no fluctuation within the groups. 5000 samples were drawn for each combination of parameters $x$, $y$, $z$, and $a$. 
+
+
+This file contains the simulation code for experiment two. It involves two mapping functions for each analysis, one for group one and group two. Note that the tests were used to confirm correctness, and report_opt for memory optimization. 
+"""
+
 # ╔═╡ 87946af6-a1b1-4301-bbb5-f727ba5372b3
 Random.seed!(8508845)
 
 # ╔═╡ 62f3089c-ad98-455f-bbce-a43da44fb10c
 md"""
-# Simulation function
+# `simulation` 
 
-
+`simulation` conducts a simulation study by generating samples from two specified probability distributions (d₁ and d₂). It then applies hypothesis tests to these samples to assess whether there are significant differences between them. 
 """ 
 
-# ╔═╡ 5406bcfa-65ae-46e3-a007-01366a04fcf8
-function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distribution, leftBoundRange::Float64, rightBoundRange::Float64, thresholdDistribution, n::Integer, nIntervals::Integer)
+# ╔═╡ 315d844e-e1b4-4067-a5ec-5aac6fa82d39
+md"""
+## `transform` and helper functions
 
-	# Pre-allocate memory for the results
-	results = (t₁ = Array{Float64}(undef, n),
-	           t₂ = Array{Float64}(undef, n),
-	           p₁ = Array{Union{Missing, Float64}}(undef, n),
-			   p₂ = Array{Union{Missing, Float64}}(undef, n)
-	)
-
-	# Generate three samples of n * 18 elements
-	sample₁ = rand(d₁, (n, 18))
-	sample₂ = rand(d₂, (n, 18))
-	sample₃ = rand(d₁, (n, 18))
-
-	# Multithread (use multiple cores for the different iterations of the loop), avoid new memory allocation in loop
-	@inbounds Threads.@threads for i in 1:n
-	
-		# Overwrite samples with adjusted version (to avoid having to reallocate memory)	
-		sample₁[i, :] = transform(@view(sample₁[i, :]), -3.0, 6.0, 0.0, nIntervals)
-		sample₂[i, :] = transform(@view(sample₂[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
-		sample₃[i, :] = transform(@view(sample₃[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
-
-		# Run test₁ (1 σ difference between samples)
-		test₁ = HypothesisTests.EqualVarianceTTest(
-			@view(sample₁[i, :]), 
-			@view(sample₂[i, :])
-		)
-
-		# Run test₂ (No difference between samples)
-		test₂ = HypothesisTests.EqualVarianceTTest(
-			@view(sample₁[i, :]), 
-			@view(sample₃[i, :])
-		)
-		
-		results.t₁[i] = test₁.t
-		results.p₁[i] = pvalue(test₁)
-		results.t₂[i] = test₂.t
-		results.p₂[i] = pvalue(test₂)
-	end
-	
-	return results
-end
-
-# ╔═╡ c45feb81-d843-4aa6-ba88-22f81484e01e
-sample₁ = rand(Normal(0,1), (1000, 18))[1, :]
-
-# ╔═╡ 54dfa28d-11a9-424e-95f4-d1fe996a4f44
- simulation(Normal(0, 1), Normal(1, 1), 2.0, 6.0, 6.0, 4, 3)
-
-# ╔═╡ 22cf591c-ae8c-479f-8b4d-a4b9fea028c2
-@time simulation(Normal(0, 1), Normal(1, 1), 2.0, 6.0, 6.0, 5000, 3)
+`transform` maps the generated values to the rating scale bins through the steps described in the paper. `setThresholds`, `getRangeBounds`, `setIntervals` and `setZeroPoint` are helper functions for this function.
+"""
 
 # ╔═╡ 404e04a6-af72-4d15-b00b-c7221a3cb296
 begin
@@ -154,17 +129,8 @@ begin
 	@test setIntervals(1.0, 2.0, 4.0, 5) == [1.0, 1.7626953125, 1.96875, 1.9990234375, 2.0]
 end
 
-# ╔═╡ b0decc3c-25de-4a3f-8e5d-b0d9af61c947
-
-
-# ╔═╡ bb1f470a-711c-46bd-a244-721a901ce543
-@test setIntervals(1, 2, -4, 5) == [1.0, 1.00390625, 1.0625, 1.3164062500000002, 2.0]
-
 # ╔═╡ 7510bac5-a09b-4239-809f-a637919d5bd6
 @report_opt setIntervals(1.0, 2.0, 5)
-
-# ╔═╡ bbfbc3e8-f1a5-461b-92a3-83c22c33b96c
-@report_opt setIntervals(1.0, 2.0, -4.0, 5)
 
 # ╔═╡ bac6bb13-276e-43e0-9c2d-0e096bdfb34c
 # Calculates the range bounds on the basis of the zero-point and the scaling.
@@ -216,9 +182,6 @@ end
 # ╔═╡ d194a887-2040-4dd7-9cb8-29fdd93640bc
 @report_opt getRangeBounds(0.0, 100.0)
 
-# ╔═╡ be12064f-bf51-432d-bb96-1b04146a98b4
-
-
 # ╔═╡ 2672b8ec-fe1c-4f14-9136-8e8db5d22022
 @test setThresholds(0.0, 1.0, 5) == [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
 
@@ -226,7 +189,6 @@ end
 @report_opt setThresholds(0.2, 0.3, 4)
 
 # ╔═╡ ae43090a-4d8c-476a-9e05-b4bb29321f71
-# Maps scores from the 
 function transform(values, min, max, thresholdDistribution::Float64, nBins)
 	for (index, value) in enumerate(values)
 		thresholds = setThresholds(min, max, thresholdDistribution, nBins)
@@ -241,11 +203,65 @@ function transform(values, min, max, thresholdDistribution::Float64, nBins)
 	return values
 end
 
+# ╔═╡ 5406bcfa-65ae-46e3-a007-01366a04fcf8
+function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distribution, leftBoundRange::Float64, rightBoundRange::Float64, thresholdDistribution, n::Integer, nIntervals::Integer)
+
+	# Pre-allocate memory for the results
+	results = (t₁ = Array{Float64}(undef, n),
+	           t₂ = Array{Float64}(undef, n),
+	           p₁ = Array{Union{Missing, Float64}}(undef, n),
+			   p₂ = Array{Union{Missing, Float64}}(undef, n)
+	)
+
+	# Generate three samples of n * 18 elements
+	sample₁ = rand(d₁, (n, 18))
+	sample₂ = rand(d₂, (n, 18))
+	sample₃ = rand(d₁, (n, 18))
+
+	# Multithread (use multiple cores for the different iterations of the loop), avoid new memory allocation in loop
+	@inbounds Threads.@threads for i in 1:n
+	
+		# Overwrite samples with adjusted version (to avoid having to reallocate memory)	
+		sample₁[i, :] = transform(@view(sample₁[i, :]), -3.0, 6.0, 0.0, nIntervals)
+		sample₂[i, :] = transform(@view(sample₂[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
+		sample₃[i, :] = transform(@view(sample₃[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
+
+		# Run test₁ (1 σ difference between samples)
+		test₁ = HypothesisTests.EqualVarianceTTest(
+			@view(sample₁[i, :]), 
+			@view(sample₂[i, :])
+		)
+
+		# Run test₂ (No difference between samples)
+		test₂ = HypothesisTests.EqualVarianceTTest(
+			@view(sample₁[i, :]), 
+			@view(sample₃[i, :])
+		)
+		
+		results.t₁[i] = test₁.t
+		results.p₁[i] = pvalue(test₁)
+		results.t₂[i] = test₂.t
+		results.p₂[i] = pvalue(test₂)
+	end
+	
+	return results
+end
+
+# ╔═╡ 22cf591c-ae8c-479f-8b4d-a4b9fea028c2
+@time simulation(Normal(0, 1), Normal(1, 1), 2.0, 6.0, 6.0, 5000, 3)
+
 # ╔═╡ 38ddc64e-8696-4147-a33d-edd6d4e3eb61
 @test transform([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0], 0.0, 5.0, 0.0, 5) == [1, 2, 3, 4, 5, 6, 7]
 
 # ╔═╡ ee9e2068-8f27-4c69-8b79-8f9ab00b83d6
 @report_opt transform([-1, 0, 1, 2, 3, 4, 5], 0.0, 5.0, 0.0, 5)
+
+# ╔═╡ e2ee5085-2d54-4679-8914-34577bddb07d
+md"""
+## `runSimulation`
+
+The `runSimulation` function conducts a simulation study by iterating over the Cartesian product of all different parameter values. It then a simulation for each combination. It calculates empirical power and Type I error rates based on the results of the simulations.
+"""
 
 # ╔═╡ ba7f60e8-363f-4aa8-94eb-63a934145280
 function runSimulation()
@@ -301,16 +317,10 @@ end
 @report_opt runSimulation()
 
 # ╔═╡ 970fbef4-887c-4b37-840c-112d676a4b1c
-# ╠═╡ disabled = true
-#=╠═╡
 output = runSimulation()
-  ╠═╡ =#
 
 # ╔═╡ 2d6f46ee-3007-41dd-85e8-5e7f3f15d61c
-# ╠═╡ disabled = true
-#=╠═╡
 CSV.write("../Data/group_diff_data.csv", output)
-  ╠═╡ =#
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -2473,13 +2483,14 @@ version = "1.4.1+1"
 """
 
 # ╔═╡ Cell order:
+# ╟─3e5e60a4-50a4-4688-9cb1-07fdefd8a517
+# ╟─b3a21f0c-d8c6-483b-a4b9-23871b0b359c
 # ╠═9f5d42a0-c114-11ee-1763-69ae57c4e335
 # ╠═87946af6-a1b1-4301-bbb5-f727ba5372b3
-# ╠═62f3089c-ad98-455f-bbce-a43da44fb10c
+# ╟─62f3089c-ad98-455f-bbce-a43da44fb10c
 # ╠═5406bcfa-65ae-46e3-a007-01366a04fcf8
-# ╠═c45feb81-d843-4aa6-ba88-22f81484e01e
-# ╠═54dfa28d-11a9-424e-95f4-d1fe996a4f44
 # ╠═22cf591c-ae8c-479f-8b4d-a4b9fea028c2
+# ╟─315d844e-e1b4-4067-a5ec-5aac6fa82d39
 # ╠═404e04a6-af72-4d15-b00b-c7221a3cb296
 # ╠═53ce5d7b-c4ce-47c6-9ceb-22cf69afcdc3
 # ╠═a6d3beda-180e-469a-8b58-c36a9cf3d84a
@@ -2488,21 +2499,18 @@ version = "1.4.1+1"
 # ╠═60e209fa-601e-440f-81e2-6cbd244e7487
 # ╠═0ab87fb9-2acc-4910-a86e-155990ab47c8
 # ╠═1e0235e3-e4c2-4edb-8318-a2b7c85cb963
-# ╠═b0decc3c-25de-4a3f-8e5d-b0d9af61c947
-# ╟─bb1f470a-711c-46bd-a244-721a901ce543
 # ╠═7510bac5-a09b-4239-809f-a637919d5bd6
-# ╠═bbfbc3e8-f1a5-461b-92a3-83c22c33b96c
 # ╠═bac6bb13-276e-43e0-9c2d-0e096bdfb34c
 # ╠═765ee145-b718-4fe3-bdf1-7e3b1e52eadc
 # ╠═e2457c1d-037a-4924-a388-4411ff8d45da
 # ╠═bec0a0d5-befe-4b9b-96a9-85c04eadb662
 # ╠═d194a887-2040-4dd7-9cb8-29fdd93640bc
-# ╠═be12064f-bf51-432d-bb96-1b04146a98b4
 # ╠═2672b8ec-fe1c-4f14-9136-8e8db5d22022
 # ╠═a89271f7-3680-4151-92de-30634b7216b0
 # ╠═ae43090a-4d8c-476a-9e05-b4bb29321f71
 # ╠═38ddc64e-8696-4147-a33d-edd6d4e3eb61
 # ╠═ee9e2068-8f27-4c69-8b79-8f9ab00b83d6
+# ╟─e2ee5085-2d54-4679-8914-34577bddb07d
 # ╠═ba7f60e8-363f-4aa8-94eb-63a934145280
 # ╠═9a10ae73-0ef8-4e22-a6d2-25246d78560b
 # ╠═970fbef4-887c-4b37-840c-112d676a4b1c
