@@ -1,6 +1,6 @@
 # Mapping Instability
 
-This is a readme for the code the repository for the paper `Mapping Instability on Rating Scale Responses.' Two experiments are included, focusing on investigating the impact of mapping instability on statistical analyses. In the first experiment, random mapping instability was introduced across all observations to assess its effects on statistical power and Type I error rates. The second experiment aimed to evaluate the effects of group-based mapping instability, where mapping inconsistencies were introduced between two experimental conditions while maintaining stability within each group.
+This is the repository for the materials for the paper `Mapping Instability on Rating Scale Responses.' Two experiments are included, focusing on investigating the impact of mapping instability on statistical analyses. In the first experiment, random mapping instability was introduced across all observations to assess its effects on statistical power and Type I error rates. The second experiment aimed to evaluate the effects of group-based mapping instability, where mapping inconsistencies were introduced between two experimental conditions while maintaining stability within each group.
 
 The data is generated as part of the simulation code. They cannot be divided due to the research set-up. Detailed instructions for running the experiment can be found under the header `research recipe' below.
 
@@ -20,15 +20,22 @@ All material involved in the production of this thesis project is available on [
 
 # Folder hierarchy
 
-./Code - Contains the code that I used to run the simulation and  
-./Plots - Contains all generated plots.
+./Simulation - Contains the code that I used to run the simulation and  
+Subdivided into:
+
+- ./Code: Contains all the code used to run the simulation and plot the results. `./random_diff.jl` and `./group_diff.jl` contain experiment 1 and experiment 2, and `./analysis.jl` contains making the plots.
+- ./Data: Contains the generated data.
+- ./Diagrams: Diagrams used by `analysis.jl` to plot the effects of
+
+./Plots - Contains all plots as they are used in the final paper.
 ./Thesis - Contains the latex source code for my thesis.
 
-Earlier versions:
+Earlier versions of the paper/presentations of my progress are also included:
 
 ./Legacy/Presentation 19-9-2023 - This contains a presentation that I gave for my thesis proposal
 ./Legacy/Presentation 13-12-2023 - This contains a half-way presentation for my thesis, be aware that my topic was (very!) different back then as well.
-./Legacy/Proposal - This contains my thesis proposal file. Note that this project is very different from what I ended up doing.
+./Legacy/Proposal - This contains my thesis proposal file. Note that this paper is very different from what I ended up doing.
+./Legacy/ResearchReport - Contains the pdf of the paper during a half-way. Note that this paper is very different from what I ended up doing.
 
 ## Research recipe
 
@@ -53,7 +60,9 @@ Now, Pluto will open. Browse to the file in the file picker at the bottom. Be su
 
 2. Browse to `./Simulation/Code/group_diff.jl` in the pluto user interface file picker. Press the Enter-button. This file contains all the code and the annotations for the second simulation study. Press `run notebook code' on the top right of the page. The simulation will now run. Note that it may take a while (for me it takes about 20 minutes - after heavy code optimization)
 
-3. Browse to `./Simulation/Code/analysis.jl` in the pluto user file picker. Press the Enter-button. This file contains all the code and annotations for the plots and the analysis for the second simulation study.
+3. Browse to `./Simulation/Code/analysis.jl` in the pluto user file picker. Press the Enter-button. This file contains all the code and annotations for the plots and the analysis for the second simulation study. ALL PLOTS ARE SAVED WITHIN THE NOTEBOOK FILE, AND CAN BE SAVED TO YOUR COMPUTER BY RIGHT-CLICKING AND CLICKING DOWNLOAD.
+
+@Em.Aa. If you want to test reproducability, delete the Data folder and run the first two files. This is the only output not internally saved in the pluto notebooks. If you want to test reproducability of the plots, just run the notebook file. It should result in equivalent plots to the plots in my paper.
 
 # Compiling the latex file
 

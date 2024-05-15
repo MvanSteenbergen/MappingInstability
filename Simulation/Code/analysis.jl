@@ -13,9 +13,6 @@ begin
 	using FileIO
 end
 
-# ╔═╡ 6b0470a8-4492-4b09-a769-47c9998f71d5
-
-
 # ╔═╡ 75ec7454-2760-4e2e-9016-509fce4b2ca1
 md"""
 Copyright 2024 Maas van Steenbergen
@@ -168,7 +165,7 @@ end
 
 # ╔═╡ 6ed60b8f-bb14-4fad-ba41-723b8700ad42
 md"""
-# Plot 1
+## Random Mapping Instability Effects Type-I/Power
 
 The first plot shows different aspects of the effect of random mapping instability on empirical power and Type I error rates. With random mapping instability, all mapings vary randomly between participants, but do not vary by group. The plot includes visualizations for zero-point instability, scaling instability, and systematic threshold instability, comparing a type of mapping instability with the value of a default without mapping instability.
 """
@@ -202,8 +199,7 @@ begin
 	m4 = f1[8, 2] = GridLayout()
 	r4 = f1[8, 3] = GridLayout()
 
-	## SET UP THE AXES UNTO WHICH THE PLOTTING TAKES PLACE
-
+	## SET UP THE AXES FOR THE PLOTTING
 	img1 = rotr90(load("../Diagrams/zeropointinstability_random.png"))
 	img2 = rotr90(load("../Diagrams/scalinginstability_random.png"))
 	img3 = rotr90(load("../Diagrams/thresholdinstability_random.png"))
@@ -225,7 +221,6 @@ begin
 	AxisR4 = Axis(r4[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → α, β", ylabel = "Empirical Type I error rate (α ⩵ 0.05)", ylabelsize = 20, xlabelsize = 20)
 
 	## ADD LABELS
-
 	Label(title[1,1], "Experiment 1: \n Effect of Random Mapping Instability on Empirical Power and Type I Error", fontsize = 34, font = :bold, halign = :center)
 	Label(illustrationheader[1,1], fontsize = 24, "Type of Parameter", font = :bold_italic)
 	Label(powerheader[1,1], fontsize = 24, "Empirical Power", font = :bold_italic)
@@ -242,14 +237,16 @@ begin
 
 	linkyaxes!(AxisL2, AxisL3, AxisL4, AxisR2, AxisR3, AxisR4)
 
-	## ADD THE ANALYSIS CODE
+	## ADD THE RESULTS FOR THE UNMAPPED DATA
 	hlines!(AxisL2, 0.832, color = :cyan3, label = "Power for stable mapping")
 	hlines!(AxisR2, 0.05, color = :cyan3, label = "Type I for stable mapping")
 	hlines!(AxisL3, 0.832, color = :cyan3)
 	hlines!(AxisR3, 0.05, color = :cyan3)
 	hlines!(AxisL4, 0.832, color = :cyan3)
 	hlines!(AxisR4, 0.05, color = :cyan3)
-	
+
+
+	## ADD THE RESULTS FROM THE DATA
 	scatterlines!(AxisL2, onlyRbr.rbr_σ, onlyRbr.Power, color = :blue, label = "Power for unstable mapping")
 	errorbars!(AxisL2,onlyRbr.rbr_σ, onlyRbr.Power, 1.96*onlyRbr.Power_SDE, whiskerwidth = 8, color = :red)
 	
@@ -287,39 +284,73 @@ begin
 	f1
 end
 
+# ╔═╡ 8bc963a4-25e9-4660-91ec-2f1f76866fa6
+md"""
+## Number of Categories and Type-I Error Rate/Power
+This plot illustrates the impact of varying the number of response categories on the empirical power and Type I error rate. The red bars are the 95% CI error bars.
+"""
+
 # ╔═╡ 4bab68ed-c529-4512-84f6-5bd17c3fa8d0
 begin
+    # Create a new figure with specified size
 	f2 = Figure(size = (1000, 500))
-
+	
+    # Define title layout
 	title1 = f2[1, 1:2]
 		
+    # Define left and right grids for plots
 	m1 = f2[2, 1] = GridLayout()
 	r1 = f2[2, 2] = GridLayout()
 	
-	AxisL1 = Axis(m1[1,1], xlabel = "Number of response categories",limits = (nothing, nothing, 0, 1), ylabel = "Empirical power (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+    # Define left and right axes with labels and limits
+	AxisL1 = Axis(m1[1,1], xlabel = "Number of response categories", limits = (nothing, nothing, 0, 1), ylabel = "Empirical power (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
 	AxisR1 = Axis(r1[1,1], xlabel = "Number of response categories", limits = (nothing, nothing, 0, 1), ylabel = "Empirical Type I error rate (α ⩵ 0.05)", ylabelsize = 16, xlabelsize = 16)
+    
+    # Set title for the figure
 	Label(title1[1,1], "Effect of the Number of Categories on Type I Error Rate and Power", fontsize = 20, font = :bold)
 		
+    # Link the x-axes of both plots
 	linkxaxes!(AxisL1, AxisR1)
 	
+    # Add horizontal lines for stable mapping power and Type I error rate
 	hlines!(AxisL1, 0.832, color = :cyan3, label = "Power for stable mapping")
-	
 	hlines!(AxisR1, 0.05, color = :cyan3, label = "Type I for stable mapping")
-
+	
+    # Add scatter plot and error bars for unstable mapping power
 	scatterlines!(AxisL1, onlyIntervals.nIntervals, onlyIntervals.Power, color = :blue, label = "Power for unstable mapping: N(0, σ)")
 	errorbars!(AxisL1, onlyIntervals.nIntervals, onlyIntervals.Power, 1.96*onlyIntervals.Power_SDE, whiskerwidth = 8, color = :red)
 	
+    # Add scatter plot and error bars for unstable mapping Type I error rate
 	scatterlines!(AxisR1, onlyIntervals.nIntervals, onlyIntervals.TypeI, color = :blue, limits = (nothing, nothing, 0, 1), label = "Type I for unstable mapping: N(0, σ)")
 	errorbars!(AxisR1, onlyIntervals.nIntervals, onlyIntervals.TypeI, 1.96*onlyIntervals.TypeI_SDE, whiskerwidth = 8, color = :red)
 
+    # Return the figure
 	f2
 end
 
+# ╔═╡ 6a0f9b1a-3474-4a1d-9038-18f44d90eea2
+md"""
+## Two-Way Interactions Mapping Instability Parameters Power
+
+This code generates a series of heatmaps arranged in a grid layout, representing the interactions between different parameters of mapping instability and their effects on empirical power in Experiment 1. The heatmaps visualize how variations in parameters  zero-point instability, scaling instability, and threshold instability impacts the empirical power of a simple t-test.
+"""
+
+# ╔═╡ a2a3bf3d-33fb-4b7e-bc97-00b53bb3f902
+md"""
+## Two-Way Interactions Mapping Instability Parameters Type-I Error
+
+This code generates a series of heatmaps arranged in a grid layout, representing the interactions between different parameters of mapping instability and their effects on the Type-I error rate in Experiment 1. The heatmaps visualize how variations in parameters  zero-point instability, scaling instability, and threshold instability impacts the Type-I error rate of a simple t-test.
+"""
+
 # ╔═╡ ca60ad2c-d9c5-420d-a271-825551b3a3dc
 begin
+    # Create a figure with specified size
 	f4 = Figure(size = (900, 900))
 	
+    # Set up the title grid layout
 	title3 = f4[1, 0:3] = GridLayout()
+	
+    # Set up the subplots grid layouts
 	b11 = f4[2, 1] = GridLayout()
 	b12 = f4[3, 1] = GridLayout()
 	b13 = f4[4, 1] = GridLayout()
@@ -328,9 +359,13 @@ begin
 	b31 = f4[4, 3] = GridLayout()
 	b24 = f4[2:4,0] = GridLayout()
 
+    # Set joint color limits for the heatmap
 	joint_limits_2 = (0, 0.8)
 
+    # Set up the color scale for the heatmap
     scale = ReversibleScale(x -> asinh(x / 2) / log(10), x -> 2sinh(log(10) * x))
+	
+    # Define axes for each subplot
 	AxisB11 = Axis(b11[1,1], xlabel = "Zero-point instability \n σ of Normal (-3, σ)",  ylabel = "Number of categories")
 	AxisB12 = Axis(b12[1,1], xlabel = "Scaling instability \n σ of Normal (6, σ)", ylabel = "Number of categories")
 	AxisB13 = Axis(b13[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ)", ylabel = "Number of categories")
@@ -340,8 +375,10 @@ begin
 
 	AxisB31 = Axis(b31[1,1], xlabel = "Threshold instability\n σ of Normal (0, σ)", ylabel = "Scaling instability \n σ of Normal (6, σ)")
 
+    # Set the title of the plot
 	Label(title3[1,1], "Empirical Type I Error After Changing Measurement Instability Parameters", fontsize = 20, font = :bold, halign = :left)
 	
+    # Create heatmaps for each subplot
 	hmb11 = heatmap!(AxisB11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.TypeI, colorrange = joint_limits_2, colorscale = scale, colormap = Reverse(:roma))
 	hmb12 = heatmap!(AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.TypeI, colorrange = joint_limits_2, colorscale = scale, colormap = Reverse(:roma))
 	hmb13 = heatmap!(AxisB13, intervalAndThα.th_σ, intervalAndThα.nIntervals, intervalAndThα.TypeI, colorrange = joint_limits_2, colorscale = scale, colormap = Reverse(:roma))
@@ -351,56 +388,71 @@ begin
 
 	hmb31 = heatmap!(AxisB31, rbrAndThα.th_σ, rbrAndThα.rbr_σ, rbrAndThα.TypeI, colorrange = joint_limits_2, colorscale = scale, colormap = Reverse(:roma))
 
+    # Add colorbar to the plot
 	AxisB33 = Colorbar(b24[1,1], hmb11)
 
+    # Display the figure
 	f4
 end
 
 # ╔═╡ d3f26221-8558-4e8c-a6da-ac6580ee3b58
 begin
-	f3 = Figure(size = (1100, 1100))
-	
-	f3_title = f3[1, 0:3] = GridLayout()
-	f3_b11 = f3[2, 1] = GridLayout()
-	f3_b12 = f3[3, 1] = GridLayout()
-	f3_b13 = f3[4, 1] = GridLayout()
-	f3_b22 = f3[3, 2] = GridLayout()
-	f3_b23 = f3[4, 2] = GridLayout()
-	f3_b31 = f3[4, 3] = GridLayout()
-	f3_b24 = f3[2:4,0] = GridLayout()
+# Create a new figure with specified size
+f3 = Figure(size = (1100, 1100))
 
-	f3_joint_limits = (0.4, 1)
+# Define grid layouts for different sections of the figure
+f3_title = f3[1, 0:3] = GridLayout()
+f3_b11 = f3[2, 1] = GridLayout()
+f3_b12 = f3[3, 1] = GridLayout()
+f3_b13 = f3[4, 1] = GridLayout()
+f3_b22 = f3[3, 2] = GridLayout()
+f3_b23 = f3[4, 2] = GridLayout()
+f3_b31 = f3[4, 3] = GridLayout()
+f3_b24 = f3[2:4,0] = GridLayout()
 
-    f3_scale = ReversibleScale(x -> asinh(x / 2) / log(10), x -> 2sinh(log(10) * x))
-	
-	f3_AxisB11 = Axis(f3_b11[1,1], xlabel = "Zero-point instability \n σ of Normal (-3, σ) → cₚ",  ylabel = "Number of categories")
-	f3_AxisB12 = Axis(f3_b12[1,1], xlabel = "Scaling instability \n σ of Normal (6, σ) → xₚ", ylabel = "Number of categories")
-	f3_AxisB13 = Axis(f3_b13[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → Kₚₜ", ylabel = "Number of categories")
+# Define joint limits for the color scale of heatmaps
+f3_joint_limits = (0.4, 1)
 
-	f3_AxisB22 = Axis(f3_b22[1,1], xlabel = "Scaling instability \n σ of Normal (6, σ) → xₚ", ylabel = "Zero-point instability \n σ of Normal (-3, σ) → cₚ")
-	f3_AxisB23 = Axis(f3_b23[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → α, β", ylabel = "Zero-point instability \n σ of Normal (-3, σ) → cₚ")
-	f3_AxisB31 = Axis(f3_b31[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → α, β", ylabel = "Scaling instability \n σ of Normal (6, σ) → xₚ")
+# Define axes for different sections of the figure
+f3_AxisB11 = Axis(f3_b11[1,1], xlabel = "Zero-point instability \n σ of Normal (-3, σ) → cₚ",  ylabel = "Number of categories")
+f3_AxisB12 = Axis(f3_b12[1,1], xlabel = "Scaling instability \n σ of Normal (6, σ) → xₚ", ylabel = "Number of categories")
+f3_AxisB13 = Axis(f3_b13[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → Kₚₜ", ylabel = "Number of categories")
 
-	Label(f3_title[1,1], "Experiment 1: \n Effect of Interactions Between Mapping Instability Parameters on Empirical Power", fontsize = 20, font = :bold, halign = :left)
-	
-	f3_hmb11 = heatmap!(f3_AxisB11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
-	f3_hmb12 = heatmap!(f3_AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
-	f3_hmb13 = heatmap!(f3_AxisB13, intervalAndThα.th_σ, intervalAndThα.nIntervals, intervalAndThα.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
-	
-	f3_hmb21 = heatmap!(f3_AxisB22, lbrAndRbr.rbr_σ, lbrAndRbr.lbr_σ, lbrAndRbr.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
-	f3_hmb22 = heatmap!(f3_AxisB23, lbrAndThα.th_σ, lbrAndThα.lbr_σ, lbrAndThα.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
-	f3_hmb31 = heatmap!(f3_AxisB31, rbrAndThα.th_σ, rbrAndThα.rbr_σ, rbrAndThα.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+f3_AxisB22 = Axis(f3_b22[1,1], xlabel = "Scaling instability \n σ of Normal (6, σ) → xₚ", ylabel = "Zero-point instability \n σ of Normal (-3, σ) → cₚ")
+f3_AxisB23 = Axis(f3_b23[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → α, β", ylabel = "Zero-point instability \n σ of Normal (-3, σ) → cₚ")
+f3_AxisB31 = Axis(f3_b31[1,1], xlabel = "Threshold instability \n σ of Normal (0, σ) → α, β", ylabel = "Scaling instability \n σ of Normal (6, σ) → xₚ")
 
-	f3_AxisB33 = Colorbar(f3_b24[1,1], f3_hmb11)
+# Set title for the figure
+Label(f3_title[1,1], "Experiment 1: \n Effect of Interactions Between Mapping Instability Parameters on Empirical Power", fontsize = 20, font = :bold, halign = :left)
 
-	f3
+# Generate heatmaps for different sections of the figure
+f3_hmb11 = heatmap!(f3_AxisB11, intervalAndLbr.lbr_σ, intervalAndLbr.nIntervals, intervalAndLbr.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+f3_hmb12 = heatmap!(f3_AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+f3_hmb13 = heatmap!(f3_AxisB13, intervalAndThα.th_σ, intervalAndThα.nIntervals, intervalAndThα.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+
+f3_hmb21 = heatmap!(f3_AxisB22, lbrAndRbr.rbr_σ, lbrAndRbr.lbr_σ, lbrAndRbr.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+f3_hmb22 = heatmap!(f3_AxisB23, lbrAndThα.th_σ, lbrAndThα.lbr_σ, lbrAndThα.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+f3_hmb31 = heatmap!(f3_AxisB31, rbrAndThα.th_σ, rbrAndThα.rbr_σ, rbrAndThα.Power, colorrange = f3_joint_limits, colorscale = scale, colormap = :roma)
+
+# Add colorbar to the figure
+f3_AxisB33 = Colorbar(f3_b24[1,1], f3_hmb11)
+
+# Display the figure
+f3
 end
+
+# ╔═╡ ceaa91fc-de1d-4287-9c6c-acf87171ed66
+md"""
+## Group-Based Mapping Instability Effects Type-I/Power
+
+This plot shows different sub-types of the effect of group-based mapping instability on empirical power and Type I error rates. With group-based mapping instability, the mapping is different between groups, but does not randomly vary between observatons. The plot includes visualizations for zero-point instability, scaling instability, and systematic threshold instability, comparing a type of mapping instability with the value of a default without mapping instability.
+"""
 
 # ╔═╡ 8223f116-693c-4ca4-b0c0-1a0e1321d88c
 begin
 	f5 = Figure(size = (1600, 1600))
 
-	# SET UP THE GRID LAYOUT
+	# Set up the grid layout
 	f5_title = f5[1, 1:3] = GridLayout()
 
 	f5_illustrationheader = f5[2, 1] = GridLayout()
@@ -425,6 +477,7 @@ begin
 	f5_m4 = f5[8, 2] = GridLayout()
 	f5_r4 = f5[8, 3] = GridLayout()
 
+	# Add explanatory diagrams to the plot.
 	f5_img1 = rotr90(load("../Diagrams/zeropointinstability_groupbased.png"))
 	f5_img2 = rotr90(load("../Diagrams/scalinginstability_groupbased.png"))
 	f5_img3 = rotr90(load("../Diagrams/thresholdinstability_groupbased.png"))
@@ -433,7 +486,7 @@ begin
 	f5_AxisM3 = Axis(f5_l3[1,1], aspect = DataAspect())
 	f5_AxisM4 = Axis(f5_l4[1,1], aspect = DataAspect())
 
-
+	# Add axes to the plot
 	f5_AxisL2 = Axis(f5_m2[1,1], xlabel = "Zero-point Instability \n Group 1: cₚ = -3.0 | Group 2: cₚ = 𝑥", ylabel = "Empirical Power (α ⩵ 0.05)", ylabelsize = 20, xlabelsize = 20)
 	f5_AxisL3 = Axis(f5_m3[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Empirical Power (α ⩵ 0.05)", xlabelsize = 20, ylabelsize = 20)
 	f5_AxisL4 = Axis(f5_m4[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Empirical power (α ⩵ 0.05)", xlabelsize = 20, ylabelsize = 20)
@@ -461,13 +514,15 @@ begin
 
 	linkyaxes!(f5_AxisL2, f5_AxisL3, f5_AxisL4, f5_AxisR2, f5_AxisR3, f5_AxisR4)
 
+	# Add results from the unmapped (untransformed) data
 	hlines!(f5_AxisL2, 0.832, color = :cyan3, label = "Power for stable mapping")
 	hlines!(f5_AxisR2, 0.05, color = :cyan3, label = "Type I for stable mapping")
 	hlines!(f5_AxisL3, 0.832, color = :cyan3)
 	hlines!(f5_AxisR3, 0.05, color = :cyan3)
 	hlines!(f5_AxisL4, 0.832, color = :cyan3)
 	hlines!(f5_AxisR4, 0.05, color = :cyan3)
-		
+
+	# Add results from the transformed data.
 	scatterlines!(f5_AxisL2, onlyRbr_gb.rbr_σ, onlyRbr_gb.Power, color = :blue, label = "Power for unstable mapping")
 	errorbars!(f5_AxisL2,onlyRbr_gb.rbr_σ, onlyRbr_gb.Power, 1.96*onlyRbr_gb.Power_SDE, whiskerwidth = 8, color = :red)
 	
@@ -505,50 +560,73 @@ begin
 	f5
 end
 
+# ╔═╡ 2e11f585-2281-42f2-b0b4-e4a1a92ca69c
+md"""
+## Two-Way Interactions Group-Based Mapping Instability Parameters Power
+
+This code generates a series of heatmaps arranged in a grid layout, representing the interactions between different parameters of group-based mapping instability and their effects on empirical power in Experiment 1. The heatmaps visualize how variations in parameters  zero-point instability, scaling instability, and threshold instability impacts the empirical power of a simple t-test.
+"""
+
 # ╔═╡ bed8540d-3095-4a8f-b5e1-45035f2df16c
 begin
-	f6 = Figure(size = (1100, 1100))
-	
-	f6_title = f6[1, 0:3] = GridLayout()
-	f6_b11 = f6[2, 1] = GridLayout()
-	f6_b12 = f6[3, 1] = GridLayout()
-	f6_b13 = f6[4, 1] = GridLayout()
-	f6_b22 = f6[3, 2] = GridLayout()
-	f6_b23 = f6[4, 2] = GridLayout()
-	f6_b31 = f6[4, 3] = GridLayout()
-	f6_b24 = f6[2:4,0] = GridLayout()
+    # Create a figure with specified size
+    f6 = Figure(size = (1100, 1100))
+    
+    # Set up the grid layout for different sections of the plot
+    f6_title = f6[1, 0:3] = GridLayout()
+    f6_b11 = f6[2, 1] = GridLayout()
+    f6_b12 = f6[3, 1] = GridLayout()
+    f6_b13 = f6[4, 1] = GridLayout()
+    f6_b22 = f6[3, 2] = GridLayout()
+    f6_b23 = f6[4, 2] = GridLayout()
+    f6_b31 = f6[4, 3] = GridLayout()
+    f6_b24 = f6[2:4,0] = GridLayout()
 
-	f6_joint_limits = (0.6, 1)
+    # Set limits for the color scale
+    f6_joint_limits = (0.6, 1)
 
+    # Define a scale for the heatmap color scale
     f6_scale = ReversibleScale(x -> asinh(x / 2) / log(10), x -> 2sinh(log(10) * x))
-	
-	f6_AxisB11 = Axis(f6_b11[1,1], xlabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑥",  ylabel = "Number of categories")
-	f6_AxisB12 = Axis(f6_b12[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Number of categories")
-	f6_AxisB13 = Axis(f6_b13[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Number of categories")
 
-	f6_AxisB22 = Axis(f6_b22[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑦")
-	f6_AxisB23 = Axis(f6_b23[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑦")
-	f6_AxisB31 = Axis(f6_b31[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑦")
+    # Set up axes for the heatmaps
+    f6_AxisB11 = Axis(f6_b11[1,1], xlabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑥",  ylabel = "Number of categories")
+    f6_AxisB12 = Axis(f6_b12[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Number of categories")
+    f6_AxisB13 = Axis(f6_b13[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Number of categories")
+    f6_AxisB22 = Axis(f6_b22[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑦")
+    f6_AxisB23 = Axis(f6_b23[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑦")
+    f6_AxisB31 = Axis(f6_b31[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑦")
 
-	Label(f6_title[1,1], "Experiment 2: \n Effect of Interactions Between Mapping Instability Parameters on Empirical Power", fontsize = 20, font = :bold, halign = :left)
-	
-	f6_hmb11 = heatmap!(f6_AxisB11, intervalAndLbr_gb.lbr_σ, intervalAndLbr_gb.nIntervals, intervalAndLbr_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
-	f6_hmb12 = heatmap!(f6_AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
-	f6_hmb13 = heatmap!(f6_AxisB13, intervalAndThα_gb.th_α, intervalAndThα_gb.nIntervals, intervalAndThα_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
-	
-	f6_hmb21 = heatmap!(f6_AxisB22, lbrAndRbr_gb.rbr_σ, lbrAndRbr_gb.lbr_σ, lbrAndRbr_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
-	f6_hmb22 = heatmap!(f6_AxisB23, lbrAndThα_gb.th_α, lbrAndThα_gb.lbr_σ, lbrAndThα_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
-	f6_hmb31 = heatmap!(f6_AxisB31, rbrAndThα_gb.th_α, rbrAndThα_gb.rbr_σ, rbrAndThα_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
+    # Set the title for the plot
+    Label(f6_title[1,1], "Experiment 2: \n Effect of Interactions Between Mapping Instability Parameters on Empirical Power", fontsize = 20, font = :bold, halign = :left)
+    
+    # Plot the heatmaps for different combinations of instability parameters
+    f6_hmb11 = heatmap!(f6_AxisB11, intervalAndLbr_gb.lbr_σ, intervalAndLbr_gb.nIntervals, intervalAndLbr_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
+    f6_hmb12 = heatmap!(f6_AxisB12, intervalAndRbr.rbr_σ, intervalAndRbr.nIntervals, intervalAndRbr.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
+    f6_hmb13 = heatmap!(f6_AxisB13, intervalAndThα_gb.th_α, intervalAndThα_gb.nIntervals, intervalAndThα_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
+    f6_hmb21 = heatmap!(f6_AxisB22, lbrAndRbr_gb.rbr_σ, lbrAndRbr_gb.lbr_σ, lbrAndRbr_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
+    f6_hmb22 = heatmap!(f6_AxisB23, lbrAndThα_gb.th_α, lbrAndThα_gb.lbr_σ, lbrAndThα_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
+    f6_hmb31 = heatmap!(f6_AxisB31, rbrAndThα_gb.th_α, rbrAndThα_gb.rbr_σ, rbrAndThα_gb.Power, colorrange = f6_joint_limits, colorscale = scale, colormap = :roma)
 
-	f6_AxisB33 = Colorbar(f6_b24[1,1], f6_hmb11)
+    # Add a colorbar to the plot
+    f6_AxisB33 = Colorbar(f6_b24[1,1], f6_hmb11)
 
-	f6
-end
+    # Return the figure
+    f6
+end 
+
+# ╔═╡ 1c182c04-7e54-4baa-81d5-92d323dd918d
+md"""
+## Two-Way Interactions Group-Based Mapping Instability Parameters Type-I
+
+This code generates a series of heatmaps arranged in a grid layout, representing the interactions between different parameters of group-based mapping instability and their effects on Type-I error for Experiment 2. The heatmaps visualize how variations in parameters zero-point instability, scaling instability, and threshold instability impacts the Type-I error of a simple t-test.
+"""
 
 # ╔═╡ 53e58f32-c3da-487a-8fff-38bcb64a8203
 begin
+	# Define a figure with a specified size
 	f7 = Figure(size = (1100, 1100))
-	
+
+	# Set up the grid layout for different sections of the plot
 	f7_title3 = f7[1, 0:3] = GridLayout()
 	f7_b11 = f7[2, 1] = GridLayout()
 	f7_b12 = f7[3, 1] = GridLayout()
@@ -558,32 +636,35 @@ begin
 	f7_b31 = f7[4, 3] = GridLayout()
 	f7_b24 = f7[2:4,0] = GridLayout()
 
+	# Define joint limits for color scale
 	f7_joint_limits = (0, 0.8)
 
-    f7_scale = ReversibleScale(x -> asinh(x / 2) / log(10), x -> 2sinh(log(10) * x))
-	
+	# Define a scale for the heatmap color scale
+	f7_scale = ReversibleScale(x -> asinh(x / 2) / log(10), x -> 2sinh(log(10) * x))
+
+	# Set up axes for the heatmaps
 	f7_AxisB11 = Axis(f7_b11[1,1], xlabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑥",  ylabel = "Number of categories")
 	f7_AxisB12 = Axis(f7_b12[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Number of categories")
 	f7_AxisB13 = Axis(f7_b13[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Number of categories")
-
 	f7_AxisB22 = Axis(f7_b22[1,1], xlabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑥", ylabel = "Zero-point Instability \n Group 1: cₚ = -3.0 | Group 2: cₚ = 𝑦")
 	f7_AxisB23 = Axis(f7_b23[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Zero-point Instability \n Group 1: cₚ = 6.0 | Group 2: cₚ = 𝑦")
-
 	f7_AxisB31 = Axis(f7_b31[1,1], xlabel = "Threshold Instability \n Group 1: α & β = 0 | Group 2: α & β → 𝑥", ylabel = "Scaling Instability \n Group 1: xₚ = 6.0 | Group 2: xₚ = 𝑦")
 
+	# Set up title for the plot
 	Label(f7_title3[1,1], "Experiment 2: \n Effect of Interactions Between Mapping Instability Parameters on Empirical Type-I Error", fontsize = 20, font = :bold, halign = :left)
-	
+
+	# Plot the heatmaps for different combinations of instability parameters
 	f7_hmb11 = heatmap!(f7_AxisB11, intervalAndLbr_gb.lbr_σ, intervalAndLbr_gb.nIntervals, intervalAndLbr_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
 	f7_hmb12 = heatmap!(f7_AxisB12, intervalAndRbr_gb.rbr_σ, intervalAndRbr_gb.nIntervals, intervalAndRbr_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
 	f7_hmb13 = heatmap!(f7_AxisB13, intervalAndThα_gb.th_α, intervalAndThα_gb.nIntervals, intervalAndThα_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
-	
 	f7_hmb21 = heatmap!(f7_AxisB22, lbrAndRbr_gb.rbr_σ, lbrAndRbr_gb.lbr_σ, lbrAndRbr_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
-	f7_hmb22 = heatmap!(f7_AxisB23, lbrAndThα_gb.th_α, lbrAndThα_gb.lbr_σ, lbrAndThα_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
-
+	f7_hmb22 = heatmap!(f7_AxisB23, lbrAndThα_gb.th_α, lbrAndThα_gb.lbr_σ, 	lbrAndThα_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
 	f7_hmb31 = heatmap!(f7_AxisB31, rbrAndThα_gb.th_α, rbrAndThα_gb.rbr_σ, rbrAndThα_gb.TypeI, colorrange = f7_joint_limits, colorscale = scale, colormap = Reverse(:roma))
 
+	# Add a colorbar to the plot
 	f7_AxisB33 = Colorbar(f7_b24[1,1], f7_hmb11)
 
+	# Return the figure
 	f7
 end
 
@@ -2276,7 +2357,6 @@ version = "3.5.0+0"
 """
 
 # ╔═╡ Cell order:
-# ╠═6b0470a8-4492-4b09-a769-47c9998f71d5
 # ╟─75ec7454-2760-4e2e-9016-509fce4b2ca1
 # ╟─0f32e5ae-a6bf-453d-beef-530c6ba6c654
 # ╠═33346680-f0d0-11ee-360d-7f79d033e3da
@@ -2289,11 +2369,17 @@ version = "3.5.0+0"
 # ╠═cb50185d-9dc8-4201-a1a7-fc4392bc1dc7
 # ╟─6ed60b8f-bb14-4fad-ba41-723b8700ad42
 # ╠═1f986790-6f45-4ccb-a9fd-3449f895538f
+# ╟─8bc963a4-25e9-4660-91ec-2f1f76866fa6
 # ╠═4bab68ed-c529-4512-84f6-5bd17c3fa8d0
+# ╟─6a0f9b1a-3474-4a1d-9038-18f44d90eea2
 # ╠═d3f26221-8558-4e8c-a6da-ac6580ee3b58
+# ╟─a2a3bf3d-33fb-4b7e-bc97-00b53bb3f902
 # ╠═ca60ad2c-d9c5-420d-a271-825551b3a3dc
+# ╟─ceaa91fc-de1d-4287-9c6c-acf87171ed66
 # ╠═8223f116-693c-4ca4-b0c0-1a0e1321d88c
+# ╟─2e11f585-2281-42f2-b0b4-e4a1a92ca69c
 # ╠═bed8540d-3095-4a8f-b5e1-45035f2df16c
+# ╟─1c182c04-7e54-4baa-81d5-92d323dd918d
 # ╠═53e58f32-c3da-487a-8fff-38bcb64a8203
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
