@@ -12,7 +12,7 @@ Julia 1.10.0 was used. Package dependencies are stored in the manifest.toml file
 
 # License
 
-All scripts are MIT Licensed. The license is addended to the top of those files. Because I use a lot of (open-source) external software for the creation of other repository files and presentations, I chose not to add licenses to those.
+All scripts are MIT Licensed. The license is added to the top of those files.
 
 # Ethics, privacy, and security.
 
