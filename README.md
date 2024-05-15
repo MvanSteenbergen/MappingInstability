@@ -1,4 +1,4 @@
-# Mapping Instability on Rating Scale Instruments
+# Mapping Instability on Rating Scale Responses
 
 This is the repository for the materials for the paper `Mapping Instability on Rating Scale Responses.' Two experiments are included, focusing on investigating the impact of mapping instability on statistical analyses. In the first experiment, random mapping instability was introduced across all observations to assess its effects on statistical power and Type I error rates. The second experiment aimed to evaluate the effects of group-based mapping instability, where mapping inconsistencies were introduced between two experimental conditions while maintaining stability within each group.
 
