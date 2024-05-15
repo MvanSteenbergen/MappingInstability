@@ -26,7 +26,7 @@ All material involved in the production of this thesis project is available on [
 
 # Folder hierarchy
 
-./Simulation - Contains the code that I used to run the simulation and  
+./Simulation - Contains the code that I used to run the simulation and analysis.
 Subdivided into:
 
 - ./Code: Contains all the code used to run the simulation and plot the results. `./random_diff.jl` and `./group_diff.jl` contain experiment 1 and experiment 2, and `./analysis.jl` contains making the plots.
@@ -71,7 +71,9 @@ Now, Pluto will open. Browse to the file in the file picker at the bottom. Be su
 
 3. Browse to `./Simulation/Code/analysis.jl` in the pluto user file picker. Press the Enter-button. This file contains all the code and annotations for the plots and the analysis for the second simulation study. ALL PLOTS ARE SAVED WITHIN THE NOTEBOOK FILE, AND CAN BE SAVED TO YOUR COMPUTER BY RIGHT-CLICKING AND CLICKING DOWNLOAD.
 
-@Em.Aa. If you want to test reproducability, delete the Data folder and run the first two files. This is the only output not saved internally in the pluto notebooks. If you want to test reproducability of the plots, just run the notebook file. It should result in equivalent plots to the plots in my paper. The data is read and displayed at the top of the analysis.jl file.
+@Em.Aa. If you want to test reproducability, delete the Data folder and run the first two files. This is the only output not saved internally in the pluto notebooks. If you want to test reproducability of the plots, just run the notebook file. It should result in equivalent plots to the plots in my paper.
+
+The data that I created for the simulation is read by, and displayed at the top of the analysis.jl file. Note that the in-between steps (generating the data, the state of the data after mapping) aren't saved but discarded - the file size would be gigantic. With the same seed, however, the simulation should run in the same way.
 
 # Compiling the latex file
 
