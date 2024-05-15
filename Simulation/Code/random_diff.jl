@@ -19,21 +19,146 @@ begin
 	using Random
 	using JET
 	using ProgressLogging
-	using Profile
 end
 
 # ╔═╡ 87946af6-a1b1-4301-bbb5-f727ba5372b3
 Random.seed!(8508845)
 
-# ╔═╡ 62f3089c-ad98-455f-bbce-a43da44fb10c
-md"""
-# Simulation function
+# ╔═╡ 404e04a6-af72-4d15-b00b-c7221a3cb296
+begin
+	# Overloaded function when zero is a number. Doesn't do anything, technically (input is same as output). Made explicit for readability.
+	setZeroPoint(zero::Number) = zero
+	# Overloaded function for setting zero-point when zero-point is a distribution (unstable zero-point).
+	setZeroPoint(d::Distributions.Distribution) = rand(d, 1)[1]
+end
+
+# ╔═╡ 53ce5d7b-c4ce-47c6-9ceb-22cf69afcdc3
+begin
+	@test setZeroPoint(0) == 0
+	@test 0 <= setZeroPoint(Uniform(0,1)) <= 1
+end
+
+# ╔═╡ a6d3beda-180e-469a-8b58-c36a9cf3d84a
+begin
+	# Overloaded function when the max of the threshold range is randomly drawn from a distribution (unstable threshold-max)
+	setScaling(zero::Number, d::Distributions.Distribution) = zero + rand(d, 1)[1]
+	# Overloaded function when the max of the threshold range is a number (a stable threshold max).
+	setScaling(zero::Number, scale::Number) = zero + scale
+end
+
+# ╔═╡ 5cc2c31c-c810-430f-98b5-e97092633d03
+begin
+	@test setScaling(0, 1) == 1
+	@test 5 <= setScaling(5, Uniform(0,1)) <= 6
+end
+
+# ╔═╡ 0ab87fb9-2acc-4910-a86e-155990ab47c8
+begin
+	# Returns an array with the bounds if bound distances are equal. Stability is implied.
+	setIntervals(
+		min::Number, 
+		max::Number, 
+		nIntervals::Number
+	) = collect(LinRange(min, max, nIntervals))
 
 
-""" 
+	# Returns an array if distances between consecutive pairs of bounds change systematically within one person. Because α is stable, structural stability is still implied. Random interval instability is still possible (is added in later).
+	function setIntervals(
+		min::Number, 
+		max::Number, 
+		thresholdParameter::Number, 
+		nIntervals::Number
+	)
+		if thresholdParameter > 0
+			α, β = 1, thresholdParameter + 1
+		else
+			α, β = -thresholdParameter + 1, 1
+		end
+		
+		proportions = cdf(Beta(α, β), collect(LinRange(0, 1, nIntervals)))
+		proportions .*= (max - min)
+		proportions .+= min
+		return proportions
+	end
+end
+
+# ╔═╡ 1e0235e3-e4c2-4edb-8318-a2b7c85cb963
+begin
+	@test setIntervals(1, 2, 4, 5) == [1.0, 1.6835937499999998, 1.9375, 1.99609375, 2.0]
+end
+
+# ╔═╡ 0b47916e-e101-4e80-ba4a-fffdb6f17691
+@report_opt setIntervals(1, 2, 4, 5)
+
+# ╔═╡ bb1f470a-711c-46bd-a244-721a901ce543
+@test setIntervals(1, 2, -4, 5) == [1.0, 1.00390625, 1.0625, 1.3164062500000002, 2.0]
+
+# ╔═╡ bac6bb13-276e-43e0-9c2d-0e096bdfb34c
+# Calculates the range bounds on the basis of the zero-point and the scaling.
+function getRangeBounds(zero, scaling)
+	min = setZeroPoint(zero)
+	max = setScaling(min, scaling)
+	return min, max
+end
+	
+
+# ╔═╡ 765ee145-b718-4fe3-bdf1-7e3b1e52eadc
+@test getRangeBounds(0, 100) == (0, 100)
+
+# ╔═╡ bec0a0d5-befe-4b9b-96a9-85c04eadb662
+begin
+	# Sets thresholds when only nIntervals is specified. Stability is implied.
+	function setThresholds(
+		zero, 
+		scaling, 
+		nIntervals::Number
+	)
+		min, max = getRangeBounds(zero, scaling)
+		thresholds = setIntervals(min, max, nIntervals + 1)
+		return thresholds
+	end
+
+
+	# Sets threshold when nIntervals & interval distribution is specified. Stability is still implied, but equal intervals are not.
+	function setThresholds(
+		zero,
+		scaling,
+		threshold,
+		nIntervals::Number
+	)
+		min, max = getRangeBounds(zero, scaling)
+		if threshold == 0.0
+			thresholds = setIntervals(min, max, nIntervals + 1) 
+		else
+			thresholds = setIntervals(min, max, threshold, nIntervals + 1)
+		end
+		return thresholds
+	end
+end
+	
+
+# ╔═╡ 2672b8ec-fe1c-4f14-9136-8e8db5d22022
+@test setThresholds(0, 1, 5) == [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+
+# ╔═╡ ae43090a-4d8c-476a-9e05-b4bb29321f71
+# Maps scores from the 
+function transform(values, min, max, thresholdDistribution, nBins)
+	for (index, value) in enumerate(values)
+		α = rand(thresholdDistribution, 1)[1]
+		thresholds = setThresholds(min, max, α, nBins)
+		category = length(thresholds) + 1
+		for threshold in thresholds
+			if value < threshold
+				category -= 1
+			end
+		end
+		values[index] = category
+	end
+	return values
+end
 
 # ╔═╡ 5406bcfa-65ae-46e3-a007-01366a04fcf8
-function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distribution, leftBoundRange::Float64, rightBoundRange::Float64, thresholdDistribution, n::Integer, nIntervals::Integer)
+function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distribution, leftBoundRange, rightBoundRange, thresholdDistribution, n::Integer, nIntervals::Integer)
 
 	# Pre-allocate memory for the results
 	results = (t₁ = Array{Float64}(undef, n),
@@ -51,7 +176,7 @@ function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distri
 	@inbounds Threads.@threads for i in 1:n
 	
 		# Overwrite samples with adjusted version (to avoid having to reallocate memory)	
-		sample₁[i, :] = transform(@view(sample₁[i, :]), -3.0, 6.0, 0.0, nIntervals)
+		sample₁[i, :] = transform(@view(sample₁[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
 		sample₂[i, :] = transform(@view(sample₂[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
 		sample₃[i, :] = transform(@view(sample₃[i, :]), leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals)
 
@@ -76,176 +201,11 @@ function simulation(d₁::Distributions.Distribution, d₂::Distributions.Distri
 	return results
 end
 
-# ╔═╡ c45feb81-d843-4aa6-ba88-22f81484e01e
-sample₁ = rand(Normal(0,1), (1000, 18))[1, :]
-
-# ╔═╡ 54dfa28d-11a9-424e-95f4-d1fe996a4f44
- simulation(Normal(0, 1), Normal(1, 1), 2.0, 6.0, 6.0, 4, 3)
-
-# ╔═╡ 22cf591c-ae8c-479f-8b4d-a4b9fea028c2
-@time simulation(Normal(0, 1), Normal(1, 1), 2.0, 6.0, 6.0, 5000, 3)
-
-# ╔═╡ 404e04a6-af72-4d15-b00b-c7221a3cb296
-begin
-	# Overloaded function when zero is a number. Doesn't do anything, technically (input is same as output). Made explicit for readability.
-	setZeroPoint(zero::Number) = zero
-	# Overloaded function for setting zero-point when zero-point is a distribution (unstable zero-point).
-	setZeroPoint(d::Distributions.Distribution) = rand(d, 1)[1]
-end
-
-# ╔═╡ 53ce5d7b-c4ce-47c6-9ceb-22cf69afcdc3
-begin
-	@test setZeroPoint(0.0) == 0.0
-	@test 0 <= setZeroPoint(Uniform(0,1)) <= 1
-end
-
-# ╔═╡ a6d3beda-180e-469a-8b58-c36a9cf3d84a
-begin
-	# Overloaded function when the max of the threshold range is randomly drawn from a distribution (unstable threshold-max)
-	setScaling(zero::Float64, d::Distributions.Distribution) = zero + rand(d, 1)[1]
-	# Overloaded function when the max of the threshold range is a number (a stable threshold max).
-	setScaling(zero::Float64, scale::Number) = zero + scale
-end
-
-# ╔═╡ 5cc2c31c-c810-430f-98b5-e97092633d03
-begin
-	@test setScaling(0.0, 1.0) == 1.0
-	@test 5 <= setScaling(5.0, Uniform(0,1)) <= 6
-end
-
-# ╔═╡ 27a0c78e-2d88-4d7d-8b5d-c13bb69ec297
-@report_opt setScaling(0.0, 1.0)
-
-# ╔═╡ 60e209fa-601e-440f-81e2-6cbd244e7487
-@report_opt setScaling(0.0, Normal(0,1))
-
-# ╔═╡ 0ab87fb9-2acc-4910-a86e-155990ab47c8
-begin
-	# Returns an array with the bounds if bound distances are equal. Stability is implied.
-	setIntervals(
-		min::Float64, 
-		max::Float64, 
-		nIntervals::Integer
-	) = collect(LinRange(min, max, nIntervals))
-
-
-	# Returns an array if distances between consecutive pairs of bounds change systematically within one person. Because α is stable, structural stability is still implied. Random interval instability is still possible (is added in later).
-	function setIntervals(
-		min::Float64, 
-		max::Float64, 
-		thresholdParameter::Float64, 
-		nIntervals::Integer
-	)
-		if thresholdParameter > 0.0
-			α, β = 1.0, thresholdParameter + 1.0
-		else
-			α, β = -thresholdParameter + 1.0, 1.0
-		end
-		
-		proportions = cdf(Beta(α, β), collect(LinRange(0.0, 1.0, nIntervals)))
-		proportions .*= (max - min)
-		proportions .+= min
-		return proportions
-	end
-end
-
-# ╔═╡ 1e0235e3-e4c2-4edb-8318-a2b7c85cb963
-begin
-	@test setIntervals(1.0, 2.0, 4.0, 5) == [1.0, 1.7626953125, 1.96875, 1.9990234375, 2.0]
-end
-
-# ╔═╡ b0decc3c-25de-4a3f-8e5d-b0d9af61c947
-
-
-# ╔═╡ bb1f470a-711c-46bd-a244-721a901ce543
-@test setIntervals(1, 2, -4, 5) == [1.0, 1.00390625, 1.0625, 1.3164062500000002, 2.0]
-
-# ╔═╡ 7510bac5-a09b-4239-809f-a637919d5bd6
-@report_opt setIntervals(1.0, 2.0, 5)
-
-# ╔═╡ bbfbc3e8-f1a5-461b-92a3-83c22c33b96c
-@report_opt setIntervals(1.0, 2.0, -4.0, 5)
-
-# ╔═╡ bac6bb13-276e-43e0-9c2d-0e096bdfb34c
-# Calculates the range bounds on the basis of the zero-point and the scaling.
-function getRangeBounds(zero::Float64, scaling::Float64)
-	min = setZeroPoint(zero)
-	max = setScaling(min, scaling)
-	return min, max
-end
-	
-
-# ╔═╡ 765ee145-b718-4fe3-bdf1-7e3b1e52eadc
-@test getRangeBounds(0.0, 100.0) == (0.0, 100.0)
-
-# ╔═╡ e2457c1d-037a-4924-a388-4411ff8d45da
-@report_opt getRangeBounds(0.0, 100.0)
-
-# ╔═╡ bec0a0d5-befe-4b9b-96a9-85c04eadb662
-begin
-	# Sets thresholds when only nIntervals is specified. Stability is implied.
-	function setThresholds(
-		zero::Float64, 
-		scaling::Float64, 
-		nIntervals::Integer
-	)
-		min, max = getRangeBounds(zero, scaling)
-		thresholds = setIntervals(min, max, nIntervals + 1)
-		return thresholds
-	end
-
-
-	# Sets threshold when nIntervals & interval distribution is specified. Stability is still implied, but equal intervals are not.
-	function setThresholds(
-		zero::Float64,
-		scaling::Float64,
-		threshold::Float64,
-		nIntervals::Integer
-	)
-		min, max = getRangeBounds(zero, scaling)
-		if threshold == 0.0 
-			thresholds = setIntervals(min, max, nIntervals + 1) 
-		else
-			thresholds = setIntervals(min, max, threshold, nIntervals + 1)
-		end
-		return thresholds
-	end
-end
-	
-
-# ╔═╡ d194a887-2040-4dd7-9cb8-29fdd93640bc
-@report_opt getRangeBounds(0.0, 100.0)
-
-# ╔═╡ be12064f-bf51-432d-bb96-1b04146a98b4
-
-
-# ╔═╡ 2672b8ec-fe1c-4f14-9136-8e8db5d22022
-@test setThresholds(0.0, 1.0, 5) == [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-
-# ╔═╡ a89271f7-3680-4151-92de-30634b7216b0
-@report_opt setThresholds(0.2, 0.3, 4)
-
-# ╔═╡ ae43090a-4d8c-476a-9e05-b4bb29321f71
-# Maps scores from the 
-function transform(values, min, max, thresholdDistribution::Float64, nBins)
-	for (index, value) in enumerate(values)
-		thresholds = setThresholds(min, max, thresholdDistribution, nBins)
-		category = length(thresholds) + 1
-		for threshold in thresholds
-			if value < threshold
-				category -= 1
-			end
-		end
-		values[index] = category
-	end
-	return values
-end
+# ╔═╡ 6aea3cae-e446-422f-92f6-5ad004596d9a
+@time simulation(Normal(0, 1), Normal(1, 1), Normal(-3.0, 2), Normal(6.0, 2), Normal(6.0, 2), 5000, 3)
 
 # ╔═╡ 38ddc64e-8696-4147-a33d-edd6d4e3eb61
-@test transform([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0], 0.0, 5.0, 0.0, 5) == [1, 2, 3, 4, 5, 6, 7]
-
-# ╔═╡ ee9e2068-8f27-4c69-8b79-8f9ab00b83d6
-@report_opt transform([-1, 0, 1, 2, 3, 4, 5], 0.0, 5.0, 0.0, 5)
+@test transform([-1, 0, 1, 2, 3, 4, 5], 0, 5, Normal(0, 0), 5) == [1, 2, 3, 4, 5, 6, 7]
 
 # ╔═╡ ba7f60e8-363f-4aa8-94eb-63a934145280
 function runSimulation()
@@ -254,10 +214,10 @@ function runSimulation()
 	d₁ = Normal(0, 1)
 	d₂ = Normal(1, 1)
 	
-	zeroPoints = Float64[collect(-3.5:0.1:-2.5)...]
-	scalingMax = Float64[collect(5.5:0.1:6.5)...]
-	thresholds = Float64[collect(-0.5:0.1:0.5)...]
-	nIntervals = Int32[collect(4:15)..., 20, 50, 80, 100]
+	zeroPoints = [-3.0, collect(Normal(-3.0, y) for y in 0.2:0.2:1.0)...]
+	scalingMax = [6.0, collect(Normal(6.0, y) for y in 0.2:0.2:1.0)...]
+	thresholds = [collect(Normal(0, y) for y in 0.0:0.2:1.0)...]
+	nIntervals = [collect(4:15)..., 20, 50, 80, 100]
 
 	iter = Iterators.product(zeroPoints, scalingMax, thresholds, nIntervals)
 
@@ -265,7 +225,7 @@ function runSimulation()
 	
 	output  = (lbr_σ = Array{Float64}(undef, iter_size),
 			   rbr_σ = Array{Float64}(undef, iter_size),
-	           th_α = Array{Float64}(undef, iter_size),
+	           th_σ = Array{Float64}(undef, iter_size),
 			   nIntervals = Array{Int64}(undef, iter_size),
 	           Power = Array{Float64}(undef, iter_size),
 	           Power_SDE = Array{Float64}(undef, iter_size),
@@ -275,7 +235,7 @@ function runSimulation()
 
 	i = 1
 
-	@inbounds @progress for (leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals) in iter
+	@progress for (leftBoundRange, rightBoundRange, thresholdDistribution, nIntervals) in iter
 
 		results = simulation(d₁, d₂, leftBoundRange, rightBoundRange,
 							 thresholdDistribution, n, nIntervals + 1)
@@ -285,9 +245,9 @@ function runSimulation()
 		output.TypeI[i] = mean(map(a -> a <= 0.05, results.p₂))
 		output.nIntervals[i] = nIntervals
 		output.TypeI_SDE[i] = @views sqrt((output.TypeI[i] * (1 - output.TypeI[i])) / n)
-		output.lbr_σ[i] = leftBoundRange 
-		output.rbr_σ[i] = rightBoundRange
-		output.th_α[i] = thresholdDistribution
+		output.lbr_σ[i] = lbr_σ = leftBoundRange == -3 ? 0.0 : leftBoundRange.σ 
+		output.rbr_σ[i] = rightBoundRange == 6 ? 0.0 : rightBoundRange.σ
+		output.th_σ[i] = thresholdDistribution.σ
 		
 		i += 1
 	end
@@ -298,19 +258,10 @@ end
 		
 
 # ╔═╡ 9a10ae73-0ef8-4e22-a6d2-25246d78560b
-@report_opt runSimulation()
-
-# ╔═╡ 970fbef4-887c-4b37-840c-112d676a4b1c
-# ╠═╡ disabled = true
-#=╠═╡
 output = runSimulation()
-  ╠═╡ =#
 
 # ╔═╡ 2d6f46ee-3007-41dd-85e8-5e7f3f15d61c
-# ╠═╡ disabled = true
-#=╠═╡
-CSV.write("./group_diff_data.csv", output)
-  ╠═╡ =#
+CSV.write("../Data/random_diff_data.csv", output)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -324,7 +275,6 @@ HypothesisTests = "09f84164-cd44-5f33-b23f-e6b0d136a0d5"
 JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
 Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
-Profile = "9abbd945-dff8-562f-b5e8-e1ebf5ef1b79"
 ProgressLogging = "33c8b6b6-d38a-422a-b730-caa89a2f386c"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
@@ -350,7 +300,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "217cd554ca9695d0e4c101f0d61acbf10676ec34"
+project_hash = "7461a4ad6f4aa62710484d966a024e6cd5b5c849"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -1727,10 +1677,6 @@ version = "0.5.6"
 deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
-[[deps.Profile]]
-deps = ["Printf"]
-uuid = "9abbd945-dff8-562f-b5e8-e1ebf5ef1b79"
-
 [[deps.ProgressLogging]]
 deps = ["Logging", "SHA", "UUIDs"]
 git-tree-sha1 = "80d919dee55b9c50e8d9e2da5eeafff3fe58b539"
@@ -2475,37 +2421,24 @@ version = "1.4.1+1"
 # ╔═╡ Cell order:
 # ╠═9f5d42a0-c114-11ee-1763-69ae57c4e335
 # ╠═87946af6-a1b1-4301-bbb5-f727ba5372b3
-# ╠═62f3089c-ad98-455f-bbce-a43da44fb10c
 # ╠═5406bcfa-65ae-46e3-a007-01366a04fcf8
-# ╠═c45feb81-d843-4aa6-ba88-22f81484e01e
-# ╠═54dfa28d-11a9-424e-95f4-d1fe996a4f44
-# ╠═22cf591c-ae8c-479f-8b4d-a4b9fea028c2
+# ╠═6aea3cae-e446-422f-92f6-5ad004596d9a
 # ╠═404e04a6-af72-4d15-b00b-c7221a3cb296
 # ╠═53ce5d7b-c4ce-47c6-9ceb-22cf69afcdc3
 # ╠═a6d3beda-180e-469a-8b58-c36a9cf3d84a
 # ╠═5cc2c31c-c810-430f-98b5-e97092633d03
-# ╠═27a0c78e-2d88-4d7d-8b5d-c13bb69ec297
-# ╠═60e209fa-601e-440f-81e2-6cbd244e7487
 # ╠═0ab87fb9-2acc-4910-a86e-155990ab47c8
 # ╠═1e0235e3-e4c2-4edb-8318-a2b7c85cb963
-# ╠═b0decc3c-25de-4a3f-8e5d-b0d9af61c947
+# ╠═0b47916e-e101-4e80-ba4a-fffdb6f17691
 # ╟─bb1f470a-711c-46bd-a244-721a901ce543
-# ╠═7510bac5-a09b-4239-809f-a637919d5bd6
-# ╠═bbfbc3e8-f1a5-461b-92a3-83c22c33b96c
 # ╠═bac6bb13-276e-43e0-9c2d-0e096bdfb34c
 # ╠═765ee145-b718-4fe3-bdf1-7e3b1e52eadc
-# ╠═e2457c1d-037a-4924-a388-4411ff8d45da
 # ╠═bec0a0d5-befe-4b9b-96a9-85c04eadb662
-# ╠═d194a887-2040-4dd7-9cb8-29fdd93640bc
-# ╠═be12064f-bf51-432d-bb96-1b04146a98b4
 # ╠═2672b8ec-fe1c-4f14-9136-8e8db5d22022
-# ╠═a89271f7-3680-4151-92de-30634b7216b0
 # ╠═ae43090a-4d8c-476a-9e05-b4bb29321f71
 # ╠═38ddc64e-8696-4147-a33d-edd6d4e3eb61
-# ╠═ee9e2068-8f27-4c69-8b79-8f9ab00b83d6
 # ╠═ba7f60e8-363f-4aa8-94eb-63a934145280
 # ╠═9a10ae73-0ef8-4e22-a6d2-25246d78560b
-# ╠═970fbef4-887c-4b37-840c-112d676a4b1c
 # ╠═2d6f46ee-3007-41dd-85e8-5e7f3f15d61c
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

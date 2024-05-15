@@ -1,24 +1,72 @@
 # Mapping Instability
 
-This is the repository for my thesis, which can be found in the folder "Thesis".
+This is a readme for the code the repository for the paper `Mapping Instability on Rating Scale Responses.' Two experiments are included, focusing on investigating the impact of mapping instability on statistical analyses. In the first experiment, random mapping instability was introduced across all observations to assess its effects on statistical power and Type I error rates. The second experiment aimed to evaluate the effects of group-based mapping instability, where mapping inconsistencies were introduced between two experimental conditions while maintaining stability within each group.
+
+The data is generated as part of the simulation code. They cannot be divided due to the research set-up. Detailed instructions for running the experiment can be found under the header `research recipe' below.
+
+All README information is found in this top-level document. All code files are annotated using the Pluto.jl notebook software.
+
+# License
+
+All scripts are MIT Licensed. The license is addended to the top of those files. Because I use a lot of (open-source) external software for the creation of other repository files and presentations, I chose not to add licenses to those.
+
+# Ethics, privacy, and security.
+
+All software used in this project is open-source. No participants or privacy-sensitive content were involved in the production and running of the simulation study. The study was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University (23-1844).
+
+## Permission and access
+
+All material involved in the production of this thesis project is available on [GitHub](https://github.com/MvanSteenbergen/MappingInstability). Maas van Steenbergen is the maintainer of this repository. He can be contacted through mvansteenbergen@proton.me.
 
 # Folder hierarchy
 
-## Running the code
+./Code - Contains the code that I used to run the simulation and  
+./Plots - Contains all generated plots.
+./Thesis - Contains the latex source code for my thesis.
 
-### Installing Pluto
+Earlier versions:
+
+./Legacy/Presentation 19-9-2023 - This contains a presentation that I gave for my thesis proposal
+./Legacy/Presentation 13-12-2023 - This contains a half-way presentation for my thesis, be aware that my topic was (very!) different back then as well.
+./Legacy/Proposal - This contains my thesis proposal file. Note that this project is very different from what I ended up doing.
+
+## Research recipe
+
+### Installing Julia
 
 The code is in the folder "Code". If you haven't installed the julia language, install it first at [the Julia website](https://julialang.org/). Make sure the file hierarchy is maintained, so clone the entire repository!
 
-###
+### Install Pluto
 
-First, you have to install Pluto and open the files. You don't have to install the packages separately, or do anything else. All the packages are contained in Pluto notebook files. These contain the version information for the packages and they should be installed automatically. Open a Julia-terminal in the containing folder. Then, run the following commands in the command line interface:
+First, you have to install Pluto and open the files. You don't have to install the packages separately, or do anything else. All the packages are contained in Pluto notebook files. These contain the version dependencies for the packages and they should be installed automatically. NOTE THAT THE VERSION INFORMATION IS SAVED IN THE DOCUMENT AS A MANIFEST.TOML ON THE BOTTOM OF THE .JL FILES. Open a Julia-terminal in the containing folder. Then, run the following commands in the command line interface:
 
     using Pkg
     Pkg.add("Pluto")
     using Pluto
     Pluto.run()
 
-Now you will see
+Now, Pluto will open. Browse to the file in the file picker at the bottom. Be sure to press Enter, as clicken open will remove the input (for me at least.).
 
-## Compiling the latex file
+### Open Pluto files
+
+1. Browse to `./Simulation/Code/random_diff.jl` in the pluto user interface file picker. Press the Enter-button. This file contains all the code and the annotations for the first simulation study. Press `run notebook code' on the top right of the page. The simulation will now run. Note that it may take a while (for me it takes about 20 minutes - after heavy code optimization)
+
+2. Browse to `./Simulation/Code/group_diff.jl` in the pluto user interface file picker. Press the Enter-button. This file contains all the code and the annotations for the second simulation study. Press `run notebook code' on the top right of the page. The simulation will now run. Note that it may take a while (for me it takes about 20 minutes - after heavy code optimization)
+
+3. Browse to `./Simulation/Code/analysis.jl` in the pluto user file picker. Press the Enter-button. This file contains all the code and annotations for the plots and the analysis for the second simulation study.
+
+# Compiling the latex file
+
+We'll discuss two ways to run and compile the tex files. These descriptions generated through ChatGPT, adjust, and tested. The first one is through TeXworks: 1. **Download TeXworks**: Go to the TeXworks website (https://www.tug.org/texworks/) and download the appropriate installer for your operating system (Windows, macOS, or Linux).
+
+2. **Install TeXworks**: Once the download is complete, run the installer and follow the on-screen instructions to install TeXworks on your computer.
+
+3. **Verify Installation**: After the installation is complete, you can verify that TeXworks has been installed by searching for it in your applications or by running it directly from the location where it was installed.
+
+Compiling a LaTeX File into PDF using TeXworks:
+
+1. **Open article.tex**: Double-click on article.tex. It should automatically open using TeXworks.
+
+2. **Compile the Document**: Click the green "Play" button (or press Ctrl + T on Windows/Linux or Cmd + T on macOS) to compile your LaTeX document into a PDF. TeXworks will run the necessary compilation steps, including processing any LaTeX commands and generating the PDF output.
+
+3. **View the PDF**: Once the compilation process is complete, TeXworks will open the generated PDF file automatically. You can review the output to ensure that it appears as expected.
