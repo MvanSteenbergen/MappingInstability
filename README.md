@@ -6,9 +6,11 @@ The data is generated as part of the simulation code. They cannot be divided due
 
 All README information is found in this top-level document. All code files are annotated using the Pluto.jl notebook software.
 
-# Versions information
+# Version information
 
-Julia 1.10.0 was used. Package dependencies are stored in the manifest.toml file at the bottom of each code.jl file. These can be read when opening the pluto files in notepad.
+Julia 1.10.0 was used for the code. Detailed package information, included dependencies and version numbers are stored in the manifest.toml file at the bottom of each .jl file. These can be read by opening the .jl files in notepad.
+
+All illustrative diagrams (not plots) were created using draw.io.
 
 # License
 
