@@ -38,9 +38,12 @@ Subdivided into:
 
 Earlier versions of the paper/presentations of my progress are also included:
 
-./Legacy/Presentation 19-9-2023 - This contains a presentation that I gave for my thesis proposal
+./Legacy/Presentation 19-9-2023 - This contains a presentation that given for my thesis proposal
+
 ./Legacy/Presentation 13-12-2023 - This contains a half-way presentation for my thesis, be aware that my topic was (very!) different back then as well.
+
 ./Legacy/Proposal - This contains my thesis proposal file. Note that this paper is very different from what I ended up doing.
+
 ./Legacy/ResearchReport - Contains the pdf of the paper during a half-way. Note that this paper is very different from what I ended up doing.
 
 ## Research recipe
