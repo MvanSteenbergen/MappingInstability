@@ -66,7 +66,7 @@ Now, Pluto will open. Browse to the file in the file picker at the bottom. Be su
 
 3. Browse to `./Simulation/Code/analysis.jl` in the pluto user file picker. Press the Enter-button. This file contains all the code and annotations for the plots and the analysis for the second simulation study. ALL PLOTS ARE SAVED WITHIN THE NOTEBOOK FILE, AND CAN BE SAVED TO YOUR COMPUTER BY RIGHT-CLICKING AND CLICKING DOWNLOAD.
 
-@Em.Aa. If you want to test reproducability, delete the Data folder and run the first two files. This is the only output not internally saved in the pluto notebooks. If you want to test reproducability of the plots, just run the notebook file. It should result in equivalent plots to the plots in my paper. The data is read and displayed on the top of the analysis.jl file.
+@Em.Aa. If you want to test reproducability, delete the Data folder and run the first two files. This is the only output not saved internally in the pluto notebooks. If you want to test reproducability of the plots, just run the notebook file. It should result in equivalent plots to the plots in my paper. The data is read and displayed at the top of the analysis.jl file.
 
 # Compiling the latex file
 
