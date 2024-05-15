@@ -8,7 +8,7 @@ All README information is found in this top-level document. All code files are a
 
 # Version information
 
-Julia 1.10.0 was used for the code. Detailed package information, included dependencies and version numbers are stored in the manifest.toml file at the bottom of each .jl file. These can be read by opening the .jl files in notepad.
+Julia 1.10.0 was used for the code. Detailed package information, included dependencies and version numbers are stored in the manifest.toml file at the bottom of each .jl file. These can be read by opening the .jl files in notepad (not in pluto itself!) under the header PLUTO_MANIFEST_TOML_CONTENTS. Note that pluto installs these dependencies itself when opened through the Pluto.jl interface, the user doesn't have to do anything.
 
 All illustrative diagrams (not plots) were created using draw.io.
 
